@@ -1,6 +1,6 @@
 
 # =============================================================================
-# Tool Manager
+# Tool Directory
 #
 # A program to prepare an HTML table listing softwares available on
 # a file system.
