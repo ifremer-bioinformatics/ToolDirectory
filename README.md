@@ -25,7 +25,7 @@ to a nice view to be presented as a web page for our users:
 
 ## Dependencies
 
-This tool is a Python 2.7 program. It also requires the following package used to build the HTML report:
+This tool is a Python 2.7 program. It also requires the following packages used to build the HTML report:
 
 * Pandas (tested with release 0.21)
 * Jinja2 (tested with release 2.9.6)
