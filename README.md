@@ -6,6 +6,8 @@ This package provides an easy and convenient tool to list softwares installed on
 
 Tool Directory was originally designed to provide a summary of all bioinformatics tools installed on the DATARMOR supercomputer at IFREMER.
 
+![Tool Directory](doc/test-page.png)
+
 ## Dependencies
 
 This tool is a Python 2.7 program. It also requires the following package used to build the HTML report:
