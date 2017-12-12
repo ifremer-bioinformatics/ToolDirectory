@@ -24,24 +24,28 @@ import os
 import pandas as pd
 import collections
 import string
+from optparse import OptionParser
 
-# ------------------------------------------------------------------  
+# ------------------------------------------------------------------
 # --  DEFINITIONS  -------------------------------------------------
 # ------------------------------------------------------------------
 
-# Root directory containing tools
+# Root directory containing tools; defualt is the test Directory
+# You can use argument "-d" (see main, below)
 TOOLS_DIR      = "./test"
 
 # Extension of files containing tool's descriptions
 TOOL_EXT       = ".properties"
 
-# Property keys used to build HTML table
+# Property keys used to build HTML table:
+#  1- colum order to use in the table
 ORDERED_KEYS   = ["NAME","VERSION","CMDLINE","GALAXY","KEYWORDS","URLDOC"]
+#  2- column labels
 KEYS_TO_LABELS = {
         'NAME'    : 'Tool name',
         'VERSION' : 'release',
         'CMDLINE' : 'cmd-line',
-        'GALAXY'  : 'Galaxy@DATARMOR',
+        'GALAXY'  : 'Galaxy',
         'KEYWORDS': 'Available for',
         'URLDOC'  : 'Manual'
         }
@@ -111,6 +115,17 @@ def orderProperties(properties):
 # ------------------------------------------------------------------
 # --  MAIN  --------------------------------------------------------
 # ------------------------------------------------------------------
+
+# Collect arguments if any provided
+parser = OptionParser()
+parser.add_option(
+    "-d", "--directory",
+    dest="directory",
+    help="home directory of software properties",
+    metavar="DIR")
+(options, args) = parser.parse_args()
+if options.directory!=None:
+  TOOLS_DIR=options.directory
 
 # step 1: collect all properties files
 filesList=getFiles(TOOLS_DIR)
