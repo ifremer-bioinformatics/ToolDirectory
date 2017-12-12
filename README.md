@@ -6,6 +6,21 @@ This package provides an easy and convenient tool to list softwares installed on
 
 Tool Directory was originally designed to provide a summary of all bioinformatics tools installed on the DATARMOR supercomputer at IFREMER.
 
+In other words, we can go from an "ugly" terminal listing:
+```
+/appli/bioinfo
+  ├── blast
+  │    ├── 2.2.31
+  │    └── 2.6.0
+  ├── plast
+  │    └── 2.3.2
+  ├── beedeem
+  │    └── 4.3.0
+  .../...
+```
+
+to a nice view to be presented as a web page for our users:
+
 ![Tool Directory](doc/test-page.png)
 
 ## Dependencies
