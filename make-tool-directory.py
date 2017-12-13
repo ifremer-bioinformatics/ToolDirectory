@@ -35,7 +35,7 @@ from optparse import OptionParser
 TOOLS_DIR      = "./test"
 
 # Extension of files containing tool's descriptions
-TOOL_EXT       = ".properties"
+TOOL_EXT       = "tool.properties"
 
 # Property keys used to build HTML table:
 #  1- colum order to use in the table
@@ -62,6 +62,16 @@ DATA_FORMATTER = {
 # ------------------------------------------------------------------
 # --  FUNCTIONS    -------------------------------------------------
 # ------------------------------------------------------------------
+
+def fileCompare(f1, f2):
+  props1 = readFile(f1)
+  props2 = readFile(f2)
+  if props1["NAME"].lower() < props2["NAME"].lower():
+     return -1
+  elif props1["NAME"].lower() == props2["NAME"].lower():
+     return 0
+  else:
+    return 1
 
 # ------------------------------------------------------------------
 # Collect properties files.
@@ -129,6 +139,7 @@ if options.directory!=None:
 
 # step 1: collect all properties files
 filesList=getFiles(TOOLS_DIR)
+filesList.sort(fileCompare)
 
 # step 2: read all tool's properties
 data=[]
@@ -148,7 +159,7 @@ df.rename(columns=lambda x: KEYS_TO_LABELS[x], inplace=True)
 cellpadding = '10px'
 linestyle = '1px solid #ddd'
 d = [
-    {'selector':'th','props':[('text-align', 'left'),('border-bottom', linestyle),('padding-left',cellpadding)]},
+    {'selector':'th','props':[('text-align', 'center'),('border-bottom', linestyle),('padding-left',cellpadding)]},
     {'selector':'tr:hover','props': [('background-color', '#F0F8FF')]}
   ]
 
