@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 # =============================================================================
-# Tool Directory
+# Tool Directory - v1.0.0
 #
 # A program to prepare an HTML table listing softwares available on
 # a file system.
