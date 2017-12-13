@@ -68,7 +68,7 @@ Here is an example of a simple *tool-home-dir*:
 
 Now, to declare your softwares to Tool Directory you just have to setup Property files, one per software. Such a Property file contains the description of a single software (see below) and it has to follow these two constraints
 
-* file extension must be ".properties"
+* file must be called "tool.properties"
 * file is located within home directory of a software
 
 For instance, considering our PLAST 2.3.2 installation (see above directory tree structure), we have setup a file called "tool.properties" located in /appli/bioinfo/plast/2.3.2.
@@ -110,7 +110,7 @@ Maybe you could be interested in adding, removing or renaming the keys of a Prop
 You can test the tool as follows:
 
 ```
-python make-tool-directory.py > test.html
+make-tool-directory.py > test.html
 ```
 Then open "test.html" in your web browser. You should see sometjing like this:
 
@@ -121,7 +121,7 @@ Then open "test.html" in your web browser. You should see sometjing like this:
 You use Tool Directory in a very straightforward way:
 
 ```
-python make-tool-directory.py -d <directory> > my-listing.html
+make-tool-directory.py -d <directory> > my-listing.html
 
 where:
      directory: root directory of your software installation; considering our
