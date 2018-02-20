@@ -55,9 +55,10 @@ KEYS_TO_LABELS = {
 # @DATA@ is a reverved keyword used to introduce value into formatted string
 # Accepted values for @DATA@ for CMDLINE and GALAXY: true, false (lower case!)
 DATA_FORMATTER = {
-  'URLDOC'  : '<a href="@DATA@"><img src="./images/document.png" border="0"></a>',
-  'CMDLINE' : '<img src="./images/@DATA@.png" border="0">',
-  'GALAXY'  : '<img src="./images/@DATA@.png" border="0">'
+  'URLDOC'      : '<a href="@DATA@"><img src="./images/document.png" border="0"></a>',
+  'CMDLINE'     : '<img src="./images/@DATA@.png" border="0">',
+  'CMD_INSTALL' : '<img src="./images/@DATA@.png" border="0">',
+  'GALAXY'      : '<img src="./images/@DATA@.png" border="0">'
 }
 
 # ------------------------------------------------------------------
@@ -106,11 +107,15 @@ def readFile(propertiesFile):
 # argument key: key of property to format
 # argument value: the value to format
 # return a formatted value as a string
-def formatData(key, value):
+def formatData(key, properties):
   if key in DATA_FORMATTER:
-    return string.replace(DATA_FORMATTER[key], "@DATA@", value)
+    new_value=string.replace(DATA_FORMATTER[key], "@DATA@", properties[key])
+    if key=="CMDLINE" and "CMD_INSTALL" in properties:
+      install_type=properties["CMD_INSTALL"]
+      new_value+=("&nbsp;"+string.replace(DATA_FORMATTER["CMD_INSTALL"], "@DATA@", install_type))
+    return new_value
   else:
-    return value
+    return properties[key]
 
 # ------------------------------------------------------------------
 # Order properties
@@ -120,7 +125,7 @@ def orderProperties(properties):
   orderedProperties=collections.OrderedDict()
   for okey in ORDERED_KEYS:
     if okey in properties:
-      orderedProperties[okey]=formatData(okey, properties[okey])
+      orderedProperties[okey]=formatData(okey, properties)
   return orderedProperties
 
 # ------------------------------------------------------------------
