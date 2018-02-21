@@ -83,6 +83,7 @@ CMDLINE=true
 GALAXY=true
 URLDOC=https://plast.inria.fr/user-guide/
 KEYWORDS=pairwise-sequence-alignment
+CMD_INSTALL=shell
 ```
 As you can see this is basically a set of key=value pairs. Keys are reserved case-sentive words and values are set by you.
 
@@ -96,12 +97,15 @@ CMDLINE: software available on the command-line? (only use one of: true, false)
 GALAXY: software available on GALAXY Workflow platform? (only use one of: true, false)
 URLDOC: URL to the user manual
 KEYWORDS: one or several keywords to classify your software
+CMD_INSTALL: the way a tool is installed. (one of: conda, docker, shell)
 ```
 All but GALAXY keys are valid to describe your softwares, whatever their field of application. Then, regarding KEYWORDS values, we rely on the EDAM-operation names (see http://edamontology.org/page). It is up to you to choose whatever naming system appropriate to classify your tools.
 
 ### Modifying keys in Property files
 
 Maybe you could be interested in adding, removing or renaming the keys of a Property file. Of course, this is possible: just edit the Python source code of Tool Directory and adapt it to your needs. The source code is fully documented and it should be easy to modify it.
+
+In a similar way, you can add more CMD_INSTALL values. If you do so, just ensure that you add the corresponding image in the images folder. For instance, the value docker is associated to images/docker.png file.
 
 ## Tool Directory use
 
