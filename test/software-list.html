@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Bioinformatics Software List</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="../thirdparty/Keshif/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../thirdparty/Keshif/js/d3.4.2.6.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../thirdparty/Keshif/keshif.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="../thirdparty/Keshif/keshif.css"/ type="text/css">
+    <link rel="stylesheet" href="../thirdparty/Keshif/font-awesome/css/font-awesome.min.css">
+
+    <script type="text/javascript" src="../thirdparty/Keshif//demo/js/demo.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="../thirdparty/Keshif/demo/css/demo.css" type="text/css">
+
+    <script type="text/javascript" src="../thirdparty/Keshif//demo/helpin/helpin_material.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../thirdparty/Keshif//demo/helpin/helpin.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="../thirdparty/Keshif/demo/helpin/helpin.css" type="text/css">
+
+    <script type="text/javascript">
+//
+var socialShare = false, demoHeader = false;
+//
+
+google.charts.setOnLoadCallback(function(){
+  browser = new kshf.Browser({
+    domID: "#Software_Browser",
+    barChartWidth: 160,
+    leftPanelLabelWidth: 150,
+    recordName: "softwares",
+    rightPanelLabelWidth: 90,
+    source: {
+      gdocId: '1CuQRxPAbAfgE4e2ZS0xxHaT3MTBrqp8pq6p5ZeWBCUY',
+      tables: "Tests"
+    },
+    summaries: [
+      { name: "EDAM" },
+      { name: "Environment"},
+      { name: "Thematic"},
+      { name: "Access"},
+    ],
+    recordDisplay: {
+      sortColWidth: 45,
+      sortBy: { title: 'id', inverse: true },
+      textSearch: "Nom",
+      detailsToggle: "one",
+      recordView: function() {
+        var appliPath = "@DM_PATH@";
+		var str="";
+		str+="<div class=''>";
+		str+="<span>"+this.Nom+"</span> ";
+		str+="<a class='pubLink fa fa-external-link externallink' target='_blank' href='";
+		str+=this.Doc;
+		str+="'>   Documentation</a>";
+		str+="</div>";
+		str+="<span class='item_details'>";
+		str+="<div class='topics'>";
+		str+=this.Description;
+		str+="</div>";
+		str+="<div class='topics'>";
+		str+=" Category: " + this.EDAM;
+		str+="</div>";
+		str+="<div class='topics'>";
+		str+=" Thematic: " + this.Thematic;
+		str+="</div>";
+		str+="<div class='topics'>";
+		str+=" Environment: " + this.Environment;
+		str+="</div>";
+		str+="<div>";
+		str+=" <span class='topics'>Access: ";
+		if(this.Access!==""&&this.Access!==null){
+		  if(this.Access=="Cmdline"){
+			str+="Cmd-line@DATARMOR </span><span class='topicsstd'>(";
+			str+=appliPath;
+			str+=this.Nom.toLowerCase().replace(" - ", "/");
+			str+=")</span>";
+		  }
+		  else if(this.Access=="Galaxy"){
+			str+="<span class='topics'><a class='pubLink fa fa-external-link' target='_blank' href='";
+			str+=this.Doc;
+			str+="'> Galaxy Ifremer</a></span>";
+		  }
+		  else {
+			str+="Cmd-line@DATARMOR </span><span class='topicsstd'>(";
+			str+=appliPath;
+			str+=this.Nom.toLowerCase().replace(" - ", "/");
+			str+=")</span><span class='topics'>  and  ";
+			str+="<a class='pubLink fa fa-external-link' target='_blank' href='";
+			str+=this.Doc;
+			str+="'> Galaxy Ifremer</a></span>";
+		  }
+		}
+		str+="</div>";
+		str+="</span>";
+		return str;
+	  }
+    }
+  });
+});
+    </script>
+<style id="kshfStyle">
+#Software_Browser {
+  background-color: white;
+  height: calc(100vh - 85px);
+  width: calc(100vw - 50px);
+}
+.item_details{
+  margin-left: 5px;
+}
+.topics{
+  font-size: 0.9em;
+  font-weight: 300;
+  margin-left: 5px;
+  font-variant: small-caps;
+}
+.topicsstd{
+  font-size: 0.8em;
+  font-weight: 300;
+}
+.externallink{
+  margin-left: 3px;
+  font-size: 0.7em;
+  vertical-align: middle;
+}
+.pubLink{
+  color: #005FA9;
+  display: inline-block;
+  text-decoration: none;
+}
+.pubLink:hover {
+  color: orangered !important;
+  text-decoration: none;
+}
+
+</style>
+</head>
+<body>
+  <div class="contents">
+    <div id="Software_Browser"></div>
+    <div id="demo_Infobox"> Data compiled from DATARMOR:@DM_PATH@ </div>
+  </div>
+</body>
+</html>
