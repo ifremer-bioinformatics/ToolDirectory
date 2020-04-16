@@ -1,0 +1,3 @@
+[submodule "thirdparty/Keshif"]
+	path = thirdparty/Keshif
+	url = https://github.com/ifremer-bioinformatics/Keshif.git
