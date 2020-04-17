@@ -21,6 +21,15 @@
 
     <script type="text/javascript">
 		var socialShare = false, demoHeader = false;
+		
+		function formatCmdLine(appPath, toolName){
+		  var str="Cmd-line@DATARMOR </span><span class='topicsstd'>(";
+          str+=appPath;
+          str+=toolName.toLowerCase().replace(" - ", "/");
+          str+=")</span>";
+          return str;
+		}
+		
 		google.charts.setOnLoadCallback(function(){
 		  browser = new kshf.Browser({
 			domID: "#Software_Browser",
@@ -69,10 +78,7 @@
 				str+=" <span class='topics'>Access: ";
 				if(this.Access!==""&&this.Access!==null){
 				  if(this.Access=="Cmdline"){
-					str+="Cmd-line@DATARMOR </span><span class='topicsstd'>(";
-					str+=appliPath;
-					str+=this.Name.toLowerCase().replace(" - ", "/");
-					str+=")</span>";
+					str+=formatCmdLine(appliPath, this.Name);
 				  }
 				  else if(this.Access=="Galaxy"){
 					str+="<span class='topics'><a class='pubLink fa fa-external-link' target='_blank' href='";
@@ -80,10 +86,8 @@
 					str+="'> Galaxy Ifremer</a></span>";
 				  }
 				  else {
-					str+="Cmd-line@DATARMOR </span><span class='topicsstd'>(";
-					str+=appliPath;
-					str+=this.Name.toLowerCase().replace(" - ", "/");
-					str+=")</span><span class='topics'>  and  ";
+					str+=formatCmdLine(appliPath, this.Name);
+					str+="<span class='topics'>  and  ";
 					str+="<a class='pubLink fa fa-external-link' target='_blank' href='";
 					str+=this.Doc;
 					str+="'> Galaxy Ifremer</a></span>";
