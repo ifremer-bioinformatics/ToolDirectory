@@ -11,12 +11,9 @@
     <link rel="stylesheet" href="../thirdparty/Keshif/keshif.css"/ type="text/css">
     <link rel="stylesheet" href="../thirdparty/Keshif/font-awesome/css/font-awesome.min.css">
 
-    <script type="text/javascript" src="../thirdparty/Keshif//demo/js/demo.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="../thirdparty/Keshif/demo/css/demo.css" type="text/css">
-
-    <script type="text/javascript" src="../thirdparty/Keshif//demo/helpin/helpin_material.js" charset="utf-8"></script>
-    <script type="text/javascript" src="../thirdparty/Keshif//demo/helpin/helpin.js" charset="utf-8"></script>
-    <link rel="stylesheet" href="../thirdparty/Keshif/demo/helpin/helpin.css" type="text/css">
+    <script type="text/javascript" src="../thirdparty/Keshif/helpin/helpin_material.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../thirdparty/Keshif/helpin/helpin.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="../thirdparty/Keshif/helpin/helpin.css" type="text/css">
 
     <script type="text/javascript">
 //
@@ -133,12 +130,71 @@ google.charts.setOnLoadCallback(function(){
   text-decoration: none;
 }
 
+
+.infobox_icon {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f05a";
+  color: gray;
+}
+#Infobox {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  text-align: center;
+  font-weight: 300;
+  font-family: sans-serif;
+  font-size: 0.8em;
+  padding: 3px 40px 3px 40px;
+  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/PjxzdmcgeG1sbnM9Imh0d…g9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNsZXNzaGF0LWdlbmVyYXRlZCkiIC8+PC9zdmc+);
+  background-image: -webkit-linear-gradient(bottom, #dfd2a9 0%, rgba(255, 255, 255, 0) 80%);
+  background-image: -moz-linear-gradient(bottom, #dfd2a9 0%, rgba(255, 255, 255, 0) 80%);
+  background-image: -o-linear-gradient(bottom, #dfd2a9 0%, rgba(255, 255, 255, 0) 80%);
+  background-image: linear-gradient(to top, #dfd2a9 0%, rgba(255, 255, 255, 0) 80%);
+}
+#Infobox a {
+  color: black;
+  font-weight: 500;
+}
+#Infobox a:hover {
+  color: orangered;
+}
+#Infobox .fa {
+  color: gray;
+}
+#Infobox:before {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f05a";
+  color: gray;
+}
+#Infobox:after {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  content: "\f05a";
+  color: gray;
+}
+
+
 </style>
 </head>
 <body>
   <div class="contents">
     <div id="Software_Browser"></div>
-    <div id="demo_Infobox"> Data compiled from DATARMOR:@DM_PATH@ </div>
+    <div id="Infobox"> Data compiled from DATARMOR:@DM_PATH@ </div>
   </div>
 </body>
 </html>
