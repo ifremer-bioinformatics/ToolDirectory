@@ -10,7 +10,9 @@
   font-size: 0.9em;
   font-weight: 300;
   margin-left: 5px;
-  font-variant: small-caps;
+}
+.topicsbold{
+  font-weight: 800;
 }
 .topicsstd{
   font-size: 0.8em;
@@ -31,6 +33,12 @@
   text-decoration: none;
 }
 
+.toolName{
+	color: #0E1AC2;
+}
+.toolVersion{
+	font-size: 0.9em;
+}
 
 .infobox_icon {
   display: inline-block;

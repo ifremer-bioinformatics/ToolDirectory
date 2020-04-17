@@ -24,14 +24,33 @@
     <script type="text/javascript">
 		var socialShare = false, demoHeader = false;
 		
+		function formatToolName(toolName){
+		 var idx=toolName.lastIndexOf("-");
+		 var str="<span class='toolName'>";
+		 if (idx<0){
+		    return str+toolName+"</span> ";
+         }
+         str+=toolName.substring(0,idx).trim();
+         str+="</span> - <span class='toolVersion'>";
+         str+=toolName.substring(idx+1).trim();
+         str+="</span> ";
+         return str;
+		}
 		function formatCmdLine(appPath, toolName){
-		  var str="Cmd-line@DATARMOR </span><span class='topicsstd'>(";
+		  var str="Cmd-line </span><span class='topicsstd'>(";
           str+=appPath;
           str+=toolName.toLowerCase().replace(" - ", "/");
           str+=")</span>";
           return str;
 		}
-		
+		function formatSimpleTopics(topicClass, topicName){
+          var str="<div><span class='topics topicsbold'>";
+          str+=topicClass;
+          str+=": </span><span class='topics'>";
+          str+=topicName;
+          str+="</span></div>";
+          return str;
+		}
 		google.charts.setOnLoadCallback(function(){
 		  browser = new kshf.Browser({
 			domID: "#Software_Browser",
@@ -49,9 +68,9 @@
 			  tables: "Softwares"
 			},
 			summaries: [
+			  { name: "Thematic"},
 			  { name: "EDAM" },
 			  { name: "Environment"},
-			  { name: "Thematic"},
 			  { name: "Access"},
 			],
 			recordDisplay: {
@@ -60,29 +79,23 @@
 			  textSearch: "Name",
 			  detailsToggle: "one",
 			  recordView: function() {
-				var appliPath = "/appli/bioinfo/";
+				var appliPath = "DATARMOR : /path/to/";
 				var str="";
 				str+="<div class=''>";
-				str+="<span>"+this.Name+"</span> ";
+				str+=formatToolName(this.Name);
 				str+="<a class='pubLink fa fa-external-link externallink' target='_blank' href='";
 				str+=this.Doc;
 				str+="'>   Documentation</a>";
 				str+="</div>";
 				str+="<span class='item_details'>";
-				str+="<div class='topics'>";
+				str+="<div class='topicsbold'>";
 				str+=this.Description;
 				str+="</div>";
-				str+="<div class='topics'>";
-				str+=" Category: " + this.EDAM;
-				str+="</div>";
-				str+="<div class='topics'>";
-				str+=" Thematic: " + this.Thematic;
-				str+="</div>";
-				str+="<div class='topics'>";
-				str+=" Environment: " + this.Environment;
-				str+="</div>";
+				str+=formatSimpleTopics("Category", this.EDAM);
+				str+=formatSimpleTopics("Thematic", this.Thematic);
+				str+=formatSimpleTopics("Environment", this.Environment);
 				str+="<div>";
-				str+=" <span class='topics'>Access: ";
+				str+=" <span class='topics topicsbold'>Access:</span><span class='topics'> ";
 				if(this.Access!==""&&this.Access!==null){
 				  if(this.Access=="Cmdline"){
 					str+=formatCmdLine(appliPath, this.Name);
@@ -96,8 +109,8 @@
 					str+=formatCmdLine(appliPath, this.Name);
 					str+="<span class='topics'>  and  ";
 					str+="<a class='pubLink fa fa-external-link' target='_blank' href='";
-					str+=this.Doc;
-					str+="'> Galaxy Ifremer</a></span>";
+					str+="https://usegalaxy.org";
+					str+="'> Galaxy Platform</a></span>";
 				  }
 				}
 				str+="</div>";
