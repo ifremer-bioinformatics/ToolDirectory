@@ -58,12 +58,17 @@
 			recordName: "softwares",
 			rightPanelLabelWidth: 90,
 			source: {
-              //Two possible solutions to load 'local' data file:
-              // solution 1: using a URL, e.g.:
+              //Three possible solutions to load a data file:
+              // solution 1: using Google Docs, e.g.:
+              //gdocId: '1Kf3WkhhhnUn9hclYh2erI6tSpiLgLum5mYtOO_3rxnQ',
+              // solution 2: using a URL, e.g.:
               //dirPath: "http://localhost/~ifremer/ToolDirectory/test/",
-              // solution 2: using a relative path (to this script), e.g.:
+              // solution 3: using a relative path (to this script), e.g.:
               dirPath: "./",
               fileType: 'csv',
+              // note that using 'dirPath' and 'fileType' are only relevant 
+              // for solutions 2 and 3; see Keshif doc for more details.
+			  //Name of data table containing list of softwares
 			  tables: "Softwares"
 			},
 			summaries: [
