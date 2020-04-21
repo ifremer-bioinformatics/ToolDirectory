@@ -1,0 +1,5 @@
+TEMPLATE=template.html
+WEBPAGEFILENAME=yourwebpage.html
+CLUSTERNAME=CLUSTER
+TOOLDIRECTORYPATH=/path/to/
+PAGETITLE=Webpage name for listing tools available @CLUSTER

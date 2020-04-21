@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>{{ d.PAGETITLE }}</title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="../thirdparty/Keshif/js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="../thirdparty/Keshif/js/d3.4.2.6.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../thirdparty/Keshif/keshif.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../thirdparty/Keshif/helpin/helpin_material.js" charset="utf-8"></script>
+    <script type="text/javascript" src="../thirdparty/Keshif/helpin/helpin.js" charset="utf-8"></script>
+
+    <script type="text/javascript" src="../thirdparty/Keshif/js/papaparse.min.js" charset="utf-8"></script>
+
+    <link rel="stylesheet" href="../thirdparty/Keshif/keshif.css"/ type="text/css">
+    <link rel="stylesheet" href="../thirdparty/Keshif/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../thirdparty/Keshif/helpin/helpin.css" type="text/css">
+
+    <link rel="stylesheet" href="../css/software_browser.css" type="text/css">
+
+    <script type="text/javascript">
+		var socialShare = false, demoHeader = false;
+
+		function formatToolName(toolName){
+		 var idx=toolName.lastIndexOf("-");
+		 var str="<span class='toolName'>";
+		 if (idx<0){
+		    return str+toolName+"</span> ";
+         }
+         str+=toolName.substring(0,idx).trim();
+         str+="</span> - <span class='toolVersion'>";
+         str+=toolName.substring(idx+1).trim();
+         str+="</span> ";
+         return str;
+		}
+		function formatCmdLine(appPath, toolName){
+		  var str="Cmd-line </span><span class='topicsstd'>(";
+          str+=appPath;
+          str+=")</span>";
+          return str;
+		}
+		function formatSimpleTopics(topicClass, topicName){
+          var str="<div><span class='topics topicsbold'>";
+          str+=topicClass;
+          str+=": </span><span class='topics'>";
+          str+=topicName;
+          str+="</span></div>";
+          return str;
+		}
+		google.charts.setOnLoadCallback(function(){
+		  browser = new kshf.Browser({
+			domID: "#Software_Browser",
+			barChartWidth: 160,
+			leftPanelLabelWidth: 150,
+			recordName: "softwares",
+			rightPanelLabelWidth: 90,
+			source: {
+              //Three possible solutions to load a data file:
+              // solution 1: using Google Docs, e.g.:
+              //gdocId: '1Kf3WkhhhnUn9hclYh2erI6tSpiLgLum5mYtOO_3rxnQ',
+
+              // solution 2: using a URL, e.g.:
+              //dirPath: "http://localhost/~ifremer/ToolDirectory/test/",
+
+              // solution 3: using a relative path (to this script), e.g.:
+              dirPath: "./",
+              fileType: 'csv',
+              // note that using 'dirPath' and 'fileType' are only relevant
+              //   for solutions 2 and 3; see Keshif doc for more details
+              //   (https://github.com/adilyalcin/Keshif/wiki/Docs:-Loading-Data).
+
+			  //Name of data table containing list of softwares
+			  tables: "Softwares"
+			},
+			summaries: [
+			  { name: "Topic"},
+			  { name: "EDAM" },
+			  { name: "Environment"},
+			  { name: "Access"},
+			],
+			recordDisplay: {
+			  sortColWidth: 45,
+			  sortBy: { title: 'id', inverse: true },
+			  textSearch: "Name",
+			  detailsToggle: "one",
+			  recordView: function() {
+				var appliPathPrefix = "{{d.CLUSTERNAME}} : ";
+				var str="";
+				str+="<div class=''>";
+				str+=formatToolName(this.Name);
+				str+="<a class='pubLink fa fa-external-link externallink' target='_blank' href='";
+				str+=this.Doc;
+				str+="'>   Documentation</a>";
+				str+="</div>";
+				str+="<span class='item_details'>";
+				str+="<div class='topicsbold'>";
+				str+=this.Description;
+				str+="</div>";
+				str+=formatSimpleTopics("Category", this.EDAM);
+				str+=formatSimpleTopics("Topic", this.Topic);
+				str+=formatSimpleTopics("Environment", this.Environment);
+				str+="<div>";
+				str+=" <span class='topics topicsbold'>Access:</span><span class='topics'> ";
+				if(this.Access!==""&&this.Access!==null){
+				  if(this.Access=="Cmdline only"){
+					str+=formatCmdLine(appliPathPrefix+this.Path, this.Name);
+				  }
+				  else if(this.Access=="Galaxy only"){
+					str+="<span class='topics'><a class='pubLink fa fa-external-link' target='_blank' href='";
+					str+=this.Doc;
+					str+="'> Galaxy Platform</a></span>";
+				  }
+				  else {
+					str+=formatCmdLine(appliPathPrefix+this.Path, this.Name);
+					str+="<span class='topics'>  and  ";
+					str+="<a class='pubLink fa fa-external-link' target='_blank' href='";
+					str+="https://usegalaxy.org";
+					str+="'> Galaxy Platform</a></span>";
+				  }
+				}
+				str+="</div>";
+				str+="</span>";
+				return str;
+			  }
+			}
+		  });
+		});
+    </script>
+</head>
+<body>
+  <div class="contents">
+    <div id="Software_Browser"></div>
+    <div id="Infobox"> Data compiled from {{d.CLUSTERNAME}}:{{d.TOOLDIRECTORYPATH}} </div>
+  </div>
+</body>
+</html>
