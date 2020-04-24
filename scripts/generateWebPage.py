@@ -21,8 +21,8 @@ def main(args):
         key, value = re.split(r'=', l.rstrip('\n'))
         data[key] = value
 
-        template = open('../template/template.html', "r").read()
-        webpage = open(os.path.join(args.path, 'index.html'), "w")
+    template = open('../template/template.html', "r").read()
+    webpage = open(os.path.join(args.path, 'index.html'), "w")
 
     #Load the template and make the rendering
     tm = Template(template)
