@@ -41,10 +41,13 @@ This tool is a Python 2.7 program. It also requires the following packages used 
 Depending on your host configuration you can install these dependencies using either Python package manager or Conda. At IFREMER, we use conda and we had setup a Conda environment as follows:
 
 ```
-conda create -n ToolDirectory-1.0
-source activate ToolDirectory-1.0
+conda create -n ToolDirectory-2.0
+source activate ToolDirectory-2.0
 conda install -c python=2.7 Jinja2 pandas
 ```
+
+Tool Directory also relies on the open-source version of [Keshif](https://github.com/adilyalcin/Keshif) data visualisation, included in this package, i.e. you do not have to install it.
+
 ## Prepare your Directory
 
 ### What is a directory?
