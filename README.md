@@ -15,7 +15,7 @@ The simple web viewer is a basic HTML Table aims at providing a clear overview o
 
 The data exploration viewer uses the open-source version version of [Keshif](https://github.com/adilyalcin/Keshif), a web-based data exploration environment for data analytics. It provides an extensive presentation of bioinformatics softwares along with data filtering features relying on [EDAM](https://ifb-elixirfr.github.io/edam-browser) Topic and Operation terms.
 
-![Tool Directory](doc/fact-viewer.png)
+![Tool Directory](doc/facet-viewer.png)
 
 In other words, ToolDirectory provides a convenient way to go from an "ugly" terminal listing:
 ```
