@@ -16,7 +16,7 @@ def getArgs():
     parser = argparse.ArgumentParser(description="")
     parser.add_argument('-u',dest="update",type=str,required=True,help='')
     parser.add_argument('-p',dest="path",type=str,default="../test/",help='')
-    parser.add_argument('-s',dest="skipdir",type=lambda s: [str(item) for item in s.split(',')],help='Delimited list input')
+    parser.add_argument('-s',dest="skipdir", default=[], type=lambda s: [str(item) for item in s.split(',')],help='Delimited list of folder(s) to ignore')
 
     args = parser.parse_args()
 
@@ -65,11 +65,9 @@ def updateToolProperties(toolsPropertiesListFiles, modifications):
         shutil.copy2(current, backup)
         # Open backup file and update (rewrite) the original file
         backupToolProp = open(backup, 'r')
-        # newToolProp = open(current, 'w')
+        newToolProp = open(current, 'w')
         # Devel
-        newToolProp = open(current+'.test', 'w')
-
-
+        # newToolProp = open(current+'.test', 'w')
         for l in backupToolProp:
             keyword, propertie = re.split(r'=', l.rstrip('\n'))
             # Get the tool name and extract the data to update
@@ -93,7 +91,7 @@ def updateToolProperties(toolsPropertiesListFiles, modifications):
 def main(args):
     # 1 - Get the tool and associated modification
     # Can be a modification of an existing key or insertion of a new key
-    modifications = toolProperties2update('tools2update.test')
+    modifications = toolProperties2update(args.update)
     # 2 - Collect all properties files
     toolsPropertiesListFiles = getFiles(args.path, args.skipdir)
     # 3 - Make the update
