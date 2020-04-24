@@ -35,7 +35,7 @@ import random
 
 # Root directory containing tools; defualt is the test Directory
 # You can use argument "-d" (see main, below)
-TOOLS_DIR      = "./test"
+TOOLS_DIR      = "../test/catalogue"
 
 # Extension of files containing tool's descriptions
 TOOL_EXT       = "tool.properties"
@@ -87,7 +87,8 @@ def getFiles(directory="."):
         for file in files:
             if file.endswith(TOOL_EXT):
                 abs_f=os.path.join(root, file)
-                filesList.append(abs_f)
+                print("{}".format(abs_f))
+		filesList.append(abs_f)
     return filesList
 
 # ------------------------------------------------------------------
@@ -175,7 +176,6 @@ if options.directory!=None:
 
 # step 1: collect all properties files
 filesList=getFiles(TOOLS_DIR)
-# filesList.sort(fileCompare) -> ne correspond pas à la syntaxe de sort() /!\/!\/!\/!\/!\/!\/!\/!\/!\/!\
 
 # step 2: read all tool's properties
 data=[]
