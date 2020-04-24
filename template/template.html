@@ -2,27 +2,29 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
   <head>
     <title>{{ d.PAGETITLE }}</title>
-
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-    <script type="text/javascript" src="../thirdparty/Keshif/js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="../thirdparty/Keshif/js/d3.4.2.6.min.js" charset="utf-8"></script>
-    <script type="text/javascript" src="../thirdparty/Keshif/keshif.js" charset="utf-8"></script>
-    <script type="text/javascript" src="../thirdparty/Keshif/helpin/helpin_material.js" charset="utf-8"></script>
-    <script type="text/javascript" src="../thirdparty/Keshif/helpin/helpin.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="./js/d3.4.2.6.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./keshif.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="./keshif.css"/ type="text/css">
+    <link rel="stylesheet" href="./font-awesome/css/font-awesome.min.css">
 
-    <script type="text/javascript" src="../thirdparty/Keshif/js/papaparse.min.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./js/papaparse.min.js" charset="utf-8"></script>
 
-    <link rel="stylesheet" href="../thirdparty/Keshif/keshif.css"/ type="text/css">
-    <link rel="stylesheet" href="../thirdparty/Keshif/font-awesome/css/font-awesome.min.css">
-    <link rel="stylesheet" href="../thirdparty/Keshif/helpin/helpin.css" type="text/css">
+    <script type="text/javascript" src="./demo/js/demo.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="./demo/css/demo.css" type="text/css">
 
-    <link rel="stylesheet" href="../css/software_browser.css" type="text/css">
+    <script type="text/javascript" src="./demo/helpin/helpin_material.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./demo/helpin/helpin.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="./demo/helpin/helpin.css" type="text/css">
 
     <script type="text/javascript">
-		var socialShare = false, demoHeader = false;
+
+//
+var socialShare = false, demoHeader = false;
+//
 
 		function formatToolName(toolName){
 		 var idx=toolName.lastIndexOf("-");
@@ -110,15 +112,15 @@
 				  }
 				  else if(this.Access=="Galaxy only"){
 					str+="<span class='topics'><a class='pubLink fa fa-external-link' target='_blank' href='";
-					str+=this.Doc;
-					str+="'> Galaxy Platform</a></span>";
+					str+="{{d.GALAXYURL}}";
+					str+="'> {{d.GALAXYNAME}}</a></span>";
 				  }
 				  else {
 					str+=formatCmdLine(appliPathPrefix+this.Path, this.Name);
 					str+="<span class='topics'>  and  ";
 					str+="<a class='pubLink fa fa-external-link' target='_blank' href='";
-					str+="https://usegalaxy.org";
-					str+="'> Galaxy Platform</a></span>";
+					str+="{{d.GALAXYURL}}";
+					str+="'> {{d.GALAXYNAME}}</a></span>";
 				  }
 				}
 				str+="</div>";
