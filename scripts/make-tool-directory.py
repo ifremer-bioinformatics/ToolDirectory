@@ -137,7 +137,7 @@ def orderProperties(properties):
 # argument properties: dictionary with tool's properties
 def writeCSV(properties):
     txt = open('Softwares.csv', 'w')
-    txt.write('Name,EDAM,Environment,Topic,Access,Doc,Description,Path\n')
+    txt.write('Name,Operation,Environment,Topic,Access,Doc,Description,Path\n')
     for tool in sorted(properties.keys(), key=lambda x:x.lower()):
         p = properties[tool]
         if p['CMDLINE'] == 'true' and p['GALAXY'] == 'true':
