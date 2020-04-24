@@ -6,13 +6,13 @@ This package provides an easy and convenient tool to display in a graphical way 
 
 Tool Directory was originally designed to provide a summary of all bioinformatics tools installed on the DATARMOR supercomputer at IFREMER.
 
-*Two views are available*: either a simple web page or a data exploration viewer. 
+**Two views are available**: either a simple web page or a data exploration viewer. 
 
-*The simple web viewer* is a basic HTML Table aims at providing a clear overview of software name and version, software classification keywords and direct link to documentation. 
+**The simple web viewer** is a basic HTML Table aims at providing a clear overview of software name and version, software classification keywords and direct link to documentation. 
 
 ![Tool Directory](doc/test-page.png)
 
-*The data exploration viewer* provides an extensive presentation of bioinformatics softwares along with data filtering features relying on [EDAM](https://ifb-elixirfr.github.io/edam-browser) Topic and Operation terms.
+**The data exploration viewer** provides an extensive presentation of bioinformatics softwares along with data filtering features relying on [EDAM](https://ifb-elixirfr.github.io/edam-browser) Topic and Operation terms.
 
 ![Tool Directory](doc/facet-viewer.png)
 
