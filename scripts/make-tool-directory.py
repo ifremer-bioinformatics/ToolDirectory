@@ -87,7 +87,6 @@ def getFiles(directory="."):
         for file in files:
             if file.endswith(TOOL_EXT):
                 abs_f=os.path.join(root, file)
-                print("{}".format(abs_f))
 		filesList.append(abs_f)
     return filesList
 
