@@ -23,7 +23,7 @@ def parseProperties(directory, ignore):
     'cmdline':       'CMDLINE=',
     'galaxy':        'GALAXY=',
     'documentation': 'URLDOC=',
-    'edam':          'KEYWORDS=',
+    'operation':     'KEYWORDS=',
     'environment':   'CMD_INSTALL=',
     'topic':         'TOPIC='
     }
@@ -62,7 +62,7 @@ def parseProperties(directory, ignore):
 
 def outputWriting(outpath, dictData):
     txt = open(os.path.join(outpath, 'Softwares.csv'), 'w')
-    txt.write('Name,EDAM,Environment,Topic,Access,Doc,Description,Path\n')
+    txt.write('Name,Operation,Environment,Topic,Access,Doc,Description,Path\n')
     # Iterate over each tool - sorted by name
     for tool in sorted(dictData.keys(), key=lambda x:x.lower()):
         # Get properties
@@ -78,7 +78,7 @@ def outputWriting(outpath, dictData):
             p['access'] = 'Galaxy only'
         # Write, ordered
         name = p['name'] + ' - ' + p['version']
-        txt.write('"{0}","{1}","{2}","{3}","{4}","{5}","{6}","{7}"\n'.format(name,p['edam'],p['environment'],p['topic'],p['access'],p['documentation'],p['description'],p['path']))
+        txt.write('"{0}","{1}","{2}","{3}","{4}","{5}","{6}","{7}"\n'.format(name,p['operation'],p['environment'],p['topic'],p['access'],p['documentation'],p['description'],p['path']))
     # Close file
     txt.close()
 
