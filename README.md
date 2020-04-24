@@ -2,11 +2,22 @@
 
 ## Introduction
 
-This package provides an easy and convenient tool to list softwares installed on a local system. The list itself is an HTML Table aims at providing a clear overview of software name and version, software classification keywords and direct link to documentation.
+This package provides an easy and convenient tool to display in a graphical way list softwares installed on a local system. 
 
 Tool Directory was originally designed to provide a summary of all bioinformatics tools installed on the DATARMOR supercomputer at IFREMER.
 
-In other words, we can go from an "ugly" terminal listing:
+Two views are available: either a simple web page or a data exploration viewer. 
+
+
+The simple web viewer is a basic HTML Table aims at providing a clear overview of software name and version, software classification keywords and direct link to documentation. 
+
+![Tool Directory](doc/test-page.png)
+
+The data exploration viewer uses the open-source version version of [Keshif](https://github.com/adilyalcin/Keshif), a web-based data exploration environment for data analytics. It provides an extensive presentation of bioinformatics softwares along with data filtering features relying on [EDAM](https://ifb-elixirfr.github.io/edam-browser) Topic and Operation terms.
+
+![Tool Directory](doc/fact-viewer.png)
+
+In other words, ToolDirectory provides a convenient way to go from an "ugly" terminal listing:
 ```
 /appli/bioinfo
   ├── blast
@@ -19,9 +30,7 @@ In other words, we can go from an "ugly" terminal listing:
   .../...
 ```
 
-to a nice view to be presented as a web page for our users:
-
-![Tool Directory](doc/test-page.png)
+to nice views to be presented as a web page for your users.
 
 ## Dependencies
 
@@ -96,10 +105,13 @@ VERSION: the release tag of the software
 CMDLINE: software available on the command-line? (only use one of: true, false)
 GALAXY: software available on GALAXY Workflow platform? (only use one of: true, false)
 URLDOC: URL to the user manual
-KEYWORDS: one or several keywords to classify your software
+KEYWORDS: one or several keywords to classify your software using EDAM Operation terms
+TOPIC: one or several keywords to classify your software using EDAM Topic terms
 CMD_INSTALL: the way a tool is installed. (one of: conda, docker, shell)
 ```
 All but GALAXY keys are valid to describe your softwares, whatever their field of application. Then, regarding KEYWORDS values, we rely on the EDAM-operation names (see http://edamontology.org/page). It is up to you to choose whatever naming system appropriate to classify your tools.
+
+For a complete list of example of such 'tool.properties' files, look at ![catalogue directory](test/catalogue).
 
 ### Modifying keys in Property files
 
@@ -134,3 +146,16 @@ where:
      my-listing.html: the list of your software, Html/Table formatted; use a
                 file name as needed
 ```
+
+## Setup the simple HTML based view
+
+Simply uses the procedure described in the Testing section, above.
+
+## Setup the Keshif based view
+
+## Licenses
+
+Tool Directory is released under the terms of the Apache 2 license.
+
+Keshif open-source is released under the terms of the BSD-3 clause license.
+
