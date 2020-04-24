@@ -1,5 +1,5 @@
-TEMPLATE=template.html
-WEBPAGEFILENAME=yourwebpage.html
 CLUSTERNAME=CLUSTER
 TOOLDIRECTORYPATH=/path/to/
 PAGETITLE=Webpage name for listing tools available @CLUSTER
+GALAXYNAME=Your Galaxy name
+GALAXYURL=https://your.galaxy.foo
