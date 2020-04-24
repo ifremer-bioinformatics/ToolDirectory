@@ -26,6 +26,8 @@ import pandas as pd
 import collections
 import string
 from optparse import OptionParser
+# Devel
+import random
 
 # ------------------------------------------------------------------
 # --  DEFINITIONS  -------------------------------------------------
@@ -55,52 +57,53 @@ KEYS_TO_LABELS = {
 # @DATA@ is a reverved keyword used to introduce value into formatted string
 # Accepted values for @DATA@ for CMDLINE and GALAXY: true, false (lower case!)
 DATA_FORMATTER = {
-  'URLDOC'      : '<a href="@DATA@"><img src="./images/document.png" border="0"></a>',
-  'CMDLINE'     : '<img src="./images/@DATA@.png" border="0">',
-  'CMD_INSTALL' : '<img src="./images/@DATA@.png" border="0">',
-  'GALAXY'      : '<img src="./images/@DATA@.png" border="0">'
+    'URLDOC'      : '<a href="@DATA@"><img src="./images/document.png" border="0"></a>',
+    'CMDLINE'     : '<img src="./images/@DATA@.png" border="0">',
+    'CMD_INSTALL' : '<img src="./images/@DATA@.png" border="0">',
+    'GALAXY'      : '<img src="./images/@DATA@.png" border="0">'
 }
 
 # ------------------------------------------------------------------
 # --  FUNCTIONS    -------------------------------------------------
 # ------------------------------------------------------------------
 
-def fileCompare(f1, f2):
-  props1 = readFile(f1)
-  props2 = readFile(f2)
-  if props1["NAME"].lower() < props2["NAME"].lower():
-     return -1
-  elif props1["NAME"].lower() == props2["NAME"].lower():
-     return 0
-  else:
-    return 1
+# def fileCompare(f1, f2):
+#     props1 = readFile(f1)
+#     props2 = readFile(f2)
+#     if props1["NAME"].lower() < props2["NAME"].lower():
+#         return -1
+#     elif props1["NAME"].lower() == props2["NAME"].lower():
+#         return 0
+#     else:
+#         return 1
 
 # ------------------------------------------------------------------
 # Collect properties files.
 # argument directory: root directory used to start collecting files
 # return a list of file absolute paths
 def getFiles(directory="."):
-  filesList=[]
-  for root, dirs, files in os.walk(TOOLS_DIR):
-    for file in files:
-      if file.endswith(TOOL_EXT):
-        abs_f=os.path.join(root, file)
-        filesList.append(abs_f)
-  return filesList
+    filesList=[]
+    for root, dirs, files in os.walk(TOOLS_DIR):
+        for file in files:
+            if file.endswith(TOOL_EXT):
+                abs_f=os.path.join(root, file)
+                filesList.append(abs_f)
+    return filesList
 
 # ------------------------------------------------------------------
 # Read properties from file as they are provided
 # argument: a file containing tool's properties
 # return: a dictionary with tool's properties
 def readFile(propertiesFile):
-  properties = {}
-  with open(propertiesFile) as myfile:
-    for line in myfile:
-      cleanedLine=line.strip()
-      if cleanedLine and cleanedLine[0]!='#':
-        name,value=cleanedLine.partition("=")[::2]
-        properties[name.strip()]=value.strip()
-  return properties
+    properties = {}
+    properties['PATH'] = os.path.dirname(propertiesFile)
+    with open(propertiesFile) as myfile:
+        for line in myfile:
+            cleanedLine=line.strip()
+            if cleanedLine and cleanedLine[0]!='#':
+                name,value=cleanedLine.partition("=")[::2]
+                properties[name.strip()]=value.strip()
+    return properties
 
 # ------------------------------------------------------------------
 # Format a particular value for HTML presentation
@@ -108,30 +111,57 @@ def readFile(propertiesFile):
 # argument value: the value to format
 # return a formatted value as a string
 def formatData(key, properties):
-  if key in DATA_FORMATTER:
-    new_value=string.replace(DATA_FORMATTER[key], "@DATA@", properties[key])
-    if key=="CMDLINE" and "CMD_INSTALL" in properties:
-      install_type=properties["CMD_INSTALL"]
-      new_value+=("&nbsp;"+string.replace(DATA_FORMATTER["CMD_INSTALL"], "@DATA@", install_type))
-    return new_value
-  else:
-    return properties[key]
+    if key in DATA_FORMATTER:
+        new_value=str.replace(DATA_FORMATTER[key], "@DATA@", properties[key])
+        if key=="CMDLINE" and "CMD_INSTALL" in properties:
+            install_type=properties["CMD_INSTALL"]
+            new_value+=("&nbsp;"+str.replace(DATA_FORMATTER["CMD_INSTALL"], "@DATA@", install_type))
+        return new_value
+    else:
+        return properties[key]
 
 # ------------------------------------------------------------------
 # Order properties
 # argument properties: dictionary with tool's properties
 # return an OrderedDict
 def orderProperties(properties):
-  orderedProperties=collections.OrderedDict()
-  for okey in ORDERED_KEYS:
-    if okey in properties:
-      orderedProperties[okey]=formatData(okey, properties)
-  return orderedProperties
+    orderedProperties=collections.OrderedDict()
+    for okey in ORDERED_KEYS:
+        if okey in properties:
+            orderedProperties[okey]=formatData(okey, properties)
+    return orderedProperties
+
+# ------------------------------------------------------------------
+# Write csv file for keshif
+# argument properties: dictionary with tool's properties
+def writeCSV(properties):
+    txt = open('Softwares.csv', 'w')
+    txt.write('Name,EDAM,Environment,Topic,Access,Doc,Description,Path\n')
+    for tool in sorted(properties.keys(), key=lambda x:x.lower()):
+        p = properties[tool]
+        if p['CMDLINE'] == 'true' and p['GALAXY'] == 'true':
+            p['ACCESS'] = 'Galaxy and cmdline'
+        elif p['CMDLINE'] == 'true' and p['GALAXY'] == 'false':
+            p['ACCESS'] = 'Cmdline only'
+        else:
+            p['ACCESS'] = 'Galaxy only'
+        # Topic -> randomized for the dev
+        p['TOPIC'] = random.choice(['Epigenetics','Multi-thematic','Genomics','Metabarcoding','Metagenomics','Transcriptomics','Other'])
+        name = p['NAME'] + ' - ' + p['VERSION']
+        txt.write('"{0}","{1}","{2}","{3}","{4}","{5}","{6}","{7}"\n'.format(name,
+                                                                            p['KEYWORDS'],
+                                                                            p['CMD_INSTALL'],
+                                                                            p['TOPIC'],
+                                                                            p['ACCESS'],
+                                                                            p['URLDOC'],
+                                                                            p['DESCRIPTION'],
+                                                                            p['PATH']))
+    #Close file
+    txt.close()
 
 # ------------------------------------------------------------------
 # --  MAIN  --------------------------------------------------------
 # ------------------------------------------------------------------
-
 # Collect arguments if any provided
 parser = OptionParser()
 parser.add_option(
@@ -145,16 +175,27 @@ if options.directory!=None:
 
 # step 1: collect all properties files
 filesList=getFiles(TOOLS_DIR)
-filesList.sort(fileCompare)
+# filesList.sort(fileCompare) -> ne correspond pas à la syntaxe de sort() /!\/!\/!\/!\/!\/!\/!\/!\/!\/!\
 
 # step 2: read all tool's properties
 data=[]
+csv={}
 for fl in filesList:
-  props = readFile(fl)
-  oprops = orderProperties(props)
-  data.append(oprops)
+    # In case of problem with the input file
+    print(fl)
+    # Get and order properties
+    props = readFile(fl)
+    oprops = orderProperties(props)
+    data.append(oprops)
+    # Get the data for the csv file
+    tool = props['NAME'] +'-'+ props['VERSION']
+    csv[tool] = props
 
-# step 3: use Pandas to prepare HTML output
+# step3: write csv file with informations from all tools
+# will be used for Keshif visualisation
+writeCSV(csv)
+
+# step 4: use Pandas to prepare HTML output
 #pd.set_option('display.max_colwidth', -1)
 
 # convert our data to a Pandas' data frame
@@ -181,7 +222,8 @@ s = df.style.set_properties(
         **{'text-align': 'center','border-bottom': linestyle,'padding-left': cellpadding})\
       .set_table_styles(d)
 
-
-print "<html><body>"
-print s.render()
-print "</body></html>"
+# write output html files
+webhtml = open('clustertools.html', 'w')
+webhtml.write("<html>\n<body>\n")
+webhtml.write(s.render())
+webhtml.write("\n</body>\n</html>\n")
