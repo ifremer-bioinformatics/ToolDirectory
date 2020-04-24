@@ -8,11 +8,11 @@ Tool Directory was originally designed to provide a summary of all bioinformatic
 
 **Two views are available**: either a simple web page or a data exploration viewer. 
 
-**The simple web viewer** is a basic HTML Table aims at providing a clear overview of software name and version, software classification keywords and direct link to documentation. 
+**The simple web viewer** is a basic HTML Table aims at providing a clear overview of software name and version, software classification keywords and direct link to documentation. It is available since Tool Directory first release.
 
 ![Tool Directory](doc/test-page.png)
 
-**The data exploration viewer** provides an extensive presentation of bioinformatics softwares along with data filtering features relying on [EDAM](https://ifb-elixirfr.github.io/edam-browser) Topic and Operation terms.
+**The data exploration viewer** provides an extensive presentation of bioinformatics softwares along with data filtering features relying on [EDAM](https://ifb-elixirfr.github.io/edam-browser) Topic and Operation terms. It was introduced with Tool Directory release 2.0.
 
 ![Tool Directory](doc/facet-viewer.png)
 
