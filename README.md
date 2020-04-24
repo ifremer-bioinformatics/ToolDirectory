@@ -6,14 +6,13 @@ This package provides an easy and convenient tool to display in a graphical way 
 
 Tool Directory was originally designed to provide a summary of all bioinformatics tools installed on the DATARMOR supercomputer at IFREMER.
 
-Two views are available: either a simple web page or a data exploration viewer. 
+*Two views are available*: either a simple web page or a data exploration viewer. 
 
-
-The simple web viewer is a basic HTML Table aims at providing a clear overview of software name and version, software classification keywords and direct link to documentation. 
+*The simple web viewer* is a basic HTML Table aims at providing a clear overview of software name and version, software classification keywords and direct link to documentation. 
 
 ![Tool Directory](doc/test-page.png)
 
-The data exploration viewer uses the open-source version version of [Keshif](https://github.com/adilyalcin/Keshif), a web-based data exploration environment for data analytics. It provides an extensive presentation of bioinformatics softwares along with data filtering features relying on [EDAM](https://ifb-elixirfr.github.io/edam-browser) Topic and Operation terms.
+*The data exploration viewer* provides an extensive presentation of bioinformatics softwares along with data filtering features relying on [EDAM](https://ifb-elixirfr.github.io/edam-browser) Topic and Operation terms.
 
 ![Tool Directory](doc/facet-viewer.png)
 
@@ -151,11 +150,11 @@ where:
 
 Simply uses the procedure described in the Testing section, above.
 
-## Setup the Keshif based view
+## Setup the data exploration view
 
 ## Licenses
 
 Tool Directory is released under the terms of the Apache 2 license.
 
-Keshif open-source is released under the terms of the BSD-3 clause license.
+Tool Directory data exploration viewer uses the open-source version version of [Keshif](https://github.com/adilyalcin/Keshif), a web-based data exploration environment for data analytics. Keshif open-source is released under the terms of the BSD-3 clause license.
 
