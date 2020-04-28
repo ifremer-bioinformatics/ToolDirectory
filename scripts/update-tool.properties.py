@@ -15,8 +15,7 @@ from collections import defaultdict
 def getArgs():
     parser = argparse.ArgumentParser(description="")
     parser.add_argument('-u',dest="update",type=str,required=True,help='')
-    parser.add_argument('-p',dest="path",type=str,default="../test/",help='')
-    parser.add_argument('-s',dest="skipdir", default=[], type=lambda s: [str(item) for item in s.split(',')],help='Delimited list of folder(s) to ignore')
+    parser.add_argument('-p',dest="toolspath",type=str,default="../test/",help='')
 
     args = parser.parse_args()
 
@@ -34,19 +33,36 @@ def toolProperties2update(modifications):
         modifTools[tool][key] = newVal
     return modifTools
 
-# Collect properties files.
+# Collect all files at a certain depth
 # Argument directory: root directory used to start collecting files
-# Argument skipdir: a list of directory to ignore
+# Argument depth: depth level to digging - fixed at 2 as structure is ./toolName/version/
+# Return an os.walk() object - path, dirs names, files into each dir
+def walklevel(directory, depth = 2):
+    # If depth is negative, just walk
+    # Unsed in the project
+    if depth < 0:
+        for root, dirs, files in os.walk(directory):
+            yield root, dirs, files
+    # path.count works because is a file has a "/" it will show up in the list as a ":"
+    else:
+        path = directory.rstrip(os.path.sep)
+        num_sep = path.count(os.path.sep)
+        for root, dirs, files in os.walk(path):
+            yield root, dirs, files
+            num_sep_this = root.count(os.path.sep)
+            if num_sep + depth <= num_sep_this:
+                del dirs[:]
+
+
+# Collect properties files.
+# Argument directores: root, dirs and files from os.walk()
 # Return a list of file absolute paths
-def getFiles(directory, skipdir):
+def getFiles(directories):
     filesList=[]
-    for dir in os.listdir(directory):
-    	if not dir in skipdir:
-            for root, dirs, files in os.walk(os.path.join(directory,dir)):
-                for file in files:
-                    if file.endswith('tool.properties'):
-                        abs_f=os.path.join(root, file)
-                        filesList.append(abs_f)
+    for root, dirs, files in directories:
+        if 'tool.properties' in files:
+            abs_f=os.path.join(root, 'tool.properties')
+            filesList.append(abs_f)
     return filesList
 
 # Update tool.properties files and save the original file.
@@ -57,6 +73,9 @@ def updateToolProperties(toolsPropertiesListFiles, modifications):
     now = datetime.datetime.now()
     daytime = now.strftime("%Y-%m-%d")
     # Read each file, make a backup file and create the new propertie file
+    # TODO: read each file but only make a backup if needed
+    # Parse and store all tool.properties and in a new function, only backup
+    # and update listed files
     for f in toolsPropertiesListFiles:
         print(f)
         current = f
@@ -92,9 +111,11 @@ def main(args):
     # 1 - Get the tool and associated modification
     # Can be a modification of an existing key or insertion of a new key
     modifications = toolProperties2update(args.update)
-    # 2 - Collect all properties files
-    toolsPropertiesListFiles = getFiles(args.path, args.skipdir)
-    # 3 - Make the update
+    # 2 - Digging tool directory and explore at 2 level of depth
+    directories = walklevel(args.toolspath)
+    # 3 - Collect all properties files
+    toolsPropertiesListFiles = getFiles(directories)
+    # 4 - Make the update
     updateToolProperties(toolsPropertiesListFiles, modifications)
 
 if __name__ == '__main__':
