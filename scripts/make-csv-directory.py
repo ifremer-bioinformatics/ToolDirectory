@@ -28,7 +28,7 @@ import argparse
 def getArgs():
     parser = argparse.ArgumentParser(description="")
     parser.add_argument('-p',dest="toolspath",type=str,default="../test/",help='')
-    parser.add_argument('-o',dest="outpath",type=str,default="../test/",help='')
+    parser.add_argument('-o',dest="csvfile",type=str,default="../test/Softwares.csv",help='')
 
     args = parser.parse_args()
 
@@ -87,8 +87,8 @@ def parseProperties(directories):
     # Return the dict for printing
     return(properties)
 
-def outputWriting(outpath, dictData):
-    txt = open(os.path.join(outpath, 'Softwares.csv'), 'w')
+def outputWriting(csvfile, dictData):
+    txt = open(csvfile, 'w')
     txt.write('Name,Operation,Environment,Topic,Access,Doc,Description,Path\n')
     # Iterate over each tool - sorted by name
     for tool in sorted(dictData.keys(), key=lambda x:x.lower()):
@@ -115,7 +115,7 @@ def main(args):
     # 2 - parse all tool.properties
     parsedProperties = parseProperties(directories)
     # 3 - write csv file
-    outputWriting(args.outpath ,parsedProperties)
+    outputWriting(args.csvfile ,parsedProperties)
 
 if __name__ == '__main__':
     args = getArgs()
