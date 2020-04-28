@@ -25,43 +25,7 @@ import os
 import pandas as pd
 import collections
 import string
-from optparse import OptionParser
-# Devel
-import random
-
-# ------------------------------------------------------------------
-# --  DEFINITIONS  -------------------------------------------------
-# ------------------------------------------------------------------
-
-# Root directory containing tools; defualt is the test Directory
-# You can use argument "-d" (see main, below)
-TOOLS_DIR      = "../test/catalogue"
-
-# Extension of files containing tool's descriptions
-TOOL_EXT       = "tool.properties"
-
-# Property keys used to build HTML table:
-#  1- colum order to use in the table
-ORDERED_KEYS   = ["NAME","VERSION","CMDLINE","GALAXY","KEYWORDS","URLDOC"]
-#  2- column labels
-KEYS_TO_LABELS = {
-        'NAME'    : 'Tool name',
-        'VERSION' : 'release',
-        'CMDLINE' : 'cmd-line',
-        'GALAXY'  : 'Galaxy',
-        'KEYWORDS': 'Available for',
-        'URLDOC'  : 'Manual'
-        }
-
-# Which keys have to be reformatted
-# @DATA@ is a reverved keyword used to introduce value into formatted string
-# Accepted values for @DATA@ for CMDLINE and GALAXY: true, false (lower case!)
-DATA_FORMATTER = {
-    'URLDOC'      : '<a href="@DATA@"><img src="./images/document.png" border="0"></a>',
-    'CMDLINE'     : '<img src="./images/@DATA@.png" border="0">',
-    'CMD_INSTALL' : '<img src="./images/@DATA@.png" border="0">',
-    'GALAXY'      : '<img src="./images/@DATA@.png" border="0">'
-}
+import argparse
 
 # ------------------------------------------------------------------
 # --  FUNCTIONS    -------------------------------------------------
@@ -78,16 +42,36 @@ DATA_FORMATTER = {
 #         return 1
 
 # ------------------------------------------------------------------
+# Collect all files at a certain depth
+# Argument directory: root directory used to start collecting files
+# Argument depth: depth level to digging - fixed at 2 as structure is ./toolName/version/
+# Return an os.walk() object - path, dirs names, files into each dir
+def walklevel(directory=".", depth = 2):
+    # If depth is negative, just walk
+    # Unsed in the project
+    if depth < 0:
+        for root, dirs, files in os.walk(directory):
+            yield root, dirs, files
+    # path.count works because is a file has a "/" it will show up in the list as a ":"
+    else:
+        path = directory.rstrip(os.path.sep)
+        num_sep = path.count(os.path.sep)
+        for root, dirs, files in os.walk(path):
+            yield root, dirs, files
+            num_sep_this = root.count(os.path.sep)
+            if num_sep + depth <= num_sep_this:
+                del dirs[:]
+
+# ------------------------------------------------------------------
 # Collect properties files.
-# argument directory: root directory used to start collecting files
-# return a list of file absolute paths
-def getFiles(directory="."):
+# Argument directores: root, dirs and files from os.walk()
+# Return a list of file absolute paths
+def getFiles(directories):
     filesList=[]
-    for root, dirs, files in os.walk(TOOLS_DIR):
-        for file in files:
-            if file.endswith(TOOL_EXT):
-                abs_f=os.path.join(root, file)
-		filesList.append(abs_f)
+    for root, dirs, files in directories:
+        if 'tool.properties' in files:
+            abs_f=os.path.join(root, 'tool.properties')
+            filesList.append(abs_f)
     return filesList
 
 # ------------------------------------------------------------------
@@ -110,7 +94,7 @@ def readFile(propertiesFile):
 # argument key: key of property to format
 # argument value: the value to format
 # return a formatted value as a string
-def formatData(key, properties):
+def formatData(key, properties, DATA_FORMATTER):
     if key in DATA_FORMATTER:
         new_value=str.replace(DATA_FORMATTER[key], "@DATA@", properties[key])
         if key=="CMDLINE" and "CMD_INSTALL" in properties:
@@ -124,11 +108,11 @@ def formatData(key, properties):
 # Order properties
 # argument properties: dictionary with tool's properties
 # return an OrderedDict
-def orderProperties(properties):
+def orderProperties(properties, ORDERED_KEYS, DATA_FORMATTER):
     orderedProperties=collections.OrderedDict()
     for okey in ORDERED_KEYS:
         if okey in properties:
-            orderedProperties[okey]=formatData(okey, properties)
+            orderedProperties[okey]=formatData(okey, properties, DATA_FORMATTER)
     return orderedProperties
 
 # ------------------------------------------------------------------
@@ -145,8 +129,6 @@ def writeCSV(properties):
             p['ACCESS'] = 'Cmdline only'
         else:
             p['ACCESS'] = 'Galaxy only'
-        # Topic -> randomized for the dev
-        p['TOPIC'] = random.choice(['Epigenetics','Multi-thematic','Genomics','Metabarcoding','Metagenomics','Transcriptomics','Other'])
         name = p['NAME'] + ' - ' + p['VERSION']
         txt.write('"{0}","{1}","{2}","{3}","{4}","{5}","{6}","{7}"\n'.format(name,
                                                                             p['KEYWORDS'],
@@ -160,69 +142,109 @@ def writeCSV(properties):
     txt.close()
 
 # ------------------------------------------------------------------
-# --  MAIN  --------------------------------------------------------
+# Write html file for direct visualisation
+# argument properties: data with properties and key to visualize
+def writeHTML(data, KEYS_TO_LABELS):
+    # step 4: use Pandas to prepare HTML output
+    #pd.set_option('display.max_colwidth', -1)
+    # convert our data to a Pandas' data frame
+    df = pd.DataFrame.from_dict(data)
+    df.rename(columns=lambda x: KEYS_TO_LABELS[x], inplace=True)
+
+    # Dict used to setup table styles
+    cellpadding = '10px'
+    linestyle = '1px solid #ddd'
+    d = [
+        {'selector':'th','props':[('text-align', 'center'),('border-bottom', linestyle),('padding-left',cellpadding)]},
+        {'selector':'tr:hover','props': [('background-color', '#F0F8FF')]}
+      ]
+
+    all_labels = list(KEYS_TO_LABELS.values())
+    firstColLabel = all_labels.pop(0)
+
+    # format the data as an HTML table
+    s = df.style.set_properties(
+            subset=[firstColLabel],
+            **{'text-align': 'left','border-bottom': linestyle,'padding-left': cellpadding})\
+          .set_properties(
+            subset=all_labels,
+            **{'text-align': 'center','border-bottom': linestyle,'padding-left': cellpadding})\
+          .set_table_styles(d)
+
+    # write output html files
+    webhtml = open('clustertools.html', 'w')
+    webhtml.write("<html>\n<body>\n")
+    webhtml.write(s.render())
+    webhtml.write("\n</body>\n</html>\n")
+
 # ------------------------------------------------------------------
-# Collect arguments if any provided
-parser = OptionParser()
-parser.add_option(
-    "-d", "--directory",
-    dest="directory",
-    help="home directory of software properties",
-    metavar="DIR")
-(options, args) = parser.parse_args()
-if options.directory!=None:
-  TOOLS_DIR=options.directory
+def getArgs():
+    parser = argparse.ArgumentParser(description="")
+    parser.add_argument('-d',dest="directory",type=str,default="../test/catalogue/",help='home directory of software properties')
+    args = parser.parse_args()
 
-# step 1: collect all properties files
-filesList=getFiles(TOOLS_DIR)
+    return args
 
-# step 2: read all tool's properties
-data=[]
-csv={}
-for fl in filesList:
-    # In case of problem with the input file
-    print(fl)
-    # Get and order properties
-    props = readFile(fl)
-    oprops = orderProperties(props)
-    data.append(oprops)
-    # Get the data for the csv file
-    tool = props['NAME'] +'-'+ props['VERSION']
-    csv[tool] = props
+def main(args):
+    # ------------------------------------------------------------------
+    # --  DEFINITIONS  -------------------------------------------------
+    # ------------------------------------------------------------------
+    # Extension of files containing tool's descriptions
+    TOOL_EXT       = "tool.properties"
+    # Property keys used to build HTML table:
+    #  1- colum order to use in the table
+    ORDERED_KEYS   = ["NAME","VERSION","CMDLINE","GALAXY","KEYWORDS","URLDOC"]
+    #  2- column labels
+    KEYS_TO_LABELS = {
+            'NAME'    : 'Tool name',
+            'VERSION' : 'release',
+            'CMDLINE' : 'cmd-line',
+            'GALAXY'  : 'Galaxy',
+            'KEYWORDS': 'Available for',
+            'URLDOC'  : 'Manual'
+            }
+    # Which keys have to be reformatted
+    # @DATA@ is a reverved keyword used to introduce value into formatted string
+    # Accepted values for @DATA@ for CMDLINE and GALAXY: true, false (lower case!)
+    DATA_FORMATTER = {
+        'URLDOC'      : '<a href="@DATA@"><img src="./images/document.png" border="0"></a>',
+        'CMDLINE'     : '<img src="./images/@DATA@.png" border="0">',
+        'CMD_INSTALL' : '<img src="./images/@DATA@.png" border="0">',
+        'GALAXY'      : '<img src="./images/@DATA@.png" border="0">'
+    }
 
-# step3: write csv file with informations from all tools
-# will be used for Keshif visualisation
-writeCSV(csv)
+    # ------------------------------------------------------------------
+    # --  MAIN  --------------------------------------------------------
+    # ------------------------------------------------------------------
+    # step 1: digging tool directory and explore at 2 level of depth
+    directories = walklevel(args.directory)
 
-# step 4: use Pandas to prepare HTML output
-#pd.set_option('display.max_colwidth', -1)
+    # step 2: collect all properties files
+    filesList=getFiles(directories)
 
-# convert our data to a Pandas' data frame
-df = pd.DataFrame.from_dict(data)
-df.rename(columns=lambda x: KEYS_TO_LABELS[x], inplace=True)
+    # step 3: read all tool's properties
+    # TODO: keep only one structure instead of 2 for csv and html writing
+    data=[]
+    csv={}
+    for fl in filesList:
+        # In case of problem with the input file
+        print(fl)
+        # Get and order properties
+        props = readFile(fl)
+        oprops = orderProperties(props, ORDERED_KEYS, DATA_FORMATTER)
+        data.append(oprops)
+        # Get the data for the csv file
+        tool = props['NAME'] +'-'+ props['VERSION']
+        csv[tool] = props
 
-# Dict used to setup table styles
-cellpadding = '10px'
-linestyle = '1px solid #ddd'
-d = [
-    {'selector':'th','props':[('text-align', 'center'),('border-bottom', linestyle),('padding-left',cellpadding)]},
-    {'selector':'tr:hover','props': [('background-color', '#F0F8FF')]}
-  ]
+    # step4: write csv file with informations from all tools
+    # will be used for Keshif visualisation
+    writeCSV(csv)
 
-all_labels = list(KEYS_TO_LABELS.values())
-firstColLabel = all_labels.pop(0)
+    # step5: write html file with informations from all tools
+    # backup option if Keshif visualisation is problematic
+    writeHTML(data, KEYS_TO_LABELS)
 
-# format the data as an HTML table
-s = df.style.set_properties(
-        subset=[firstColLabel],
-        **{'text-align': 'left','border-bottom': linestyle,'padding-left': cellpadding})\
-      .set_properties(
-        subset=all_labels,
-        **{'text-align': 'center','border-bottom': linestyle,'padding-left': cellpadding})\
-      .set_table_styles(d)
-
-# write output html files
-webhtml = open('clustertools.html', 'w')
-webhtml.write("<html>\n<body>\n")
-webhtml.write(s.render())
-webhtml.write("\n</body>\n</html>\n")
+if __name__ == '__main__':
+    args = getArgs()
+    main(args)
