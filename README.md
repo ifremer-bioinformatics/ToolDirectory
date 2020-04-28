@@ -155,6 +155,11 @@ Simply uses the procedure described in the Testing section, above.
 
 ## Setup the data exploration view
 
+- On your web server, locate the 'www' directory, then create some sub-folder, e.g. 'tool-dirrectory' (to do once) ;
+- Copy content of 'thirdparty/Keshif' into 'www/tool-dirrectory' (to do once) ;
+- Copy file 'css/software_browser.css' into 'www/tool-dirrectory' (to do once) ;
+- Run script 'script/tool.properties2csv.py' to prepare content of 'template' and place it into 'www/tool-dirrectory' (to do each time yout install a new software)
+
 ## Licenses
 
 Tool Directory is released under the terms of the Apache 2 license.
