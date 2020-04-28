@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 # =============================================================================
-# Tool Directory - v1.0.0
+# Tool Directory
 #
 # A program to prepare an HTML table listing softwares available on
 # a file system.
@@ -18,7 +18,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-# (c) 2017 Ifremer-Bioinformatics Team
+# (c) 2017-20 Ifremer-Bioinformatics Team
 # =============================================================================
 
 import os
@@ -30,16 +30,6 @@ import argparse
 # ------------------------------------------------------------------
 # --  FUNCTIONS    -------------------------------------------------
 # ------------------------------------------------------------------
-
-# def fileCompare(f1, f2):
-#     props1 = readFile(f1)
-#     props2 = readFile(f2)
-#     if props1["NAME"].lower() < props2["NAME"].lower():
-#         return -1
-#     elif props1["NAME"].lower() == props2["NAME"].lower():
-#         return 0
-#     else:
-#         return 1
 
 # ------------------------------------------------------------------
 # Collect all files at a certain depth

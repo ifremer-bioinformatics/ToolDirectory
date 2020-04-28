@@ -1,5 +1,26 @@
 #!/usr/bin/env python3
 
+# =============================================================================
+# Tool Directory 
+#
+# A program to prepare an HTML table listing softwares available on
+# a file system.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# (c) 2017-20 Ifremer-Bioinformatics Team
+# =============================================================================
+
 import os
 import re
 import argparse
@@ -8,7 +29,6 @@ def getArgs():
     parser = argparse.ArgumentParser(description="")
     parser.add_argument('-p',dest="toolspath",type=str,default="../test/",help='')
     parser.add_argument('-o',dest="outpath",type=str,default="../test/",help='')
-    # parser.add_argument('-s',dest="skipdir", default=[], type=lambda s: [str(item) for item in s.split(',')],help='Delimited list of tool folder(s) to ignore')
 
     args = parser.parse_args()
 
