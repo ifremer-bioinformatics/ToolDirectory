@@ -134,7 +134,8 @@ In a similar way, you can add more CMD_INSTALL values. If you do so, just ensure
 You can test the tool as follows:
 
 ```
-make-tool-directory.py > test.html
+cd scripts
+./make-html-directory.py -o test.html
 ```
 Then open "test.html" in your web browser. You should see sometjing like this:
 
@@ -145,7 +146,8 @@ Then open "test.html" in your web browser. You should see sometjing like this:
 You use Tool Directory in a very straightforward way:
 
 ```
-make-tool-directory.py -d <directory> > my-listing.html
+cd scripts
+./make-html-directory.py -p <directory> -o my-listing.html
 
 where:
      directory: root directory of your software installation; considering our
@@ -161,12 +163,20 @@ Simply uses the procedure described in the Testing section, above.
 
 ## Setup the data exploration view
 
-- On your web server, locate the 'www' directory, then create some sub-folder, e.g. 'tool-directory' (to do once) ;
-- Copy content of 'thirdparty/Keshif/' into 'www/tool-directory' (to do once) ;
-- Copy file 'css/software_browser.css' into 'www/tool-directory' (to do once) ;
-- Edit file 'template/example.lst' and update field values to match your system (to do once) ;
-- Run script 'scripts/generateWebPage.py' to generate html template into 'www/tool-directory' (to do once) ;
-- Run script 'scripts/tool.properties2csv.py' to prepare content of 'template' and place it into 'www/tool-directory' (to do each time yout install a new software)
+### Prepare the dynamic viewer basic files
+
+Steps to execute one time  are
+- On your web server, locate the 'www' directory, then create a sub-folder, e.g. 'tool-directory' ;
+- Copy content of 'thirdparty/Keshif/*' into 'www/tool-directory' ;
+- Copy file 'css/software_browser.css' into 'www/tool-directory' ;
+- Edit file 'template/example.lst' and update field values to match your system ;
+- Run script 'scripts/generateWebPage.py' to generate html template into 'www/tool-directory' ;
+
+### Prepare the CSV file required by the viewer
+
+- Run script 'scripts/make-csv-directory.py' to prepare CSV file' and place it into 'www/tool-directory'.
+
+That step has to be executed each time yout install a new software into your repository of tools; at Ifremer, we use a cron task.
 
 ## Licenses
 
