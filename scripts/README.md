@@ -30,11 +30,12 @@ To generate the main web page for the the dynamic data viewer, use:
 ./generateWebPage.py -i ../template/template.html -p <directory>
 
 where:
-     directory: target directory to place generate HTML fil
+     directory: target directory to place generate HTML file
 ```
 
 ## Use of script to manage project
 
-To collect all "tool.properties" files of a software repository, use `collect-tool-properties.sh`. No arguments required, simply edit the script before use (very simple to do).
+To collect all "tool.properties" files of a software repository, use `collect-tool-properties.sh`. No arguments required, simply edit the script before use (very simple to do: edit variables SOURCE_DIR and TARGET_DIR).
+
 
 
