@@ -2,23 +2,13 @@
 
 ## Introduction
 
-This package provides an easy and convenient tool to display in a graphical way list softwares installed on a local system. 
+This package provides an easy and convenient tool to display in a graphical way list of softwares installed on a computer. 
 
 Tool Directory was originally designed to provide a summary of all bioinformatics tools installed on the DATARMOR supercomputer at IFREMER.
 
-**Two views are available**: either a simple web page or a data exploration viewer. 
-
-**The simple web viewer** is a basic HTML Table aims at providing a clear overview of software name and version, software classification keywords and direct link to documentation. It is available since Tool Directory first release.
-
-![Tool Directory](doc/test-page.png)
-
-**The data exploration viewer** provides an extensive presentation of bioinformatics softwares along with data filtering features relying on [EDAM](https://ifb-elixirfr.github.io/edam-browser) Topic and Operation terms. It was introduced with Tool Directory release 2.0.
-
-![Tool Directory](doc/facet-viewer.png)
-
-In other words, ToolDirectory provides a convenient way to go from an "ugly" terminal listing:
+ToolDirectory provides a convenient way to go from an "ugly" terminal listing:
 ```
-/appli/bioinfo
+/path/to/bioinfo-softwares
   ├── blast
   │    ├── 2.2.31
   │    └── 2.6.0
@@ -29,7 +19,23 @@ In other words, ToolDirectory provides a convenient way to go from an "ugly" ter
   .../...
 ```
 
-to nice views to be presented as a web page for your users.
+to nice views to be presented on a web page for your users.
+
+**Two views are available**: 
+- a simple web page (since ToolDirectory v1)
+- a dynamic data exploration viewer (introduced with ToolDirectory v2). 
+
+### The simple web viewer
+
+This is a basic HTML Table aims at providing a clear overview of software name and version, software classification keywords and direct link to documentation. It is available since Tool Directory first release.
+
+![Tool Directory](doc/test-page.png)
+
+### The dynamic data exploration viewer
+
+It provides an extensive presentation of bioinformatics softwares along with data filtering features relying on [EDAM](https://ifb-elixirfr.github.io/edam-browser) Topic and Operation terms. It was introduced with Tool Directory release 2.0.
+
+![Tool Directory](doc/facet-viewer.png)
 
 ## Dependencies
 
@@ -43,7 +49,7 @@ Depending on your host configuration you can install these dependencies using ei
 ```
 conda create -n ToolDirectory-2.0
 source activate ToolDirectory-2.0
-conda install -c python=2.7 Jinja2 pandas
+conda install -c python=3.6 Jinja2 pandas
 ```
 
 Tool Directory also relies on the open-source version of [Keshif](https://github.com/adilyalcin/Keshif) data visualisation, included in this package, i.e. you do not have to install it.
