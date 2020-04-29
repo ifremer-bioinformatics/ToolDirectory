@@ -187,10 +187,10 @@ def main(args):
 
     # step 2: collect all properties files
     filesList=getFiles(directories)
+    filesList.sort(key=str.lower)
 
     # step 3: read all tool's properties
     data=[]
-    csv={}
     for fl in filesList:
         # In case of problem with the input file
         print(fl)
