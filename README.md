@@ -155,10 +155,12 @@ Simply uses the procedure described in the Testing section, above.
 
 ## Setup the data exploration view
 
-- On your web server, locate the 'www' directory, then create some sub-folder, e.g. 'tool-dirrectory' (to do once) ;
-- Copy content of 'thirdparty/Keshif' into 'www/tool-dirrectory' (to do once) ;
-- Copy file 'css/software_browser.css' into 'www/tool-dirrectory' (to do once) ;
-- Run script 'script/tool.properties2csv.py' to prepare content of 'template' and place it into 'www/tool-dirrectory' (to do each time yout install a new software)
+- On your web server, locate the 'www' directory, then create some sub-folder, e.g. 'tool-directory' (to do once) ;
+- Copy content of 'thirdparty/Keshif/' into 'www/tool-directory' (to do once) ;
+- Copy file 'css/software_browser.css' into 'www/tool-directory' (to do once) ;
+- Edit file 'template/example.lst' and update field values to match your system (to do once) ;
+- Run script 'scripts/generateWebPage.py' to generate html template into 'www/tool-directory' (to do once) ;
+- Run script 'scripts/tool.properties2csv.py' to prepare content of 'template' and place it into 'www/tool-directory' (to do each time yout install a new software)
 
 ## Licenses
 

@@ -106,35 +106,9 @@ def orderProperties(properties, ORDERED_KEYS, DATA_FORMATTER):
     return orderedProperties
 
 # ------------------------------------------------------------------
-# Write csv file for keshif
-# argument properties: dictionary with tool's properties
-def writeCSV(properties):
-    txt = open('Softwares.csv', 'w')
-    txt.write('Name,Operation,Environment,Topic,Access,Doc,Description,Path\n')
-    for tool in sorted(properties.keys(), key=lambda x:x.lower()):
-        p = properties[tool]
-        if p['CMDLINE'] == 'true' and p['GALAXY'] == 'true':
-            p['ACCESS'] = 'Galaxy and cmdline'
-        elif p['CMDLINE'] == 'true' and p['GALAXY'] == 'false':
-            p['ACCESS'] = 'Cmdline only'
-        else:
-            p['ACCESS'] = 'Galaxy only'
-        name = p['NAME'] + ' - ' + p['VERSION']
-        txt.write('"{0}","{1}","{2}","{3}","{4}","{5}","{6}","{7}"\n'.format(name,
-                                                                            p['KEYWORDS'],
-                                                                            p['CMD_INSTALL'],
-                                                                            p['TOPIC'],
-                                                                            p['ACCESS'],
-                                                                            p['URLDOC'],
-                                                                            p['DESCRIPTION'],
-                                                                            p['PATH']))
-    #Close file
-    txt.close()
-
-# ------------------------------------------------------------------
 # Write html file for direct visualisation
 # argument properties: data with properties and key to visualize
-def writeHTML(data, KEYS_TO_LABELS):
+def writeHTML(htmlfile, data, KEYS_TO_LABELS):
     # step 4: use Pandas to prepare HTML output
     #pd.set_option('display.max_colwidth', -1)
     # convert our data to a Pandas' data frame
@@ -162,7 +136,7 @@ def writeHTML(data, KEYS_TO_LABELS):
           .set_table_styles(d)
 
     # write output html files
-    webhtml = open('clustertools.html', 'w')
+    webhtml = open(htmlfile, 'w')
     webhtml.write("<html>\n<body>\n")
     webhtml.write(s.render())
     webhtml.write("\n</body>\n</html>\n")
@@ -170,7 +144,9 @@ def writeHTML(data, KEYS_TO_LABELS):
 # ------------------------------------------------------------------
 def getArgs():
     parser = argparse.ArgumentParser(description="")
-    parser.add_argument('-d',dest="directory",type=str,default="../test/catalogue/",help='home directory of software properties')
+    parser.add_argument('-p',dest="directory",type=str,default="../test/catalogue/",help='home directory of software properties')
+    parser.add_argument('-o',dest="htmlfile",type=str,default="tool-directory.html",help='HTML file containing list of tools')
+
     args = parser.parse_args()
 
     return args
@@ -211,11 +187,10 @@ def main(args):
 
     # step 2: collect all properties files
     filesList=getFiles(directories)
+    filesList.sort(key=str.lower)
 
     # step 3: read all tool's properties
-    # TODO: keep only one structure instead of 2 for csv and html writing
     data=[]
-    csv={}
     for fl in filesList:
         # In case of problem with the input file
         print(fl)
@@ -223,17 +198,10 @@ def main(args):
         props = readFile(fl)
         oprops = orderProperties(props, ORDERED_KEYS, DATA_FORMATTER)
         data.append(oprops)
-        # Get the data for the csv file
-        tool = props['NAME'] +'-'+ props['VERSION']
-        csv[tool] = props
 
-    # step4: write csv file with informations from all tools
-    # will be used for Keshif visualisation
-    writeCSV(csv)
-
-    # step5: write html file with informations from all tools
+    # step4: write html file with informations from all tools
     # backup option if Keshif visualisation is problematic
-    writeHTML(data, KEYS_TO_LABELS)
+    writeHTML(args.htmlfile, data, KEYS_TO_LABELS)
 
 if __name__ == '__main__':
     args = getArgs()
