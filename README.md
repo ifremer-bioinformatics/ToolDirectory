@@ -19,7 +19,7 @@ ToolDirectory provides a convenient way to go from an "ugly" terminal listing:
   .../...
 ```
 
-to nice views to be presented on a web page for your users.
+to nice views to be presented on a web page for your users. [Check out by yourself](https://ifremer-bioinformatics.github.io/ToolDirectorySample/)!
 
 **Two views are available**: 
 - a simple web page (since ToolDirectory v1)
