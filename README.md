@@ -2,11 +2,11 @@
 
 ## Introduction
 
-This package provides an easy and convenient tool to display in a graphical way list of softwares installed on a computer. 
+ToolDirectory provides a convenient tool to display list of softwares in a graphical way along with dynamic data filtering capabilities. It was primarily designed to help end users find their way among several hundred of bioinformatics tools installed on our supercomputer DATARMOR at IFREMER. 
 
-Tool Directory was originally designed to provide a summary of all bioinformatics tools installed on the DATARMOR supercomputer at IFREMER.
+The tool relies on a standard way of describing softwares: EDAM Topic and Operation terms, installation types, supported platforms, packaging, etc. These description "facets" are available for dynamic software filtering directly in the viewer. 
 
-ToolDirectory provides a convenient way to go from an "ugly" terminal listing:
+ToolDirectory provides a way to go from an "ugly" terminal listing:
 ```
 /path/to/bioinfo-softwares
   ├── blast
@@ -19,7 +19,9 @@ ToolDirectory provides a convenient way to go from an "ugly" terminal listing:
   .../...
 ```
 
-to nice views to be presented on a web page for your users. [Check out by yourself](https://ifremer-bioinformatics.github.io/ToolDirectorySample/)!
+to nice views to be presented on a web page for your users.
+
+[Check out by yourself](https://ifremer-bioinformatics.github.io/ToolDirectorySample/)!
 
 **Two views are available**: 
 - a simple web page (since ToolDirectory v1)
