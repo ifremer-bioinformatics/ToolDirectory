@@ -33,7 +33,7 @@ This is a basic HTML Table aims at providing a clear overview of software name a
 
 ### The dynamic data exploration viewer
 
-It provides an extensive presentation of bioinformatics softwares along with data filtering features relying on [EDAM](https://ifb-elixirfr.github.io/edam-browser) Topic and Operation terms. It was introduced with Tool Directory release 2.0.
+It provides an extensive presentation of bioinformatics softwares along with data filtering features relying on [EDAM](https://ifb-elixirfr.github.io/edam-browser) Topic and Operation terms. It was introduced with Tool Directory release 2.0. Check out a working viewer [here](https://ifremer-bioinformatics.github.io/ToolDirectorySample/).
 
 ![Tool Directory](doc/facet-viewer.png)
 
