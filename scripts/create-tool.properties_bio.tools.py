@@ -27,7 +27,7 @@ def getArgs():
     parser = argparse.ArgumentParser(description="", formatter_class=lambda prog: argparse.HelpFormatter(prog, max_help_position=80, width=130))
     parser.add_argument('-n',dest="tool_id", type=str, required=True, help='Tool Name. Ex: bowtie2')
     parser.add_argument('-v',dest="version", type=str, required=True, help='Tool version. Ex: 2.6.3')
-    parser.add_argument('-t', dest="topics", type=str, default='topics.allow.txt', help='List of topics allowed')
+    parser.add_argument('-t', dest="topics", type=str, default='~/tool-directory/ToolDirectory/scripts/topics.allow.txt', help='List of topics allowed')
     parser.add_argument('-c',dest="cmdline", type=str, choices=['true','false'], default='true',help='Available in cmdline (true)')
     parser.add_argument('-g',dest="galaxy", type=str, choices=['true','false'], default='false',help='Available in Galaxy (false)')
     parser.add_argument('-i',dest="install", type=str, choices=['conda','shell','docker','singularity'], default='conda',help='Available using... (conda)')
