@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 
 from __future__ import print_function
+import argparse
 import sys
+import os
 import re
 import requests
 from requests.exceptions import HTTPError
-import argparse
 import json
 
 """
@@ -26,11 +27,13 @@ def eprint(*args, **kwargs):
 def getArgs():
     parser = argparse.ArgumentParser(description="", formatter_class=lambda prog: argparse.HelpFormatter(prog, max_help_position=80, width=130))
     parser.add_argument('-n',dest="tool_id", type=str, required=True, help='Tool Name. Ex: bowtie2')
-    parser.add_argument('-v',dest="version", type=str, required=True, help='Tool version. Ex: 2.6.3')
-    parser.add_argument('-t', dest="topics", type=str, default='~/tool-directory/ToolDirectory/scripts/topics.allow.txt', help='List of topics allowed')
-    parser.add_argument('-c',dest="cmdline", type=str, choices=['true','false'], default='true',help='Available in cmdline (true)')
-    parser.add_argument('-g',dest="galaxy", type=str, choices=['true','false'], default='false',help='Available in Galaxy (false)')
-    parser.add_argument('-i',dest="install", type=str, choices=['conda','shell','docker','singularity'], default='conda',help='Available using... (conda)')
+    parser.add_argument('-v',dest="version", type=str, required=True, help='Tool version. Ex: 2.3.5')
+    parser.add_argument('-t',dest="topics",  type=str, default='/home1/datahome/galaxy/tool-directory/ToolDirectory/scripts/topics.allow.txt', help='List of topics allowed [topics.allow.txt]')
+    parser.add_argument('-c',dest="cmdline", type=str, default='true', choices=['true','false'], help='Available in cmdline [%(default)s]')
+    parser.add_argument('-g',dest="galaxy",  type=str, default='false', choices=['true','false'], help='Available in Galaxy [%(default)s]')
+    parser.add_argument('-i',dest="install", type=str, default='c', choices=['c','b','d','s'], help='[c]onda/[b]ash/[d]ocker/[s]ingularity [%(default)s]')
+    parser.add_argument('-p',dest="path",    type=str, default='/appli/bioinfo/',help='ToolsDir path [%(default)s]')
+    parser.add_argument('-f',dest="force",   action='store_true', help='Overwrite tool.properties')
 
     arg = parser.parse_args()
 
@@ -60,12 +63,25 @@ def topics_allowed(topics_file):
 
 def write_properties(args, json, topics):
 
+    install_values = {'c':'conda', 'b':'shell', 'd':'docker', 's':'singularity'}
+
     # Get arguments
     tool_id = args.tool_id
     version = args.version
     cmdline = args.cmdline
     galaxy = args.galaxy
-    install_type = args.install
+    install_type = install_values[args.install]
+
+    # Get path
+    main_dir = args.path
+    sub_dir = os.path.join(args.tool_id, args.version)
+    full_path = os.path.join(main_dir, sub_dir)
+
+    # Check path exist
+    if not os.path.isdir(full_path):
+        eprint(f"\033[0;31;47m ERROR:"+full_path+" do not exist! \033[0m")
+        eprint(f"\033[0;31;47m ERROR: processus killed \033[0m")
+        exit(1)
 
     # Get infos when in a list and formatting
     ## Operations
@@ -85,7 +101,17 @@ def write_properties(args, json, topics):
         eprint(f"\033[0;31;47m WARNING: no topic(s) matching allowed topics \033[0m")
 
     #Create and write tool.properties
-    tool_prop = open('tool.properties', 'w')
+    properties = os.path.join(full_path, 'tool.properties')
+
+    # Before, check is file exist
+    if os.path.isfile(properties) and not args.force:
+        eprint(f"\033[0;31;47m WARNING: tool.properties already exist \033[0m")
+        eprint(f"\033[0;31;47m WARNING: create tool.properties.tmp instead \033[0m")
+        properties = os.path.join(full_path, 'tool.properties.tmp')
+
+    tool_prop = open(properties, 'w')
+
+    # Write
     tool_prop.write('NAME='+json['biotoolsID']+'\n')
     tool_prop.write('DESCRIPTION='+json['description'].split('\n')[0]+'\n')
     tool_prop.write('VERSION='+version+'\n')
@@ -110,5 +136,5 @@ def main(args):
     write_properties(args, json_read, topics)
 
 if __name__ == '__main__':
-	args = getArgs()
-	main(args)
+    args = getArgs()
+    main(args)
