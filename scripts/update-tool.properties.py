@@ -49,9 +49,10 @@ def toolProperties2update(modifications):
     modifList = open(modifications, 'r')
     modifTools = defaultdict(dict)
     for l in modifList:
-        tool, keyUpdate = re.split(r'\t', l.rstrip('\n'))
+        tool, version, keyUpdate = re.split(r'\t', l.rstrip('\n'))
+        modifTools[tool][version] = {}
         key, newVal = keyUpdate.split('=')
-        modifTools[tool][key] = newVal
+        modifTools[tool][version][key] = newVal
     return modifTools
 
 # Collect all files at a certain depth
@@ -74,7 +75,6 @@ def walklevel(directory, depth = 2):
             if num_sep + depth <= num_sep_this:
                 del dirs[:]
 
-
 # Collect properties files.
 # Argument directores: root, dirs and files from os.walk()
 # Return a list of file absolute paths
@@ -93,37 +93,50 @@ def updateToolProperties(toolsPropertiesListFiles, modifications):
     # Get the date of the modification
     now = datetime.datetime.now()
     daytime = now.strftime("%Y-%m-%d")
-    # Read each file, make a backup file and create the new propertie file
-    # TODO: read each file but only make a backup if needed
-    # Parse and store all tool.properties and in a new function, only backup
+    # Parse and store all tool.properties and only backup
     # and update listed files
     for f in toolsPropertiesListFiles:
-        print(f)
-        current = f
-        backup = f.replace('tool.properties','tool.properties.backup.'+daytime)
-        # Make a copy of the original tool.properties with metadata
-        shutil.copy2(current, backup)
-        # Open backup file and update (rewrite) the original file
-        backupToolProp = open(backup, 'r')
-        newToolProp = open(current, 'w')
-        # Devel
-        # newToolProp = open(current+'.test', 'w')
-        for l in backupToolProp:
+        # print(f)
+        # 1 - read and store the file informations
+        tool_infos = {}
+        tool_prop = open(f, 'r')
+        for l in tool_prop:
             keyword, propertie = re.split(r'=', l.rstrip('\n'))
-            # Get the tool name and extract the data to update
-            if keyword == 'NAME':
-                toolUpdateProp = modifications[propertie]
-                newToolProp.write('{0}={1}\n'.format(keyword, propertie))
-            # If the keyword new to be update...
-            elif keyword in toolUpdateProp:
-                newToolProp.write('{0}={1}\n'.format(keyword, toolUpdateProp[keyword]))
-                del toolUpdateProp[keyword]
-            else:
-                newToolProp.write('{0}={1}\n'.format(keyword, propertie))
-        # Insertion of new key(s)
-        if len(toolUpdateProp) > 0:
-            for keyword, propertie in toolUpdateProp.items():
-                newToolProp.write('{0}={1}\n'.format(keyword, propertie))
+            tool_infos[keyword] = propertie
+        tool_prop.close()
+
+        # 2 - Make the backup part if needed
+        ## First, check the tool
+        if tool_infos['NAME'] in modifications:
+            ## Second, check the version
+            if tool_infos['VERSION'] in modifications[tool_infos['NAME']]:
+                # Get the modifications
+                keys_to_update = modifications[tool_infos['NAME']][tool_infos['VERSION']]
+                # Make a copy of the original tool.properties with metadata
+                backup = f.replace('tool.properties', 'tool.properties.backup.' + daytime)
+                shutil.copy2(f, backup)
+                # Write the updated file
+                tool_backup = open(backup, 'r')
+                # tool_update = open(f, 'w')
+                # Devel
+                tool_update = open(f+'.test', 'w')
+
+                # Update the file using backup as reference
+                for l in tool_backup:
+                    keyword, propertie = re.split(r'=', l.rstrip('\n'))
+                    # Get the tool name and extract the data to update
+                    if keyword == 'NAME':
+                        tool_update.write('{0}={1}\n'.format(keyword, propertie))
+                    # If the keyword need to be update...
+                    elif keyword in keys_to_update:
+                        tool_update.write('{0}={1}\n'.format(keyword, keys_to_update[keyword]))
+                        del keys_to_update[keyword]
+                    else:
+                        tool_update.write('{0}={1}\n'.format(keyword, propertie))
+                # Insertion of new key(s)
+                if len(keys_to_update) > 0:
+                    for keyword, propertie in keys_to_update.items():
+                        tool_update.write('{0}={1}\n'.format(keyword, propertie))
 
 # ------------------------------------------------------------------
 # --  MAIN  --------------------------------------------------------
