@@ -61,7 +61,8 @@ def parseProperties(directories):
     'documentation': 'URLDOC=',
     'operation':     'KEYWORDS=',
     'environment':   'CMD_INSTALL=',
-    'topic':         'TOPIC='
+    'topic':         'TOPIC=',
+    'date':          'DATE_INSTALL='
     }
 
     # Main dict with the result for each tool
@@ -105,7 +106,7 @@ def outputWriting(csvfile, dictData):
             p['access'] = 'Galaxy only'
         # Write, ordered
         name = p['name'] + ' - ' + p['version']
-        txt.write('"{0}","{1}","{2}","{3}","{4}","{5}","{6}","{7}"\n'.format(name,p['operation'],p['environment'],p['topic'],p['access'],p['documentation'],p['description'],p['path']))
+        txt.write('"{0}","{1}","{2}","{3}","{4}","{5}","{6}","{7}","{8}"\n'.format(name,p['operation'],p['environment'],p['topic'],p['access'],p['documentation'],p['description'],p['path'],p['date']))
     # Close file
     txt.close()
 
