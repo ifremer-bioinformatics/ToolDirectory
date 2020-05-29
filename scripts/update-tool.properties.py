@@ -117,10 +117,9 @@ def updateToolProperties(toolsPropertiesListFiles, modifications):
                 shutil.copy2(f, backup)
                 # Write the updated file
                 tool_backup = open(backup, 'r')
-                # tool_update = open(f, 'w')
+                tool_update = open(f, 'w')
                 # Devel
-                tool_update = open(f+'.test', 'w')
-
+                # tool_update = open(f+'.test', 'w')
                 # Update the file using backup as reference
                 for l in tool_backup:
                     keyword, propertie = re.split(r'=', l.rstrip('\n'))
