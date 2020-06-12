@@ -1,5 +1,26 @@
 #!/usr/bin/env python3
 
+# =============================================================================
+# Tool Directory
+#
+# A program to prepare an HTML table listing softwares available on
+# a file system.
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+#
+# (c) 2017-20 Ifremer-Bioinformatics Team
+# =============================================================================
+
 from __future__ import print_function
 import argparse
 import sys
@@ -20,7 +41,7 @@ KEYWORDS=genome-assembly
 CMD_INSTALL=conda
 TOPIC=Sequence assembly
 """
-
+# For errors / warnings
 def eprint(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
 
@@ -39,7 +60,7 @@ def getArgs():
     return arg
 
 def biotools_request(tool_id):
-
+    # Try to get data from bio.tools API
     try:
         response = requests.get('https://bio.tools/api/tool/'+tool_id+'/?format=json')
         response.raise_for_status()
@@ -50,6 +71,7 @@ def biotools_request(tool_id):
         eprint(f'Other error occurred: {error}')
         exit(1)
     else:
+        # Return json as text file
         return response.text
 
 def write_properties(args, json, params):
@@ -142,7 +164,7 @@ def conda_tool(params, args):
         eprint(f"\033[0;31;47m ERROR: Processus killed \033[0m")
         exit(1)
 
-    # Write env.sh and delen.sh
+    # Write env.sh and delenv.sh
     env_sh = open(os.path.join(path_tool, 'env.sh'), 'w')
     env_sh.write('#!/usr/bin/env bash\n')
     env_sh.write('. '+ params['anaconda_profile_d'] +'\n')
