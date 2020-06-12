@@ -2,9 +2,9 @@
 
 ## Introduction
 
-ToolDirectory provides a convenient tool to display list of softwares in a graphical way along with dynamic data filtering capabilities. It was primarily designed to help end users find their way among several hundred of bioinformatics tools installed on our supercomputer DATARMOR at IFREMER. 
+ToolDirectory provides a convenient tool to display list of softwares in a graphical way along with dynamic data filtering capabilities. It was primarily designed to help end users find their way among several hundred of bioinformatics tools installed on our supercomputer DATARMOR at IFREMER.
 
-The tool relies on a standard way of describing softwares: EDAM Topic and Operation terms, installation types, supported platforms, packaging, etc. These description "facets" are available for dynamic software filtering directly in the viewer. 
+The tool relies on a standard way of describing softwares: EDAM Topic and Operation terms, installation types, supported platforms, packaging, etc. These description "facets" are available for dynamic software filtering directly in the viewer.
 
 ToolDirectory provides a way to go from an "ugly" terminal listing:
 ```
@@ -23,9 +23,9 @@ to nice views to be presented on a web page for your users.
 
 [Check out by yourself](https://ifremer-bioinformatics.github.io/ToolDirectorySample/)!
 
-**Two views are available**: 
+**Two views are available**:
 - a simple web page (since ToolDirectory v1)
-- a dynamic data exploration viewer (introduced with ToolDirectory v2). 
+- a dynamic data exploration viewer (introduced with ToolDirectory v2).
 
 ### The simple web viewer
 
@@ -123,6 +123,39 @@ All but GALAXY keys are valid to describe your softwares, whatever their field o
 
 For a complete list of example of such 'tool.properties' files, look at ![catalogue directory](test/catalogue).
 
+### Automatic creation of properties using Bio.tools API
+
+To be consistent between the descriptions of your softwares, we strongly recommend to use the Bio.tools database.
+
+To do such job, you can use ```create-tool.properties_bio.tools.py``` which will automatically create the ```tool.properties``` as follows:
+
+```bash
+create-tool.properties_bio.tools.py -n bowtie2 -v 2.3.5
+```
+By default, it will search for the parameter file into  ```~/.tooldir.params``` which contains the structure of your install environment, as follow:
+
+```
+{
+    "install_dir_path": "/foo/bar/",
+    "conda_envs_path": "/foo/tools_env/",
+    "anaconda_dir_path": "/foo/anaconda/<versions>/",
+    "anaconda_profile_d": "/foo/anaconda/<versions>/etc/profile.d/conda.sh",
+    "topics":
+        [
+            "Bioimaging",
+            "Bioinformatics",
+            "Biological databases",
+            "Comparative genomics",
+            "Data visualisation",
+            "Statistics and probability",
+            "Structure analysis",
+            "Transcriptomics"
+        ]
+}
+```
+
+And you can indicate a restrictive list of allowed topics.
+
 ### Modifying keys in Property files
 
 Maybe you could be interested in adding, removing or renaming the keys of a Property file. Of course, this is possible: just edit the Python source code of Tool Directory and adapt it to your needs. The source code is fully documented and it should be easy to modify it.
@@ -185,4 +218,3 @@ That step has to be executed each time yout install a new software into your rep
 Tool Directory is released under the terms of the Apache 2 license.
 
 Tool Directory data exploration viewer uses the open-source version of [Keshif](https://github.com/adilyalcin/Keshif), a web-based data exploration environment for data analytics. Keshif open-source is released under the terms of the BSD-3 clause license.
-
