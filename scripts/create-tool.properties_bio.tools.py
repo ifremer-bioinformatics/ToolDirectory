@@ -116,7 +116,7 @@ def write_properties(args, json, params):
     # Get the date
     now = datetime.datetime.now()
     # daytime = now.strftime("%Y-%m-%d")
-    daytime = now.strftime("%d-%m-%Y")
+    daytime = now.strftime("%d/%m/%Y")
 
     #Create and write tool.properties
     properties = os.path.join(tool_dir_path, 'tool.properties')

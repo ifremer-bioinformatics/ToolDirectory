@@ -90,7 +90,7 @@ def parseProperties(directories):
 
 def outputWriting(csvfile, dictData):
     txt = open(csvfile, 'w')
-    txt.write('Name,Operation,Environment,Topic,Access,Doc,Description,Path\n')
+    txt.write('Name,Operation,Environment,Topic,Access,Doc,Description,Path,Date\n')
     # Iterate over each tool - sorted by name
     for tool in sorted(dictData.keys(), key=lambda x:x.lower()):
         # Get properties
