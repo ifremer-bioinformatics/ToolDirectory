@@ -65,14 +65,36 @@ def biotools_request(tool_id):
         response = requests.get('https://bio.tools/api/tool/'+tool_id+'/?format=json')
         response.raise_for_status()
     except HTTPError as http_error:
-        eprint(f'HTTP error occurred: {http_error}')
-        exit(1)
+        if response.status_code == 404:
+            # eprint(f"\033[0;31;47m WARNING: HTTP error occurred: {http_error} \033[0m")
+            eprint(f"\033[0;31;47m WARNING: "+tool_id+" is not described in Bio.tools \033[0m")
+            eprint(f"\033[0;31;47m WARNING: Tool.properties will be created anyway \033[0m")
+            response_dict = {
+                            "description":"",
+                            "homepage":"",
+                            "biotoolsID":"",
+                            "function":[
+                                {
+                                    "operation":[{"uri":"","term":""}]}],
+                                    "topic":[{"uri":"","term":""}]
+                            }
+            response_json = json.dumps(response_dict)
+            # Return empty json
+            code = response.status_code
+            #
+            return response_json, code
+        else:
+            eprint(f"\033[0;31;47m ERROR: HTTP error occurred: {http_error} \033[0m")
+            exit(1)
     except Exception as error:
-        eprint(f'Other error occurred: {error}')
+        eprint(f"\033[0;31;47m ERROR: Other error occurred: {error} \033[0m")
         exit(1)
     else:
         # Return json as text file
-        return response.text
+        response_json = response.text
+        code = response.status_code
+        #
+        return response_json, code
 
 def write_properties(args, json, params):
 
@@ -205,32 +227,35 @@ def main(args):
     tool_name = args.tool_name
     eprint(f"\033[0;37;46m LOG: Launch create for " + tool_name + " \033[0m")
 
-    # 3 - Get json file from bio.tools
-    eprint(f"\033[0;37;46m LOG: Collect info. from bio.tools \033[0m")
-    response = biotools_request(tool_name)
-
-    # 4 - Load the json
-    eprint(f"\033[0;37;46m LOG: Load and parse JSON \033[0m")
-    json_read = json.loads(response)
-
-    # 5 - Create output tool directory
-    eprint(f"\033[0;37;46m LOG: Create install folder at ... \033[0m")
+    # 3 - Create output tool directory
     path_tool = make_tool_dir(params, args)
-    eprint(f"\033[0;37;46m LOG: " + path_tool + "\033[0m")
+    eprint(f"\033[0;37;46m LOG: Create install folder at: " + path_tool + "\033[0m")
 
-    # 5b - For conda, create env.sh and delenv.sh
-    eprint(f"\033[0;37;46m LOG: Conda installation detected\033[0m")
+    # 4 - For conda, create env.sh and delenv.sh
+    eprint(f"\033[0;37;46m LOG: Conda installation detected \033[0m")
     eprint(f"\033[0;37;46m LOG: Create env.sh and delenv.sh \033[0m")
     if args.install_type == 'c':
         conda_tool(params, args)
 
-    # 6 - Parse the json, collect infos and write properties
+    # 5 - Get json file from bio.tools
+    eprint(f"\033[0;37;46m LOG: Collect info. from bio.tools \033[0m")
+    response, code = biotools_request(tool_name)
+
+    # 6 - Load the json
+    eprint(f"\033[0;37;46m LOG: Load and parse JSON \033[0m")
+    json_read = json.loads(response)
+
+    # 7 - Parse the json, collect infos and write properties
     eprint(f"\033[0;37;46m LOG: Create tool.properties \033[0m")
     write_properties(args, json_read, params)
 
-    # 7 - Ending
+    # 8 - Ending
     eprint(f"\033[0;37;46m LOG: " + tool_name + " installed at " + path_tool + "\033[0m")
-    eprint(f"\033[0;37;46m LOG: Please check tool description\033[0m")
+    if code == 404:
+        eprint(f"\033[0;31;47m WARNING: Tool.properties tags are empty \033[0m")
+        eprint(f"\033[0;31;47m WARNING: Please, manually fill "+ path_tool +"/tool.properties \033[0m")
+    else:
+        eprint(f"\033[0;37;46m LOG: Please check tool description\033[0m")
 
 if __name__ == '__main__':
     args = getArgs()
