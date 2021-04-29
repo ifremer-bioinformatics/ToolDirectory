@@ -40,6 +40,7 @@ URLDOC=http://canu.readthedocs.io
 KEYWORDS=genome-assembly
 CMD_INSTALL=conda
 TOPIC=Sequence assembly
+OWNER=acormier
 """
 # For errors / warnings
 def eprint(*args, **kwargs):
@@ -49,6 +50,7 @@ def getArgs():
     parser = argparse.ArgumentParser(description="", formatter_class=lambda prog: argparse.HelpFormatter(prog, max_help_position=80, width=130))
     parser.add_argument('-n',dest="tool_name", type=str, required=True, help='Tool Name. Ex: bowtie2')
     parser.add_argument('-v',dest="tool_version", type=str, required=True, help='Tool version. Ex: 2.3.5')
+    parser.add_argument('-o', dest="owner", type=str, required=True, help='Installer uid. Ex: acormier')
     parser.add_argument('-c',dest="cmdline", type=str, default='true', choices=['true','false'], help='Available in cmdline [%(default)s]')
     parser.add_argument('-g',dest="galaxy",  type=str, default='false', choices=['true','false'], help='Available in Galaxy [%(default)s]')
     parser.add_argument('-i',dest="install_type", type=str, default='c', choices=['c','b','d','s'], help='[c]onda/[b]ash/[d]ocker/[s]ingularity [%(default)s]')
@@ -106,6 +108,7 @@ def write_properties(args, json, params):
     cmdline = args.cmdline
     galaxy = args.galaxy
     install_type = install_values[args.install_type]
+    owner = args.owner
 
     # Get path
     install_dir = params['install_dir_path']
@@ -165,6 +168,7 @@ def write_properties(args, json, params):
     tool_prop.write('CMD_INSTALL='+install_type+'\n')
     tool_prop.write('TOPIC='+','.join(topic)+'\n')
     tool_prop.write('DATE_INSTALL=' + daytime)
+    tool_prop.write('OWNER=' + owner)
 
 def conda_tool(params, args):
 
@@ -252,8 +256,8 @@ def main(args):
     # 8 - Ending
     eprint(f"\033[0;37;46m LOG: " + tool_name + " installed at " + path_tool + "\033[0m")
     if code == 404:
-        eprint(f"\033[0;31;47m WARNING: Tool.properties tags are empty \033[0m")
-        eprint(f"\033[0;31;47m WARNING: Please, manually fill "+ path_tool +"/tool.properties \033[0m")
+        eprint(f"\033[0;31;47m WARNING: Tool.properties tags are empty\033[0m")
+        eprint(f"\033[0;31;47m WARNING: Please, manually fill "+ path_tool +"/tool.properties\033[0m")
     else:
         eprint(f"\033[0;37;46m LOG: Please check tool description\033[0m")
 
