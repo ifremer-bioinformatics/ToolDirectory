@@ -61,9 +61,9 @@ def upgrade_to_json(tool_properties_files):
             infos[k] = v
         prop.close()
         # 2 - write JSON
-        with open('data.json', 'w') as outjson:
-            json.dump(infos, outjson, sort_keys=False, indent=2)
-        outjson.close()
+        with open(os.path.join(path,'properties.json'), 'w') as out_json:
+            json.dump(infos, out_json, sort_keys=False, indent=2)
+        out_json.close()
 
 def upgrade(args):
     # 1 - Digging tool directory and explore at 2 level of depth
