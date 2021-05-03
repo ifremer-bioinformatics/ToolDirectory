@@ -27,18 +27,6 @@ from requests.exceptions import HTTPError
 import json
 import datetime
 
-# """
-# NAME=Canu
-# DESCRIPTION=A single molecule sequence assembler for genomes large and small
-# VERSION=2.0
-# CMDLINE=true
-# GALAXY=false
-# URLDOC=http://canu.readthedocs.io
-# KEYWORDS=genome-assembly
-# CMD_INSTALL=conda
-# TOPIC=Sequence assembly
-# OWNER=acormier
-# """
 # For errors / warnings
 def eprint(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
@@ -80,7 +68,7 @@ def biotools_request(tool_id):
         #
         return response_json, code
 
-def write_properties(args, json, params):
+def write_properties(args, biojson, params):
 
     # Installation type
     install_values = {'c':'conda', 'b':'shell', 'd':'docker', 's':'singularity'}
@@ -90,13 +78,13 @@ def write_properties(args, json, params):
     daytime = now.strftime("%d/%m/%Y")
 
     # Store properties
-    p = {
-        'NAME': json['biotoolsID'],
-        'DESCRIPTION': json['description'].split('\n')[0],
+    prop = {
+        'NAME': biojson['biotoolsID'],
+        'DESCRIPTION': biojson['description'].split('\n')[0],
         'VERSION': args.tool_version,
         'CMDLINE': args.cmdline,
         'GALAXY': args.galaxy,
-        'URLDOC': json['homepage'],
+        'URLDOC': biojson['homepage'],
         'CMD_INSTALL': install_values[args.install_type],
         'DATE_INSTAL':daytime,
         'OWNER': args.owner
@@ -114,22 +102,22 @@ def write_properties(args, json, params):
     # Format bio.tool data
     ## Operations
     function = []
-    for i in json['function']:
+    for i in biojson['function']:
         operation = i['operation'][0]['term'].lower().replace(' ','-')
         function.append(operation)
-    p['KEYWORDS'] = ','.join(list(set(function)))
+    prop['KEYWORDS'] = ','.join(list(set(function)))
     ## Topics
     topic = []
-    for i in json['topic']:
+    for i in biojson['topic']:
         top = i['term']
         if top in params['topics']:
             topic.append(top)
     topic = list(set(topic))
-    p['TOPIC'] = ','.join(topic)
+    prop['TOPIC'] = ','.join(topic)
     if len(topic) == 0:
         eprint(f"\033[0;31;47m WARNING: no topic(s) matching allowed topics \033[0m")
     ## Description
-    if len(json['description'].split('\n')[0]) > 200:
+    if len(biojson['description'].split('\n')[0]) > 200:
         eprint(f"\033[0;31;47m WARNING: tool description longer than 200 characters\033[0m")
 
     #Create and write tool.properties
@@ -142,7 +130,7 @@ def write_properties(args, json, params):
 
     # Write
     with open(properties, 'w') as out_json:
-        json.dump(p, out_json, sort_keys=False, indent=2)
+        json.dump(prop, out_json, sort_keys=False, indent=2)
     out_json.close()
 
 def conda_tool(params, args):
@@ -222,11 +210,11 @@ def create(args):
 
     # 6 - Load the json
     eprint(f"\033[0;37;46m LOG: Load and parse JSON \033[0m")
-    json_read = json.loads(response)
+    bio_json = json.loads(response)
 
     # 7 - Parse the json, collect infos and write properties
     eprint(f"\033[0;37;46m LOG: Create tool.properties \033[0m")
-    write_properties(args, json_read, params)
+    write_properties(args, bio_json, params)
 
     # 8 - Ending
     eprint(f"\033[0;37;46m LOG: " + tool_name + " installed at " + path_tool + "\033[0m")
