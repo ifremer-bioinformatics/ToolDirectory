@@ -58,7 +58,7 @@ class ToolDir(object):
 
     def upgrade(self):
         parser = argparse.ArgumentParser(description="Upgrade tool properties to JSON (v2 -> v3)")
-        parser.add_argument('-p', dest="toolspath", type=str, default="test/", help='')
+        parser.add_argument('-p', dest="toolspath", type=str, default="test/", help='Tools main folder')
 
         args = parser.parse_args(sys.argv[2:])
 
@@ -66,8 +66,8 @@ class ToolDir(object):
 
     def kcsv(self):
         parser = argparse.ArgumentParser(description="Create csv for Keshif visualisation")
-        parser.add_argument('-p', dest="toolspath", type=str, default="test/", help='')
-        parser.add_argument('-o', dest="csvfile", type=str, default="test/Softwares.csv", help='')
+        parser.add_argument('-p', dest="toolspath", type=str, default="test/", help='Tools main folder')
+        parser.add_argument('-o', dest="csvfile", type=str, default="test/Softwares.csv", help='Output csv name')
 
         args = parser.parse_args(sys.argv[2:])
 
