@@ -46,7 +46,6 @@ def get_tool_prop(directories):
             tool_prop_files.append(abs_f)
     return tool_prop_files
 
-
 def output_writing(csv_out, json_lst):
     txt = open(csv_out, 'w')
     txt.write('Name,Operation,Environment,Topic,Access,Doc,Description,Path,Date\n')
