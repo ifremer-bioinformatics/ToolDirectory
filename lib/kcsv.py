@@ -67,7 +67,7 @@ def output_writing(csv_out, json_lst):
             p['ACCESS'] = 'Galaxy only'
         # Write, ordered
         name = p['NAME'] + ' - ' + p['VERSION']
-        txt.write('"{0}","{1}","{2}","{3}","{4}","{5}","{6}","{7}","{8}"\n'.format(name,p['KEYWORDS'],p['CMD_INSTALL'],p['TOPIC'],p['ACCESS'],p['URLDOC'],p['DESCRIPTION'],p['PATH'],p['DATE_INSTAL']))
+        txt.write('"{0}","{1}","{2}","{3}","{4}","{5}","{6}","{7}","{8}"\n'.format(name,p['KEYWORDS'],p['CMD_INSTALL'],p['TOPIC'],p['ACCESS'],p['URLDOC'],p['DESCRIPTION'],p['PATH'],p['DATE_INSTALL']))
     # Close file
     txt.close()
 
