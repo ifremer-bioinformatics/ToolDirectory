@@ -213,13 +213,13 @@ def create(args):
     bio_json = json.loads(response)
 
     # 7 - Parse the json, collect infos and write properties
-    eprint(f"\033[0;37;46m LOG: Create tool.properties \033[0m")
+    eprint(f"\033[0;37;46m LOG: Create properties.json \033[0m")
     write_properties(args, bio_json, params)
 
     # 8 - Ending
     eprint(f"\033[0;37;46m LOG: " + tool_name + " installed at " + path_tool + "\033[0m")
     if code == 404:
-        eprint(f"\033[0;31;47m WARNING: Tool.properties tags are empty\033[0m")
-        eprint(f"\033[0;31;47m WARNING: Please, manually fill "+ path_tool +"/tool.properties\033[0m")
+        eprint(f"\033[0;31;47m WARNING: properties.json tags are empty\033[0m")
+        eprint(f"\033[0;31;47m WARNING: Please, manually fill "+ path_tool +"/properties.json\033[0m")
     else:
         eprint(f"\033[0;37;46m LOG: Please check tool description\033[0m")
