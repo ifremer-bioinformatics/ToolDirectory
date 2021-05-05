@@ -86,7 +86,7 @@ def write_properties(args, biojson, params):
         'GALAXY': args.galaxy,
         'URLDOC': biojson['homepage'],
         'CMD_INSTALL': install_values[args.install_type],
-        'DATE_INSTAL':daytime,
+        'DATE_INSTALL':daytime,
         'OWNER': args.owner
     }
 
