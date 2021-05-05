@@ -5,6 +5,7 @@ import sys
 from lib import create
 from lib import upgrade
 from lib import kcsv
+from lib import update
 
 class ToolDir(object):
 
@@ -14,6 +15,7 @@ class ToolDir(object):
             usage='''tooldir <command> [<args>]
             The available commands are:
             create   Create tool properties
+            update  Update tool properties (add new key(s), change values)
             upgrade  Upgrade tool properties to JSON (v2 -> v3)
             kcsv     Create csv for Keshif visualisation
             ''')
@@ -27,7 +29,7 @@ class ToolDir(object):
         args = parser.parse_args(sys.argv[1:2])
         # LBYL (Look Before You Leap)
         # validate command using dispatch list, print error message if the command is unrecognized
-        dispatch = ['create','upgrade', 'kcsv']
+        dispatch = ['create','upgrade','update','kcsv']
         if args.command not in dispatch:  # if not hasattr(self, args.command):
             print(f"tooldir: '{args.command}' is not a tooldir command. See 'tooldir --help'")
             exit(1)
@@ -50,11 +52,21 @@ class ToolDir(object):
         parser.add_argument('-i', dest="install_type", type=str, default='c', choices=['c', 'b', 'd', 's'],
                             help='[c]onda/[b]ash/[d]ocker/[s]ingularity [%(default)s]')
         parser.add_argument('-p', dest="params", type=str, default='~/.tooldir.params', help='Params file')
-        parser.add_argument('-f', dest="force", action='store_true', help='Overwrite tool.properties')
+        parser.add_argument('-f', dest="force", action='store_true', help='Overwrite properties')
 
         args = parser.parse_args(sys.argv[2:])
 
         create.create(args)
+
+    def update(self):
+        parser = argparse.ArgumentParser(description="")
+        parser.add_argument('-u', dest="update", type=str, required=True, help='Key(s) to add/update')
+        parser.add_argument('-p', dest="toolspath", type=str, default="test/", help='Tools main folder')
+        parser.add_argument('-b', dest="backup", action='store_true', help='Make a backup')
+
+        args = parser.parse_args(sys.argv[2:])
+
+        update.update(args)
 
     def upgrade(self):
         parser = argparse.ArgumentParser(description="Upgrade tool properties to JSON (v2 -> v3)")
