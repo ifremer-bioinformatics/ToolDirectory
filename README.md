@@ -69,7 +69,7 @@ usage: tooldir <command> [<args>]
 
 Tool Directory expects a directory structure with the following constraints:
 
-- <install-dir>/\<tool>/\<version>/
+- \<install-dir>/\<tool>/\<version>/
 
 Here is an example:
 
@@ -88,10 +88,10 @@ Here is an example:
 
 To declare your softwares to Tool Directory you just have to setup a propertie file, one per software. It contains the description of a single software and it has to follow these two constraints
 
-* file must be called "properties.json"
+* file must be called ```properties.json```
 * file is located within home directory of a software
 
-For instance, considering our PLAST 2.3.2 installation, we have setup a file called "properties.json" located in /appli/bioinfo/plast/2.3.2:
+For instance, considering our PLAST 2.3.2 installation, we have setup a file called ```properties.json``` located in /appli/bioinfo/plast/2.3.2:
 
 ```
 {
