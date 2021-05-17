@@ -51,6 +51,9 @@ def output_writing(csv_out, json_lst):
     txt.write('Name,Operation,Environment,Topic,Access,Doc,Description,Path,Date\n')
     # Iterate over each tool - sorted by name
     # for tool in sorted(dictData.keys(), key=lambda x:x.lower()):
+
+    json_lst.sort(key=str.lower)
+
     for tool in json_lst:
         # Load json
         with open(tool) as json_data:
