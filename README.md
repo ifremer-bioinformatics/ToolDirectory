@@ -217,4 +217,4 @@ That step has to be executed each time yout install a new software into your rep
 
 Tool Directory is released under the terms of the Apache 2 license.
 
-Tool Directory data exploration viewer uses the open-source version of [Keshif](https://github.com/adilyalcin/Keshif), a web-based data exploration environment for data analytics. Keshif open-source is released under the terms of the BSD-3 clause license.
+Tool Directory data exploration viewer uses the open-source version of [Keshif](https://github.com/adilyalcin/Keshif), a web-based data exploration environment for data analytics. Keshif open-source is released under the terms of the BSD-3 clause license. Read Keshif [publication](http://adilyalcin.me/academic/KeshifInPractice.pdf).
