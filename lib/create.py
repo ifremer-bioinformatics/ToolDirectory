@@ -178,8 +178,9 @@ def make_tool_dir(params, args):
     path_tool = os.path.join(install_dir_path, tool_name, tool_version)
     if os.path.isdir(path_tool):
         eprint(f"\033[0;31;47m WARNING:"+path_tool+" already exist! \033[0m")
-        eprint(f"\033[0;31;47m WARNING: files inside will be overwritten \033[0m")
+        eprint(f"\033[0;31;47m WARNING: file(s) inside will be overwritten \033[0m")
     else:
+        eprint(f"\033[0;37;46m LOG: Create install folder at: " + path_tool + "\033[0m")
         os.makedirs(path_tool)
 
     return path_tool
@@ -196,13 +197,12 @@ def create(args):
 
     # 3 - Create output tool directory
     path_tool = make_tool_dir(params, args)
-    eprint(f"\033[0;37;46m LOG: Create install folder at: " + path_tool + "\033[0m")
 
     # 4 - For conda, create env.sh and delenv.sh
-    eprint(f"\033[0;37;46m LOG: Conda installation detected \033[0m")
-    eprint(f"\033[0;37;46m LOG: Create env.sh and delenv.sh \033[0m")
     if args.install_type == 'c':
+        eprint(f"\033[0;37;46m LOG: Conda installation detected \033[0m")
         conda_tool(params, args)
+        eprint(f"\033[0;37;46m LOG: Create env.sh and delenv.sh \033[0m")
 
     # 5 - Get json file from bio.tools
     eprint(f"\033[0;37;46m LOG: Collect info. from bio.tools \033[0m")
