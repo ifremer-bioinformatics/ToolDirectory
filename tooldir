@@ -4,10 +4,10 @@ import argparse
 import sys
 from lib import create
 from lib import upgrade
-from lib import kcsv
 from lib import update
+from lib import kcsv
 from lib import khtml
-from lib import html
+
 
 class ToolDir(object):
 
@@ -21,7 +21,6 @@ class ToolDir(object):
             upgrade  Upgrade tool properties to JSON (v2 -> v3)
             kcsv     Create csv for Keshif visualisation
             khtml    Create core webpage for Keshif
-            html     Create a basic html view
             ''')
         parser.add_argument('command', help='Subcommand to run')
         # if there is no command specified, print the parser's help message
@@ -33,7 +32,7 @@ class ToolDir(object):
         args = parser.parse_args(sys.argv[1:2])
         # LBYL (Look Before You Leap)
         # validate command using dispatch list, print error message if the command is unrecognized
-        dispatch = ['create','upgrade','update','kcsv','khtml','html']
+        dispatch = ['create','upgrade','update','kcsv','khtml']
         if args.command not in dispatch:  # if not hasattr(self, args.command):
             print(f"tooldir: '{args.command}' is not a tooldir command. See 'tooldir --help'")
             exit(1)
@@ -99,16 +98,6 @@ class ToolDir(object):
 
         khtml.khtml(args)
 
-    def html(self):
-        parser = argparse.ArgumentParser(description="Create a basic html view")
-        parser.add_argument('-p', dest="directory", type=str, default="test/catalogue/",
-                            help='home directory of software properties')
-        parser.add_argument('-o', dest="htmlfile", type=str, default="tool-directory.html",
-                            help='HTML file containing list of tools')
-
-        args = parser.parse_args(sys.argv[2:])
-
-        html.html(args)
 
 if __name__ == '__main__':
     ToolDir()
