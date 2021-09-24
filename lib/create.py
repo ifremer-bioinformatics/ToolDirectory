@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 # =============================================================================
 # Tool Directory
 #
@@ -22,7 +20,6 @@
 # =============================================================================
 
 from __future__ import print_function
-import argparse
 import sys
 import os
 import requests
@@ -30,36 +27,9 @@ from requests.exceptions import HTTPError
 import json
 import datetime
 
-"""
-NAME=Canu
-DESCRIPTION=A single molecule sequence assembler for genomes large and small
-VERSION=2.0
-CMDLINE=true
-GALAXY=false
-URLDOC=http://canu.readthedocs.io
-KEYWORDS=genome-assembly
-CMD_INSTALL=conda
-TOPIC=Sequence assembly
-OWNER=acormier
-"""
 # For errors / warnings
 def eprint(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
-
-def getArgs():
-    parser = argparse.ArgumentParser(description="", formatter_class=lambda prog: argparse.HelpFormatter(prog, max_help_position=80, width=130))
-    parser.add_argument('-n',dest="tool_name", type=str, required=True, help='Tool Name. Ex: bowtie2')
-    parser.add_argument('-v',dest="tool_version", type=str, required=True, help='Tool version. Ex: 2.3.5')
-    parser.add_argument('-o', dest="owner", type=str, required=True, help='Installer uid. Ex: acormier')
-    parser.add_argument('-c',dest="cmdline", type=str, default='true', choices=['true','false'], help='Available in cmdline [%(default)s]')
-    parser.add_argument('-g',dest="galaxy",  type=str, default='false', choices=['true','false'], help='Available in Galaxy [%(default)s]')
-    parser.add_argument('-i',dest="install_type", type=str, default='c', choices=['c','b','d','s'], help='[c]onda/[b]ash/[d]ocker/[s]ingularity [%(default)s]')
-    parser.add_argument('-p',dest="params", type=str, default='~/.tooldir.params', help='Params file')
-    parser.add_argument('-f',dest="force",   action='store_true', help='Overwrite tool.properties')
-
-    arg = parser.parse_args()
-
-    return arg
 
 def biotools_request(tool_id):
     # Try to get data from bio.tools API
@@ -98,77 +68,70 @@ def biotools_request(tool_id):
         #
         return response_json, code
 
-def write_properties(args, json, params):
+def write_properties(args, biojson, params):
 
+    # Installation type
     install_values = {'c':'conda', 'b':'shell', 'd':'docker', 's':'singularity'}
 
-    # Get arguments
-    tool_name = args.tool_name
-    tool_version = args.tool_version
-    cmdline = args.cmdline
-    galaxy = args.galaxy
-    install_type = install_values[args.install_type]
-    owner = args.owner
+    # Get the date
+    now = datetime.datetime.now()
+    daytime = now.strftime("%d/%m/%Y")
 
-    # Get path
+    # Store properties
+    prop = {
+        'NAME': biojson['biotoolsID'],
+        'DESCRIPTION': biojson['description'].split('\n')[0],
+        'VERSION': args.tool_version,
+        'CMDLINE': args.cmdline,
+        'GALAXY': args.galaxy,
+        'URLDOC': biojson['homepage'],
+        'CMD_INSTALL': install_values[args.install_type],
+        'DATE_INSTALL':daytime,
+        'OWNER': args.owner
+    }
+
+    # Get tool installation path
     install_dir = params['install_dir_path']
-    tool_dir = os.path.join(tool_name, tool_version)
+    tool_dir = os.path.join(args.tool_name, args.tool_version)
     tool_dir_path = os.path.join(install_dir, tool_dir)
-
-    # Check path exist
     if not os.path.isdir(tool_dir_path):
         eprint(f"\033[0;31;47m ERROR:"+tool_dir_path+" do not exist! \033[0m")
         eprint(f"\033[0;31;47m ERROR: processus killed \033[0m")
         exit(1)
 
-    # Get infos when in a list and formatting
+    # Format bio.tool data
     ## Operations
     function = []
-    for i in json['function']:
+    for i in biojson['function']:
         operation = i['operation'][0]['term'].lower().replace(' ','-')
         function.append(operation)
-    function = list(set(function))
+    prop['KEYWORDS'] = ','.join(list(set(function)))
     ## Topics
     topic = []
-    for i in json['topic']:
+    for i in biojson['topic']:
         top = i['term']
         if top in params['topics']:
             topic.append(top)
     topic = list(set(topic))
+    prop['TOPIC'] = ','.join(topic)
     if len(topic) == 0:
         eprint(f"\033[0;31;47m WARNING: no topic(s) matching allowed topics \033[0m")
-
-    # Get the date
-    now = datetime.datetime.now()
-    # daytime = now.strftime("%Y-%m-%d")
-    daytime = now.strftime("%d/%m/%Y")
+    ## Description
+    if len(biojson['description'].split('\n')[0]) > 200:
+        eprint(f"\033[0;31;47m WARNING: tool description longer than 200 characters\033[0m")
 
     #Create and write tool.properties
-    properties = os.path.join(tool_dir_path, 'tool.properties')
-
-    # Before, check is file exist
+    properties = os.path.join(tool_dir_path, 'properties.json')
     if os.path.isfile(properties) and not args.force:
-        eprint(f"\033[0;31;47m WARNING: tool.properties already exist \033[0m")
-        eprint(f"\033[0;31;47m WARNING: create tool.properties.tmp instead \033[0m")
-        eprint(f"\033[0;31;47m WARNING: use -f to overwrite tool.properties \033[0m")
-        properties = os.path.join(tool_dir_path, 'tool.properties.tmp')
-
-    tool_prop = open(properties, 'w')
+        eprint(f"\033[0;31;47m WARNING: properties.json already exist \033[0m")
+        eprint(f"\033[0;31;47m WARNING: create properties.json.tmp instead \033[0m")
+        eprint(f"\033[0;31;47m WARNING: use -f to overwrite properties.json \033[0m")
+        properties = os.path.join(tool_dir_path, 'properties.json.tmp')
 
     # Write
-    tool_prop.write('NAME='+json['biotoolsID']+'\n')
-    tool_prop.write('DESCRIPTION='+json['description'].split('\n')[0]+'\n')
-    if len(json['description'].split('\n')[0]) > 200:
-        eprint(f"\033[0;31;47m WARNING: tool description longer than 200 characters\033[0m")
-    tool_prop.write('VERSION='+tool_version+'\n')
-    tool_prop.write('CMDLINE='+cmdline+'\n')
-    tool_prop.write('GALAXY='+galaxy+'\n')
-    tool_prop.write('URLDOC='+json['homepage']+'\n')
-    tool_prop.write('KEYWORDS='+','.join(function)+'\n')
-    tool_prop.write('CMD_INSTALL='+install_type+'\n')
-    tool_prop.write('TOPIC='+','.join(topic)+'\n')
-    tool_prop.write('DATE_INSTALL=' + daytime)
-    tool_prop.write('OWNER=' + owner)
+    with open(properties, 'w') as out_json:
+        json.dump(prop, out_json, sort_keys=False, indent=2)
+    out_json.close()
 
 def conda_tool(params, args):
 
@@ -215,13 +178,14 @@ def make_tool_dir(params, args):
     path_tool = os.path.join(install_dir_path, tool_name, tool_version)
     if os.path.isdir(path_tool):
         eprint(f"\033[0;31;47m WARNING:"+path_tool+" already exist! \033[0m")
-        eprint(f"\033[0;31;47m WARNING: files inside will be overwritten \033[0m")
+        eprint(f"\033[0;31;47m WARNING: file(s) inside will be overwritten \033[0m")
     else:
+        eprint(f"\033[0;37;46m LOG: Create install folder at: " + path_tool + "\033[0m")
         os.makedirs(path_tool)
 
     return path_tool
 
-def main(args):
+def create(args):
 
     # 1 - Get params
     with open(os.path.expanduser(args.params)) as json_data:
@@ -233,13 +197,12 @@ def main(args):
 
     # 3 - Create output tool directory
     path_tool = make_tool_dir(params, args)
-    eprint(f"\033[0;37;46m LOG: Create install folder at: " + path_tool + "\033[0m")
 
     # 4 - For conda, create env.sh and delenv.sh
-    eprint(f"\033[0;37;46m LOG: Conda installation detected \033[0m")
-    eprint(f"\033[0;37;46m LOG: Create env.sh and delenv.sh \033[0m")
     if args.install_type == 'c':
+        eprint(f"\033[0;37;46m LOG: Conda installation detected \033[0m")
         conda_tool(params, args)
+        eprint(f"\033[0;37;46m LOG: Create env.sh and delenv.sh \033[0m")
 
     # 5 - Get json file from bio.tools
     eprint(f"\033[0;37;46m LOG: Collect info. from bio.tools \033[0m")
@@ -247,20 +210,16 @@ def main(args):
 
     # 6 - Load the json
     eprint(f"\033[0;37;46m LOG: Load and parse JSON \033[0m")
-    json_read = json.loads(response)
+    bio_json = json.loads(response)
 
     # 7 - Parse the json, collect infos and write properties
-    eprint(f"\033[0;37;46m LOG: Create tool.properties \033[0m")
-    write_properties(args, json_read, params)
+    eprint(f"\033[0;37;46m LOG: Create properties.json \033[0m")
+    write_properties(args, bio_json, params)
 
     # 8 - Ending
     eprint(f"\033[0;37;46m LOG: " + tool_name + " installed at " + path_tool + "\033[0m")
     if code == 404:
-        eprint(f"\033[0;31;47m WARNING: Tool.properties tags are empty\033[0m")
-        eprint(f"\033[0;31;47m WARNING: Please, manually fill "+ path_tool +"/tool.properties\033[0m")
+        eprint(f"\033[0;31;47m WARNING: properties.json tags are empty\033[0m")
+        eprint(f"\033[0;31;47m WARNING: Please, manually fill "+ path_tool +"/properties.json\033[0m")
     else:
         eprint(f"\033[0;37;46m LOG: Please check tool description\033[0m")
-
-if __name__ == '__main__':
-    args = getArgs()
-    main(args)

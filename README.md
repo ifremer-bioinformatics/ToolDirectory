@@ -1,76 +1,47 @@
-# Tool Directory Software
-
+# ToolDirectory
 ## Introduction
 
-ToolDirectory provides a convenient tool to display list of softwares in a graphical way along with dynamic data filtering capabilities. It was primarily designed to help end users find their way among several hundred of bioinformatics tools installed on our supercomputer DATARMOR at IFREMER.
+ToolDirectory provides a convenient tool to display list of softwares in a webpage along with dynamic data filtering capabilities.
 
-The tool relies on a standard way of describing softwares: EDAM Topic and Operation terms, installation types, supported platforms, packaging, etc. These description "facets" are available for dynamic software filtering directly in the viewer.
+![Tool Directory](images/tooldirectory.png)
 
-ToolDirectory provides a way to go from an "ugly" terminal listing:
-```
-/path/to/bioinfo-softwares
-  ├── blast
-  │    ├── 2.2.31
-  │    └── 2.6.0
-  ├── plast
-  │    └── 2.3.2
-  ├── beedeem
-  │    └── 4.3.0
-  .../...
-```
+You can test our [public demo](https://ifremer-bioinformatics.github.io/ToolDirectorySample/)
 
-to nice views to be presented on a web page for your users.
-
-[Check out by yourself](https://ifremer-bioinformatics.github.io/ToolDirectorySample/)!
-
-**Two views are available**:
-- a simple web page (since ToolDirectory v1)
-- a dynamic data exploration viewer (introduced with ToolDirectory v2).
-
-### The simple web viewer
-
-This is a basic HTML Table aims at providing a clear overview of software name and version, software classification keywords and direct link to documentation. It is available since Tool Directory first release.
-
-![Tool Directory](doc/test-page.png)
-
-### The dynamic data exploration viewer
-
-It provides an extensive presentation of bioinformatics softwares along with data filtering features relying on [EDAM](https://ifb-elixirfr.github.io/edam-browser) Topic and Operation terms. It was introduced with Tool Directory release 2.0. Check out a working viewer [here](https://ifremer-bioinformatics.github.io/ToolDirectorySample/).
-
-![Tool Directory](doc/facet-viewer.png)
-
-## Dependencies
+## Installation
 
 This tool is a Python 3.x program. It also requires the following packages used to build the HTML report:
 
 * Pandas (tested with release 0.21)
 * Jinja2 (tested with release 2.9.6)
-
-Depending on your host configuration you can install these dependencies using either Python package manager or Conda. At IFREMER, we use conda and we had setup a Conda environment as follows:
+* Requests (tested with release 2.25.1)
 
 ```
-conda create -n ToolDirectory-2.0
-source activate ToolDirectory-2.0
-conda install -c python=3.6 Jinja2 pandas
+conda create -p tooldir-v3.0 -c jinja2 pandas requests
 ```
 
-Tool Directory also relies on the open-source version of [Keshif](https://github.com/adilyalcin/Keshif) data visualisation, included in this package, i.e. you do not have to install it.
+Web rendering relies on the open-source version of [Keshif](https://github.com/adilyalcin/Keshif) data visualisation. We provided [Katalog](https://gitlab.ifremer.fr/bioinfo/katalog), a lightweight version specifically designed for ToolDirectory and DataDirectory.
+
+## Basic usage
+
+```bash
+$ tooldir -h
+usage: tooldir <command> [<args>]
+            The available commands are:
+            create   Create tool properties
+            update   Update tool properties (add new key(s), change values)
+            upgrade  Upgrade tool properties to JSON (v2 -> v3)
+            kcsv     Create csv for visualisation
+            khtml    Create core webpage for visualisation
+```
 
 ## Prepare your Directory
-
-### What is a directory?
-
-This is simply the place (*i.e.* a folder on your computing system) where your (bioinformatics) softwares are installed; while Tool Directory was designed to handle a catalog of bioinformatics tools, is can be used for any other software lisiting.
-
-### Expected directory structure
+### 1 - Expected directory structure
 
 Tool Directory expects a directory structure with the following constraints:
 
-* **directory** is a folder on your computing system; let's call it *tool-home-dir*
-* all softwares to be listed are located in sub-folders of *tool-home-dir*
-* softwares having different releases are also organized using sub-folders
+- \<install-dir>/\<tool>/\<version>/
 
-Here is an example of a simple *tool-home-dir*:
+Here is an example:
 
 ```
 /appli/bioinfo
@@ -83,30 +54,30 @@ Here is an example of a simple *tool-home-dir*:
   │    └── 4.3.0
   .../...
 ```
-### Declaring your softwares
+### 2a - Declaring your softwares
 
-Now, to declare your softwares to Tool Directory you just have to setup Property files, one per software. Such a Property file contains the description of a single software (see below) and it has to follow these two constraints
+To declare your softwares to Tool Directory you just have to setup a propertie file, one per software. It contains the description of a single software and it has to follow these two constraints
 
-* file must be called "tool.properties"
+* file must be called ```properties.json```
 * file is located within home directory of a software
 
-For instance, considering our PLAST 2.3.2 installation (see above directory tree structure), we have setup a file called "tool.properties" located in /appli/bioinfo/plast/2.3.2.
-
-Here is the content of "tool.properties" for PLAST 2.3.2:
-
+Example:
 ```
-NAME=PLAST
-DESCRIPTION=High Performance Parallel Local Alignment Search Tool
-VERSION=2.3.2
-CMDLINE=true
-GALAXY=true
-URLDOC=https://plast.inria.fr/user-guide/
-KEYWORDS=pairwise-sequence-alignment
-CMD_INSTALL=shell
+{
+  "NAME": "PLAST",
+  "DESCRIPTION": "High Performance Parallel Local Alignment Search Tool",
+  "VERSION": "2.3.3",
+  "CMDLINE": "true",
+  "GALAXY": "true",
+  "URLDOC": "https://plast.inria.fr/user-guide/",
+  "KEYWORDS": "sequence-similarity-search",
+  "CMD_INSTALL": "shell",
+  "TOPIC": "Biological databases",
+  "DATE_INSTALL": "11/07/2018",
+  "OWNER": "galaxy"
+}
 ```
-As you can see this is basically a set of key=value pairs. Keys are reserved case-sentive words and values are set by you.
-
-Here is such a Property file explained:
+Keys explanation:
 
 ```
 NAME: the name of the software
@@ -118,19 +89,17 @@ URLDOC: URL to the user manual
 KEYWORDS: one or several keywords to classify your software using EDAM Operation terms
 TOPIC: one or several keywords to classify your software using EDAM Topic terms
 CMD_INSTALL: the way a tool is installed. (one of: conda, docker, shell)
+OWNER: person who installed the software
 ```
-All but GALAXY keys are valid to describe your softwares, whatever their field of application. Then, regarding KEYWORDS values, we rely on the EDAM-operation names (see http://edamontology.org/page). It is up to you to choose whatever naming system appropriate to classify your tools.
 
-For a complete list of example of such 'tool.properties' files, look at ![catalogue directory](test/catalogue).
+A list of JSON files is available in `test/catalogue`.
 
-### Automatic creation of properties using Bio.tools API
+### 2b - Automatic creation of properties using Bio.tools API
 
-To be consistent between the descriptions of your softwares, we strongly recommend to use the Bio.tools database.
-
-To do such job, you can use ```create-tool.properties_bio.tools.py``` which will automatically create the ```tool.properties``` as follows:
+To be consistent between the descriptions of your softwares, we strongly recommend to use the Bio.tools database using ```tooldir create```
 
 ```bash
-create-tool.properties_bio.tools.py -n bowtie2 -v 2.3.5
+tooldir create -n bowtie2 -v 2.3.5 -o username
 ```
 By default, it will search for the parameter file into  ```~/.tooldir.params``` which contains the structure of your install environment, as follow:
 
@@ -156,65 +125,26 @@ By default, it will search for the parameter file into  ```~/.tooldir.params``` 
 
 And you can indicate a restrictive list of allowed topics.
 
-### Modifying keys in Property files
+### 3 - Setup visualisation
 
-Maybe you could be interested in adding, removing or renaming the keys of a Property file. Of course, this is possible: just edit the Python source code of Tool Directory and adapt it to your needs. The source code is fully documented and it should be easy to modify it.
+You will need [Katalog](https://gitlab.ifremer.fr/bioinfo/katalog), a lightweight version of [Keshif](https://github.com/adilyalcin/Keshif) specifically designed for ToolDirectory and DataDirectory.
 
-In a similar way, you can add more CMD_INSTALL values. If you do so, just ensure that you add the corresponding image in the images folder. For instance, the value docker is associated to images/docker.png file.
 
-## Tool Directory use
-
-### Testing the tool
-
-You can test the tool as follows:
-
-```
-cd scripts
-./make-html-directory.py -o test.html
-```
-Then open "test.html" in your web browser. You should see sometjing like this:
-
-![Tool Directory](doc/test-page.png)
-
-### Using the tool with your software listing
-
-You use Tool Directory in a very straightforward way:
-
-```
-cd scripts
-./make-html-directory.py -p <directory> -o my-listing.html
-
-where:
-     directory: root directory of your software installation; considering our
-                sample directory tree structure (see above), we will use:
-                -d /appli/bioinfo
-     my-listing.html: the list of your software, Html/Table formatted; use a
-                file name as needed
+```bash
+git clone https://gitlab.ifremer.fr/bioinfo/katalog.git /foo/bar/www/tooldirectory
 ```
 
-## Setup the simple HTML based view
+Then, configure ToolDirectory and generate the software list:
+```bash
+# At the first utilization, generate a html webpage for visualization
+tooldir khtml -i webpage.json -p /path/to/www/katalog/
 
-Simply uses the procedure described in the Testing section, above.
+# Generate csv file for Keshif visualization, at first time and for each update
+tooldir kcsv -p /path/to/softwares/ -o /foo/bar/www/tooldirectory/Softwares.csv
+```
 
-## Setup the data exploration view
-
-### Prepare the dynamic viewer basic files
-
-Steps to execute one time  are
-- On your web server, locate the 'www' directory, then create a sub-folder, e.g. 'tool-directory' ;
-- Copy content of 'thirdparty/Keshif/*' into 'www/tool-directory' ;
-- Copy file 'css/software_browser.css' into 'www/tool-directory' ;
-- Edit file 'template/example.lst' and update field values to match your system ;
-- Run script 'scripts/generateWebPage.py' to generate html template into 'www/tool-directory' ;
-
-### Prepare the CSV file required by the viewer
-
-- Run script 'scripts/make-csv-directory.py' to prepare CSV file' and place it into 'www/tool-directory'.
-
-That step has to be executed each time yout install a new software into your repository of tools; at Ifremer, we use a cron task.
+You can use a crontab to automatically update the software listing.
 
 ## Licenses
 
 Tool Directory is released under the terms of the Apache 2 license.
-
-Tool Directory data exploration viewer uses the open-source version of [Keshif](https://github.com/adilyalcin/Keshif), a web-based data exploration environment for data analytics. Keshif open-source is released under the terms of the BSD-3 clause license. Read Keshif [publication](http://adilyalcin.me/academic/KeshifInPractice.pdf).

@@ -1,0 +1,103 @@
+#!/usr/bin/env python3
+
+import argparse
+import sys
+from lib import create
+from lib import upgrade
+from lib import update
+from lib import kcsv
+from lib import khtml
+
+
+class ToolDir(object):
+
+    def __init__(self):
+        parser = argparse.ArgumentParser(
+            description='ToolDirectory: Dynamic visualization of softwares',
+            usage='''tooldir <command> [<args>]
+            The available commands are:
+            create   Create tool properties
+            update   Update tool properties (add new key(s), change values)
+            upgrade  Upgrade tool properties to JSON (v2 -> v3)
+            kcsv     Create csv for Keshif visualisation
+            khtml    Create core webpage for Keshif
+            ''')
+        parser.add_argument('command', help='Subcommand to run')
+        # if there is no command specified, print the parser's help message
+        if len(sys.argv) == 1:
+            parser.print_help()
+            exit(1)
+        # parse_args defaults to [1:] for args, but you need to
+        # exclude the rest of the args too, or validation will fail
+        args = parser.parse_args(sys.argv[1:2])
+        # LBYL (Look Before You Leap)
+        # validate command using dispatch list, print error message if the command is unrecognized
+        dispatch = ['create','upgrade','update','kcsv','khtml']
+        if args.command not in dispatch:  # if not hasattr(self, args.command):
+            print(f"tooldir: '{args.command}' is not a tooldir command. See 'tooldir --help'")
+            exit(1)
+        # if not hasattr(self, args.command):
+        #     print('Unrecognized command')
+        #     parser.print_help()
+        #     exit(1)
+        # use dispatch pattern to invoke method with same name
+        getattr(self, args.command)()
+
+    def create(self):
+        parser = argparse.ArgumentParser(description="Create tool properties JSON")
+        parser.add_argument('-n', dest="tool_name", type=str, required=True, help='Tool Name. Ex: bowtie2')
+        parser.add_argument('-v', dest="tool_version", type=str, required=True, help='Tool version. Ex: 2.3.5')
+        parser.add_argument('-o', dest="owner", type=str, required=True, help='Installer uid. Ex: acormier')
+        parser.add_argument('-c', dest="cmdline", type=str, default='true', choices=['true', 'false'],
+                            help='Available in cmdline [%(default)s]')
+        parser.add_argument('-g', dest="galaxy", type=str, default='false', choices=['true', 'false'],
+                            help='Available in Galaxy [%(default)s]')
+        parser.add_argument('-i', dest="install_type", type=str, default='c', choices=['c', 'b', 'd', 's'],
+                            help='[c]onda/[b]ash/[d]ocker/[s]ingularity [%(default)s]')
+        parser.add_argument('-p', dest="params", type=str, default='~/.tooldir.params', help='Params file')
+        parser.add_argument('-f', dest="force", action='store_true', help='Overwrite properties')
+
+        args = parser.parse_args(sys.argv[2:])
+
+        create.create(args)
+
+    def update(self):
+        parser = argparse.ArgumentParser(description="Update tool properties (add new key(s), change values)")
+        parser.add_argument('-u', dest="update", type=str, required=True, help='Key(s) to add/update')
+        parser.add_argument('-p', dest="toolspath", type=str, default="test/", help='Tools main folder')
+        parser.add_argument('-b', dest="backup", action='store_true', help='Make a backup')
+
+        args = parser.parse_args(sys.argv[2:])
+
+        update.update(args)
+
+    def upgrade(self):
+        parser = argparse.ArgumentParser(description="Upgrade tool properties to JSON (v2 -> v3)")
+        parser.add_argument('-p', dest="toolspath", type=str, default="test/", help='Tools main folder')
+
+        args = parser.parse_args(sys.argv[2:])
+
+        upgrade.upgrade(args)
+
+    def kcsv(self):
+        parser = argparse.ArgumentParser(description="Create csv for Keshif visualisation")
+        parser.add_argument('-p', dest="toolspath", type=str, default="test/", help='Tools main folder')
+        parser.add_argument('-o', dest="csvfile", type=str, default="test/Softwares.csv", help='Output csv name')
+
+        args = parser.parse_args(sys.argv[2:])
+
+        kcsv.kcsv(args)
+
+    def khtml(self):
+        parser = argparse.ArgumentParser(description="Create core webpage for Keshif")
+        parser.add_argument('-i', dest="info", type=argparse.FileType('r'), required=True,
+                            help='File with informations to generate the web page')
+        parser.add_argument('-p', dest="path", type=str, required=True, help='Destination for html file')
+
+        args = parser.parse_args(sys.argv[2:])
+
+        khtml.khtml(args)
+
+
+if __name__ == '__main__':
+    ToolDir()
