@@ -10,12 +10,9 @@ from requests.exceptions import HTTPError
 
 
 def walk_level(directory, depth=2):
-    # If depth is negative, just walk
-    # Unsed in the project
     if depth < 0:
         for root, dirs, files in os.walk(directory):
             yield root, dirs, files
-    # path.count works because is a file has a "/" it will show up in the list as a ":"
     else:
         path = directory.rstrip(os.path.sep)
         num_sep = path.count(os.path.sep)
@@ -26,13 +23,20 @@ def walk_level(directory, depth=2):
                 del dirs[:]
 
 
-# For errors / warnings
+def get_json(directories):
+    json_lst = []
+    for root, dirs, files in directories:
+        if 'properties.json' in files:
+            abs_f = os.path.join(root, 'properties.json')
+            json_lst.append(abs_f)
+    return json_lst
+
+
 def eprint(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
 
 
-def biotools_request(tool_id):
-    # Try to get data from bio.tools API
+def biotools_api_request(tool_id):
     try:
         response = requests.get('https://bio.tools/api/tool/' + tool_id + '/?format=json')
         response.raise_for_status()
@@ -41,21 +45,6 @@ def biotools_request(tool_id):
             # eprint(f"\033[0;31;47m WARNING: HTTP error occurred: {http_error} \033[0m")
             eprint(f"\033[0;31;47m WARNING: " + tool_id + " is not described in Bio.tools \033[0m")
             exit(1)
-            # eprint(f"\033[0;31;47m WARNING: Tool.properties will be created anyway but empty \033[0m")
-            # response_dict = {
-            #     "description": "",
-            #     "homepage": "",
-            #     "biotoolsID": "",
-            #     "function": [
-            #         {
-            #             "operation": [{"uri": "", "term": ""}]}],
-            #     "topic": [{"uri": "", "term": ""}]
-            # }
-            # response_json = json.dumps(response_dict)
-            # # Return empty json
-            # code = response.status_code
-            # #
-            # return response_json, code
         else:
             eprint(f"\033[0;31;47m ERROR: HTTP error occurred: {http_error} \033[0m")
             exit(1)
@@ -63,11 +52,48 @@ def biotools_request(tool_id):
         eprint(f"\033[0;31;47m ERROR: Other error occurred: {error} \033[0m")
         exit(1)
     else:
-        # Return json as text file
         response_json = response.text
         code = response.status_code
-        #
         return response_json, code
+
+
+def check_module_path(args):
+    module_dir_path = os.path.join(args.path_modules, args.tool_name)
+    if not os.path.isdir(module_dir_path):
+        eprint(f"\033[0;31;47m ERROR:" + module_dir_path + " do not exist! \033[0m")
+        eprint(f"\033[0;31;47m ERROR: processus killed \033[0m")
+        exit(1)
+    module_file_path = os.path.join(args.path_modules, args.tool_name, args.tool_version)
+    if not os.path.isfile(module_file_path):
+        eprint(f"\033[0;31;47m ERROR:" + module_file_path + " do not exist! \033[0m")
+        eprint(f"\033[0;31;47m ERROR: processus killed \033[0m")
+        exit(1)
+
+
+def update_properties(args, properties):
+    eprint(f"\033[0;37;46m LOG: " + args.tool_name + " already exist. Adding new version number... \033[0m")
+    with open(properties) as json_data:
+        p = json.load(json_data)
+    p_check = p['VERSION'].split(',')
+    if args.tool_version not in p_check:
+        p['VERSION'] = p['VERSION'] + ',' + args.tool_version
+        with open(properties, 'w') as o:
+            json.dump(p, o, sort_keys=False, indent=2)
+        o.close()
+        eprint(f"\033[0;37;46m LOG: all done!\033[0m")
+    else:
+        eprint(f"\033[0;31;47m WARNING: tool version already declared. Skip.\033[0m")
+
+
+def create_properties(args, properties):
+    eprint(f"\033[0;37;46m LOG: Launch create for " + args.tool_name + " \033[0m")
+    eprint(f"\033[0;37;46m LOG: Collect info. from bio.tools \033[0m")
+    response, code = biotools_api_request(args.tool_name)
+    eprint(f"\033[0;37;46m LOG: Load and parse JSON \033[0m")
+    bio_json = json.loads(response)
+    eprint(f"\033[0;37;46m LOG: Create properties.json \033[0m")
+    write_properties(args, bio_json, properties)
+    eprint(f"\033[0;37;46m LOG: all done!\033[0m")
 
 
 def write_properties(args, biojson, properties):
@@ -97,90 +123,34 @@ def write_properties(args, biojson, properties):
     out_json.close()
 
 
-def check_modules(args):
-    module_dir_path = os.path.join(args.path_modules, args.tool_name)
-    if not os.path.isdir(module_dir_path):
-        eprint(f"\033[0;31;47m ERROR:" + module_dir_path + " do not exist! \033[0m")
-        eprint(f"\033[0;31;47m ERROR: processus killed \033[0m")
-        exit(1)
-    module_file_path = os.path.join(args.path_modules, args.tool_name, args.tool_version)
-    if not os.path.isfile(module_file_path):
-        eprint(f"\033[0;31;47m ERROR:" + module_file_path + " do not exist! \033[0m")
-        eprint(f"\033[0;31;47m ERROR: processus killed \033[0m")
-        exit(1)
-
-
-def update_properties(args, properties):
-    with open(properties) as json_data:
-        p = json.load(json_data)
-    p_check = p['VERSION'].split(',')
-    if args.tool_version not in p_check:
-        p['VERSION'] = p['VERSION'] + ',' + args.tool_version
-        with open(properties, 'w') as o:
-            json.dump(p, o, sort_keys=False, indent=2)
-        o.close()
-    else:
-        eprint(f"\033[0;31;47m WARNING: tool version already declared. Skip.\033[0m")
-
-
-def create_properties(args, properties):
-    eprint(f"\033[0;37;46m LOG: Launch create for " + args.tool_name + " \033[0m")
-    eprint(f"\033[0;37;46m LOG: Collect info. from bio.tools \033[0m")
-    response, code = biotools_request(args.tool_name)
-    eprint(f"\033[0;37;46m LOG: Load and parse JSON \033[0m")
-    bio_json = json.loads(response)
-    eprint(f"\033[0;37;46m LOG: Create properties.json \033[0m")
-    write_properties(args, bio_json, properties)
-    eprint(f"\033[0;37;46m LOG: all done!\033[0m")
-
-
-def update_infos(modifications):
+def collect_properties_to_upgrade(modifications):
     updates = open(modifications, 'r')
     update_data = {}
     for l in updates:
         tool, version, key = re.split(r'\t', l.rstrip('\n'))
         key, val = key.split('=')
-        if not tool in update_data:
-            update_data[tool] = {version:{}}
-        if not version in update_data[tool]:
+        if tool not in update_data:
+            update_data[tool] = {version: {}}
+        if version not in update_data[tool]:
             update_data[tool][version] = {}
         update_data[tool][version][key] = val
     return update_data
 
 
-def get_json(directories):
-    json_lst=[]
-    for root, dirs, files in directories:
-        if 'properties.json' in files:
-            abs_f=os.path.join(root, 'properties.json')
-            json_lst.append(abs_f)
-    return json_lst
-
-
-def update_tool_prop(json_list, modifications, backup=False):
-    # Get the date of the modification
+def upgrade_properties(json_list, modifications, backup=False):
     now = datetime.datetime.now()
     daytime = now.strftime("%Y-%m-%d")
-    # Parse and store all tool.properties and only backup
-    # and update listed files
     for j in json_list:
         with open(j) as json_data:
             p = json.load(json_data)
-        # 2a - Update all
         if "all" in modifications:
-            for k,v in modifications["all"]["all"].items():
+            for k, v in modifications["all"]["all"].items():
                 p[k] = v
-        # 2b - Update specific tools - Overwrite modifications apply to all
-        ## First, check the tool
         if p['NAME'] in modifications:
-            ## Second, check the version
             if p['VERSION'] in modifications[p['NAME']]:
-                # Get the modifications
                 for k, v in modifications[p['NAME']][p['VERSION']].items():
                     p[k] = v
-        # 3 - Close
         json_data.close()
-        # 4 - Write
         if "all" in modifications:
             if backup:
                 backup = j.replace('properties.json', 'properties.' + daytime)
@@ -197,7 +167,7 @@ def update_tool_prop(json_list, modifications, backup=False):
             out_json.close()
 
 
-def get_tool_prop(directories):
+def get_properties_files(directories):
     tool_prop_files = []
     for root, dirs, files in directories:
         if 'properties.json' in files:
@@ -206,22 +176,16 @@ def get_tool_prop(directories):
     return tool_prop_files
 
 
-def output_writing(csv_out, json_lst):
+def kcsv_writing(csv_out, json_lst):
     txt = open(csv_out, 'w')
     txt.write('Name,Version,Operation,Topic,Doc,Description,Date\n')
-    # Iterate over each tool - sorted by name
-    # for tool in sorted(dictData.keys(), key=lambda x:x.lower()):
 
     json_lst.sort(key=str.lower)
 
     for tool in json_lst:
-        # Load json
         with open(tool) as json_data:
             p = json.load(json_data)
-        # Print path in case of error
-        # Write, ordered
-        name = p['NAME'] + ' - ' + p['VERSION']
         txt.write(
-            '"{0}","{1}","{2}","{3}","{4}","{5}","{6}"\n'.format(p['NAME'],p['VERSION'],p['KEYWORDS'],p['TOPIC'],p['URLDOC'],p['DESCRIPTION'],p['DATE_INSTALL']))
-    # Close file
+            '"{0}","{1}","{2}","{3}","{4}","{5}","{6}"\n'.format(p['NAME'], p['VERSION'], p['KEYWORDS'], p['TOPIC'],
+                                                                 p['URLDOC'], p['DESCRIPTION'], p['DATE_INSTALL']))
     txt.close()
