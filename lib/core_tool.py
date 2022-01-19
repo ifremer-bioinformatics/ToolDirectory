@@ -39,9 +39,9 @@ def biotools_request(tool_id):
     except HTTPError as http_error:
         if response.status_code == 404:
             # eprint(f"\033[0;31;47m WARNING: HTTP error occurred: {http_error} \033[0m")
-            core.eprint(f"\033[0;31;47m WARNING: " + tool_id + " is not described in Bio.tools \033[0m")
+            eprint(f"\033[0;31;47m WARNING: " + tool_id + " is not described in Bio.tools \033[0m")
             exit(1)
-            # core.eprint(f"\033[0;31;47m WARNING: Tool.properties will be created anyway but empty \033[0m")
+            # eprint(f"\033[0;31;47m WARNING: Tool.properties will be created anyway but empty \033[0m")
             # response_dict = {
             #     "description": "",
             #     "homepage": "",
@@ -57,10 +57,10 @@ def biotools_request(tool_id):
             # #
             # return response_json, code
         else:
-            core.eprint(f"\033[0;31;47m ERROR: HTTP error occurred: {http_error} \033[0m")
+            eprint(f"\033[0;31;47m ERROR: HTTP error occurred: {http_error} \033[0m")
             exit(1)
     except Exception as error:
-        core.eprint(f"\033[0;31;47m ERROR: Other error occurred: {error} \033[0m")
+        eprint(f"\033[0;31;47m ERROR: Other error occurred: {error} \033[0m")
         exit(1)
     else:
         # Return json as text file
@@ -91,7 +91,7 @@ def write_properties(args, biojson, properties):
         topic.append(i['term'])
     prop['TOPIC'] = ','.join(list(set(topic)))
     if len(biojson['description'].split('\n')[0]) > 200:
-        core.eprint(f"\033[0;31;47m WARNING: tool description longer than 200 characters\033[0m")
+        eprint(f"\033[0;31;47m WARNING: tool description longer than 200 characters\033[0m")
     with open(properties, 'w') as out_json:
         json.dump(prop, out_json, sort_keys=False, indent=2)
     out_json.close()
@@ -100,13 +100,13 @@ def write_properties(args, biojson, properties):
 def check_modules(args):
     module_dir_path = os.path.join(args.path_modules, args.tool_name)
     if not os.path.isdir(module_dir_path):
-        core.eprint(f"\033[0;31;47m ERROR:" + module_dir_path + " do not exist! \033[0m")
-        core.eprint(f"\033[0;31;47m ERROR: processus killed \033[0m")
+        eprint(f"\033[0;31;47m ERROR:" + module_dir_path + " do not exist! \033[0m")
+        eprint(f"\033[0;31;47m ERROR: processus killed \033[0m")
         exit(1)
     module_file_path = os.path.join(args.path_modules, args.tool_name, args.tool_version)
     if not os.path.isfile(module_file_path):
-        core.eprint(f"\033[0;31;47m ERROR:" + module_file_path + " do not exist! \033[0m")
-        core.eprint(f"\033[0;31;47m ERROR: processus killed \033[0m")
+        eprint(f"\033[0;31;47m ERROR:" + module_file_path + " do not exist! \033[0m")
+        eprint(f"\033[0;31;47m ERROR: processus killed \033[0m")
         exit(1)
 
 
@@ -120,18 +120,18 @@ def update_properties(args, properties):
             json.dump(p, o, sort_keys=False, indent=2)
         o.close()
     else:
-        core.eprint(f"\033[0;31;47m WARNING: tool version already declared. Skip.\033[0m")
+        eprint(f"\033[0;31;47m WARNING: tool version already declared. Skip.\033[0m")
 
 
 def create_properties(args, properties):
-    core.eprint(f"\033[0;37;46m LOG: Launch create for " + args.tool_name + " \033[0m")
-    core.eprint(f"\033[0;37;46m LOG: Collect info. from bio.tools \033[0m")
+    eprint(f"\033[0;37;46m LOG: Launch create for " + args.tool_name + " \033[0m")
+    eprint(f"\033[0;37;46m LOG: Collect info. from bio.tools \033[0m")
     response, code = biotools_request(args.tool_name)
-    core.eprint(f"\033[0;37;46m LOG: Load and parse JSON \033[0m")
+    eprint(f"\033[0;37;46m LOG: Load and parse JSON \033[0m")
     bio_json = json.loads(response)
-    core.eprint(f"\033[0;37;46m LOG: Create properties.json \033[0m")
+    eprint(f"\033[0;37;46m LOG: Create properties.json \033[0m")
     write_properties(args, bio_json, properties)
-    core.eprint(f"\033[0;37;46m LOG: all done!\033[0m")
+    eprint(f"\033[0;37;46m LOG: all done!\033[0m")
 
 
 def update_infos(modifications):
