@@ -19,7 +19,7 @@ This is an HTML/JavaScript/D3.js viewer, so you basically need no other installa
 
 The only step you have to achieve consists in creating a specific CSV file, listing all your softwares along with some metadata, such as EDAM terms, links to documentation, etc. An example is provided in test file [Sotwares.csv](test/Softwares.csv).
 
-Then, you place that CSV file within main directory of katalog clone (see above). 
+Then, you place that CSV file within main directory of Katalog clone (see above). Please review this fully running example of Katalog Viewer tool : [ToolDirectory Viewer at work](https://github.com/ifremer-bioinformatics/ifremer-bioinformatics.github.io/tree/master/ToolDirectorySample).
 
 That's all folks.
 
