@@ -7,7 +7,25 @@ ToolDirectory provides a convenient tool to display list of softwares in a webpa
 
 You can test our [public demo](https://ifremer-bioinformatics.github.io/ToolDirectorySample/)
 
-## Installation
+## Direct use of ToolDirectory Viewer
+
+You will need [Katalog](https://gitlab.ifremer.fr/bioinfo/katalog), a lightweight version of [Keshif](https://github.com/adilyalcin/Keshif) specifically designed for ToolDirectory and DataDirectory.
+
+```bash
+git clone https://gitlab.ifremer.fr/bioinfo/katalog.git /foo/bar/www/tooldirectory
+```
+
+This is an HTML/JavaScript/D3.js viewer, so you basically need no other installation to do.
+
+The only step you have to achieve consists in creating a specific CSV file, listing all your softwares along with some metadata, such as EDAM terms, links to documentation, etc. An example is provided in test file [Sotwares.csv](test/Softwares.csv).
+
+Then, you place that CSV file within main directory of katalog clone (see above). 
+
+That's all folks.
+
+## Installation of ToolDirectory to manage softwares
+
+ToolDirectory provides tools to handle a catalogue of softwares relying on a particular way of installating softwares on your system (see below, Expected directory structure).
 
 This tool is a Python 3.x program. It also requires the following packages used to build the HTML report:
 
