@@ -13,7 +13,9 @@ The only step you have to achieve consists in creating a specific CSV file, list
 
 Then, review this fully running example of ToolDirectory Viewer tool : [ToolDirectory Viewer at work](https://github.com/ifremer-bioinformatics/ifremer-bioinformatics.github.io/tree/master/ToolDirectorySample), you'll see how a Softwares.csv file is used. 
 
-That's all folks.
+That's all folks to use the Viewer.
+
+Now, to create the CSV file requested by the Viewer in a fully automated way, ToolDirectory provides a few tools, hereafter presented.
 
 ## Installation of ToolDirectory to manage softwares
 
