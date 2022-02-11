@@ -9,17 +9,9 @@ You can test our [public demo](https://ifremer-bioinformatics.github.io/ToolDire
 
 ## Direct use of ToolDirectory Viewer
 
-You will need [Katalog](https://gitlab.ifremer.fr/bioinfo/katalog), a lightweight version of [Keshif](https://github.com/adilyalcin/Keshif) specifically designed for ToolDirectory and DataDirectory.
-
-```bash
-git clone https://gitlab.ifremer.fr/bioinfo/katalog.git /foo/bar/www/tooldirectory
-```
-
-This is an HTML/JavaScript/D3.js viewer, so you basically need no other installation to do.
-
 The only step you have to achieve consists in creating a specific CSV file, listing all your softwares along with some metadata, such as EDAM terms, links to documentation, etc. An example is provided in test file [Sotwares.csv](test/Softwares.csv).
 
-Then, you place that CSV file within main directory of Katalog clone (see above). Please review this fully running example of Katalog Viewer tool : [ToolDirectory Viewer at work](https://github.com/ifremer-bioinformatics/ifremer-bioinformatics.github.io/tree/master/ToolDirectorySample).
+Then, review this fully running example of ToolDirectory Viewer tool : [ToolDirectory Viewer at work](https://github.com/ifremer-bioinformatics/ifremer-bioinformatics.github.io/tree/master/ToolDirectorySample), you'll see how a Softwares.csv file is used. 
 
 That's all folks.
 
