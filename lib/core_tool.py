@@ -32,8 +32,8 @@ def walk_level(directory, depth=2):
 def get_json(directories):
     json_lst = []
     for root, dirs, files in directories:
-        if 'properties.json' in files:
-            abs_f = os.path.join(root, 'properties.json')
+        if 'properties.json-test' in files:
+            abs_f = os.path.join(root, 'properties.json-test')
             json_lst.append(abs_f)
     return json_lst
 
@@ -70,15 +70,6 @@ def biotools_api_request(tool_id):
 
 
 def check_path(args):
-    """ Ensure that module file or compilation/conda folder exist depending on the cluster architecture
-    :param args:
-        - path: main path to module/tools directory
-        - name: tool name
-        - version: tool version
-    :return:
-    Nothing
-    """
-
     tool_path = os.path.join(args.path, args.name)
     if not os.path.isdir(tool_path):
         eprint(f"\033[0;31;47m ERROR:" + tool_path + " do not exist! \033[0m")
@@ -170,12 +161,15 @@ def kcsv_writing(csv_out, json_lst):
     for tool in json_lst:
         with open(tool) as json_data:
             p = json.load(json_data)
-            versions = ','.join(sorted(p['version'].keys(), reverse=True))
+            # versions = ','.join(sorted(p['version'].keys(), reverse=True))
+            ver_env = []
+            for k in sorted(p['version'].keys(), reverse=True):
+                ver_env.append(k+'-'+p['version'][k]['environment'])
+            versions = ','.join(ver_env)
             txt.write('"{0}","{1}","{2}","{3}","{4}","{5}"\n'.format(p['name'],
                                                                      versions,
                                                                      p['operation'],
                                                                      p['topic'],
                                                                      p['homepage'],
                                                                      p['description']))
-
     txt.close()
