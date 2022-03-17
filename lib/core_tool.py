@@ -32,8 +32,8 @@ def walk_level(directory, depth=2):
 def get_json(directories):
     json_lst = []
     for root, dirs, files in directories:
-        if 'properties.json-test' in files:
-            abs_f = os.path.join(root, 'properties.json-test')
+        if 'properties.json' in files:
+            abs_f = os.path.join(root, 'properties.json')
             json_lst.append(abs_f)
     return json_lst
 
