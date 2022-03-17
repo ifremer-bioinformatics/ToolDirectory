@@ -37,6 +37,6 @@ TARGET_DIR="../test/catalogue"
 for tooldir in $(find $SOURCE_DIR -maxdepth 1 -mindepth 1 -type d | sort):
 do
   echo "Collect tool.properties from: $tooldir"
-  rsync -a --prune-empty-dirs --include '*/' --include 'tool.properties' --exclude '*' $tooldir $TARGET_DIR
+  rsync -a --prune-empty-dirs --include '*/' --include 'properties.json' --exclude '*' $tooldir $TARGET_DIR
 done
 
