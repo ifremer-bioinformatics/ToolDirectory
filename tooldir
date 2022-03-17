@@ -14,9 +14,9 @@ class ToolDir(object):
             usage='''tooldir <command> [<args>]
             The available commands are:
             create   Create tool properties
-            upgrade  Update tool properties (add new key(s), change values)
             kcsv     Create csv for Keshif visualization
             ''')
+        #  upgrade  Update tool properties (add new key(s), change values)
         parser.add_argument('command', help='Subcommand to run')
         # if there is no command specified, print the parser's help message
         if len(sys.argv) == 1:
@@ -27,7 +27,8 @@ class ToolDir(object):
         args = parser.parse_args(sys.argv[1:2])
         # LBYL (Look Before You Leap)
         # validate command using dispatch list, print error message if the command is unrecognized
-        dispatch = ['create','upgrade','kcsv']
+        # dispatch = ['create','upgrade','kcsv']
+        dispatch = ['create', 'kcsv']
         if args.command not in dispatch:  # if not hasattr(self, args.command):
             print(f"tooldir: '{args.command}' is not a tooldir command. See 'tooldir --help'")
             exit(1)
@@ -40,39 +41,26 @@ class ToolDir(object):
 
     def create(self):
         parser = argparse.ArgumentParser(description="Create tool properties JSON")
-        parser.add_argument('-n', dest="tool_name", type=str, required=True, help='Tool Name. Ex: bowtie2')
-        parser.add_argument('-v', dest="tool_version", type=str, required=True, help='Tool version. Ex: 2.3.5')
-        parser.add_argument('-o', dest="owner", type=str, required=True, help='Installer uid. Ex: acormier')
+        parser.add_argument('-n', dest="name", type=str, required=True, help='Tool Name. Ex: bowtie2')
+        parser.add_argument('-v', dest="version", type=str, required=True, help='Tool version. Ex: 2.3.5')
+        parser.add_argument('-o', dest="installer", type=str, required=True, help='Installer uid. Ex: acormier')
         parser.add_argument('-c', dest="cmdline", type=str, default='true', choices=['true', 'false'],
                             help='Available in cmdline [%(default)s]')
         parser.add_argument('-g', dest="galaxy", type=str, default='false', choices=['true', 'false'],
                             help='Available in Galaxy [%(default)s]')
-        parser.add_argument('-i', dest="install_type", type=str, default='c', choices=['c', 'b', 'd', 's'],
-                            help='[c]onda/[b]ash/[d]ocker/[s]ingularity [%(default)s]')
-        parser.add_argument('-p', dest="path_modules", type=str, default='test/ifb/', help='Path to module files')
-        # parser.add_argument('-f', dest="force", action='store_true', help='Overwrite properties')
+        parser.add_argument('-i', dest="environment", type=str, default='c', choices=['c', 'b', 'd', 's', 'o'],
+                            help='[c]onda/[b]ash/[d]ocker/[s]ingularity/[o]ther [%(default)s]')
+        parser.add_argument('-p', dest="path", type=str, default='test/ifb/', help='Path to module files')
+        parser.add_argument('-d', dest="datetime", type=str, help='Installation date [Current date]')
 
         args = parser.parse_args(sys.argv[2:])
 
-        cl.check_module_path(args)
-        properties = os.path.join(args.path_modules, args.tool_name, 'properties.json')
+        cl.check_path(args)
+        properties = os.path.join(args.path, args.name, 'properties.json')
         if os.path.isfile(properties):
-            cl.update_properties(args, properties)
+            cl.add_version(args, properties)
         else:
             cl.create_properties(args, properties)
-
-    def upgrade(self):
-        parser = argparse.ArgumentParser(description="Upgrade tool properties (add new key(s), change values)")
-        parser.add_argument('-u', dest="update", type=str, required=True, help='Key(s) to add/update')
-        parser.add_argument('-p', dest="toolspath", type=str, default="test/", help='Tools main folder')
-        parser.add_argument('-b', dest="backup", action='store_true', help='Make a backup')
-
-        args = parser.parse_args(sys.argv[2:])
-
-        modifications = cl.collect_properties_to_upgrade(args.update)
-        directories = cl.walk_level(args.toolspath)
-        tools_json = cl.get_json(directories)
-        cl.upgrade_properties(tools_json, modifications, backup=args.backup)
 
     def kcsv(self):
         parser = argparse.ArgumentParser(description="Create csv for Keshif visualisation")
@@ -82,7 +70,7 @@ class ToolDir(object):
         args = parser.parse_args(sys.argv[2:])
 
         directories = cl.walk_level(args.toolspath)
-        prop_json = cl.get_properties_files(directories)
+        prop_json = cl.get_json(directories)
         cl.kcsv_writing(args.csvfile, prop_json)
 
 
