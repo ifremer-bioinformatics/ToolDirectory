@@ -154,7 +154,7 @@ def add_version(args, properties):
 
 def kcsv_writing(csv_out, json_lst):
     txt = open(csv_out, 'w')
-    txt.write('Name,Version,Operation,Topic,Doc,Description\n')
+    txt.write('Name,Version,Operation,Topic,Doc,Description,Environment,Galaxy\n')
 
     json_lst.sort(key=str.lower)
 
@@ -163,13 +163,20 @@ def kcsv_writing(csv_out, json_lst):
             p = json.load(json_data)
             # versions = ','.join(sorted(p['version'].keys(), reverse=True))
             ver_env = []
+            env = []
             for k in sorted(p['version'].keys(), reverse=True):
-                ver_env.append(k+'-'+p['version'][k]['environment'])
+                ver_env.append(k + '-' + p['version'][k]['environment'])
+                if p['version'][k]['environment'] not in env:
+                    env.append(p['version'][k]['environment'])
             versions = ','.join(ver_env)
-            txt.write('"{0}","{1}","{2}","{3}","{4}","{5}"\n'.format(p['name'],
-                                                                     versions,
-                                                                     p['operation'],
-                                                                     p['topic'],
-                                                                     p['homepage'],
-                                                                     p['description']))
+            environments = ','.join(env)
+            isGalaxy = p['version'][k]['isGalaxy']
+            txt.write('"{0}","{1}","{2}","{3}","{4}","{5}","{6}","{7}"\n'.format(p['name'],
+                                                                           versions,
+                                                                           p['operation'],
+                                                                           p['topic'],
+                                                                           p['homepage'],
+                                                                           p['description'],
+                                                                           environments,
+                                                                           isGalaxy))
     txt.close()
