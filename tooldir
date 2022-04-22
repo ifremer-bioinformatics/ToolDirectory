@@ -4,6 +4,7 @@ import argparse
 import sys
 import os
 from lib import core_tool as cl
+from lib import ifremer as ifr
 
 
 class ToolDir(object):
@@ -55,6 +56,17 @@ class ToolDir(object):
 
         args = parser.parse_args(sys.argv[2:])
 
+        # IFREMER
+        params = {
+            "install_dir_path": "/appli/bioinfo/",
+            "conda_envs_path": "/appli/conda-env/bioinfo",
+            "anaconda_dir_path": "/appli/anaconda/versions/",
+            "anaconda_profile_d": "/appli/anaconda/latest/etc/profile.d/conda.sh"
+        }
+        if args.environment == 'conda':
+            ifr.make_tool_dir(params, args)
+            ifr.conda_tool(params, args)
+        #  ALL
         cl.check_path(args)
         properties = os.path.join(args.path, args.name, 'properties.json')
         if os.path.isfile(properties):
