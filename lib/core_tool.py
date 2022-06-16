@@ -117,7 +117,8 @@ def write_properties(args, biojson, properties):
                 "environment": environment[args.environment],
                 "localInstallDate": install_date,
                 "isCmdline": args.cmdline,
-                "isGalaxy": args.galaxy
+                "isGalaxy": args.galaxy,
+                "isWorkflow": args.workflow
             }
         }
     }
@@ -142,7 +143,8 @@ def add_version(args, properties):
             "environment": environment[args.environment],
             "localInstallDate": install_date,
             "isCmdline": args.cmdline,
-            "isGalaxy": args.galaxy
+            "isGalaxy": args.galaxy,
+            "isWorkflow": args.workflow
         }
         with open(properties, 'w') as o:
             json.dump(p, o, sort_keys=False, indent=2)
@@ -154,7 +156,7 @@ def add_version(args, properties):
 
 def kcsv_writing(csv_out, json_lst):
     txt = open(csv_out, 'w')
-    txt.write('Name,Version,Operation,Topic,Doc,Description,Environment,Galaxy\n')
+    txt.write('Name,Version,Operation,Topic,Doc,Description,Environment,Galaxy,Workflow\n')
 
     json_lst.sort(key=str.lower)
 
@@ -171,12 +173,14 @@ def kcsv_writing(csv_out, json_lst):
             versions = ','.join(ver_env)
             environments = ','.join(env)
             isGalaxy = p['version'][k]['isGalaxy']
-            txt.write('"{0}","{1}","{2}","{3}","{4}","{5}","{6}","{7}"\n'.format(p['name'],
+            isWorkflow = p['version'][k]['isWorkflow']
+            txt.write('"{0}","{1}","{2}","{3}","{4}","{5}","{6}","{7}","{8}"\n'.format(p['name'],
                                                                            versions,
                                                                            p['operation'],
                                                                            p['topic'],
                                                                            p['homepage'],
                                                                            p['description'],
                                                                            environments,
-                                                                           isGalaxy))
+                                                                           isGalaxy,
+                                                                           isWorkflow))
     txt.close()

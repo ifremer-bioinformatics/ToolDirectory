@@ -51,6 +51,8 @@ class ToolDir(object):
                             help='Available in Galaxy [%(default)s]')
         parser.add_argument('-i', dest="environment", type=str, default='c', choices=['c', 'b', 'd', 's', 'o'],
                             help='[c]onda/[b]ash/[d]ocker/[s]ingularity/[o]ther [%(default)s]')
+        parser.add_argument('-w', dest="workflow", type=str, default='false', choices=['false', 'true'],
+                            help='For workflow')
         parser.add_argument('-p', dest="path", type=str, default='test/ifb/', help='Path to module files')
         parser.add_argument('-d', dest="datetime", type=str, help='Installation date [Current date]')
 
