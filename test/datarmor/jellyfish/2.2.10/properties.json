@@ -1,0 +1,13 @@
+{
+  "NAME": "jellyfish",
+  "DESCRIPTION": "A command-line algorithm for counting k-mers in DNA sequence.",
+  "VERSION": "2.2.10",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "http://www.genome.umd.edu/jellyfish.html",
+  "CMD_INSTALL": "conda",
+  "DATE_INSTALL": "09/12/2021",
+  "OWNER": "acormier",
+  "KEYWORDS": "k-mer-counting",
+  "TOPIC": "Sequence assembly"
+}

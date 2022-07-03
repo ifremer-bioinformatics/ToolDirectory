@@ -1,0 +1,13 @@
+{
+  "NAME": "fastqc",
+  "DESCRIPTION": "A quality control tool for high throughput sequence data",
+  "VERSION": "0.11.9",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "http://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+  "KEYWORDS": "sequence-composition-calculation",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Bioinformatics",
+  "DATE_INSTALL": "01/02/2021",
+  "OWNER": "galaxy"
+}

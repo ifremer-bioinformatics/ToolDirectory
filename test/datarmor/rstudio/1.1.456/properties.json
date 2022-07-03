@@ -1,0 +1,13 @@
+{
+  "NAME": "RStudio",
+  "DESCRIPTION": "Tool for statistics",
+  "VERSION": "1.1.456",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://rstudio.com/",
+  "KEYWORDS": "statistics-and-probability,visualisation",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Statistics and probability",
+  "DATE_INSTALL": "20/02/2020",
+  "OWNER": "galaxy"
+}

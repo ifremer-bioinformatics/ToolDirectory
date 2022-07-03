@@ -1,0 +1,17 @@
+{
+  "name": "metilene",
+  "description": "Fast and sensitive detection of differential DNA methylation.",
+  "homepage": "https://www.bioinf.uni-leipzig.de/Software/metilene/",
+  "operation": "DMR-identification",
+  "topic": "Epigenetics",
+  "version": {
+    "0.2.8": {
+      "localInstallUser": "acormier",
+      "environment": "conda",
+      "localInstallDate": "15/12/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "jModelTest2",
+  "description": "Tool to carry out statistical selection of best-fit models of nucleotide substitution",
+  "homepage": "https://github.com/ddarriba/jmodeltest2",
+  "operation": "phylogenetic-tree-construction",
+  "topic": "Phylogeny",
+  "version": {
+    "2.1.10": {
+      "localInstallUser": "galaxy",
+      "environment": "shell",
+      "localInstallDate": "06/12/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

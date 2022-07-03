@@ -1,0 +1,13 @@
+{
+  "NAME": "diamond",
+  "DESCRIPTION": "Sequence aligner for protein and translated DNA searches and functions as a drop-in replacement for the NCBI BLAST software tools.",
+  "VERSION": "2.0.14",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/bbuchfink/diamond",
+  "CMD_INSTALL": "conda",
+  "DATE_INSTALL": "19/01/2022",
+  "OWNER": "acormier",
+  "KEYWORDS": "sequence-alignment-analysis",
+  "TOPIC": "Sequence analysis"
+}

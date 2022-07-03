@@ -1,0 +1,13 @@
+{
+  "NAME": "CulebrONT",
+  "DESCRIPTION": "scalable, modular and traceable Snakemake pipeline, able to launch multiple assembly tools in parallel, giving you the possibility of circularise, polish, and correct assemblies, checking quality",
+  "VERSION": "1.6",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://culebront-pipeline.readthedocs.io/en/latest/",
+  "CMD_INSTALL": "Snakemake",
+  "DATE_INSTALL": "26/10/2021",
+  "OWNER": "pgdurand",
+  "KEYWORDS": "genome-assembly",
+  "TOPIC": "Sequence assembly,Workflows"
+}

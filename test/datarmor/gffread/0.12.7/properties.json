@@ -1,0 +1,13 @@
+{
+  "NAME": "gffread",
+  "DESCRIPTION": "GFF/GTF utility providing format conversions, filtering, FASTA sequence extraction and more",
+  "VERSION": "0.12.7",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/gpertea/gffread",
+  "KEYWORDS": "sequence-annotation",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Sequence analysis",
+  "DATE_INSTALL": "15/10/2021",
+  "OWNER": "cnoel"
+}

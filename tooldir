@@ -2,26 +2,23 @@
 
 import argparse
 import sys
-from lib import create
-from lib import upgrade
-from lib import update
-from lib import kcsv
-from lib import khtml
+import os
+from lib import core as cl
+from lib import ifremer as ifr
 
 
 class ToolDir(object):
 
     def __init__(self):
         parser = argparse.ArgumentParser(
-            description='ToolDirectory: Dynamic visualization of softwares',
+            description='ToolDirectory: Dynamic visualization of software',
             usage='''tooldir <command> [<args>]
             The available commands are:
             create   Create tool properties
-            update   Update tool properties (add new key(s), change values)
-            upgrade  Upgrade tool properties to JSON (v2 -> v3)
-            kcsv     Create csv for Keshif visualisation
-            khtml    Create core webpage for Keshif
+            status   Set installation status of tool/version
+            kcsv     Create csv for Keshif visualization
             ''')
+        #  upgrade  Update tool properties (add new key(s), change values)
         parser.add_argument('command', help='Subcommand to run')
         # if there is no command specified, print the parser's help message
         if len(sys.argv) == 1:
@@ -32,7 +29,7 @@ class ToolDir(object):
         args = parser.parse_args(sys.argv[1:2])
         # LBYL (Look Before You Leap)
         # validate command using dispatch list, print error message if the command is unrecognized
-        dispatch = ['create','upgrade','update','kcsv','khtml']
+        dispatch = ['create', 'status', 'kcsv']
         if args.command not in dispatch:  # if not hasattr(self, args.command):
             print(f"tooldir: '{args.command}' is not a tooldir command. See 'tooldir --help'")
             exit(1)
@@ -45,39 +42,49 @@ class ToolDir(object):
 
     def create(self):
         parser = argparse.ArgumentParser(description="Create tool properties JSON")
-        parser.add_argument('-n', dest="tool_name", type=str, required=True, help='Tool Name. Ex: bowtie2')
-        parser.add_argument('-v', dest="tool_version", type=str, required=True, help='Tool version. Ex: 2.3.5')
-        parser.add_argument('-o', dest="owner", type=str, required=True, help='Installer uid. Ex: acormier')
+        parser.add_argument('-n', dest="name", type=str, required=True, help='Tool Name. Ex: bowtie2')
+        parser.add_argument('-v', dest="version", type=str, required=True, help='Tool version. Ex: 2.3.5')
+        parser.add_argument('-o', dest="installer", type=str, required=True, help='Installer uid. Ex: acormier')
         parser.add_argument('-c', dest="cmdline", type=str, default='true', choices=['true', 'false'],
                             help='Available in cmdline [%(default)s]')
         parser.add_argument('-g', dest="galaxy", type=str, default='false', choices=['true', 'false'],
                             help='Available in Galaxy [%(default)s]')
-        parser.add_argument('-i', dest="install_type", type=str, default='c', choices=['c', 'b', 'd', 's'],
-                            help='[c]onda/[b]ash/[d]ocker/[s]ingularity [%(default)s]')
-        parser.add_argument('-p', dest="params", type=str, default='~/.tooldir.params', help='Params file')
-        parser.add_argument('-f', dest="force", action='store_true', help='Overwrite properties')
+        parser.add_argument('-i', dest="environment", type=str, default='c', choices=['c', 'b', 'd', 's', 'o'],
+                            help='[c]onda/[b]ash/[d]ocker/[s]ingularity/[o]ther [%(default)s]')
+        parser.add_argument('-w', dest="workflow", type=str, default='false', choices=['false', 'true'],
+                            help='For workflow')
+        parser.add_argument('-p', dest="path", type=str, default='test/ifb/', help='Path to module files')
+        parser.add_argument('-d', dest="datetime", type=str, help='Installation date [Current date]')
 
         args = parser.parse_args(sys.argv[2:])
 
-        create.create(args)
+        # IFREMER
+        params = {
+            "install_dir_path": "/appli/bioinfo/",
+            "conda_envs_path": "/appli/conda-env/bioinfo",
+            "anaconda_dir_path": "/appli/anaconda/versions/",
+            "anaconda_profile_d": "/appli/anaconda/latest/etc/profile.d/conda.sh"
+        }
+        if args.environment == 'conda':
+            ifr.make_tool_dir(params, args)
+            ifr.conda_tool(params, args)
+        #  ALL
+        cl.check_path(args)
+        properties = os.path.join(args.path, args.name, 'properties.json')
+        if os.path.isfile(properties):
+            cl.add_version(args, properties)
+        else:
+            cl.create_properties(args, properties)
 
-    def update(self):
-        parser = argparse.ArgumentParser(description="Update tool properties (add new key(s), change values)")
-        parser.add_argument('-u', dest="update", type=str, required=True, help='Key(s) to add/update')
-        parser.add_argument('-p', dest="toolspath", type=str, default="test/", help='Tools main folder')
-        parser.add_argument('-b', dest="backup", action='store_true', help='Make a backup')
+    def status(self):
+        parser = argparse.ArgumentParser(description="Set installation status of tool/version")
+        parser.add_argument('-p', dest="propertie", type=str, default="test/", help='Path to json')
+        parser.add_argument('-s', dest="status", type=str, default='inactive', choices=['active', 'inactive'], help='Tool/version installation status [%(default)s]')
+        parser.add_argument('-l', dest="versions", type=str, nargs='+', help='Version(s) to set status')
 
         args = parser.parse_args(sys.argv[2:])
 
-        update.update(args)
-
-    def upgrade(self):
-        parser = argparse.ArgumentParser(description="Upgrade tool properties to JSON (v2 -> v3)")
-        parser.add_argument('-p', dest="toolspath", type=str, default="test/", help='Tools main folder')
-
-        args = parser.parse_args(sys.argv[2:])
-
-        upgrade.upgrade(args)
+        cl.set_status(args.propertie, args.versions, args.status)
 
     def kcsv(self):
         parser = argparse.ArgumentParser(description="Create csv for Keshif visualisation")
@@ -86,17 +93,9 @@ class ToolDir(object):
 
         args = parser.parse_args(sys.argv[2:])
 
-        kcsv.kcsv(args)
-
-    def khtml(self):
-        parser = argparse.ArgumentParser(description="Create core webpage for Keshif")
-        parser.add_argument('-i', dest="info", type=argparse.FileType('r'), required=True,
-                            help='File with informations to generate the web page')
-        parser.add_argument('-p', dest="path", type=str, required=True, help='Destination for html file')
-
-        args = parser.parse_args(sys.argv[2:])
-
-        khtml.khtml(args)
+        directories = cl.walk_level(args.toolspath)
+        prop_json = cl.get_json(directories)
+        cl.kcsv_writing(args.csvfile, prop_json)
 
 
 if __name__ == '__main__':

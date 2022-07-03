@@ -1,0 +1,13 @@
+{
+  "NAME": "Canu",
+  "DESCRIPTION": "A single molecule sequence assembler for genomes large and small",
+  "VERSION": "2.0",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "http://canu.readthedocs.io",
+  "KEYWORDS": "genome-assembly",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Sequence assembly",
+  "DATE_INSTALL": "19/03/2020",
+  "OWNER": "galaxy"
+}

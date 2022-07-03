@@ -1,0 +1,13 @@
+{
+  "NAME": "Raven",
+  "DESCRIPTION": "De novo genome assembler for long uncorrected reads",
+  "VERSION": "1.5",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/lbcb-sci/raven",
+  "KEYWORDS": "genome-assembly",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Sequence assembly",
+  "DATE_INSTALL": "04/06/2021",
+  "OWNER": "cnoel"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "swarm",
+  "description": "A robust and fast clustering method for amplicon-based studies. The purpose of this tool is to provide a novel clustering algorithm that handles massive sets of amplicons.",
+  "homepage": "https://github.com/torognes/swarm",
+  "operation": "sequence-clustering",
+  "topic": "Biodiversity,Sequence analysis,Microbiology,Molecular biology",
+  "version": {
+    "3.1.0": {
+      "localInstallUser": "cnoel",
+      "environment": "conda",
+      "localInstallDate": "07/07/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

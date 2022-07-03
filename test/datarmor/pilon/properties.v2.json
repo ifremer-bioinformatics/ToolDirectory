@@ -1,0 +1,25 @@
+{
+  "name": "Pilon",
+  "description": "Read alignment analysis to diagnose, report, and automatically improve de novo genome assemblies.",
+  "homepage": "http://www.broadinstitute.org/software/pilon/",
+  "operation": "read-alignment,analysis,sequence-assembly",
+  "topic": "Assembly",
+  "version": {
+    "1.23": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "20/01/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    },
+    "1.24": {
+      "localInstallUser": "cnoel",
+      "environment": "conda",
+      "localInstallDate": "29/06/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

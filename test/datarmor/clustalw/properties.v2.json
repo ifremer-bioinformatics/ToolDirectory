@@ -1,0 +1,17 @@
+{
+  "name": "Clustal W",
+  "description": "Multiple alignment of nucleic acid and protein sequences ",
+  "homepage": "http://www.clustal.org/omega/",
+  "operation": "multiple-sequence-alignment",
+  "topic": "Phylogeny",
+  "version": {
+    "2.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "False"
+    }
+  }
+}

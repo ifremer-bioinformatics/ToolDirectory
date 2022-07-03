@@ -1,0 +1,13 @@
+{
+  "NAME": "Medaka",
+  "DESCRIPTION": "Sequence correction provided by ONT Research ",
+  "VERSION": "1.2.6",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/nanoporetech/medaka",
+  "KEYWORDS": "sequencing-error-detection",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Sequence assembly",
+  "DATE_INSTALL": "08/04/2021",
+  "OWNER": "galaxy"
+}

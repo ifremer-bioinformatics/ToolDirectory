@@ -1,0 +1,13 @@
+{
+  "NAME": "abricate",
+  "DESCRIPTION": "Mass screening of contigs for antibiotic resistance genes",
+  "VERSION": "0.9.8",
+  "CMDLINE": "true",
+  "GALAXY": "true",
+  "URLDOC": "https://github.com/tseemann/abricate",
+  "KEYWORDS": "gene-prediction",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Functional genomics",
+  "DATE_INSTALL": "13/12/2019",
+  "OWNER": "galaxy"
+}

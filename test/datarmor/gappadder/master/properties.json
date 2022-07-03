@@ -1,0 +1,13 @@
+{
+  "NAME": "GAPPadder",
+  "DESCRIPTION": "GAPPadder is designed for closing gaps on the draft genomes with paired-end reads or mate-paired reads.",
+  "VERSION": "master",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/simoncchu/GAPPadder",
+  "KEYWORDS": "scaffold-gap-completion",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Sequence assembly",
+  "DATE_INSTALL": "18/03/2021",
+  "OWNER": "galaxy"
+}

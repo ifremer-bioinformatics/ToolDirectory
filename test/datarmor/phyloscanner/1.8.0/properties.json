@@ -1,0 +1,13 @@
+{
+  "NAME": "phyloscanner",
+  "DESCRIPTION": "Analysing pathogen genetic diversity and relationships between and within hosts.",
+  "VERSION": "1.8.0",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/BDI-pathogens/phyloscanner",
+  "KEYWORDS": "data-handling",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Mapping,Population genetics",
+  "DATE_INSTALL": "11/05/2021",
+  "OWNER": "cnoel"
+}

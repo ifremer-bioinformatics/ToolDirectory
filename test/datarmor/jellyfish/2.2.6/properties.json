@@ -1,0 +1,13 @@
+{
+  "NAME": "Jellyfish",
+  "DESCRIPTION": "counting of k-mers in DNA",
+  "VERSION": "2.2.6",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "http://www.genome.umd.edu/jellyfish.html",
+  "KEYWORDS": "k-mer-counting",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Sequence assembly",
+  "DATE_INSTALL": "14/03/2018",
+  "OWNER": "galaxy"
+}

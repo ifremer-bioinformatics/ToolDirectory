@@ -1,0 +1,13 @@
+{
+  "NAME": "modbam2bed",
+  "DESCRIPTION": "A program to aggregate modified base counts stored in a modified-base BAM file to a bedMethyl file.",
+  "VERSION": "0.4.6",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/epi2me-labs/modbam2bed",
+  "KEYWORDS": "methylation-calling",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Epigenetics",
+  "DATE_INSTALL": "23/02/2022",
+  "OWNER": "cnoel"
+}

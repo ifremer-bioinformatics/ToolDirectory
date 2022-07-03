@@ -1,0 +1,13 @@
+{
+  "NAME": "CONSENT",
+  "DESCRIPTION": "self-correction method for long reads",
+  "VERSION": "2.2.2",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/morispi/CONSENT",
+  "KEYWORDS": "read-correction",
+  "CMD_INSTALL": "shell",
+  "TOPIC": "Sequence assembly",
+  "DATE_INSTALL": "12/07/2021",
+  "OWNER": "cnoel"
+}

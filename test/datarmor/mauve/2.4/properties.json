@@ -1,0 +1,13 @@
+{
+  "NAME": "Mauve",
+  "DESCRIPTION": "Multiple genome alignment",
+  "VERSION": "2.4",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "http://darlinglab.org/mauve/mauve.html",
+  "KEYWORDS": "genome-alignment",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Sequence assembly",
+  "DATE_INSTALL": "18/06/2020",
+  "OWNER": "galaxy"
+}

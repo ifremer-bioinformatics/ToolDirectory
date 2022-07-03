@@ -1,0 +1,13 @@
+{
+  "NAME": "PEAR",
+  "DESCRIPTION": "An ultrafast, memory-efficient and highly accurate pair-end read merger",
+  "VERSION": "0.9.6",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": " https://sco.h-its.org/exelixis/web/software/pear/doc.html",
+  "KEYWORDS": "read-preprocessing",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Bioinformatics",
+  "DATE_INSTALL": "04/07/2018",
+  "OWNER": "galaxy"
+}

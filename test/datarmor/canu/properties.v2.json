@@ -1,0 +1,57 @@
+{
+  "name": "Canu",
+  "description": "De-novo assembly tool for long read chemistry like Nanopore data and PacBio data.",
+  "homepage": "https://github.com/marbl/canu",
+  "operation": "de-novo-assembly",
+  "topic": "Genomics",
+  "version": {
+    "1.6": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "15/02/2018",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    },
+    "1.7": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "13/03/2018",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    },
+    "1.9": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "16/01/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    },
+    "2.0": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "19/03/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    },
+    "2.1.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "05/11/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    },
+    "2.2": {
+      "localInstallUser": "acormier",
+      "environment": "conda",
+      "localInstallDate": "07/12/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

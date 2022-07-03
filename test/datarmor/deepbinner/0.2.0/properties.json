@@ -1,0 +1,13 @@
+{
+  "NAME": "Deepbinner",
+  "DESCRIPTION": "Deepbinner is a tool for demultiplexing barcoded Oxford Nanopore sequencing reads.",
+  "VERSION": "0.2.0",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/rrwick/Deepbinner",
+  "KEYWORDS": "demultiplexing",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Bioinformatics",
+  "DATE_INSTALL": "17/06/2020",
+  "OWNER": "galaxy"
+}

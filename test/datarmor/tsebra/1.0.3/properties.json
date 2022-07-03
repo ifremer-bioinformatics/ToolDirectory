@@ -1,0 +1,13 @@
+{
+  "NAME": "TSEBRA",
+  "DESCRIPTION": "TSEBRA is a combiner tool that selects transcripts from gene predictions based on the support by extrisic evidence in form of introns and start/stop codons. It was developed to combine BRAKER1 and BRAKER2 predicitons to increase their accuracies.",
+  "VERSION": "1.0.3",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/Gaius-Augustus/TSEBRA",
+  "CMD_INSTALL": "conda",
+  "DATE_INSTALL": "10/02/2022",
+  "OWNER": "acormier",
+  "KEYWORDS": "gene-prediction",
+  "TOPIC": "Functional genomics"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "RagTag",
+  "description": "RagTag is a collection of software tools for scaffolding and improving modern genome assemblies.",
+  "homepage": "https://github.com/malonge/RagTag",
+  "operation": "genome-assembly",
+  "topic": "Sequence assembly",
+  "version": {
+    "1.0.2": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "15/12/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

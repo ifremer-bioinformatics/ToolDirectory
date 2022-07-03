@@ -1,0 +1,17 @@
+{
+  "name": "mitobim",
+  "description": "MITObim - mitochondrial baiting and iterative mapping",
+  "homepage": "https://github.com/chrishah/MITObim",
+  "operation": "genome-assembly",
+  "topic": "Sequence assembly",
+  "version": {
+    "1.9.1": {
+      "localInstallUser": "acormier",
+      "environment": "conda",
+      "localInstallDate": "17/01/2022",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

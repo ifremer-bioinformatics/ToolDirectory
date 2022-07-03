@@ -1,0 +1,13 @@
+{
+  "NAME": "salmon",
+  "DESCRIPTION": "quantifying the expression of transcripts using RNA-seq data",
+  "VERSION": "0.13.1",
+  "CMDLINE": "true",
+  "GALAXY": "true",
+  "URLDOC": "https://combine-lab.github.io/salmon/",
+  "KEYWORDS": "rna-seq-quantification",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Transcriptomics",
+  "DATE_INSTALL": "11/03/2019",
+  "OWNER": "galaxy"
+}

@@ -1,0 +1,13 @@
+{
+  "NAME": "Bismark",
+  "DESCRIPTION": "A tool to map bisulfite converted sequence reads and determine cytosine methylation states",
+  "VERSION": "0.17",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "http://www.bioinformatics.babraham.ac.uk/projects/bismark/",
+  "KEYWORDS": "bisulfite-mapping",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Epigenetics",
+  "DATE_INSTALL": "17/11/2017",
+  "OWNER": "galaxy"
+}

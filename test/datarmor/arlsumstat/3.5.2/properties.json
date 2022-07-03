@@ -1,0 +1,13 @@
+{
+  "NAME": "ARLSUMSTAT",
+  "DESCRIPTION": "modified version of Arlequin for computing summary statistics",
+  "VERSION": "3.5.2",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "http://cmpg.unibe.ch/software/arlequin35/man/arlsumstat_readme.txt",
+  "KEYWORDS": "statistics-and-probability",
+  "CMD_INSTALL": "shell",
+  "TOPIC": "Population genetics",
+  "DATE_INSTALL": "18/04/2019",
+  "OWNER": "galaxy"
+}

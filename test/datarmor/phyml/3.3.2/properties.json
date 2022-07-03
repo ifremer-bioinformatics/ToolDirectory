@@ -1,0 +1,13 @@
+{
+  "NAME": "PhyML",
+  "DESCRIPTION": "Estimate Maximum-Likelihook Phylogenies",
+  "VERSION": "3.3.2",
+  "CMDLINE": "true",
+  "GALAXY": "true",
+  "URLDOC": "http://www.atgc-montpellier.fr/phyml/",
+  "KEYWORDS": "phylogenetic-tree-construction",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Phylogeny",
+  "DATE_INSTALL": "17/11/2017",
+  "OWNER": "galaxy"
+}

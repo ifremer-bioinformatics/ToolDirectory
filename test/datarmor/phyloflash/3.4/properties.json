@@ -1,0 +1,13 @@
+{
+  "NAME": "phyloFlash",
+  "DESCRIPTION": "A pipeline to rapidly reconstruct the SSU rRNAs and explore phylogenetic composition of an Illumina (meta)genomic or transcriptomic dataset.",
+  "VERSION": "3.4",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/HRGV/phyloFlash",
+  "KEYWORDS": "sequence-assembly",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Metagenomics",
+  "DATE_INSTALL": "05/05/2021",
+  "OWNER": "galaxy"
+}

@@ -1,0 +1,13 @@
+{
+  "NAME": "BEDOPS",
+  "DESCRIPTION": "high-performance genomic feature operations",
+  "VERSION": "2.4.38",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/bedops/bedops",
+  "KEYWORDS": "workflows",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Bioinformatics",
+  "DATE_INSTALL": "03/04/2020",
+  "OWNER": "galaxy"
+}

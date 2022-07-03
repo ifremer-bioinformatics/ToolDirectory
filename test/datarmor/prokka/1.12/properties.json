@@ -1,0 +1,13 @@
+{
+  "NAME": "Prokka",
+  "DESCRIPTION": "Annotation of prokaryotic genomes",
+  "VERSION": "1.12",
+  "CMDLINE": "true",
+  "GALAXY": "true",
+  "URLDOC": "http://www.vicbioinformatics.com/software.prokka.shtml",
+  "KEYWORDS": "gene-prediction",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Functional genomics",
+  "DATE_INSTALL": "17/11/2017",
+  "OWNER": "galaxy"
+}

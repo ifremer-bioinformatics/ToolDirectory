@@ -1,0 +1,13 @@
+{
+  "NAME": "ARB",
+  "DESCRIPTION": "Silva visualization tool",
+  "VERSION": "6.0.6",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "http://www.arb-home.de/documentation.html",
+  "KEYWORDS": "visualisation,phylogenetic-analysis",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Phylogeny",
+  "DATE_INSTALL": "12/12/2017",
+  "OWNER": "galaxy"
+}

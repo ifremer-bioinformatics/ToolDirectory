@@ -1,0 +1,13 @@
+{
+  "NAME": "CRISP",
+  "DESCRIPTION": "Detect SNPs and short indels from high-throughput sequencing of pooled DNA samples",
+  "VERSION": "0.7",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://bansal-lab.github.io/software/crisp.html",
+  "KEYWORDS": "variant-calling",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Epigenetics",
+  "DATE_INSTALL": "17/11/2017",
+  "OWNER": "galaxy"
+}

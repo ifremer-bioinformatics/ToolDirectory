@@ -1,0 +1,13 @@
+{
+  "NAME": "p7zip",
+  "DESCRIPTION": "file compressor/decompressor relying on 7zip",
+  "VERSION": "16.02",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://anaconda.org/conda-forge/p7zip",
+  "KEYWORDS": "data-handling",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Bioinformatics",
+  "DATE_INSTALL": "16/11/2021",
+  "OWNER": "pgdurand"
+}

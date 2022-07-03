@@ -1,0 +1,13 @@
+{
+  "NAME": "sambamba",
+  "DESCRIPTION": "parallel robust and fast tool for working with SAM and BAM files",
+  "VERSION": "0.6.6",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/biod/sambamba",
+  "KEYWORDS": "data-handling",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Bioinformatics",
+  "DATE_INSTALL": "07/06/2018",
+  "OWNER": "galaxy"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "CheckV",
+  "description": "CheckV is a fully automated command-line pipeline for assessing the quality of single-contig viral genomes, including identification of host contamination for integrated proviruses, estimating completeness for genome fragments, and identification of closed genomes.",
+  "homepage": "http://bitbucket.org/berkeleylab/CheckV",
+  "operation": "sequence-assembly",
+  "topic": "Metagenomics,Metagenomic sequencing,Sequence assembly,Mapping",
+  "version": {
+    "0.5.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "15/05/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "NAME": "unicycler",
+  "DESCRIPTION": "A tool for assembling bacterial genomes from a combination of short (2nd generation) and long (3rd generation) sequencing reads.",
+  "VERSION": "0.5.0",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/rrwick/Unicycler",
+  "CMD_INSTALL": "conda",
+  "DATE_INSTALL": "09/02/2022",
+  "OWNER": "pauffret",
+  "KEYWORDS": "genome-assembly",
+  "TOPIC": "Sequence assembly"
+}

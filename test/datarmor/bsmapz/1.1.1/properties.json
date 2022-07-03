@@ -1,0 +1,13 @@
+{
+  "NAME": "bsmapz",
+  "DESCRIPTION": "short reads mapping software for bisulfite sequencing reads",
+  "VERSION": "1.1.1",
+  "CMDLINE": "true",
+  "GALAXY": "true",
+  "URLDOC": "https://github.com/zyndagj/BSMAPz",
+  "KEYWORDS": "bisulfite-mapping",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Epigenetics",
+  "DATE_INSTALL": "10/03/2020",
+  "OWNER": "galaxy"
+}

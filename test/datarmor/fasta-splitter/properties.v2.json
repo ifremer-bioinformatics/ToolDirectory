@@ -1,0 +1,17 @@
+{
+  "name": "fasta-splitter",
+  "description": "Divides a large FASTA file into a set of smaller, approximately equally sized files",
+  "homepage": "http://kirill-kryukov.com/study/tools/fasta-splitter/",
+  "operation": "data-handling",
+  "topic": "Bioinformatics",
+  "version": {
+    "0.2.4": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "16/07/2018",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

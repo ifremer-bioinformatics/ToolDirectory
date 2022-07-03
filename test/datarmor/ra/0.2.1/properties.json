@@ -1,0 +1,13 @@
+{
+  "NAME": "ra",
+  "DESCRIPTION": "Overlap-layout-consensus based DNA assembler of long uncorrected reads (short for Rapid Assembler).",
+  "VERSION": "0.2.1",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/lbcb-sci/ra",
+  "KEYWORDS": "genome-assembly",
+  "CMD_INSTALL": "shell",
+  "TOPIC": "Sequence assembly",
+  "DATE_INSTALL": "07/07/2021",
+  "OWNER": "cnoel"
+}
