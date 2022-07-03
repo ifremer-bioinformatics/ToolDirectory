@@ -48,15 +48,18 @@ def daytime():
     return time
 
 
-def biotools_api_request(tool_id):
+def biotools_api_request(args, properties):
     try:
-        response = requests.get('https://bio.tools/api/tool/' + tool_id + '/?format=json')
+        response = requests.get('https://bio.tools/api/tool/' + args.name + '/?format=json')
         response.raise_for_status()
     except HTTPError as http_error:
         if response.status_code == 404:
             # eprint(f"\033[0;31;47m WARNING: HTTP error occurred: {http_error} \033[0m")
-            eprint(f"\033[0;31;47m WARNING: " + tool_id + " is not described in Bio.tools \033[0m")
-            exit(1)
+            eprint(f"\033[0;31;47m WARNING: " + args.name + " is not described in Bio.tools \033[0m")
+            eprint(f"\033[0;31;47m WARNING: writing empty properties file \033[0m")
+            eprint(f"\033[0;31;47m WARNING: please, fill it manual: {properties} \033[0m")
+            write_properties_default(args, properties)
+            exit(0)
         else:
             eprint(f"\033[0;31;47m ERROR: HTTP error occurred: {http_error} \033[0m")
             exit(1)
@@ -85,7 +88,7 @@ def check_path(args):
 def create_properties(args, properties):
     eprint(f"\033[0;37;46m LOG: Launch create for " + args.name + " \033[0m")
     eprint(f"\033[0;37;46m LOG: Collect info. from bio.tools \033[0m")
-    response, code = biotools_api_request(args.name)
+    response, code = biotools_api_request(args, properties)
     eprint(f"\033[0;37;46m LOG: Load and parse JSON \033[0m")
     bio_json = json.loads(response)
     eprint(f"\033[0;37;46m LOG: Create properties.json \033[0m")
@@ -125,6 +128,33 @@ def write_properties(args, biojson, properties):
     }
     if len(biojson['description'].split('\n')[0]) > 400:
         eprint(f"\033[0;31;47m WARNING: tool description longer than 400 characters\033[0m")
+    with open(properties, 'w') as out_json:
+        json.dump(prop, out_json, sort_keys=False, indent=2)
+    out_json.close()
+
+
+def write_properties_default(args, properties):
+    install_date = daytime()
+    if args.datetime:
+        install_date = args.datetime
+    prop = {
+        'name': args.name,
+        'description': '',
+        'homepage': '',
+        "operation": '',
+        "topic": '',
+        'version': {
+            args.version: {
+                "localInstallUser": args.installer,
+                "environment": environment[args.environment],
+                "localInstallDate": install_date,
+                "isCmdline": args.cmdline,
+                "isGalaxy": args.galaxy,
+                "isWorkflow": args.workflow,
+                "status": "active"
+            }
+        }
+    }
     with open(properties, 'w') as out_json:
         json.dump(prop, out_json, sort_keys=False, indent=2)
     out_json.close()
