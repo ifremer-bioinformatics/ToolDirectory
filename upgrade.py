@@ -3,7 +3,7 @@
 import argparse
 import json
 import os
-from lib import core_tool as cl
+from lib import core as cl
 
 
 def getArgs():
@@ -35,7 +35,8 @@ def extract_properties(jsons):
                                                                   "localInstallDate": bio_json['DATE_INSTALL'],
                                                                   "isCmdline": bio_json['CMDLINE'],
                                                                   "isGalaxy": bio_json['GALAXY'],
-                                                                  "isWorkflow": "false"
+                                                                  "isWorkflow": "false",
+                                                                  "status": "active"
                                                               }
                                                           }}}
         else:
@@ -45,7 +46,8 @@ def extract_properties(jsons):
                 "localInstallDate": bio_json['DATE_INSTALL'],
                 "isCmdline": bio_json['CMDLINE'],
                 "isGalaxy": bio_json['GALAXY'],
-                "isWorkflow": "false"
+                "isWorkflow": "false",
+                "status": "active"
                 }
     return tools_properties
 
