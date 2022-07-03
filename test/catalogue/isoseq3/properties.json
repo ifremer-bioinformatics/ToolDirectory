@@ -1,9 +1,9 @@
 {
   "name": "isoseq3",
-  "description": "IsoSeq v3 contains the newest tools to identify transcripts in PacBio single-molecule sequencing data. Starting in SMRT Link v6.0.0, those tools power the IsoSeq GUI-based analysis application. A composable workflow of existing tools and algorithms, combined with a new clustering technique.",
+  "description": "Scalable De Novo Isoform Discovery",
   "homepage": "https://github.com/PacificBiosciences/IsoSeq",
-  "operation": "demultiplexing",
-  "topic": "Gene transcripts",
+  "operation": "splice_transcript_prediction",
+  "topic": "Transcriptomics",
   "version": {
     "3.4.0": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "02/10/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

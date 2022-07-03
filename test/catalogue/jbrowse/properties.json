@@ -1,9 +1,9 @@
 {
   "name": "JBrowse",
-  "description": "Slick, speedy genome browser with a responsive and dynamic AJAX interface for visualization of genome data. Being developed by the GMOD project as a successor to GBrowse.",
-  "homepage": "http://gmod.org/wiki/JBrowse",
+  "description": "Genome browser",
+  "homepage": "https://jbrowse.org/",
   "operation": "genome-visualisation",
-  "topic": "Genomics",
+  "topic": "Data visualisation",
   "version": {
     "1.12.3": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

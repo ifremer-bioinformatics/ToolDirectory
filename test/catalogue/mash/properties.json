@@ -3,7 +3,7 @@
   "description": "Fast genome and metagenome distance estimation using MinHash.",
   "homepage": "https://github.com/marbl/mash",
   "operation": "sequence-distance-matrix-generation",
-  "topic": "DNA mutation,Genomics,Metagenomics,Sequence analysis,Statistics and probability",
+  "topic": "Statistics and probability,Metagenomics",
   "version": {
     "2.3": {
       "localInstallUser": "lleroi",
@@ -11,7 +11,8 @@
       "localInstallDate": "23/06/2021",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

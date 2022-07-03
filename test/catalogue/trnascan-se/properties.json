@@ -3,7 +3,7 @@
   "description": "A program for improved detection of transfer RNA genes in genomic sequence.",
   "homepage": "http://trna.ucsc.edu/tRNAscan-SE/",
   "operation": "trna-gene-prediction",
-  "topic": "Sequence analysis,Genomics,RNA",
+  "topic": "Functional genomics",
   "version": {
     "2.0.7": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "26/02/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

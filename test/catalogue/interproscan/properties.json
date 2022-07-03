@@ -11,7 +11,8 @@
       "localInstallDate": "19/04/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "5.48-83.0": {
       "localInstallUser": "galaxy",
@@ -19,7 +20,8 @@
       "localInstallDate": "28/01/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

@@ -11,7 +11,8 @@
       "localInstallDate": "14/12/2021",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

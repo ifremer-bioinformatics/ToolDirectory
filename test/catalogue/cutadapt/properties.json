@@ -1,9 +1,9 @@
 {
   "name": "cutadapt",
-  "description": "Find and remove adapter sequences, primers, poly-A tails and other types of unwanted sequence from your high-throughput sequencing reads.",
-  "homepage": "https://pypi.python.org/pypi/cutadapt",
+  "description": "Finds and removes adapter sequences, primers, poly-A tails and other types of unwanted sequence from your high-throughput sequencing reads",
+  "homepage": "https://cutadapt.readthedocs.io/en/stable/",
   "operation": "sequence-trimming",
-  "topic": "Sequencing,Probes and primers,Genomics",
+  "topic": "Bioinformatics",
   "version": {
     "1.13": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "1.16": {
       "localInstallUser": "galaxy",
@@ -19,7 +20,8 @@
       "localInstallDate": "05/07/2018",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "1.18": {
       "localInstallUser": "galaxy",
@@ -27,7 +29,8 @@
       "localInstallDate": "14/09/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.8": {
       "localInstallUser": "galaxy",
@@ -35,7 +38,8 @@
       "localInstallDate": "11/02/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

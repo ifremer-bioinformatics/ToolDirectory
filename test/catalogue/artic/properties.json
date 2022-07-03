@@ -1,9 +1,9 @@
 {
   "name": "ARTIC",
-  "description": "A bioinformatics pipeline for working with virus sequencing data sequenced with nanopore",
-  "homepage": "https://github.com/artic-network/fieldbioinformatics",
+  "description": "Pipeline and set of accompanying tools for working with viral nanopore sequencing data.",
+  "homepage": "https://artic.readthedocs.io/en/latest/",
   "operation": "sequence-alignment",
-  "topic": "Genomics",
+  "topic": "Metagenomics",
   "version": {
     "1.2.1": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "14/04/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

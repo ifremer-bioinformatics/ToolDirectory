@@ -1,9 +1,9 @@
 {
   "name": "Prinseq",
-  "description": "PRINSEQ is a sequence processing tool that can be used to filter, reformat and trim genomic and metagenomic sequence data. It generates summary statistics of the input in graphical and tabular formats that can be used for quality control steps. PRINSEQ is available as both standalone and web-based versions.",
-  "homepage": "http://edwards.sdsu.edu/prinseq",
-  "operation": "read-pre-processing",
-  "topic": "Metagenomics,Transcriptomics,Genomics",
+  "description": "filter, reformat and trim NGS data",
+  "homepage": "http://prinseq.sourceforge.net/manual.html",
+  "operation": "sequence-trimming",
+  "topic": "Bioinformatics",
   "version": {
     "0.20.4": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "08/04/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

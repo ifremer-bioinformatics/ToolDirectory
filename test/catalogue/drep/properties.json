@@ -1,9 +1,9 @@
 {
   "name": "dRep",
-  "description": "Fast and accurate genomic comparisons that enables improved genome recovery from metagenomes through de-replication.",
+  "description": "dRep is a python program for rapidly comparing large numbers of genomes",
   "homepage": "https://github.com/MrOlm/drep",
-  "operation": "genome-comparison",
-  "topic": "Metagenomics,Sequence analysis,Genomics",
+  "operation": "genome-alignment",
+  "topic": "Metagenomics",
   "version": {
     "2.2.3": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "07/03/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

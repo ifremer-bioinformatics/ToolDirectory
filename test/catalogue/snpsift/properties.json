@@ -3,7 +3,7 @@
   "description": "Toolbox that allows you to filter and manipulate annotated vcf files.",
   "homepage": "http://snpeff.sourceforge.net/SnpSift.html",
   "operation": "variant-filtering",
-  "topic": "Data architecture, analysis and design,Data management",
+  "topic": "Comparative genomics",
   "version": {
     "4.3.1t": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "08/04/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

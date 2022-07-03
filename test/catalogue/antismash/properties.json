@@ -1,9 +1,9 @@
 {
   "name": "antiSMASH",
-  "description": "Rapid genome-wide identification, annotation and analysis of secondary metabolite biosynthesis gene clusters in bacterial and fungal genomes. It integrates and cross-links with a large number of in silico secondary metabolite analysis tools that have been published earlier.",
-  "homepage": "http://antismash.secondarymetabolites.org",
-  "operation": "sequence-clustering",
-  "topic": "Molecular interactions, pathways and networks,Gene and protein families",
+  "description": "Rapid genome-wide identification, annotation and analysis of secondary metabolite biosynthesis gene clusters in bacterial and fungal genomes",
+  "homepage": "https://antismash.secondarymetabolites.org/#!/start",
+  "operation": "sequence-clustering,gene-prediction",
+  "topic": "Gene and protein families",
   "version": {
     "5.1.2": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "29/05/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "6.0.1": {
       "localInstallUser": "cnoel",
@@ -19,7 +20,8 @@
       "localInstallDate": "03/03/2022",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

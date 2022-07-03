@@ -1,9 +1,9 @@
 {
   "name": "Obitools",
-  "description": "Set of python programs developed to simplify the manipulation of sequence files. They were mainly designed to help us for analyzing Next Generation Sequencer outputs (454 or Illumina) in the context of DNA Metabarcoding.",
+  "description": "A set of tools to analyse Next Generation Sequencer outputs (454 or Illumina) in the context of DNA Metabarcoding",
   "homepage": "https://git.metabarcoding.org/obitools/obitools/wikis/home",
-  "operation": "sequence-analysis",
-  "topic": "Sequence analysis,Sequencing,DNA",
+  "operation": "community-profiling",
+  "topic": "Metagenomics",
   "version": {
     "1.0": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "04/05/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

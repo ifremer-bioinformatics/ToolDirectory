@@ -1,9 +1,9 @@
 {
   "name": "HyPhy",
-  "description": "Software package for the analysis of genetic sequences using techniques in phylogenetics, molecular evolution, and machine learning.",
-  "homepage": "http://hyphy.org",
-  "operation": "statistical-calculation",
-  "topic": "Molecular interactions, pathways and networks,Phylogeny,Small molecules",
+  "description": "Hypothesis Testing using Phylogenies",
+  "homepage": "http://hyphy.org/",
+  "operation": "phylogenetic-tree-construction",
+  "topic": "Phylogeny",
   "version": {
     "2.3.14": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "15/11/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

@@ -1,6 +1,6 @@
 {
   "name": "goenrichment",
-  "description": "GOEnrichment is a tool for performing GO enrichment analysis of gene sets, such as those obtained from RNA-seq or Microarray experiments, to help characterize them at the functional level. It is available in Galaxy Europe and as a stand-alone tool.",
+  "description": "GOEnrichment is a tool for performing GO enrichment analysis of gene sets, such as those obtained from RNA-seq or Microarray experiments, to help characterize them at the functional level. ",
   "homepage": "https://github.com/DanFaria/GOEnrichment",
   "operation": "gene-set-enrichment-analysis",
   "topic": "Transcriptomics",
@@ -11,7 +11,8 @@
       "localInstallDate": "11/09/2020",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

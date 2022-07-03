@@ -1,9 +1,9 @@
 {
   "name": "dada2",
-  "description": "This package infers exact sequence variants (SVs) from amplicon data, replacing the commonly used and coarser OTU clustering approach. This pipeline inputs demultiplexed fastq files, and outputs the sequence variants and their sample-wise abundances after removing substitution and chimera errors. Taxonomic classification is available via a native implementation of the RDP naive Bayesian classifier.",
-  "homepage": "http://bioconductor.org/packages/release/bioc/html/dada2.html",
-  "operation": "variant-calling",
-  "topic": "Sequencing,Genetic variation",
+  "description": "Fast and accurate sample inference from amplicon data with single-nucleotide resolution",
+  "homepage": "https://benjjneb.github.io/dada2/index.html",
+  "operation": "community-profiling",
+  "topic": "Metagenomics",
   "version": {
     "1.10": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "04/03/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

@@ -1,9 +1,9 @@
 {
   "name": "Dsuite",
-  "description": "Fast calculation of the ABBA-BABA statistics across many populations/species.",
+  "description": "Dsuite \u2010 fast D\u2010statistics and related admixture evidence from VCF files",
   "homepage": "https://github.com/millanek/Dsuite",
-  "operation": "genotyping",
-  "topic": "Phylogeny,Phylogenomics,DNA polymorphism",
+  "operation": "data-handling",
+  "topic": "Bioinformatics",
   "version": {
     "master": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "12/11/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

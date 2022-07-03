@@ -1,9 +1,9 @@
 {
   "name": "hap.py",
-  "description": "This is a set of programs based on htslib to benchmark variant calls against gold standard truth datasets.",
-  "homepage": "https://github.com/Illumina/hap.py",
-  "operation": "",
-  "topic": "",
+  "description": "Evaluate the variants",
+  "homepage": "https://github.com/kishwarshafin/pepper",
+  "operation": "Oxford Nanopore and PacBio HiFi variant calling",
+  "topic": "Comparative genomics",
   "version": {
     "v0.3.12": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "17/03/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

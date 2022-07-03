@@ -11,7 +11,8 @@
       "localInstallDate": "17/01/2020",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.5.2": {
       "localInstallUser": "galaxy",
@@ -19,7 +20,8 @@
       "localInstallDate": "10/03/2021",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

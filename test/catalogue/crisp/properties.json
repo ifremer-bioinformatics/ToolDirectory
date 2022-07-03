@@ -1,9 +1,9 @@
 {
   "name": "CRISP",
-  "description": "Identifies rare and common variants in pooled sequencing data",
+  "description": "Detect SNPs and short indels from high-throughput sequencing of pooled DNA samples",
   "homepage": "https://bansal-lab.github.io/software/crisp.html",
-  "operation": "genetic-variation-analysis",
-  "topic": "Sequencing,Genetic variation,Genetics",
+  "operation": "variant-calling",
+  "topic": "Epigenetics",
   "version": {
     "0.7": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

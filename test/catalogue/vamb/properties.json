@@ -3,7 +3,7 @@
   "description": "Improved metagenome binning and assembly using deep variational autoencoders.",
   "homepage": "https://github.com/RasmussenLab/vamb",
   "operation": "scaffolding",
-  "topic": "Sequence assembly,Metagenomics,Informatics,Microbial ecology,Machine learning",
+  "topic": "Metagenomics,Sequence assembly",
   "version": {
     "3.0.3-gpu": {
       "localInstallUser": "acormier",
@@ -11,7 +11,8 @@
       "localInstallDate": "15/03/2022",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "3.0.3": {
       "localInstallUser": "acormier",
@@ -19,7 +20,8 @@
       "localInstallDate": "15/12/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

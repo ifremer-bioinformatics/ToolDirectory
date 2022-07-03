@@ -1,9 +1,9 @@
 {
   "name": "CulebrONT",
-  "description": "CulebrONT is a streamlined long reads multi-assembler pipeline for prokaryotic and eukaryotic genomes.",
-  "homepage": "https://github.com/SouthGreenPlatform/CulebrONT_pipeline",
+  "description": "scalable, modular and traceable Snakemake pipeline, able to launch multiple assembly tools in parallel, giving you the possibility of circularise, polish, and correct assemblies, checking quality",
+  "homepage": "https://culebront-pipeline.readthedocs.io/en/latest/",
   "operation": "genome-assembly",
-  "topic": "Model organisms,Workflows,Sequence assembly",
+  "topic": "Sequence assembly,Workflows",
   "version": {
     "1.4": {
       "localInstallUser": "pgdurand",
@@ -11,7 +11,8 @@
       "localInstallDate": "21/06/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "1.6": {
       "localInstallUser": "pgdurand",
@@ -19,7 +20,8 @@
       "localInstallDate": "26/10/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

@@ -1,9 +1,9 @@
 {
   "name": "phyloFlash",
-  "description": "Rapid Small-Subunit rRNA Profiling and Targeted Assembly from Metagenomes.",
+  "description": "A pipeline to rapidly reconstruct the SSU rRNAs and explore phylogenetic composition of an Illumina (meta)genomic or transcriptomic dataset.",
   "homepage": "https://github.com/HRGV/phyloFlash",
   "operation": "sequence-assembly",
-  "topic": "Sequence assembly,Metagenomics,Metatranscriptomics,Microbial ecology,Functional, regulatory and non-coding RNA",
+  "topic": "Metagenomics",
   "version": {
     "3.4": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "05/05/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

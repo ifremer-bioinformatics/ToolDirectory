@@ -1,9 +1,9 @@
 {
   "name": "mothur",
-  "description": "\"Open-source, platform-independent, community-supported software for describing and comparing microbial communities\" Schloss PD et al. 2009",
-  "homepage": "http://mothur.org/",
-  "operation": "",
-  "topic": "Microbial ecology",
+  "description": "Analyzing 16S rRNA gene sequences",
+  "homepage": "https://www.mothur.org/",
+  "operation": "community-profiling",
+  "topic": "Metagenomics",
   "version": {
     "1.38.1.1": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "1.39.5": {
       "localInstallUser": "galaxy",
@@ -19,7 +20,8 @@
       "localInstallDate": "22/11/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "1.42.1": {
       "localInstallUser": "galaxy",
@@ -27,7 +29,8 @@
       "localInstallDate": "06/06/2019",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

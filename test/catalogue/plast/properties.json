@@ -1,9 +1,9 @@
 {
   "name": "PLAST",
-  "description": "Parallel Local Alignment Search Tool for Database Comparison.",
-  "homepage": "http://www.irisa.fr/symbiose/projects/plast/",
-  "operation": "local-alignment",
-  "topic": "Sequence analysis",
+  "description": "High Performance Parallel Local Alignment Search Tool",
+  "homepage": "https://plast.inria.fr/user-guide/",
+  "operation": "sequence-similarity-search",
+  "topic": "Biological databases",
   "version": {
     "2.3.2": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "16/11/2017",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.3.3": {
       "localInstallUser": "galaxy",
@@ -19,7 +20,8 @@
       "localInstallDate": "11/07/2018",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

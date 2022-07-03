@@ -1,9 +1,9 @@
 {
   "name": "Bioperl",
-  "description": "A collection of Perl modules that facilitate the development of Perl scripts for bioinformatics applications.  It provides software modules for many of the typical tasks of bioinformatics programming.",
-  "homepage": "http://bioperl.org/",
+  "description": "Perl tools for comutational molecular biology",
+  "homepage": "https://bioperl.org",
   "operation": "data-handling",
-  "topic": "Software engineering,Genomics,Data management",
+  "topic": "Bioinformatics",
   "version": {
     "1.7.2": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "21/02/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

@@ -1,9 +1,9 @@
 {
   "name": "MethylExtract",
-  "description": "User friendly tool to generate i) high quality, whole genome methylation maps and ii) to detect sequence variation within the same sample preparation.",
+  "description": "Methylation maps and SNV calling from whole genome bisulfite sequencing data",
   "homepage": "http://bioinfo2.ugr.es/MethylExtract/",
   "operation": "methylation-analysis",
-  "topic": "DNA,Sequencing,Epigenetics",
+  "topic": "Epigenetics",
   "version": {
     "1.9.1": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "04/04/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

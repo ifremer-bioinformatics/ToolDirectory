@@ -1,9 +1,9 @@
 {
   "name": "Gblocks",
-  "description": "Cleaning aligned sequences.",
-  "homepage": "http://www.embl-heidelberg.de/~castresa/Gblocks/Gblocks.html",
-  "operation": "sequence-alignment-analysis",
-  "topic": "Sequence analysis",
+  "description": "Selection of conserved blocks from multiple alignments for their use in phylogenetic analysis",
+  "homepage": "https://bioweb.pasteur.fr/docs/modules/gblocks/0.91b/",
+  "operation": "phylogenetic-tree-construction",
+  "topic": "Phylogeny",
   "version": {
     "0.91b": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

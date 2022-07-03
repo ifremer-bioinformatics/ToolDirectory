@@ -1,9 +1,9 @@
 {
   "name": "sambamba",
-  "description": "This tool is a high performance modern robust and fast tool (and library), written in the D programming language, for working with SAM, BAM and CRAM formats.",
-  "homepage": "http://www.open-bio.org/wiki/Sambamba",
-  "operation": "sequence-analysis",
-  "topic": "DNA,RNA-Seq,Sequence analysis",
+  "description": "parallel robust and fast tool for working with SAM and BAM files",
+  "homepage": "https://github.com/biod/sambamba",
+  "operation": "data-handling",
+  "topic": "Bioinformatics",
   "version": {
     "0.6.6": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "07/06/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "0.8.0": {
       "localInstallUser": "galaxy",
@@ -19,7 +20,8 @@
       "localInstallDate": "25/01/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

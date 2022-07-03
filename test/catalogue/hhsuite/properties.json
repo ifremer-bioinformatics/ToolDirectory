@@ -1,9 +1,9 @@
 {
   "name": "HHsuite",
-  "description": "HH-suite is a remote protein homology detection suite.",
-  "homepage": "https://github.com/soedinglab/hh-suite",
-  "operation": "sequence-analysis",
-  "topic": "Proteins",
+  "description": "sensitive protein sequence searching based on the pairwise alignment of hidden Markov models (HMMs)",
+  "homepage": "https://github.com/soedinglab/hh-suite/tree/v3.0-beta.3",
+  "operation": "sequence-similarity-search",
+  "topic": "Bioinformatics",
   "version": {
     "3.0-beta.3": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "03/04/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

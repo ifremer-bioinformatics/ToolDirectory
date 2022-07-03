@@ -1,9 +1,9 @@
 {
   "name": "Rcorrector",
-  "description": "This is a kmer-based error correction method for RNA-seq data. It can also be applied to other types of sequencing data where the read coverage is non-uniform, such as single-cell sequencing.",
-  "homepage": "https://github.com/mourisl/Rcorrector/",
-  "operation": "sequencing-error-detection",
-  "topic": "RNA-Seq,Sequencing,RNA",
+  "description": "kmer-based error correction method for RNA-seq data",
+  "homepage": "https://github.com/mourisl/Rcorrector",
+  "operation": "read-correction",
+  "topic": "Sequence assembly",
   "version": {
     "1.0.3": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "31/10/2019",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "1.0.4": {
       "localInstallUser": "galaxy",
@@ -19,7 +20,8 @@
       "localInstallDate": "24/10/2019",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

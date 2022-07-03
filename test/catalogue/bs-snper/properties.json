@@ -1,9 +1,9 @@
 {
   "name": "BS-SNPer",
-  "description": "An ultrafast and memory-efficient package, a program for BS-Seq variation detection from alignments in standard BAM/SAM format using approximate Bayesian modeling.",
+  "description": "Exploration of SNP sites from BS-Seq data",
   "homepage": "https://github.com/hellbelly/BS-Snper",
-  "operation": "snp-detection",
-  "topic": "DNA,Statistics and probability,DNA polymorphism",
+  "operation": "methylation-calling",
+  "topic": "Epigenetics",
   "version": {
     "master": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "26/10/2017",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

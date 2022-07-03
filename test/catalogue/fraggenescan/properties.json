@@ -1,9 +1,9 @@
 {
   "name": "FragGeneScan",
-  "description": "Application for finding (fragmented) genes in short reads",
-  "homepage": "https://sourceforge.net/projects/fraggenescan/",
+  "description": "An application for finding (fragmented) genes in short reads",
+  "homepage": "https://omics.informatics.indiana.edu/FragGeneScan/",
   "operation": "gene-prediction",
-  "topic": "Sequence analysis,Genetics",
+  "topic": "Sequence analysis",
   "version": {
     "1.31": {
       "localInstallUser": "cnoel",
@@ -11,7 +11,8 @@
       "localInstallDate": "02/02/2022",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

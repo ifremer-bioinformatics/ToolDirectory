@@ -1,9 +1,9 @@
 {
   "name": "EMBOSS",
-  "description": "Diverse suite of tools for sequence analysis; many programs analagous to GCG; context-sensitive help for each tool.",
-  "homepage": "http://emboss.bioinformatics.nl/",
-  "operation": "sequence-analysis",
-  "topic": "Molecular biology,Biology,Sequence analysis",
+  "description": "Analysis package specially developed for the needs of the molecular biology",
+  "homepage": "http://emboss.sourceforge.net/",
+  "operation": "data-handling",
+  "topic": "Bioinformatics",
   "version": {
     "6.5.7": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

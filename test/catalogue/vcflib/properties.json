@@ -1,9 +1,9 @@
 {
   "name": "vcflib",
-  "description": "API and command line utilities for the manipulation of VCF files.",
+  "description": "provides methods to manipulate and interpret sequence variation as it can be described by VCF",
   "homepage": "https://github.com/vcflib/vcflib",
   "operation": "data-handling",
-  "topic": "Genomics,Data management",
+  "topic": "Bioinformatics",
   "version": {
     "1.0.0_rc1": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "07/06/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

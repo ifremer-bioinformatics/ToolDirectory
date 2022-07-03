@@ -1,9 +1,9 @@
 {
   "name": "GTDB-Tk",
-  "description": "a toolkit to classify genomes with the Genome Taxonomy Database.",
-  "homepage": "https://github.com/ecogenomics/gtdbtk",
-  "operation": "genome-alignment",
-  "topic": "Metagenomics,Proteins,Database management,Phylogenetics,Taxonomy",
+  "description": "Toolkit for assigning objective taxonomic classifications to bacterial and archaeal genomes",
+  "homepage": "https://github.com/Ecogenomics/GTDBTk#bioconda-installation",
+  "operation": "taxonomic-classification",
+  "topic": "Metagenomics",
   "version": {
     "1.0.2": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "08/04/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "1.1.0": {
       "localInstallUser": "galaxy",
@@ -19,7 +20,8 @@
       "localInstallDate": "08/04/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "1.4.1": {
       "localInstallUser": "galaxy",
@@ -27,7 +29,8 @@
       "localInstallDate": "16/02/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "1.5.0": {
       "localInstallUser": "cnoel",
@@ -35,7 +38,8 @@
       "localInstallDate": "25/05/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

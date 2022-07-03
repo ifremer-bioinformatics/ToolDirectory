@@ -1,9 +1,9 @@
 {
   "name": "SAMBA",
-  "description": "The SAMBA tool uses long reads to improve the contiguity of genome assemblies.",
-  "homepage": "https://github.com/alekseyzimin/masurca",
-  "operation": "scaffolding",
-  "topic": "Sequencing,Mapping,Sequence assembly",
+  "description": "Standardized and Automated MetaBarcoding Analyses.",
+  "homepage": "https://github.com/ifremer-bioinformatics/samba",
+  "operation": "community-profiling",
+  "topic": "Metagenomics,Workflows",
   "version": {
     "2.0.0": {
       "localInstallUser": "lquintri",
@@ -11,7 +11,8 @@
       "localInstallDate": "23/06/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "3.0.1": {
       "localInstallUser": "cnoel",
@@ -19,7 +20,8 @@
       "localInstallDate": "22/02/2021",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

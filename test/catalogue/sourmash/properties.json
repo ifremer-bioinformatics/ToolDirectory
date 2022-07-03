@@ -1,9 +1,9 @@
 {
   "name": "sourmash",
-  "description": "Compute and compare MinHash signatures for DNA data sets.",
-  "homepage": "https://sourmash.readthedocs.io/en/latest/",
-  "operation": "sequence-similarity-search",
-  "topic": "Computational biology",
+  "description": "Compute MinHash signatures for nucleotide (DNA/RNA) and protein sequences",
+  "homepage": "https://github.com/dib-lab/sourmash",
+  "operation": "sequence-similarity",
+  "topic": "Bioinformatics",
   "version": {
     "2.0.0": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "27/11/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

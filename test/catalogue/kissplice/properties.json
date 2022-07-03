@@ -1,9 +1,9 @@
 {
   "name": "KisSplice",
-  "description": "KisSplice is a software that enables to analyse RNA-seq data with or without a reference genome.",
-  "homepage": "http://kissplice.prabi.fr",
-  "operation": "",
-  "topic": "",
+  "description": "A local transcriptome assembler for SNPs, indels and AS events",
+  "homepage": "http://kissplice.prabi.fr/",
+  "operation": "transcriptome-assembly",
+  "topic": "Transcriptomics",
   "version": {
     "2.4.0-p1": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "12/04/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

@@ -1,9 +1,9 @@
 {
   "name": "deepTools",
-  "description": "User-friendly tools for the normalization and visualization of deep-sequencing data.",
-  "homepage": "https://deeptools.readthedocs.io/en/latest/",
-  "operation": "standardisation-and-normalisation",
-  "topic": "Genomics,ChIP-seq",
+  "description": "tools for exploring deep sequencing data",
+  "homepage": "https://deeptools.readthedocs.io/en/develop/",
+  "operation": "data-handling,visualisation",
+  "topic": "Bioinformatics",
   "version": {
     "3.4.3": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "05/05/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

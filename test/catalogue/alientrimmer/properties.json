@@ -1,9 +1,9 @@
 {
   "name": "AlienTrimmer",
-  "description": "Trimming and clipping FASTQ-formatted read files.",
-  "homepage": "https://research.pasteur.fr/en/software/alientrimmer/",
-  "operation": "nucleic-acid-sequence-analysis",
-  "topic": "Sequence analysis",
+  "description": "A software that allows detecting and removing contaminant sequences in both ends of NGSread sequences FASTA/FASTQ formated.",
+  "homepage": "https://bioweb.pasteur.fr/packages/pack@AlienTrimmer@0.4.0",
+  "operation": "sequence-trimming",
+  "topic": "Bioinformatics",
   "version": {
     "0.4.2": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "20/04/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

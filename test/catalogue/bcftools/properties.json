@@ -1,9 +1,9 @@
 {
   "name": "BCFtools",
-  "description": "BCFtools is a set of utilities that manipulate variant calls in the Variant Call Format (VCF) and its binary counterpart BCF. All commands work transparently with both VCFs and BCFs, both uncompressed and BGZF-compressed.",
-  "homepage": "http://www.htslib.org/",
+  "description": "Utilities for variant calling and manipulating VCFs and BCFs.",
+  "homepage": "https://samtools.github.io/bcftools/bcftools.html",
   "operation": "data-handling",
-  "topic": "GWAS study,Genetic variation,Genotyping experiment,DNA polymorphism",
+  "topic": "Bioinformatics",
   "version": {
     "1.10.2": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "17/02/2020",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "1.13": {
       "localInstallUser": "cnoel",
@@ -19,7 +20,8 @@
       "localInstallDate": "22/09/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "1.4.1": {
       "localInstallUser": "galaxy",
@@ -27,7 +29,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

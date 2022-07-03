@@ -1,9 +1,9 @@
 {
   "name": "diamond",
-  "description": "Sequence aligner for protein and translated DNA searches and functions as a drop-in replacement for the NCBI BLAST software tools. It is suitable for protein-protein search as well as DNA-protein search on short reads and longer sequences including contigs and assemblies, providing a speedup of BLAST ranging up to x20,000.",
+  "description": "sequence aligner for protein and translated DNA searches, designed for high performance analysis of big sequence data",
   "homepage": "https://github.com/bbuchfink/diamond",
-  "operation": "sequence-alignment-analysis",
-  "topic": "Sequence analysis,Proteins",
+  "operation": "sequence-similarity-search",
+  "topic": "Biological databases",
   "version": {
     "0.9.24": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "27/05/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.0.12": {
       "localInstallUser": "cnoel",
@@ -19,7 +20,8 @@
       "localInstallDate": "14/10/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.0.14": {
       "localInstallUser": "acormier",
@@ -27,7 +29,8 @@
       "localInstallDate": "19/01/2022",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.0.6": {
       "localInstallUser": "galaxy",
@@ -35,7 +38,8 @@
       "localInstallDate": "11/02/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.0.9": {
       "localInstallUser": "cnoel",
@@ -43,7 +47,8 @@
       "localInstallDate": "28/05/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

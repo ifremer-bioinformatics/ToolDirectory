@@ -1,9 +1,9 @@
 {
   "name": "VarScan",
-  "description": "VarScan, an open source tool for variant detection that is compatible with several short read align-ers.",
+  "description": "variant detection in massively parallel sequencing data",
   "homepage": "http://dkoboldt.github.io/varscan/",
   "operation": "variant-calling",
-  "topic": "Sequencing,DNA polymorphism",
+  "topic": "Comparative genomics",
   "version": {
     "2.4.3": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "16/04/2019",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

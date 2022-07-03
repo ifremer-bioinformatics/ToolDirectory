@@ -1,9 +1,9 @@
 {
   "name": "FastANI",
-  "description": "FastANI is developed for fast alignment-free computation of whole-genome Average Nucleotide Identity (ANI). ANI is defined as mean nucleotide identity of orthologous gene pairs shared between two microbial genomes. FastANI supports pairwise comparison of both complete and draft genome assemblies.",
+  "description": "Fast Whole-Genome Similarity (ANI) Estimation ",
   "homepage": "https://github.com/ParBLiSS/FastANI",
-  "operation": "",
-  "topic": "Genetic variation,Microbiology",
+  "operation": "sequence-alignment-similarity",
+  "topic": "Comparative genomics",
   "version": {
     "1.3": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "05/02/2020",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

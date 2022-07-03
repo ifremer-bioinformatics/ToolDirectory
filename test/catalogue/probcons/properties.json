@@ -1,9 +1,9 @@
 {
   "name": "ProbCons",
-  "description": "Probabilistic Consistency-based Multiple Alignment of Amino Acid Sequences.",
-  "homepage": "http://probcons.stanford.edu/",
-  "operation": "sequence-comparison",
-  "topic": "Sequence analysis",
+  "description": "Probabilistic Consistency-based Multiple Alignment of Amino Acid Sequences",
+  "homepage": "http://probcons.stanford.edu/download.html",
+  "operation": "multiple-sequence-alignment",
+  "topic": "Phylogeny",
   "version": {
     "1.12": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "14/12/2017",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

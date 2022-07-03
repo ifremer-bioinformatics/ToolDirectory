@@ -1,9 +1,9 @@
 {
   "name": "BLASR",
-  "description": "Software for mapping Single Molecule Sequencing (SMS) reads that are thousands of bases long, with divergence between the read and genome dominated by insertion and deletion error.",
+  "description": "BLASR: The PacBio long read aligner ",
   "homepage": "https://github.com/PacificBiosciences/blasr",
-  "operation": "mapping,local-alignment",
-  "topic": "Sequencing,Mapping,Genomics",
+  "operation": "read-mapping",
+  "topic": "Mapping",
   "version": {
     "5.3.3": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "27/03/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

@@ -1,7 +1,7 @@
 {
   "name": "Kaiju",
-  "description": "Program for the taxonomic assignment of high-throughput sequencing reads, e.g., Illumina or Roche/454, from whole-genome sequencing of metagenomic DNA. Reads are directly assigned to taxa using the NCBI taxonomy and a reference database of protein sequences from Bacteria, Archaea, Fungi, microbial eukaryotes and viruses.",
-  "homepage": "http://kaiju.binf.ku.dk",
+  "description": "Fast and sensitive taxonomic classification for metagenomics",
+  "homepage": "https://github.com/bioinformatics-centre/kaiju/blob/master/README.md",
   "operation": "taxonomic-classification",
   "topic": "Metagenomics",
   "version": {
@@ -11,7 +11,8 @@
       "localInstallDate": "02/07/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "1.7.3": {
       "localInstallUser": "galaxy",
@@ -19,7 +20,8 @@
       "localInstallDate": "08/02/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "1.8.2": {
       "localInstallUser": "acormier",
@@ -27,7 +29,8 @@
       "localInstallDate": "18/01/2022",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

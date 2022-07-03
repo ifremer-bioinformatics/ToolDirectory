@@ -1,9 +1,9 @@
 {
   "name": "wengan",
-  "description": "Wengan is a new genome assembler that unlike most of the current long-reads assemblers avoids entirely the all-vs-all read comparison.",
+  "description": "An accurate and ultra-fast hybrid genome assembler",
   "homepage": "https://github.com/adigenova/wengan",
   "operation": "genome-assembly",
-  "topic": "Human biology,Whole genome sequencing,Sequence assembly",
+  "topic": "Sequence assembly",
   "version": {
     "0.1": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "20/01/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

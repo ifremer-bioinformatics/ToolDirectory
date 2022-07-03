@@ -1,8 +1,8 @@
 {
   "name": "KmerGenie",
-  "description": "KmerGenie estimates the best k-mer length for genome de novo assembly. Given a set of reads, KmerGenie first computes the k-mer abundance histogram for many values of k. Then, for each value of k, it predicts the number of distinct genomic k-mers in the dataset, and returns the k-mer length which maximizes this number. Experiments show that KmerGenie's choices lead to assemblies that are close to the best possible over all k-mer lengths.",
+  "description": "estimates the best k-mer length for genome de novo assembly.",
   "homepage": "http://kmergenie.bx.psu.edu/",
-  "operation": "sequence-assembly",
+  "operation": "k-mer-counting",
   "topic": "Sequence assembly",
   "version": {
     "1.7016": {
@@ -11,7 +11,8 @@
       "localInstallDate": "22/03/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

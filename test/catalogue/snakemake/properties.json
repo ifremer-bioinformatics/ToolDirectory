@@ -3,7 +3,7 @@
   "description": "Workflow engine and language. It aims to reduce the complexity of creating workflows by providing a fast and comfortable execution environment, together with a clean and modern domain specific specification language (DSL) in python style.",
   "homepage": "https://snakemake.readthedocs.io/en/stable/index.html",
   "operation": "service-composition",
-  "topic": "Workflows,Software engineering,Bioinformatics",
+  "topic": "Bioinformatics",
   "version": {
     "5.10.0": {
       "localInstallUser": "lleroi",
@@ -11,7 +11,8 @@
       "localInstallDate": "16/06/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "5.4.0": {
       "localInstallUser": "galaxy",
@@ -19,7 +20,8 @@
       "localInstallDate": "28/12/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "6.4.0": {
       "localInstallUser": "acormier",
@@ -27,7 +29,8 @@
       "localInstallDate": "27/05/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "6.6.0": {
       "localInstallUser": "acormier",
@@ -35,7 +38,8 @@
       "localInstallDate": "21/07/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

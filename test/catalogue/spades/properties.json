@@ -1,8 +1,8 @@
 {
   "name": "Spades",
-  "description": "St. Petersburg genome assembler \u2013 is intended for both standard isolates and single-cell MDA bacteria assemblies. SPAdes 3.9 works with Illumina or IonTorrent reads and is capable of providing hybrid assemblies using PacBio, Oxford Nanopore and Sanger reads. Additional contigs can be provided and can be used as long reads.",
+  "description": "An assembly toolkit containing various assembly pipelines",
   "homepage": "http://cab.spbu.ru/software/spades/",
-  "operation": "genome-assembly",
+  "operation": "sequence-assembly",
   "topic": "Sequence assembly",
   "version": {
     "3.10.1": {
@@ -11,7 +11,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "3.11.0": {
       "localInstallUser": "galaxy",
@@ -19,7 +20,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "3.12.0": {
       "localInstallUser": "galaxy",
@@ -27,7 +29,8 @@
       "localInstallDate": "01/06/2018",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "3.13.0": {
       "localInstallUser": "galaxy",
@@ -35,7 +38,8 @@
       "localInstallDate": "23/04/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "3.14.0": {
       "localInstallUser": "galaxy",
@@ -43,7 +47,8 @@
       "localInstallDate": "17/01/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "3.15.2": {
       "localInstallUser": "galaxy",
@@ -51,7 +56,8 @@
       "localInstallDate": "06/04/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "3.15.3": {
       "localInstallUser": "acormier",
@@ -59,7 +65,8 @@
       "localInstallDate": "09/12/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "3.15.4": {
       "localInstallUser": "acormier",
@@ -67,7 +74,8 @@
       "localInstallDate": "09/03/2022",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

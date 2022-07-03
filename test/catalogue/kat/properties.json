@@ -3,7 +3,7 @@
   "description": "Suite of tools that generate, analyse and compare k-mer spectra produced from sequence files",
   "homepage": "http://www.earlham.ac.uk/kat-tools",
   "operation": "sequence-composition-calculation",
-  "topic": "Sequence analysis,Genomics",
+  "topic": "Sequence assembly",
   "version": {
     "2.4.2": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "18/05/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

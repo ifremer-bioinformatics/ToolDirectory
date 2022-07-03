@@ -1,9 +1,9 @@
 {
   "name": "vt",
-  "description": "Variant tool set that discovers short variants from Next Generation Sequencing data.",
-  "homepage": "http://genome.sph.umich.edu/wiki/Vt",
+  "description": "tool set for short variant discovery in genetic sequence data",
+  "homepage": "https://github.com/atks/vt",
   "operation": "variant-calling",
-  "topic": "Sequencing,Genetics,Sequence analysis,Sequence sites, features and motifs",
+  "topic": "Comparative genomics",
   "version": {
     "2015.11.10": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "07/06/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

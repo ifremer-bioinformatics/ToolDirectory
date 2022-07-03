@@ -1,9 +1,9 @@
 {
   "name": "Octopus",
-  "description": "Prediction of membrane protein topology and signal peptides.",
-  "homepage": "http://octopus.cbr.su.se/",
-  "operation": "transmembrane-protein-analysis",
-  "topic": "Sequence analysis",
+  "description": "Octopus is a mapping-based variant caller that implements several calling models within a unified haplotype-aware framework",
+  "homepage": "https://github.com/luntergroup/octopus",
+  "operation": "variant-calling,haplotype-mapping",
+  "topic": "Comparative genomics",
   "version": {
     "0.6.3b": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "03/02/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

@@ -1,9 +1,9 @@
 {
   "name": "FoldX",
-  "description": "FOLD-X is a program for calculating the folding energies of proteins and for calculating the effect of a point mutation on the stability of a protein.",
-  "homepage": "http://foldxsuite.crg.eu/",
+  "description": "fast and quantitative estimation of the importance of the interactions contributing to the stability of proteins and protein complexes",
+  "homepage": "http://foldxsuite.crg.eu/documentation#manual",
   "operation": "protein-folding-analysis",
-  "topic": "Protein folding, stability and design,Structure prediction,Genetic variation,Proteins,Protein folds and structural domains",
+  "topic": "Protein folds and structural domains",
   "version": {
     "5.0": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "11/05/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

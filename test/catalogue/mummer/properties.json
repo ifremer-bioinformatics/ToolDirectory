@@ -1,9 +1,9 @@
 {
   "name": "MUMmer",
-  "description": "MUMmer is a modular system for the rapid whole genome alignment of finished or draft sequence. Basically it is a ultra-fast alignment of large-scale DNA and protein sequences",
-  "homepage": "http://mummer.sourceforge.net/",
-  "operation": "sequence-alignment",
-  "topic": "Sequencing,Mapping,Genomics",
+  "description": "Versatil alignment tool for DNA and protein sequences",
+  "homepage": "https://github.com/mummer4/mummer",
+  "operation": "genome-alignment",
+  "topic": "Sequence assembly",
   "version": {
     "3.23": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "08/04/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "4.0.0beta2": {
       "localInstallUser": "galaxy",
@@ -19,7 +20,8 @@
       "localInstallDate": "08/04/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

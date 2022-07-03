@@ -1,9 +1,9 @@
 {
   "name": "Trans-ABySS",
-  "description": "A pipeline for de novo short-read transcriptome assembly and analyses.",
-  "homepage": "http://www.bcgsc.ca/platform/bioinfo/software/trans-abyss",
-  "operation": "de-novo-assembly",
-  "topic": "RNA-Seq,Gene structure,Transcriptomics,Sequence assembly",
+  "description": "De novo assembly of RNAseq data using ABySS",
+  "homepage": "https://github.com/bcgsc/transabyss",
+  "operation": "transcriptome-assembly",
+  "topic": "Transcriptomics",
   "version": {
     "2.0.1": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "01/12/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

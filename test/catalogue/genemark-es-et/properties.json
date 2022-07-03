@@ -1,9 +1,9 @@
 {
   "name": "GeneMark",
-  "description": "A family of gene prediction programs: Gene Prediction in Bacteria, Archaea, Metagenomes and Metatranscriptomes; Gene Prediction in Eukaryotes; Gene Prediction in Transcripts; Gene Prediction in Viruses, Phages and Plasmids.",
+  "description": "eukaryotic gene finder that can perform gene prediction without curated training sets",
   "homepage": "http://exon.gatech.edu/GeneMark/",
   "operation": "gene-prediction",
-  "topic": "Gene structure",
+  "topic": "Functional genomics",
   "version": {
     "4.38": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "25/03/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

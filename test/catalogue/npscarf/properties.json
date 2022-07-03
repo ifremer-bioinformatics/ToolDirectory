@@ -1,9 +1,9 @@
 {
   "name": "npScarf",
-  "description": "A hybrid sequence assembler that can scaffold and complete fragmented short read assemblies with sequence data streaming from the nanopore sequencing while sequencing is still in progress. Furthermore, it continuously reports assembly quality during the experiment so that users can terminate the sequencing when an assembly of sufficient quality and completeness is obtained.",
+  "description": "Scaffolding and Completing Assemblies in Real-time Fashion",
   "homepage": "https://github.com/mdcao/npScarf",
-  "operation": "genome-assembly",
-  "topic": "Sequencing,Sequence assembly",
+  "operation": "scaffolding",
+  "topic": "Sequence assembly",
   "version": {
     "2019.09": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "26/09/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

@@ -2,8 +2,8 @@
   "name": "AGAT",
   "description": "Another Gff Analysis Toolkit (AGAT)",
   "homepage": "https://github.com/NBISweden/AGAT",
-  "operation": "",
-  "topic": "",
+  "operation": "data-handling",
+  "topic": "Bioinformatics",
   "version": {
     "0.8.0": {
       "localInstallUser": "acormier",
@@ -11,7 +11,8 @@
       "localInstallDate": "10/01/2022",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

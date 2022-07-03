@@ -3,7 +3,7 @@
   "description": "De novo assembly from Oxford Nanopore reads.",
   "homepage": "https://github.com/chanzuckerberg/shasta",
   "operation": "genome-assembly",
-  "topic": "Sequence assembly,Genomics",
+  "topic": "Sequence assembly",
   "version": {
     "0.4.0": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "20/01/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

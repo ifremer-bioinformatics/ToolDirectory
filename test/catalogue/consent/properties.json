@@ -1,9 +1,9 @@
 {
   "name": "CONSENT",
-  "description": "Ligand-based virtual screening with consensus queries.",
-  "homepage": "https://github.com/UnixJunkie/consent",
-  "operation": "virtual-ligand-screening",
-  "topic": "Cheminformatics,Compound libraries and screening,Protein-ligand interactions",
+  "description": "self-correction method for long reads",
+  "homepage": "https://github.com/morispi/CONSENT",
+  "operation": "read-correction",
+  "topic": "Sequence assembly",
   "version": {
     "1.2": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "30/10/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.2.2": {
       "localInstallUser": "cnoel",
@@ -19,7 +20,8 @@
       "localInstallDate": "12/07/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

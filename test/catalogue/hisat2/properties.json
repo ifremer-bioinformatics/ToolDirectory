@@ -1,9 +1,9 @@
 {
   "name": "HISAT2",
-  "description": "Alignment program for mapping next-generation sequencing reads (both DNA and RNA) to a population of human genomes (as well as to a single reference genome).",
+  "description": "Graph-based alignment of next generation sequencing reads to a population of genomes",
   "homepage": "https://ccb.jhu.edu/software/hisat2/index.shtml",
-  "operation": "sequence-alignment",
-  "topic": "RNA-seq",
+  "operation": "read-mapping",
+  "topic": "Mapping",
   "version": {
     "2.0.5": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.1.0": {
       "localInstallUser": "galaxy",
@@ -19,7 +20,8 @@
       "localInstallDate": "01/12/2017",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.2.1": {
       "localInstallUser": "galaxy",
@@ -27,7 +29,8 @@
       "localInstallDate": "02/10/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

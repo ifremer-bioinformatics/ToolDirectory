@@ -1,9 +1,9 @@
 {
   "name": "Raven",
-  "description": "a de novo genome assembler for long reads.",
+  "description": "De novo genome assembler for long uncorrected reads",
   "homepage": "https://github.com/lbcb-sci/raven",
-  "operation": "de-novo-assembly",
-  "topic": "Whole genome sequencing,Genomics,Sequence assembly",
+  "operation": "genome-assembly",
+  "topic": "Sequence assembly",
   "version": {
     "0.0.7": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "16/01/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "1.5": {
       "localInstallUser": "cnoel",
@@ -19,7 +20,8 @@
       "localInstallDate": "04/06/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

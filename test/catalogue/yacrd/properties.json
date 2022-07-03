@@ -1,9 +1,9 @@
 {
   "name": "yacrd",
-  "description": "upstream tools for long-read genome assembly.",
+  "description": "Yet Another Chimeric Read Detector",
   "homepage": "https://github.com/natir/yacrd",
-  "operation": "sequence-assembly",
-  "topic": "Mapping,Machine learning,Sequence assembly",
+  "operation": "quality-control",
+  "topic": "Sequence assembly",
   "version": {
     "0.6.0": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "16/04/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

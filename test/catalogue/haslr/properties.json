@@ -1,9 +1,9 @@
 {
   "name": "HASLR",
-  "description": "Fast Hybrid Assembly of Long Reads.",
+  "description": "A fast tool for hybrid genome assembly of long and short reads ",
   "homepage": "https://github.com/vpc-ccg/haslr",
   "operation": "genome-assembly",
-  "topic": "Sequencing,Mapping,Sequence assembly",
+  "topic": "Sequence assembly",
   "version": {
     "0.8a1": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "12/02/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

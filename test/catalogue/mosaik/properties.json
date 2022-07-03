@@ -1,9 +1,9 @@
 {
   "name": "MOSAIK",
-  "description": "Reference guided aligner/assembler.",
+  "description": "Mapping second and third-generation sequencing reads to a reference genome",
   "homepage": "https://github.com/wanpinglee/MOSAIK",
-  "operation": "sequence-assembly",
-  "topic": "Sequence analysis,Sequence assembly",
+  "operation": "read-mapping",
+  "topic": "Mapping",
   "version": {
     "2.2.26": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

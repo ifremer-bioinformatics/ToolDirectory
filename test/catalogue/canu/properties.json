@@ -1,9 +1,9 @@
 {
   "name": "Canu",
-  "description": "De-novo assembly tool for long read chemistry like Nanopore data and PacBio data.",
-  "homepage": "https://github.com/marbl/canu",
-  "operation": "de-novo-assembly",
-  "topic": "Genomics",
+  "description": "A single molecule sequence assembler for genomes large and small",
+  "homepage": "http://canu.readthedocs.io",
+  "operation": "genome-assembly",
+  "topic": "Sequence assembly",
   "version": {
     "1.6": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "15/02/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "1.7": {
       "localInstallUser": "galaxy",
@@ -19,7 +20,8 @@
       "localInstallDate": "13/03/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "1.9": {
       "localInstallUser": "galaxy",
@@ -27,7 +29,8 @@
       "localInstallDate": "16/01/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.0": {
       "localInstallUser": "galaxy",
@@ -35,7 +38,8 @@
       "localInstallDate": "19/03/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.1.1": {
       "localInstallUser": "galaxy",
@@ -43,7 +47,8 @@
       "localInstallDate": "05/11/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.2": {
       "localInstallUser": "acormier",
@@ -51,7 +56,8 @@
       "localInstallDate": "07/12/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

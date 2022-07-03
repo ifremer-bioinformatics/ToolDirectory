@@ -1,9 +1,9 @@
 {
   "name": "BUSCO",
-  "description": "Provides measures for quantitative assessment of genome assembly, gene set, and transcriptome completeness based on evolutionarily informed expectations of gene content from near-universal single-copy orthologs.",
+  "description": "Assessing genome assembly and annotation completeness with Benchmarking Universal Single-Copy Orthologs",
   "homepage": "http://busco.ezlab.org/",
   "operation": "sequence-assembly-validation",
-  "topic": "Sequence analysis,Transcriptomics,Genomics,Sequence assembly",
+  "topic": "Sequence assembly",
   "version": {
     "3.0.2": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "22/07/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "4.0.0": {
       "localInstallUser": "galaxy",
@@ -19,7 +20,8 @@
       "localInstallDate": "07/01/2020",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "4.0.4": {
       "localInstallUser": "galaxy",
@@ -27,7 +29,8 @@
       "localInstallDate": "24/02/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "4.0.6": {
       "localInstallUser": "galaxy",
@@ -35,7 +38,8 @@
       "localInstallDate": "25/06/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "4.1.3": {
       "localInstallUser": "galaxy",
@@ -43,7 +47,8 @@
       "localInstallDate": "22/09/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "4.1.4": {
       "localInstallUser": "galaxy",
@@ -51,7 +56,8 @@
       "localInstallDate": "07/01/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "5.0.0": {
       "localInstallUser": "galaxy",
@@ -59,7 +65,8 @@
       "localInstallDate": "01/02/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "5.1.1": {
       "localInstallUser": "galaxy",
@@ -67,7 +74,8 @@
       "localInstallDate": "01/04/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "5.2.2": {
       "localInstallUser": "acormier",
@@ -75,7 +83,8 @@
       "localInstallDate": "30/07/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

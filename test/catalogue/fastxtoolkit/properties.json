@@ -1,9 +1,9 @@
 {
   "name": "FASTX-Toolkit",
-  "description": "Collection of command line tools for Short-Reads FASTA/FASTQ files preprocessing.",
+  "description": "Collection of command line tools for Short-Reads FASTA/FASTQ files preprocessing",
   "homepage": "http://hannonlab.cshl.edu/fastx_toolkit/",
-  "operation": "read-pre-processing",
-  "topic": "Sequence analysis",
+  "operation": "data-handling",
+  "topic": "Bioinformatics",
   "version": {
     "0.0.14": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "13/12/2018",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

@@ -1,9 +1,9 @@
 {
   "name": "FLASh",
-  "description": "Identifies paired-end reads which overlap in the middle, converting them to single long reads",
+  "description": "Fast Length Adjustment of Short reads",
   "homepage": "http://ccb.jhu.edu/software/FLASH/",
-  "operation": "read-pre-processing",
-  "topic": "Sequencing,Sequence assembly",
+  "operation": "data-handling",
+  "topic": "Bioinformatics",
   "version": {
     "1.2.11": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

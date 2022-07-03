@@ -1,9 +1,9 @@
 {
   "name": "shovill",
-  "description": "Shovill is a pipeline for assembly of bacterial isolate genomes from Illumina paired-end reads.  Shovill uses SPAdes at its core, but alters the steps before and after the primary assembly step to get similar results in less time. Shovill also supports other assemblers like SKESA, Velvet and Megahit, so you can take advantage of the pre- and post-processing the Shovill provides with those too.",
+  "description": "Microbial assembly pipeline for Illumina paired-end reads",
   "homepage": "https://github.com/tseemann/shovill",
   "operation": "genome-assembly",
-  "topic": "Sequence assembly,Microbiology,Genomics",
+  "topic": "Sequence assembly",
   "version": {
     "1.0.9": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "03/02/2020",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "1.1.0": {
       "localInstallUser": "galaxy",
@@ -19,7 +20,8 @@
       "localInstallDate": "27/05/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

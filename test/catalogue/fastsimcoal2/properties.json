@@ -1,9 +1,9 @@
 {
   "name": "fastsimcoal2",
-  "description": "Fastsimcoal2 extends fastsimcoal, a continuous time coalescent-based genetic simulation program, by enabling the estimation of demographic parameters under very complex scenarios from the site frequency spectrum under a maximum-likelihood framework.",
+  "description": "Fast sequential Markov coalescent simulation of genomic data under complex evolutionary models",
   "homepage": "http://cmpg.unibe.ch/software/fastsimcoal2/",
-  "operation": "genotyping",
-  "topic": "Gene transcripts,Mapping,Genotype and phenotype,DNA polymorphism",
+  "operation": "population-genomics",
+  "topic": "Population genetics",
   "version": {
     "fsc2603": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "07/03/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

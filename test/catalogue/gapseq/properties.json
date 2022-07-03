@@ -3,7 +3,7 @@
   "description": "Informed prediction of bacterial metabolic pathways and reconstruction of accurate metabolic models.",
   "homepage": "https://github.com/jotech/gapseq",
   "operation": "metabolic-network-modelling",
-  "topic": "Genotype and phenotype,Molecular interactions, pathways and networks,Enzymes,Microbial ecology,Endocrinology and metabolism",
+  "topic": "Genotype and phenotype",
   "version": {
     "1.1": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "18/03/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

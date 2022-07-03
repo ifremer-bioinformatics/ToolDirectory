@@ -1,9 +1,9 @@
 {
   "name": "MAFFT",
-  "description": "MAFFT (Multiple Alignment using Fast Fourier Transform) is a high speed multiple sequence alignment program.",
-  "homepage": "http://mafft.cbrc.jp/alignment/server/index.html",
+  "description": "Multiple alignment program for amino acid or nucleotide sequences",
+  "homepage": "https://mafft.cbrc.jp/alignment/software/",
   "operation": "multiple-sequence-alignment",
-  "topic": "Sequence analysis",
+  "topic": "Phylogeny",
   "version": {
     "7.245": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "7.310": {
       "localInstallUser": "galaxy",
@@ -19,7 +20,8 @@
       "localInstallDate": "19/01/2018",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "7.490": {
       "localInstallUser": "cnoel",
@@ -27,7 +29,8 @@
       "localInstallDate": "15/11/2021",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

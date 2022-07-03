@@ -1,6 +1,6 @@
 {
   "name": "OPERA-LG",
-  "description": "Scalable, exact algorithm for the scaffold assembly of large, repeat-rich genomes, out-performing state-of-the-art programs for scaffold correctness and contiguity. It provides a rigorous framework for scaffolding of repetitive sequences and a systematic approach for combining data from different second-generation and third-generation sequencing technologies.",
+  "description": "A program for scaffolding of large, repeat-rich eukaryotic genomes",
   "homepage": "https://sourceforge.net/projects/operasf/",
   "operation": "scaffolding",
   "topic": "Sequence assembly",
@@ -11,7 +11,8 @@
       "localInstallDate": "26/01/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

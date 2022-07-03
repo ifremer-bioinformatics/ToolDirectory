@@ -1,9 +1,9 @@
 {
   "name": "PhyML",
-  "description": "Phylogenetic estimation software using Maximum Likelihood",
+  "description": "Estimate Maximum-Likelihook Phylogenies",
   "homepage": "http://www.atgc-montpellier.fr/phyml/",
-  "operation": "phylogenetic-tree-generation-(maximum-likelihood-and-bayesian-methods)",
-  "topic": "Bioinformatics,Phylogenetics",
+  "operation": "phylogenetic-tree-construction",
+  "topic": "Phylogeny",
   "version": {
     "3.1": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "19/05/2017",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "3.3.2": {
       "localInstallUser": "galaxy",
@@ -19,7 +20,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

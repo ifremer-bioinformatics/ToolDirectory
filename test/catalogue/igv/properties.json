@@ -1,9 +1,9 @@
 {
   "name": "IGV",
-  "description": "High-performance visualization tool for interactive exploration of large, integrated datasets. It supports a wide variety of data types and format, including short-read alignments in the SAM/BAM format. Data can be viewed from local files or over the web via http.",
-  "homepage": "http://www.broadinstitute.org/igv/",
-  "operation": "sequence-assembly-visualisation,visualisation",
-  "topic": "Sequence analysis,Genomics,Data visualisation",
+  "description": "Integrative Genomics Viewer (IGV)",
+  "homepage": "http://software.broadinstitute.org/software/igv/book/export/html/6",
+  "operation": "sequence-visualisation",
+  "topic": "Data visualisation",
   "version": {
     "2.5.3": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "20/06/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.8.10": {
       "localInstallUser": "galaxy",
@@ -19,7 +20,8 @@
       "localInstallDate": "03/10/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

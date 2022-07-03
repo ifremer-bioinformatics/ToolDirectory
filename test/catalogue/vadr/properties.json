@@ -1,9 +1,9 @@
 {
   "name": "vadr",
-  "description": "Classification and annotation of viral sequences based on RefSeq annotation.",
-  "homepage": "https://github.com/nawrockie/vadr",
-  "operation": "deposition",
-  "topic": "Small molecules,Genomics,Gene and protein families,Virology,Sequence sites, features and motifs",
+  "description": "Viral Annotation DefineR: classification and annotation of viral sequences based on RefSeq annotation",
+  "homepage": "https://github.com/nawrockie/vadr#vadr-documentation-",
+  "operation": "sequence-annotation",
+  "topic": "Functional genomics",
   "version": {
     "1.1": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "28/05/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

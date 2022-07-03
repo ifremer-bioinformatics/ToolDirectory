@@ -1,9 +1,9 @@
 {
   "name": "eCAMI",
-  "description": "simultaneous classification and motif identification for enzyme annotation.",
-  "homepage": "https://github.com/yinlabniu/eCAMI",
-  "operation": "database-search",
-  "topic": "Small molecules,Enzymes,Plant biology,Microbial ecology,Sequence sites, features and motifs",
+  "description": "Simultaneous Classification and Motif Identification for enzyme/CAZyme annotation",
+  "homepage": "https://github.com/zhanglabNKU/eCAMI",
+  "operation": "sequence-annotation",
+  "topic": "Functional genomics",
   "version": {
     "master": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "14/04/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

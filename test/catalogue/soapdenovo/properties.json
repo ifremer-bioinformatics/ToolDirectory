@@ -1,8 +1,8 @@
 {
   "name": "SOAPdenovo",
-  "description": "SOAPdenovo, a short read de novo assembly tool, is a package for assembling short oligonucleotide into contigs and scaffolds.",
-  "homepage": "http://soap.genomics.org.cn/soapdenovo.html",
-  "operation": "sequence-assembly",
+  "description": "short-read assembly method that can build a de novo draft assembly for the human-sized genomes",
+  "homepage": "http://soap.genomics.org.cn/soapdenovo.html#inst2",
+  "operation": "genome-assembly",
   "topic": "Sequence assembly",
   "version": {
     "2.40": {
@@ -11,7 +11,8 @@
       "localInstallDate": "20/04/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

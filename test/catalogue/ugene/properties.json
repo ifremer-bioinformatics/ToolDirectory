@@ -1,9 +1,9 @@
 {
   "name": "UGENE",
-  "description": "UGENE is a free cross-platform genome analysis suite that combines popular bioinformatics tools within a single user friendly interface.",
-  "homepage": "http://ugene.unipro.ru",
-  "operation": "",
-  "topic": "Sequence analysis,Protein structure analysis,Phylogenetics,Genomics",
+  "description": "free open-source cross-platform bioinformatics software",
+  "homepage": "http://ugene.net/documentation.html",
+  "operation": "sequence-visualisation,workflows",
+  "topic": "Bioinformatics",
   "version": {
     "1.32.0": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "20/06/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

@@ -1,9 +1,9 @@
 {
   "name": "methylKit",
-  "description": "R package for DNA methylation analysis and annotation from high-throughput bisulfite sequencing. The package is designed to deal with sequencing data from RRBS and its variants, but also target-capture methods and whole genome bisulfite sequencing. It also has functions to analyze base-pair resolution 5hmC data from experimental protocols such as oxBS-Seq and TAB-Seq. Perl is needed to read SAM files only.",
-  "homepage": "http://bioconductor.org/packages/release/bioc/html/methylKit.html",
-  "operation": "methylation-analysis",
-  "topic": "DNA,Epigenetics,Methylated DNA immunoprecipitation",
+  "description": "DNA methylation analysis from high-throughput bisulfite sequencing results",
+  "homepage": "https://bioconductor.org/packages/3.8/bioc/html/methylKit.html",
+  "operation": "whole-genome-methylation-analysis",
+  "topic": "Epigenetics",
   "version": {
     "0.99.2": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "15/04/2019",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

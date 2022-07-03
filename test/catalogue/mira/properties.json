@@ -1,9 +1,9 @@
 {
   "name": "MIRA",
-  "description": "MIRA 3 - Whole Genome Shotgun and EST Sequence Assembler",
+  "description": "whole genome shotgun and EST sequence assembler for Sanger, 454, Illumina, IonTorrent data and PacBio",
   "homepage": "https://sourceforge.net/p/mira-assembler/wiki/Home/",
-  "operation": "local-alignment",
-  "topic": "RNA-Seq,Sequence assembly",
+  "operation": "genome-assembly",
+  "topic": "Sequence assembly",
   "version": {
     "4.9.6": {
       "localInstallUser": "galaxy",
@@ -11,7 +11,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }
