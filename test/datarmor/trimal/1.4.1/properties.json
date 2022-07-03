@@ -1,0 +1,13 @@
+{
+  "NAME": "Trimal",
+  "DESCRIPTION": "A tool for automated alignment trimming in large-scale phylogenetic analyses",
+  "VERSION": "1.4.1",
+  "CMDLINE": "true",
+  "GALAXY": "true",
+  "URLDOC": "http://trimal.cgenomics.org/",
+  "KEYWORDS": "sequence-trimming",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Bioinformatics",
+  "DATE_INSTALL": "17/11/2017",
+  "OWNER": "galaxy"
+}

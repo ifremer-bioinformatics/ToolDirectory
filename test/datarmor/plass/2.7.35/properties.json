@@ -1,0 +1,13 @@
+{
+  "NAME": "PLASS",
+  "DESCRIPTION": "Protein-Level ASSembler ",
+  "VERSION": "2.7.35",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/soedinglab/plass",
+  "KEYWORDS": "sequence-assembly",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Sequence assembly",
+  "DATE_INSTALL": "23/08/2019",
+  "OWNER": "galaxy"
+}

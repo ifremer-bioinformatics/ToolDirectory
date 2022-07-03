@@ -1,0 +1,17 @@
+{
+  "name": "Fiji",
+  "description": "A quantitative method to analyse F-actin distribution in cells.",
+  "homepage": "https://fiji.sc",
+  "operation": "quantification",
+  "topic": "Imaging,Cell biology",
+  "version": {
+    "20170530": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "02/12/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

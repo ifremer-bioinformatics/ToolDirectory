@@ -1,0 +1,13 @@
+{
+  "NAME": "Simka",
+  "DESCRIPTION": "De novo comparative metagenomics tool",
+  "VERSION": "1.4",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/GATB/simka",
+  "KEYWORDS": "community-profiling",
+  "CMD_INSTALL": "shell",
+  "TOPIC": "Metagenomics",
+  "DATE_INSTALL": "22/08/2018",
+  "OWNER": "galaxy"
+}

@@ -1,0 +1,17 @@
+{
+  "name": "roary",
+  "description": "A high speed stand alone pan genome pipeline, which takes annotated assemblies in GFF3 format (produced by Prokka (Seemann, 2014)) and calculates the pan genome.",
+  "homepage": "http://sanger-pathogens.github.io/Roary/",
+  "operation": "genome-assembly",
+  "topic": "DNA,Mapping,Genomics",
+  "version": {
+    "3.13.0": {
+      "localInstallUser": "lleroi",
+      "environment": "conda",
+      "localInstallDate": "20/07/2021",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "False"
+    }
+  }
+}

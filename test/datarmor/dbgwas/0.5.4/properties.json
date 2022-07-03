@@ -1,0 +1,13 @@
+{
+  "NAME": "dbgwas",
+  "DESCRIPTION": "DBGWAS is a tool for quick and efficient bacterial GWAS",
+  "VERSION": "0.5.3",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://gitlab.com/leoisl/dbgwas",
+  "KEYWORDS": "genetic-variation-analysis",
+  "CMD_INSTALL": "singularity",
+  "TOPIC": "GWAS study",
+  "DATE_INSTALL": "05/07/2021",
+  "OWNER": "galaxy"
+}

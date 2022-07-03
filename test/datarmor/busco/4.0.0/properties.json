@@ -1,0 +1,13 @@
+{
+  "NAME": "BUSCO",
+  "DESCRIPTION": "Assessing genome assembly and annotation completeness with Benchmarking Universal Single-Copy Orthologs",
+  "VERSION": "4.0.0",
+  "CMDLINE": "true",
+  "GALAXY": "true",
+  "URLDOC": "http://busco.ezlab.org/",
+  "KEYWORDS": "sequence-assembly-validation",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Sequence assembly",
+  "DATE_INSTALL": "07/01/2020",
+  "OWNER": "galaxy"
+}

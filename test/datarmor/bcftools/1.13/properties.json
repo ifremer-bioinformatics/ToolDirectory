@@ -1,0 +1,13 @@
+{
+  "NAME": "BCFtools",
+  "DESCRIPTION": "Utilities for variant calling and manipulating VCFs and BCFs.",
+  "VERSION": "1.13",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://samtools.github.io/bcftools/bcftools.html",
+  "KEYWORDS": "data-handling",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Bioinformatics",
+  "DATE_INSTALL": "22/09/2021",
+  "OWNER": "cnoel"
+}

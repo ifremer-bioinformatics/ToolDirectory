@@ -1,0 +1,13 @@
+{
+  "NAME": "spades",
+  "DESCRIPTION": "An assembly toolkit containing various assembly pipelines.",
+  "VERSION": "3.15.3",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "http://cab.spbu.ru/software/spades/",
+  "CMD_INSTALL": "conda",
+  "DATE_INSTALL": "09/12/2021",
+  "OWNER": "acormier",
+  "KEYWORDS": "genome-assembly",
+  "TOPIC": "Sequence assembly"
+}

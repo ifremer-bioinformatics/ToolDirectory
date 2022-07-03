@@ -1,0 +1,17 @@
+{
+  "name": "DeepSignal-plant",
+  "description": "A deep-learning method for detecting methylation state from Oxford Nanopore sequencing reads of plants.",
+  "homepage": "https://github.com/PengNi/deepsignal-plant",
+  "operation": "methylation-analysis",
+  "topic": "Epigenetics",
+  "version": {
+    "0.1.4": {
+      "localInstallUser": "cnoel",
+      "environment": "conda",
+      "localInstallDate": "12/01/2022",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "VCFTools",
+  "description": "Provide easily accessible methods for working with complex genetic variation data in the form of VCF files.",
+  "homepage": "https://vcftools.github.io/index.html",
+  "operation": "data-handling",
+  "topic": "Genetic variation",
+  "version": {
+    "0.1.14": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "13/09/2018",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    },
+    "0.1.16": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/05/2019",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "False"
+    }
+  }
+}

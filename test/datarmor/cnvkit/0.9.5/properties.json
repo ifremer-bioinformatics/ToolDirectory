@@ -1,0 +1,13 @@
+{
+  "NAME": "CNVkit",
+  "DESCRIPTION": "Copy number variant detection from targeted DNA sequencing",
+  "VERSION": "0.9.5",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "http://cnvkit.readthedocs.org",
+  "KEYWORDS": "variant-calling",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Comparative genomics",
+  "DATE_INSTALL": "28/02/2019",
+  "OWNER": "galaxy"
+}

@@ -1,0 +1,13 @@
+{
+  "NAME": "NCBI Blast+",
+  "DESCRIPTION": "Basic Local Alignment Search Tool",
+  "VERSION": "2.6.0",
+  "CMDLINE": "true",
+  "GALAXY": "true",
+  "URLDOC": "https://blast.ncbi.nlm.nih.gov/Blast.cgi",
+  "KEYWORDS": "sequence-similarity-search",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Biological databases",
+  "DATE_INSTALL": "17/11/2017",
+  "OWNER": "galaxy"
+}

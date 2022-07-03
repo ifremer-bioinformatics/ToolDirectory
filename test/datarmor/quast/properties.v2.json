@@ -1,0 +1,41 @@
+{
+  "name": "QUAST",
+  "description": "QUAST stands for QUality ASsessment Tool.  ",
+  "homepage": "http://quast.sourceforge.net/quast",
+  "operation": "visualisation",
+  "topic": "Sequence assembly",
+  "version": {
+    "4.5": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    },
+    "4.6.3": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "04/07/2018",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    },
+    "5.0.0": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "05/09/2018",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    },
+    "5.0.2": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "15/11/2019",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "False"
+    }
+  }
+}

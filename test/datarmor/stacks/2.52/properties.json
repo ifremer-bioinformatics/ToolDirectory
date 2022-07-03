@@ -1,0 +1,13 @@
+{
+  "NAME": "stacks",
+  "DESCRIPTION": "Developed to work with restriction enzyme based sequence data, such as RADseq, for building genetic maps and conducting population genomics and phylogeography analysis.",
+  "VERSION": "2.52",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "http://catchenlab.life.illinois.edu/stacks/",
+  "KEYWORDS": "data-handling",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Mapping,Population genetics",
+  "DATE_INSTALL": "26/06/2020",
+  "OWNER": "galaxy"
+}

@@ -1,0 +1,13 @@
+{
+  "NAME": "GATK",
+  "DESCRIPTION": "The Genome Analysis Toolkit for short variant discovery and genotyping",
+  "VERSION": "3.7",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://software.broadinstitute.org/gatk/",
+  "KEYWORDS": "variant-calling",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Comparative genomics",
+  "DATE_INSTALL": "06/11/2019",
+  "OWNER": "galaxy"
+}

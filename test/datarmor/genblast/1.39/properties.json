@@ -1,0 +1,13 @@
+{
+  "NAME": "genBlast",
+  "DESCRIPTION": "enabling BLAST to identify homologous gene sequences",
+  "VERSION": "1.39",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "http://genome.sfu.ca/genblast/index.html",
+  "KEYWORDS": "gene-prediction",
+  "CMD_INSTALL": "shell",
+  "TOPIC": "Functional genomics",
+  "DATE_INSTALL": "27/02/2019",
+  "OWNER": "galaxy"
+}

@@ -1,0 +1,13 @@
+{
+  "NAME": "Strainberry",
+  "DESCRIPTION": "Strain separation in low-complexity metagenomes using error-prone long-read technologies",
+  "VERSION": "1.1",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/rvicedomini/strainberry#installation",
+  "KEYWORDS": "genome-assembly",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Sequence assembly",
+  "DATE_INSTALL": "05/11/2021",
+  "OWNER": "cnoel"
+}

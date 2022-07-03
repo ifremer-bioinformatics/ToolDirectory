@@ -1,0 +1,13 @@
+{
+  "NAME": "PLAST",
+  "DESCRIPTION": "High Performance Parallel Local Alignment Search Tool",
+  "VERSION": "2.3.3",
+  "CMDLINE": "true",
+  "GALAXY": "true",
+  "URLDOC": "https://plast.inria.fr/user-guide/",
+  "KEYWORDS": "sequence-similarity-search",
+  "CMD_INSTALL": "shell",
+  "TOPIC": "Biological databases",
+  "DATE_INSTALL": "11/07/2018",
+  "OWNER": "galaxy"
+}

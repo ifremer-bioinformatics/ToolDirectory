@@ -1,0 +1,13 @@
+{
+  "NAME": "minimap2",
+  "DESCRIPTION": "Pairwise aligner for genomic and spliced nucleotide sequences",
+  "VERSION": "2.24",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/lh3/minimap2",
+  "CMD_INSTALL": "conda",
+  "DATE_INSTALL": "07/01/2022",
+  "OWNER": "acormier",
+  "KEYWORDS": "pairwise-sequence-alignment",
+  "TOPIC": "Mapping"
+}

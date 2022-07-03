@@ -1,0 +1,17 @@
+{
+  "name": "Variabel",
+  "description": "Novel approach and method for intrahost variant detection, which outperforms existing ONT variant callers",
+  "homepage": "https://gitlab.com/treangenlab/variabel",
+  "operation": "variant-calling",
+  "topic": "Comparative genomics",
+  "version": {
+    "1.0.0": {
+      "localInstallUser": "cnoel",
+      "environment": "conda",
+      "localInstallDate": "05/11/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

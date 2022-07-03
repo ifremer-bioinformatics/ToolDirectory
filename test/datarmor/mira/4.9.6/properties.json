@@ -1,0 +1,13 @@
+{
+  "NAME": "MIRA",
+  "DESCRIPTION": "whole genome shotgun and EST sequence assembler for Sanger, 454, Illumina, IonTorrent data and PacBio",
+  "VERSION": "4.9.6",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://sourceforge.net/p/mira-assembler/wiki/Home/",
+  "KEYWORDS": "genome-assembly",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Sequence assembly",
+  "DATE_INSTALL": "17/11/2017",
+  "OWNER": "galaxy"
+}

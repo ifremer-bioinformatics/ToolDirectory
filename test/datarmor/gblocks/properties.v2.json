@@ -1,0 +1,17 @@
+{
+  "name": "Gblocks",
+  "description": "Cleaning aligned sequences.",
+  "homepage": "http://www.embl-heidelberg.de/~castresa/Gblocks/Gblocks.html",
+  "operation": "sequence-alignment-analysis",
+  "topic": "Sequence analysis",
+  "version": {
+    "0.91b": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "False"
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "name": "Clair3",
+  "description": "deep neural network based variant caller",
+  "homepage": "https://github.com/HKU-BAL/Clair3",
+  "operation": "variant-calling",
+  "topic": "Comparative genomics",
+  "version": {
+    "0.1-r4.2": {
+      "localInstallUser": "cnoel",
+      "environment": "conda",
+      "localInstallDate": "29/06/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    },
+    "0.1": {
+      "localInstallUser": "cnoel",
+      "environment": "conda",
+      "localInstallDate": "18/05/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

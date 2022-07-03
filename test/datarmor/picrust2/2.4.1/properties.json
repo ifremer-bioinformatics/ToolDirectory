@@ -1,0 +1,13 @@
+{
+  "NAME": "PICRUSt2",
+  "DESCRIPTION": "Predict metagenome functional content from marker gene (e.g., 16S rRNA) surveys and full genomes.",
+  "VERSION": "2.4.1",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/picrust/picrust2",
+  "KEYWORDS": "functional-predictions",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Metagenomics",
+  "DATE_INSTALL": "06/07/2021",
+  "OWNER": "cnoel"
+}

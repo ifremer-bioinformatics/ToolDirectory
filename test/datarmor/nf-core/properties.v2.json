@@ -1,0 +1,17 @@
+{
+  "name": "NF-CORE",
+  "description": "Nextflow community tools",
+  "homepage": "https://nf-co.re/tools",
+  "operation": "workflows",
+  "topic": "Bioinformatics",
+  "version": {
+    "1.9": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "27/04/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

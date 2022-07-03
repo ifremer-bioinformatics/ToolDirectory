@@ -1,0 +1,17 @@
+{
+  "name": "rdp_classifier",
+  "description": "Naive Bayesian classifier that can rapidly and accurately provide taxonomic assignments from domain to genus",
+  "homepage": "http://rdp.cme.msu.edu/",
+  "operation": "taxonomic-classification",
+  "topic": "Metagenomics",
+  "version": {
+    "2.13": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "27/04/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "name": "GTDB-Tk",
+  "description": "a toolkit to classify genomes with the Genome Taxonomy Database.",
+  "homepage": "https://github.com/ecogenomics/gtdbtk",
+  "operation": "genome-alignment",
+  "topic": "Metagenomics,Proteins,Database management,Phylogenetics,Taxonomy",
+  "version": {
+    "1.0.2": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "08/04/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    },
+    "1.1.0": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "08/04/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    },
+    "1.4.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "16/02/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    },
+    "1.5.0": {
+      "localInstallUser": "cnoel",
+      "environment": "conda",
+      "localInstallDate": "25/05/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

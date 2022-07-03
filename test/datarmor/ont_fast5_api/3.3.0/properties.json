@@ -1,0 +1,13 @@
+{
+  "NAME": "ont_fast5_api",
+  "DESCRIPTION": "a simple interface to HDF5 files of the Oxford Nanopore .fast5 file format",
+  "VERSION": "3.3.0",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/nanoporetech/ont_fast5_api",
+  "CMD_INSTALL": "conda",
+  "DATE_INSTALL": "19/07/2021",
+  "OWNER": "pgdurand",
+  "KEYWORDS": "data-handling",
+  "TOPIC": "Bioinformatics"
+}

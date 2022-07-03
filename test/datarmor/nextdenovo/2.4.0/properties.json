@@ -1,0 +1,13 @@
+{
+  "NAME": "NextDenovo",
+  "DESCRIPTION": "A string graph-based de novo assembler for long reads (CLR, HiFi and ONT).",
+  "VERSION": "2.4.0",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/Nextomics/NextDenovo",
+  "KEYWORDS": "genome-assembly",
+  "CMD_INSTALL": "singularity",
+  "TOPIC": "Sequence assembly",
+  "DATE_INSTALL": "06/07/2021",
+  "OWNER": "cnoel"
+}

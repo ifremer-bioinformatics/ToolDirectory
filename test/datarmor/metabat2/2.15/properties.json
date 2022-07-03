@@ -1,0 +1,13 @@
+{
+  "NAME": "metabat2",
+  "DESCRIPTION": "MetaBAT: A robust statistical framework for reconstructing genomes from metagenomic data.",
+  "VERSION": "2.15",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://bitbucket.org/berkeleylab/metabat",
+  "CMD_INSTALL": "conda",
+  "DATE_INSTALL": "14/12/2021",
+  "OWNER": "acormier",
+  "KEYWORDS": "read-binning",
+  "TOPIC": "Metagenomics"
+}

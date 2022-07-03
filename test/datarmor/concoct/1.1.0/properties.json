@@ -1,0 +1,13 @@
+{
+  "NAME": "concoct",
+  "DESCRIPTION": "A program for unsupervised binning of metagenomic contigs by using nucleotide composition, coverage data in multiple samples and linkage data from paired end reads.",
+  "VERSION": "1.1.0",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/BinPro/CONCOCT",
+  "KEYWORDS": "read-binning",
+  "CMD_INSTALL": "singularity",
+  "TOPIC": "Metagenomics",
+  "DATE_INSTALL": "17/11/2020",
+  "OWNER": "galaxy"
+}

@@ -1,0 +1,13 @@
+{
+  "NAME": "FImpute",
+  "DESCRIPTION": "a large scale genotype imputation tool using information from relatives",
+  "VERSION": "2.2",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "http://www.aps.uoguelph.ca/~msargol/fimpute/",
+  "KEYWORDS": "genotyping",
+  "CMD_INSTALL": "shell",
+  "TOPIC": "Genotype and phenotype",
+  "DATE_INSTALL": "03/04/2018",
+  "OWNER": "galaxy"
+}
