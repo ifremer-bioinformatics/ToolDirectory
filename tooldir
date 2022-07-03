@@ -3,7 +3,7 @@
 import argparse
 import sys
 import os
-from lib import core_tool as cl
+from lib import core as cl
 from lib import ifremer as ifr
 
 
@@ -15,6 +15,7 @@ class ToolDir(object):
             usage='''tooldir <command> [<args>]
             The available commands are:
             create   Create tool properties
+            status   Activate/deactivate status of a tool
             kcsv     Create csv for Keshif visualization
             ''')
         #  upgrade  Update tool properties (add new key(s), change values)
