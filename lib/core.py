@@ -118,7 +118,8 @@ def write_properties(args, biojson, properties):
                 "localInstallDate": install_date,
                 "isCmdline": args.cmdline,
                 "isGalaxy": args.galaxy,
-                "isWorkflow": args.workflow
+                "isWorkflow": args.workflow,
+                "status": "active"
             }
         }
     }
@@ -144,7 +145,8 @@ def add_version(args, properties):
             "localInstallDate": install_date,
             "isCmdline": args.cmdline,
             "isGalaxy": args.galaxy,
-            "isWorkflow": args.workflow
+            "isWorkflow": args.workflow,
+            "status": "active"
         }
         with open(properties, 'w') as o:
             json.dump(p, o, sort_keys=False, indent=2)
@@ -163,24 +165,45 @@ def kcsv_writing(csv_out, json_lst):
     for tool in json_lst:
         with open(tool) as json_data:
             p = json.load(json_data)
-            # versions = ','.join(sorted(p['version'].keys(), reverse=True))
             ver_env = []
             env = []
+            name = p['name']
+            operation = p['operation']
+            topic = p['topic']
+            homepage = p['homepage']
+            description = p['description']
             for k in sorted(p['version'].keys(), reverse=True):
-                ver_env.append(k + '-' + p['version'][k]['environment'])
-                if p['version'][k]['environment'] not in env:
-                    env.append(p['version'][k]['environment'])
+                if p['version'][k]['status'] == 'active':
+                    ver_env.append(k + '-' + p['version'][k]['environment'])
+                    if p['version'][k]['environment'] not in env:
+                        env.append(p['version'][k]['environment'])
             versions = ','.join(ver_env)
             environments = ','.join(env)
             isGalaxy = p['version'][k]['isGalaxy']
             isWorkflow = p['version'][k]['isWorkflow']
-            txt.write('"{0}","{1}","{2}","{3}","{4}","{5}","{6}","{7}","{8}"\n'.format(p['name'],
-                                                                           versions,
-                                                                           p['operation'],
-                                                                           p['topic'],
-                                                                           p['homepage'],
-                                                                           p['description'],
-                                                                           environments,
-                                                                           isGalaxy,
-                                                                           isWorkflow))
+            # txt.write('"{0}","{1}","{2}","{3}","{4}","{5}","{6}","{7}","{8}"\n'.format(p['name'],
+            #                                                                versions,
+            #                                                                p['operation'],
+            #                                                                p['topic'],
+            #                                                                p['homepage'],
+            #                                                                p['description'],
+            #                                                                environments,
+            #                                                                isGalaxy,
+            #                                                                isWorkflow))
+            txt.write(f'"{name}","{versions}","{operation}","{topic}","{homepage}","{description}","{environments}","{isGalaxy}","{isWorkflow}"\n')
     txt.close()
+
+
+def set_status(properties, versions, status):
+    with open(properties) as json_data:
+        p = json.load(json_data)
+    for version in versions:
+        try:
+            p['version'][version]['status'] = status
+        except KeyError:
+            eprint(f"\033[0;31;47m WARNING: invalid tool version: {versions}. Skip.\033[0m")
+            pass
+        with open(properties, 'w') as o:
+            json.dump(p, o, sort_keys=False, indent=2)
+        o.close()
+        eprint(f"\033[0;37;46m LOG: all done!\033[0m")
