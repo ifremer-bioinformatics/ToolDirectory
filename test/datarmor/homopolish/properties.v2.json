@@ -1,0 +1,17 @@
+{
+  "name": "Homopolish",
+  "description": "Homopolish is a method for the removal of systematic errors in nanopore sequencing by homologous polishing.",
+  "homepage": "https://github.com/ythuang0522/homopolish",
+  "operation": "sequence-assembly",
+  "topic": "Metagenomics,Machine learning,Model organisms,Sequence assembly",
+  "version": {
+    "0.3.2": {
+      "localInstallUser": "cnoel",
+      "environment": "conda",
+      "localInstallDate": "09/09/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

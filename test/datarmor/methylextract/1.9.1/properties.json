@@ -1,0 +1,13 @@
+{
+  "NAME": "MethylExtract",
+  "DESCRIPTION": "Methylation maps and SNV calling from whole genome bisulfite sequencing data",
+  "VERSION": "1.9.1",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "http://bioinfo2.ugr.es/MethylExtract/",
+  "KEYWORDS": "methylation-analysis",
+  "CMD_INSTALL": "docker",
+  "TOPIC": "Epigenetics",
+  "DATE_INSTALL": "04/04/2019",
+  "OWNER": "galaxy"
+}

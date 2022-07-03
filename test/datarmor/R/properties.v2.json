@@ -1,0 +1,41 @@
+{
+  "name": "r",
+  "description": "Free software environment for statistical computing and graphics.",
+  "homepage": "http://www.r-project.org/",
+  "operation": "analysis",
+  "topic": "Data architecture, analysis and design,Statistics and probability,Mathematics",
+  "version": {
+    "3.5.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "05/06/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    },
+    "3.6.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "08/05/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    },
+    "4.0.0": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "08/05/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    },
+    "4.1.1": {
+      "localInstallUser": "cnoel",
+      "environment": "conda",
+      "localInstallDate": "25/08/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "NAME": "HTSeq-count",
+  "DESCRIPTION": "Counts for each gene how many reads map to it",
+  "VERSION": "0.6.1",
+  "CMDLINE": "true",
+  "GALAXY": "true",
+  "URLDOC": "http://htseq.readthedocs.io/",
+  "KEYWORDS": "rna-seq-quantification",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Transcriptomics",
+  "DATE_INSTALL": "01/12/2017",
+  "OWNER": "galaxy"
+}

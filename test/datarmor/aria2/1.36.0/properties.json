@@ -1,0 +1,13 @@
+{
+  "NAME": "Aria2",
+  "DESCRIPTION": "The lightweight multi-protocol & multi-source command-line download utility.",
+  "VERSION": "1.36.0",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "http://aria2.github.io/",
+  "CMD_INSTALL": "conda",
+  "DATE_INSTALL": "04/01/2022",
+  "OWNER": "pgdurand",
+  "KEYWORDS": "data-handling",
+  "TOPIC": "Bioinformatics"
+}

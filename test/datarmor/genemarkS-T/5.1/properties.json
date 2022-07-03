@@ -1,0 +1,13 @@
+{
+  "NAME": "GeneMarkS-T",
+  "DESCRIPTION": "Sets of assembled eukaryotic transcripts can be analyzed by the modified GeneMarkS algorithm (the set should be large enough to permit self-training). A single transcript can be analyzed by a special version of GeneMark.hmm with Heuristic models. A new advanced algorithm GeneMarkS-T was developed recently (manuscript sent to publisher).",
+  "VERSION": "5.1",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "http://topaz.gatech.edu/GeneMark/",
+  "CMD_INSTALL": "conda",
+  "DATE_INSTALL": "16/02/2022",
+  "OWNER": "acormier",
+  "KEYWORDS": "gene-prediction",
+  "TOPIC": "Functional genomics"
+}

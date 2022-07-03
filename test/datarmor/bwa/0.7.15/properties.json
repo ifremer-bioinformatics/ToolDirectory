@@ -1,0 +1,13 @@
+{
+  "NAME": "BWA",
+  "DESCRIPTION": "Mapping low-divergent sequences against a large reference genome",
+  "VERSION": "0.7.15",
+  "CMDLINE": "true",
+  "GALAXY": "true",
+  "URLDOC": "http://bio-bwa.sourceforge.net/",
+  "KEYWORDS": "read-mapping",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Mapping",
+  "DATE_INSTALL": "17/11/2017",
+  "OWNER": "galaxy"
+}

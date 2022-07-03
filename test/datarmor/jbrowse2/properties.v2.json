@@ -1,0 +1,17 @@
+{
+  "name": "JBrowse2",
+  "description": "Genome browser",
+  "homepage": "https://jbrowse.org/jb2/",
+  "operation": "genome-visualisation",
+  "topic": "Data visualisation",
+  "version": {
+    "1.0.2": {
+      "localInstallUser": "galaxy",
+      "environment": "singularity",
+      "localInstallDate": "18/02/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

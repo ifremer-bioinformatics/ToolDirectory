@@ -1,0 +1,17 @@
+{
+  "name": "MrBayes",
+  "description": "Program for Bayesian inference and model choice across a wide range of phylogenetic and evolutionary models. It uses Markov chain Monte Carlo (MCMC) methods to estimate the posterior distribution of model parameters.",
+  "homepage": "http://nbisweden.github.io/MrBayes/",
+  "operation": "phylogenetic-tree-generation-(maximum-likelihood-and-bayesian-methods)",
+  "topic": "Phylogenetics",
+  "version": {
+    "3.2.7": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "12/05/2020",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "False"
+    }
+  }
+}

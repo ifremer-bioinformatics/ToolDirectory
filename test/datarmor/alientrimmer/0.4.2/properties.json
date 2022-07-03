@@ -1,0 +1,13 @@
+{
+  "NAME": "AlienTrimmer",
+  "DESCRIPTION": "A software that allows detecting and removing contaminant sequences in both ends of NGSread sequences FASTA/FASTQ formated.",
+  "VERSION": "0.4.2",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://bioweb.pasteur.fr/packages/pack@AlienTrimmer@0.4.0",
+  "KEYWORDS": "sequence-trimming",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Bioinformatics",
+  "DATE_INSTALL": "20/04/2021",
+  "OWNER": "galaxy"
+}

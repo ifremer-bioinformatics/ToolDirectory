@@ -1,0 +1,13 @@
+{
+  "NAME": "MCScanX",
+  "DESCRIPTION": "Multiple Collinearity Scan toolkit",
+  "VERSION": "2019-09-17",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "http://chibba.pgml.uga.edu/mcscan2/",
+  "KEYWORDS": "synteny",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Comparative genomics",
+  "DATE_INSTALL": "17/09/2019",
+  "OWNER": "galaxy"
+}

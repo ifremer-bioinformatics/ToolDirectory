@@ -1,0 +1,13 @@
+{
+  "NAME": "fastsimcoal2",
+  "DESCRIPTION": "Fast sequential Markov coalescent simulation of genomic data under complex evolutionary models",
+  "VERSION": "fsc2603",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "http://cmpg.unibe.ch/software/fastsimcoal2/",
+  "KEYWORDS": "population-genomics",
+  "CMD_INSTALL": "shell",
+  "TOPIC": "Population genetics",
+  "DATE_INSTALL": "07/03/2019",
+  "OWNER": "galaxy"
+}

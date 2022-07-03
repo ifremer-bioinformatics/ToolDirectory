@@ -1,0 +1,13 @@
+{
+  "NAME": "guppy",
+  "DESCRIPTION": "real-time basecalling for Oxford Nanopore Technologies sequencing platforms",
+  "VERSION": "3.6.0",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://nanoporetech.com/",
+  "KEYWORDS": "base-calling",
+  "CMD_INSTALL": "shell",
+  "TOPIC": "Sequence assembly",
+  "DATE_INSTALL": "22/04/2020",
+  "OWNER": "galaxy"
+}

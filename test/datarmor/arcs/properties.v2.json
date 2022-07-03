@@ -1,0 +1,17 @@
+{
+  "name": "ARCS",
+  "description": "Scaffolding genome sequence assemblies using 10X Genomics GemCode/Chromium data.",
+  "homepage": "https://github.com/bcgsc/arcs/tree/v1.0.5",
+  "operation": "genome-assembly,scaffolding",
+  "topic": "Sequence assembly",
+  "version": {
+    "1.0.5": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "11/07/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

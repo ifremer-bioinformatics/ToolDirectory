@@ -1,0 +1,13 @@
+{
+  "NAME": "Snippy",
+  "DESCRIPTION": "Rapid haploid variant calling and core SNP phylogeny",
+  "VERSION": "4.4.0",
+  "CMDLINE": "true",
+  "GALAXY": "true",
+  "URLDOC": "https://github.com/tseemann/snippy",
+  "KEYWORDS": "variant-calling",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Comparative genomics",
+  "DATE_INSTALL": "26/06/2019",
+  "OWNER": "galaxy"
+}

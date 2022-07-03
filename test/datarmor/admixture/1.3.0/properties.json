@@ -1,0 +1,13 @@
+{
+  "NAME": "ADMIXTURE",
+  "DESCRIPTION": "Fast ancestry estimation",
+  "VERSION": "1.3.0",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://dalexander.github.io/admixture/index.html",
+  "KEYWORDS": "genetic-variation-analysis",
+  "CMD_INSTALL": "shell",
+  "TOPIC": "Population genetics",
+  "DATE_INSTALL": "04/09/2021",
+  "OWNER": "cnoel"
+}

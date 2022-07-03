@@ -1,0 +1,13 @@
+{
+  "NAME": "seqkit",
+  "DESCRIPTION": "Common manipulations of FASTA/Q file include converting, searching, filtering, deduplication, splitting, shuffling, and sampling",
+  "VERSION": "2.0.0",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://bioinf.shenwei.me/seqkit/",
+  "CMD_INSTALL": "conda",
+  "DATE_INSTALL": "08/10/2021",
+  "OWNER": "acormier",
+  "KEYWORDS": "data-handling",
+  "TOPIC": "Bioinformatics"
+}

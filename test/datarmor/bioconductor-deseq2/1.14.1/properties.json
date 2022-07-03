@@ -1,0 +1,13 @@
+{
+  "NAME": "DESeq2",
+  "DESCRIPTION": "Differential gene expression analysis based on the negative binomial distribution",
+  "VERSION": "1.14.1",
+  "CMDLINE": "true",
+  "GALAXY": "true",
+  "URLDOC": "https://bioconductor.org/packages/release/bioc/html/DESeq2.html",
+  "KEYWORDS": "differential-gene-expression-analysis",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Transcriptomics",
+  "DATE_INSTALL": "01/12/2017",
+  "OWNER": "galaxy"
+}

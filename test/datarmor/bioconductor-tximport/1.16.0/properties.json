@@ -1,0 +1,13 @@
+{
+  "NAME": "bioconductor-tximport ",
+  "DESCRIPTION": "Imports transcript-level abundance, estimated counts and transcript lengths, and summarizes into matrices for use with downstream gene-level analysis packages",
+  "VERSION": "1.16.0",
+  "CMDLINE": "true",
+  "GALAXY": "true",
+  "URLDOC": "https://bioconductor.org/packages/3.11/bioc/html/tximport.html",
+  "KEYWORDS": "data-handling",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Transcriptomics",
+  "DATE_INSTALL": "07/07/2020",
+  "OWNER": "galaxy"
+}

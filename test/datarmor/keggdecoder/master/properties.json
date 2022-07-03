@@ -1,0 +1,13 @@
+{
+  "NAME": "KEGGDecoder",
+  "DESCRIPTION": "Designed to parse through a KEGG-Koala outputs (blastKOALA, ghostKOALA, KOFAMSCAN) to determine the completeness of various metabolic pathways.",
+  "VERSION": "master",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/bjtully/BioData/tree/master/KEGGDecoder",
+  "KEYWORDS": "data-handling",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Bioinformatics",
+  "DATE_INSTALL": "13/04/2021",
+  "OWNER": "galaxy"
+}

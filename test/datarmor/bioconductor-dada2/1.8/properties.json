@@ -1,0 +1,13 @@
+{
+  "NAME": "bioconductor-dada2",
+  "DESCRIPTION": "Accurate, high-resolution sample inference from amplicon sequencing data",
+  "VERSION": "1.8.0",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://bioconductor.org/packages/release/bioc/html/dada2.html",
+  "KEYWORDS": "genetic-variation-analysis",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Metagenomics",
+  "DATE_INSTALL": "26/10/2018",
+  "OWNER": "galaxy"
+}

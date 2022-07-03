@@ -1,0 +1,13 @@
+{
+  "NAME": "hap.py",
+  "DESCRIPTION": "Evaluate the variants",
+  "VERSION": "v0.3.12",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/kishwarshafin/pepper",
+  "KEYWORDS": "Oxford Nanopore and PacBio HiFi variant calling",
+  "CMD_INSTALL": "singularity",
+  "TOPIC": "Comparative genomics",
+  "DATE_INSTALL": "17/03/2021",
+  "OWNER": "galaxy"
+}

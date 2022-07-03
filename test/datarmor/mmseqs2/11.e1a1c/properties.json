@@ -1,0 +1,13 @@
+{
+  "NAME": "MMseqs2",
+  "DESCRIPTION": "MMseqs2 (Many-against-Many sequence searching) is a software suite to search and cluster huge protein and nucleotide sequence sets. ",
+  "VERSION": "11.e1a1c",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://mmseqs.com",
+  "KEYWORDS": "taxonomic-classification,sequence-similarity-search,sequence-clustering",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Gene and protein families",
+  "DATE_INSTALL": "06/07/2020",
+  "OWNER": "galaxy"
+}

@@ -1,0 +1,13 @@
+{
+  "NAME": "Gblocks",
+  "DESCRIPTION": "Selection of conserved blocks from multiple alignments for their use in phylogenetic analysis",
+  "VERSION": "0.91b",
+  "CMDLINE": "true",
+  "GALAXY": "true",
+  "URLDOC": "https://bioweb.pasteur.fr/docs/modules/gblocks/0.91b/",
+  "KEYWORDS": "phylogenetic-tree-construction",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Phylogeny",
+  "DATE_INSTALL": "17/11/2017",
+  "OWNER": "galaxy"
+}

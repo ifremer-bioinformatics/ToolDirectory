@@ -1,0 +1,17 @@
+{
+  "name": "bsmap",
+  "description": "short reads mapping software for bisulfite sequencing",
+  "homepage": "https://code.google.com/archive/p/bsmap/",
+  "operation": "read-mapping",
+  "topic": "Epigenetics",
+  "version": {
+    "2.90": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "10/03/2020",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "False"
+    }
+  }
+}

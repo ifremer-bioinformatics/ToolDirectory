@@ -1,0 +1,17 @@
+{
+  "name": "DeepVariant",
+  "description": "DeepVariant is a deep learning-based variant caller that takes aligned reads (in BAM or CRAM format), produces pileup image tensors from them, classifies each tensor using a convolutional neural network, and finally reports the results in a standard VCF or gVCF file.",
+  "homepage": "https://github.com/google/deepvariant",
+  "operation": "variant-calling",
+  "topic": "Genotype and phenotype,Genomics,Whole genome sequencing,Exome sequencing,DNA polymorphism",
+  "version": {
+    "1.1.0": {
+      "localInstallUser": "acormier",
+      "environment": "singularity",
+      "localInstallDate": "17/03/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

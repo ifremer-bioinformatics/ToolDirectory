@@ -1,0 +1,13 @@
+{
+  "NAME": "lulu",
+  "DESCRIPTION": "A r-package for distribution based post clustering curation of amplicon data",
+  "VERSION": "0.1",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/tobiasgf/lulu",
+  "KEYWORDS": "sequence-clustering",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Metagenomics",
+  "DATE_INSTALL": "20/02/2018",
+  "OWNER": "galaxy"
+}

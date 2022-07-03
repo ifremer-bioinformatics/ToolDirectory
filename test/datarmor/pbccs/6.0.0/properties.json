@@ -1,0 +1,13 @@
+{
+  "NAME": "pbccs",
+  "DESCRIPTION": "CCS: Generate Highly Accurate Single-Molecule Consensus Reads (HiFi Reads)",
+  "VERSION": "6.0.0",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/PacificBiosciences/ccs",
+  "CMD_INSTALL": "conda",
+  "DATE_INSTALL": "03/09/2021",
+  "OWNER": "acormier",
+  "KEYWORDS": "sequence-alignment",
+  "TOPIC": "Sequence assembly"
+}

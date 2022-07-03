@@ -1,0 +1,17 @@
+{
+  "name": "PfamScan",
+  "description": "Search a sequence against a library of Pfam hidden Markov models (HMM)",
+  "homepage": "https://www.ebi.ac.uk/seqdb/confluence/display/JDSAT/PfamScan+Help+and+Documentation",
+  "operation": "sequence-similarity-search",
+  "topic": "Functional genomics",
+  "version": {
+    "1.6": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "18/04/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

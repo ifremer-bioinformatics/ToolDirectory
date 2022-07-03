@@ -1,0 +1,33 @@
+{
+  "name": "FROGS",
+  "description": "Analyze large sets of amplicon sequences and produce abundance tables of Operational Taxonomic Units (OTUs) and their taxonomic affiliation.",
+  "homepage": "http://frogs.toulouse.inra.fr/",
+  "operation": "taxonomic-classification",
+  "topic": "Metagenomics,Sequencing,Evolutionary biology,Microbial ecology,Taxonomy",
+  "version": {
+    "1.4.0": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/02/2018",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    },
+    "2.0.0": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "11/04/2018",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "False"
+    },
+    "3.2.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "11/03/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "NAME": "muscle",
+  "DESCRIPTION": "MUltiple Sequence Comparison by Log- Expectation",
+  "VERSION": "3.8",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://www.ebi.ac.uk/Tools/msa/muscle/",
+  "KEYWORDS": "multiple-sequence-alignment",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Phylogeny",
+  "DATE_INSTALL": "16/11/2018",
+  "OWNER": "galaxy"
+}

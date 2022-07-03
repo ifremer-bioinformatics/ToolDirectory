@@ -1,0 +1,17 @@
+{
+  "name": "LEfSe",
+  "description": "Find biomarkers between 2 or more groups using relative abundances",
+  "homepage": "https://bitbucket.org/biobakery/biobakery/wiki/lefse",
+  "operation": "community-profiling",
+  "topic": "Metagenomics",
+  "version": {
+    "1.0.8": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "12/03/2019",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "False"
+    }
+  }
+}

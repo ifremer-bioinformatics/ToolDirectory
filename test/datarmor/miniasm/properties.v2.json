@@ -1,0 +1,17 @@
+{
+  "name": "miniasm",
+  "description": "Miniasm is a very fast OLC-based de novo assembler for noisy long reads. It takes all-vs-all read self-mappings (typically by minimap) as input and outputs an assembly graph in the GFA format.",
+  "homepage": "https://github.com/lh3/miniasm",
+  "operation": "de-novo-assembly",
+  "topic": "Sequence assembly,Genomics",
+  "version": {
+    "0.2_r168": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "14/03/2018",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

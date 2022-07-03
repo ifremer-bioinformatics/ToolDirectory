@@ -1,0 +1,25 @@
+{
+  "name": "Krona",
+  "description": "Krona creates interactive HTML5 charts of hierarchical data (such as taxonomic abundance in a metagenome).",
+  "homepage": "https://github.com/marbl/Krona/wiki",
+  "operation": "visualisation",
+  "topic": "Metagenomics",
+  "version": {
+    "2.7": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "False"
+    },
+    "2.8.1": {
+      "localInstallUser": "cnoel",
+      "environment": "conda",
+      "localInstallDate": "15/02/2022",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "False"
+    }
+  }
+}

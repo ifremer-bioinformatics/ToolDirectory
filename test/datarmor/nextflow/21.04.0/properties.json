@@ -1,0 +1,13 @@
+{
+  "NAME": "nextflow",
+  "DESCRIPTION": "Nextflow enables scalable and reproducible scientific workflows using software containers. It allows the adaptation of pipelines written in the most common scripting languages.",
+  "VERSION": "21.04.0",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://www.nextflow.io/",
+  "CMD_INSTALL": "conda",
+  "DATE_INSTALL": "28/07/2021",
+  "OWNER": "acormier",
+  "KEYWORDS": "service-composition",
+  "TOPIC": "Bioinformatics"
+}

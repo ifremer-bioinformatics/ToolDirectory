@@ -1,0 +1,13 @@
+{
+  "NAME": "blupf90",
+  "DESCRIPTION": "BLUPF90 family of programs is a collection of software in Fortran 90/95 for mixed model computations in animal breeding.",
+  "VERSION": "unknown",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "http://nce.ads.uga.edu/html/projects/programs/",
+  "KEYWORDS": "analysis",
+  "CMD_INSTALL": "shell",
+  "TOPIC": "Population genetics",
+  "DATE_INSTALL": "21/10/2020",
+  "OWNER": "galaxy"
+}
