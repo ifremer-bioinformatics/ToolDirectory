@@ -49,13 +49,16 @@ def daytime():
 
 
 def biotools_api_request(args, properties):
+    name = args.name
+    if args.bid:
+        name = args.bid
     try:
-        response = requests.get('https://bio.tools/api/tool/' + args.name + '/?format=json')
+        response = requests.get('https://bio.tools/api/tool/' + name + '/?format=json')
         response.raise_for_status()
     except HTTPError as http_error:
         if response.status_code == 404:
             # eprint(f"\033[0;31;47m WARNING: HTTP error occurred: {http_error} \033[0m")
-            eprint(f"\033[0;31;47m WARNING: " + args.name + " is not described in Bio.tools \033[0m")
+            eprint(f"\033[0;31;47m WARNING: " + name + " is not described in Bio.tools \033[0m")
             eprint(f"\033[0;31;47m WARNING: writing empty properties file \033[0m")
             eprint(f"\033[0;31;47m WARNING: please, fill it manual: {properties} \033[0m")
             write_properties_default(args, properties)
@@ -87,13 +90,15 @@ def check_path(args):
 
 def create_properties(args, properties):
     eprint(f"\033[0;37;46m LOG: Launch create for " + args.name + " \033[0m")
-    eprint(f"\033[0;37;46m LOG: Collect info. from bio.tools \033[0m")
+    if args.bid:
+        eprint(f"\033[0;37;46m LOG: Search on Bio.tools for " + args.bid + " instead of " + args.name + "\033[0m")
+    eprint(f"\033[0;37;46m LOG: Collect info. from Bio.tools \033[0m")
     response, code = biotools_api_request(args, properties)
     eprint(f"\033[0;37;46m LOG: Load and parse JSON \033[0m")
     bio_json = json.loads(response)
-    eprint(f"\033[0;37;46m LOG: Create properties.json \033[0m")
+    eprint(f"\033[0;37;46m LOG: Create properties \033[0m")
     write_properties(args, bio_json, properties)
-    eprint(f"\033[0;37;46m LOG: all done!\033[0m")
+    eprint(f"\033[0;37;46m LOG: All done!\033[0m")
 
 
 def write_properties(args, biojson, properties):
@@ -101,10 +106,22 @@ def write_properties(args, biojson, properties):
     for i in biojson['function']:
         operation.append(i['operation'][0]['term'].lower().replace(' ', '-'))
     operations = ','.join(list(set(operation)))
+    if len(operation) == 0:
+        eprint(f"\033[0;31;47m ERROR: No EDAM terms for operation \033[0m")
+        eprint(f"\033[0;31;47m ERROR: Processus killed \033[0m")
+        exit(1)
+    else:
+        eprint(f"\033[0;37;46m LOG: { len(operation) } EDAM operation found\033[0m")
     topic = []
     for i in biojson['topic']:
         topic.append(i['term'])
     topics = ','.join(list(set(topic)))
+    if len(topic) == 0:
+        eprint(f"\033[0;31;47m ERROR: No EDAM terms for operation \033[0m")
+        eprint(f"\033[0;31;47m ERROR: Processus killed \033[0m")
+        exit(1)
+    else:
+        eprint(f"\033[0;37;46m LOG: { len(topic) } EDAM topics found\033[0m")
     install_date = daytime()
     if args.datetime:
         install_date = args.datetime
@@ -211,15 +228,6 @@ def kcsv_writing(csv_out, json_lst):
             environments = ','.join(env)
             isGalaxy = p['version'][k]['isGalaxy']
             isWorkflow = p['version'][k]['isWorkflow']
-            # txt.write('"{0}","{1}","{2}","{3}","{4}","{5}","{6}","{7}","{8}"\n'.format(p['name'],
-            #                                                                versions,
-            #                                                                p['operation'],
-            #                                                                p['topic'],
-            #                                                                p['homepage'],
-            #                                                                p['description'],
-            #                                                                environments,
-            #                                                                isGalaxy,
-            #                                                                isWorkflow))
             txt.write(f'"{name}","{versions}","{operation}","{topic}","{homepage}","{description}","{environments}","{isGalaxy}","{isWorkflow}"\n')
     txt.close()
 
@@ -231,9 +239,9 @@ def set_status(properties, versions, status):
         try:
             p['version'][version]['status'] = status
         except KeyError:
-            eprint(f"\033[0;31;47m WARNING: invalid tool version: {versions}. Skip.\033[0m")
+            eprint(f"\033[0;31;47m WARNING: Invalid tool version: {versions}. Skip.\033[0m")
             pass
         with open(properties, 'w') as o:
             json.dump(p, o, sort_keys=False, indent=2)
         o.close()
-        eprint(f"\033[0;37;46m LOG: all done!\033[0m")
+        eprint(f"\033[0;37;46m LOG: All done!\033[0m")
