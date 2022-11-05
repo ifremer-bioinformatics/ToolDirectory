@@ -1,10 +1,10 @@
 from __future__ import print_function
 import os
-import sys
 import json
 import requests
 import datetime
 from requests.exceptions import HTTPError
+from loguru import logger
 
 env = {
     "b": "bash",
@@ -16,23 +16,20 @@ env = {
 
 
 def create_properties(name, bid, version, owner, cmd, galaxy, environment, workflow, date, properties):
-    eprint(f"\033[0;37;46m LOG: Launch create for " + name + " \033[0m")
-    if bid:
-        eprint(f"\033[0;37;46m LOG: Search on Bio.tools for " + bid + " instead of " + name + "\033[0m")
-    eprint(f"\033[0;37;46m LOG: Collect info. from Bio.tools \033[0m")
+    logger.info(f"Create properties file for {name}")
     response, code = biotools_api_request(name, bid)
     if code == 404:
         write_properties_default(name, version, owner, cmd, galaxy, environment, workflow, date, properties)
     else:
-        eprint(f"\033[0;37;46m LOG: Load and parse JSON \033[0m")
+        logger.info(f"Load and parse JSON")
         biojson = json.loads(response)
-        eprint(f"\033[0;37;46m LOG: Create properties \033[0m")
         write_properties(name, version, date, owner, environment, cmd, galaxy, workflow, biojson, properties)
-        eprint(f"\033[0;37;46m LOG: All done!\033[0m")
+    logger.info(f"Done")
 
 
 def add_version(name, version, date, owner, environment, cmd, galaxy, workflow, properties):
-    eprint(f"\033[0;37;46m LOG: " + name + " already exist. Adding new version number... \033[0m")
+    logger.info(f"{name} already exist")
+    logger.info(f"Adding the new version")
     with open(properties) as json_data:
         p = json.load(json_data)
     p_check = p['version'].keys()
@@ -52,27 +49,34 @@ def add_version(name, version, date, owner, environment, cmd, galaxy, workflow, 
         with open(properties, 'w') as o:
             json.dump(p, o, sort_keys=False, indent=2)
         o.close()
-        eprint(f"\033[0;37;46m LOG: all done!\033[0m")
+        logger.info(f"New version successfully added")
+        logger.info(f"Done")
     else:
-        eprint(f"\033[0;31;47m WARNING: tool version already declared. Skip.\033[0m")
+        logger.warning(f"Tool version already declared")
+        logger.warning(f"Skip")
 
 
 def set_status(properties, versions, status):
+
     with open(properties) as json_data:
         p = json.load(json_data)
+    logger.info(f"Setting status for versions of {p['name']}")
     for version in versions:
         try:
             p['version'][version]['status'] = status
+            logger.info(f"Status set to {status} for version: {version}")
         except KeyError:
-            eprint(f"\033[0;31;47m WARNING: Invalid tool version: {versions}. Skip.\033[0m")
+            logger.warning(f"Invalid tool version: {versions}")
+            logger.warning(f"Skip...")
             pass
         with open(properties, 'w') as o:
             json.dump(p, o, sort_keys=False, indent=2)
         o.close()
-        eprint(f"\033[0;37;46m LOG: All done!\033[0m")
+        logger.info(f"Done")
 
 
 def kcsv_writing(csv_out, json_lst):
+    logger.info(f"Writing csv")
     txt = open(csv_out, 'w')
     txt.write('Name,Version,Operation,Topic,Doc,Description,Environment,Galaxy,Workflow\n')
 
@@ -100,6 +104,8 @@ def kcsv_writing(csv_out, json_lst):
             txt.write(
                 f'"{name}","{versions}","{operation}","{topic}","{homepage}","{description}","{environments}","{isGalaxy}","{isWorkflow}"\n')
     txt.close()
+    logger.info(f"CSV successfully written")
+    logger.info(f"Done")
 
 
 def walk_level(directory, depth=2):
@@ -125,10 +131,6 @@ def get_json(directories):
     return json_lst
 
 
-def eprint(*args, **kwargs):
-    print(*args, file=sys.stderr, **kwargs)
-
-
 def daytime():
     now = datetime.datetime.now()
     time = now.strftime("%d-%m-%Y")
@@ -136,70 +138,66 @@ def daytime():
 
 
 def biotools_api_request(name, bid):
+    logger.info(f"Collect metadata from Bio.tools for {name}")
     search = name
     if bid:
         search = bid
+    logger.info(f"Search term is {search}")
     try:
         response = requests.get('https://bio.tools/api/tool/' + search + '/?format=json')
         response.raise_for_status()
-
         response_json = response.text
         code = response.status_code
+        logger.info(f"Successfully retrieve metadata")
 
         return response_json, code
 
     except HTTPError as http_error:
         if response.status_code == 404:
-            # eprint(f"\033[0;31;47m WARNING: HTTP error occurred: {http_error} \033[0m")
-            # eprint(f"\033[0;31;47m WARNING: " + search + " is not described in Bio.tools \033[0m")
-            # eprint(f"\033[0;31;47m WARNING: writing empty properties file \033[0m")
-            # eprint(f"\033[0;31;47m WARNING: please, fill it manual: {properties} \033[0m")
             response_json = response.text
             code = response.status_code
+            logger.warning(f"{search} is not described in Bio.tools")
 
             return response_json, code
         else:
-            eprint(f"\033[0;31;47m ERROR: HTTP error occurred: {http_error} \033[0m")
+            logger.error(f"HTTP error occurred: {http_error}")
             exit(1)
     except Exception as error:
-        eprint(f"\033[0;31;47m ERROR: Other error occurred: {error} \033[0m")
+        logger.error(f"Error occurred: {error}")
         exit(1)
 
 
 def check_path(path, tool_name, tool_version):
     tool_path = os.path.join(path, tool_name)
     if not os.path.isdir(tool_path):
-        eprint(f"\033[0;31;47m ERROR:" + tool_path + " do not exist! \033[0m")
-        eprint(f"\033[0;31;47m ERROR: processus killed \033[0m")
+        logger.error(f"{tool_path} do not exist")
         exit(1)
     tool_version_path = os.path.join(path, tool_name, tool_version)
     if not os.path.isfile(tool_version_path) and not os.path.isdir(tool_version_path):
-        eprint(f"\033[0;31;47m ERROR:" + tool_version_path + " do not exist! \033[0m")
-        eprint(f"\033[0;31;47m ERROR: processus killed \033[0m")
+        logger.error(f"{tool_version_path} do not exist")
         exit(1)
 
 
 def write_properties(name, version, date, owner, environment, cmd, galaxy, workflow, biojson, properties):
+    logger.info(f"Writing properties file")
     operation = []
     for i in biojson['function']:
         operation.append(i['operation'][0]['term'].lower().replace(' ', '-'))
     operations = ','.join(list(set(operation)))
     if len(operation) == 0:
-        eprint(f"\033[0;31;47m ERROR: No operations EDAM terms found\033[0m")
-        eprint(f"\033[0;31;47m ERROR: Processus killed \033[0m")
+        logger.error(f"No operations EDAM terms found")
         exit(1)
     else:
-        eprint(f"\033[0;37;46m LOG: {len(operation)} operations EDAM found\033[0m")
+        logger.info(f"{len(operation)} operations EDAM found")
     topic = []
     for i in biojson['topic']:
         topic.append(i['term'])
     topics = ','.join(list(set(topic)))
     if len(topic) == 0:
-        eprint(f"\033[0;31;47m ERROR: No topics EDAM terms found\033[0m")
-        eprint(f"\033[0;31;47m ERROR: Processus killed \033[0m")
+        logger.error(f"No topics EDAM terms found")
         exit(1)
     else:
-        eprint(f"\033[0;37;46m LOG: {len(topic)} topics EDAM found\033[0m")
+        logger.info(f"{len(topic)} topics EDAM found")
     install_date = daytime()
     if date:
         install_date = date
@@ -223,13 +221,17 @@ def write_properties(name, version, date, owner, environment, cmd, galaxy, workf
         }
     }
     if len(biojson['description'].split('\n')[0]) > 400:
-        eprint(f"\033[0;31;47m WARNING: tool description longer than 400 characters\033[0m")
+        logger.warning(f"Tool description longer than 400 characters")
     with open(properties, 'w') as out_json:
         json.dump(prop, out_json, sort_keys=False, indent=2)
     out_json.close()
+    logger.info(f"Properties successfully written")
 
 
 def write_properties_default(name, version, owner, cmd, galaxy, environment, workflow, date, properties):
+    # eprint(f"\033[0;31;47m WARNING: writing empty properties file \033[0m")
+    # eprint(f"\033[0;31;47m WARNING: please, fill it manual: {properties} \033[0m")
+    logger.warning(f"Writing empty properties file")
     install_date = daytime()
     if date:
         install_date = datetime
@@ -255,3 +257,6 @@ def write_properties_default(name, version, owner, cmd, galaxy, environment, wor
     with open(properties, 'w') as out_json:
         json.dump(prop, out_json, sort_keys=False, indent=2)
     out_json.close()
+    logger.info(f"Properties successfully written")
+    logger.warning(f"Please, fill missing properties")
+    logger.info(f"Don't hesitate to describe this tool in Bio.tools ;)")
