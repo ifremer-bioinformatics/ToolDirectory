@@ -17,13 +17,14 @@ def getArgs():
 
 def extract_properties(jsons):
     tools_properties = {}
-    for f in jsons:
+    for f in sorted(jsons):
         print(f)
         bio_json = json.load(open(f))
         tool_name = os.path.dirname(f).split(os.sep)[-2]
         if tool_name not in tools_properties:
             tools_properties[tool_name] = {'path': os.path.join(args.path, tool_name),
                                            'properties': {'name': bio_json['NAME'],
+                                                          'bio.tools_id': bio_json['NAME'],
                                                           'description': bio_json['DESCRIPTION'],
                                                           'homepage': bio_json['URLDOC'],
                                                           "operation": bio_json['KEYWORDS'],
@@ -55,20 +56,24 @@ def extract_properties(jsons):
 def update_from_biotools(properties):
     for tool_id, tool_property in properties.items():
         try:
-            response, code = cl.biotools_api_request(tool_property['properties']['name'])
-            bio_update = json.loads(response)
-            operation = []
-            for i in bio_update['function']:
-                operation.append(i['operation'][0]['term'].lower().replace(' ', '-'))
-            operations = ','.join(list(set(operation)))
-            topic = []
-            for i in bio_update['topic']:
-                topic.append(i['term'])
-            topics = ','.join(list(set(topic)))
-            tool_property['properties']['description'] = bio_update['description'].split('\n')[0]
-            tool_property['properties']['homepage'] = bio_update['homepage']
-            tool_property['properties']['operation'] = operations
-            tool_property['properties']['topic'] = topics
+            print(f"Update {tool_property['properties']['name']}")
+            response, code = cl.biotools_api_request(tool_property['properties']['name'], None)
+            if code == 404:
+                tool_property['properties']['bio.tools_id'] = ''
+            else:
+                bio_update = json.loads(response)
+                operation = []
+                for i in bio_update['function']:
+                    operation.append(i['operation'][0]['term'].lower().replace(' ', '-'))
+                operations = ','.join(list(set(operation)))
+                topic = []
+                for i in bio_update['topic']:
+                    topic.append(i['term'])
+                topics = ','.join(list(set(topic)))
+                tool_property['properties']['description'] = bio_update['description'].split('\n')[0]
+                tool_property['properties']['homepage'] = bio_update['homepage']
+                tool_property['properties']['operation'] = operations
+                tool_property['properties']['topic'] = topics
         except:
             pass
 
