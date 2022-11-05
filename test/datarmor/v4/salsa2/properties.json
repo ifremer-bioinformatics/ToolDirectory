@@ -1,5 +1,6 @@
 {
   "name": "SALSA2",
+  "bio.tools_id": "",
   "description": "A tool to scaffold long read assemblies with Hi-C data",
   "homepage": "https://github.com/marbl/SALSA",
   "operation": "genome-assembly,scaffolding",
@@ -11,7 +12,8 @@
       "localInstallDate": "04/10/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

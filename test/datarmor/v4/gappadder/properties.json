@@ -1,5 +1,6 @@
 {
   "name": "GAPPadder",
+  "bio.tools_id": "",
   "description": "GAPPadder is designed for closing gaps on the draft genomes with paired-end reads or mate-paired reads.",
   "homepage": "https://github.com/simoncchu/GAPPadder",
   "operation": "scaffold-gap-completion",
@@ -11,7 +12,8 @@
       "localInstallDate": "18/03/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

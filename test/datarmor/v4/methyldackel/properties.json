@@ -1,5 +1,6 @@
 {
   "name": "MethylDackel",
+  "bio.tools_id": "MethylDackel",
   "description": "A (mostly) universal methylation extractor for BS-seq experiments.",
   "homepage": "https://github.com/dpryan79/MethylDackel",
   "operation": "sequence-alignment-conversion",
@@ -11,7 +12,8 @@
       "localInstallDate": "06/01/2022",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

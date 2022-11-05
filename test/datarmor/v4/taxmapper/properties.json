@@ -1,9 +1,10 @@
 {
   "name": "TaxMapper",
+  "bio.tools_id": "TaxMapper",
   "description": "Analysis tool for a reliable mapping to a provided microeukaryotic reference database and part of a comprehensive Snakemake workflow. It is used to assign taxonomic information to each NGS read by mapping to the database and filtering low quality assignments.",
   "homepage": "https://bitbucket.org/dbeisser/taxmapper",
   "operation": "genetic-mapping",
-  "topic": "NGS,Microbiology,Taxonomy,Mapping",
+  "topic": "NGS,Mapping,Microbiology,Taxonomy",
   "version": {
     "1.0.2": {
       "localInstallUser": "galaxy",
@@ -11,7 +12,8 @@
       "localInstallDate": "01/12/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

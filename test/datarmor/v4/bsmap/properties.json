@@ -1,5 +1,6 @@
 {
   "name": "bsmap",
+  "bio.tools_id": "bsmap",
   "description": "short reads mapping software for bisulfite sequencing",
   "homepage": "https://code.google.com/archive/p/bsmap/",
   "operation": "read-mapping",
@@ -11,7 +12,8 @@
       "localInstallDate": "10/03/2020",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

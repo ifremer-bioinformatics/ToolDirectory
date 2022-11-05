@@ -1,5 +1,6 @@
 {
   "name": "Platanus",
+  "bio.tools_id": "",
   "description": "Genome assembler",
   "homepage": "http://platanus.bio.titech.ac.jp/",
   "operation": "genome-assembly",
@@ -11,7 +12,8 @@
       "localInstallDate": "14/06/2017",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.0.2": {
       "localInstallUser": "galaxy",
@@ -19,7 +21,8 @@
       "localInstallDate": "22/01/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

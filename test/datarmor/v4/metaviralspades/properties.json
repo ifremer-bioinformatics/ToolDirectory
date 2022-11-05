@@ -1,5 +1,6 @@
 {
   "name": "MetaViralSpades",
+  "bio.tools_id": "",
   "description": "An assembly toolkit containing various assembly pipelines",
   "homepage": "http://cab.spbu.ru/software/spades/",
   "operation": "sequence-assembly",
@@ -11,7 +12,8 @@
       "localInstallDate": "30/07/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

@@ -1,5 +1,6 @@
 {
   "name": "GenericRepeatFinder",
+  "bio.tools_id": "",
   "description": "C++ program package for detecting terminal inverted repeats (TIRs), terminal direct repeats (TDRs), interspersed repeats, miniature inverted repeat transposable elements (MITEs), and long terminal repeat (LTR) transposons in genomes",
   "homepage": "https://github.com/bioinfolabmu/GenericRepeatFinder",
   "operation": "repeat-sequence-analysis",
@@ -11,7 +12,8 @@
       "localInstallDate": "30/09/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

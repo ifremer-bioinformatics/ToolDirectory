@@ -1,5 +1,6 @@
 {
   "name": "bioconductor-tximport ",
+  "bio.tools_id": "",
   "description": "Imports transcript-level abundance, estimated counts and transcript lengths, and summarizes into matrices for use with downstream gene-level analysis packages",
   "homepage": "https://bioconductor.org/packages/3.11/bioc/html/tximport.html",
   "operation": "data-handling",
@@ -11,7 +12,8 @@
       "localInstallDate": "07/07/2020",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

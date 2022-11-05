@@ -1,5 +1,6 @@
 {
   "name": "ucsc-bigbedtobed",
+  "bio.tools_id": "",
   "description": "Convert from bigBed to ascii bed format.",
   "homepage": "http://hgdownload.cse.ucsc.edu/admin/exe/",
   "operation": "data-handling",
@@ -11,7 +12,8 @@
       "localInstallDate": "08/02/2022",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

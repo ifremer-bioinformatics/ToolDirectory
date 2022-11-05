@@ -1,5 +1,6 @@
 {
   "name": "biom-format",
+  "bio.tools_id": "",
   "description": "Converting between file formats",
   "homepage": "http://biom-format.org/documentation/biom_conversion.html",
   "operation": "conversion",
@@ -11,7 +12,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

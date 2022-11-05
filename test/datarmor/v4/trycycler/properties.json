@@ -1,9 +1,10 @@
 {
   "name": "Trycycler",
+  "bio.tools_id": "Trycycler",
   "description": "Trycycler: consensus long-read assemblies for bacterial genomes",
   "homepage": "http://github.com/rrwick/Trycycler-paper",
   "operation": "genome-assembly",
-  "topic": "Whole genome sequencing,Genomics,Sequence assembly,Human biology,DNA",
+  "topic": "Sequence assembly,DNA,Human biology,Whole genome sequencing,Genomics",
   "version": {
     "0.5.0": {
       "localInstallUser": "cnoel",
@@ -11,7 +12,8 @@
       "localInstallDate": "02/07/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

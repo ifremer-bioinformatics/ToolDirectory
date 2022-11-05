@@ -1,9 +1,10 @@
 {
   "name": "RAxML",
+  "bio.tools_id": "RAxML",
   "description": "A tool for Phylogenetic Analysis and Post-Analysis of Large Phylogenies.",
   "homepage": "http://sco.h-its.org/exelixis/web/software/raxml/",
   "operation": "sequence-analysis",
-  "topic": "Sequence analysis,Phylogenetics",
+  "topic": "Phylogenetics,Sequence analysis",
   "version": {
     "8.2.12": {
       "localInstallUser": "galaxy",
@@ -11,7 +12,8 @@
       "localInstallDate": "15/11/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

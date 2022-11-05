@@ -1,5 +1,6 @@
 {
   "name": "Trinotate",
+  "bio.tools_id": "Trinotate",
   "description": "Comprehensive annotation suite designed for automatic functional annotation of transcriptomes, particularly de novo assembled transcriptomes, from model or non-model organisms.",
   "homepage": "https://github.com/Trinotate/Trinotate.github.io",
   "operation": "gene-functional-annotation",
@@ -11,7 +12,8 @@
       "localInstallDate": "31/10/2019",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

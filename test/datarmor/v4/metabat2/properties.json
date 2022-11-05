@@ -1,5 +1,6 @@
 {
   "name": "metabat2",
+  "bio.tools_id": "",
   "description": "MetaBAT: A robust statistical framework for reconstructing genomes from metagenomic data.",
   "homepage": "https://bitbucket.org/berkeleylab/metabat",
   "operation": "read-binning",
@@ -11,7 +12,8 @@
       "localInstallDate": "14/12/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

@@ -1,5 +1,6 @@
 {
   "name": "evo",
+  "bio.tools_id": "",
   "description": "A loose set of tools for (mainly evolutionary) genomics",
   "homepage": "https://github.com/millanek/evo",
   "operation": "data-handling",
@@ -11,7 +12,8 @@
       "localInstallDate": "12/11/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

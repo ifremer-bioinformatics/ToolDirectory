@@ -1,9 +1,10 @@
 {
   "name": "snpsift",
+  "bio.tools_id": "snpsift",
   "description": "Toolbox that allows you to filter and manipulate annotated vcf files.",
   "homepage": "http://snpeff.sourceforge.net/SnpSift.html",
   "operation": "variant-filtering",
-  "topic": "Data architecture, analysis and design,Data management",
+  "topic": "Data management,Data architecture, analysis and design",
   "version": {
     "4.3.1t": {
       "localInstallUser": "galaxy",
@@ -11,7 +12,8 @@
       "localInstallDate": "08/04/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

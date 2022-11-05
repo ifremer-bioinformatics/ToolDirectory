@@ -1,5 +1,6 @@
 {
   "name": "KEGGDecoder",
+  "bio.tools_id": "",
   "description": "Designed to parse through a KEGG-Koala outputs (blastKOALA, ghostKOALA, KOFAMSCAN) to determine the completeness of various metabolic pathways.",
   "homepage": "https://github.com/bjtully/BioData/tree/master/KEGGDecoder",
   "operation": "data-handling",
@@ -11,7 +12,8 @@
       "localInstallDate": "13/04/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

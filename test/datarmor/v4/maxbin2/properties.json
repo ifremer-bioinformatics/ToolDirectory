@@ -1,5 +1,6 @@
 {
   "name": "maxbin2",
+  "bio.tools_id": "",
   "description": "An automatic tool for binning metagenomics sequences.",
   "homepage": "https://sourceforge.net/projects/maxbin2/",
   "operation": "read-binning",
@@ -11,7 +12,8 @@
       "localInstallDate": "14/12/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

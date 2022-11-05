@@ -1,5 +1,6 @@
 {
   "name": "LEfSe",
+  "bio.tools_id": "",
   "description": "Find biomarkers between 2 or more groups using relative abundances",
   "homepage": "https://bitbucket.org/biobakery/biobakery/wiki/lefse",
   "operation": "community-profiling",
@@ -11,7 +12,8 @@
       "localInstallDate": "12/03/2019",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

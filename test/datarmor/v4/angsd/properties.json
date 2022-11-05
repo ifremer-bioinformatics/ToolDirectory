@@ -1,5 +1,6 @@
 {
   "name": "ANGSD",
+  "bio.tools_id": "ANGSD",
   "description": "Software for analyzing next generation sequencing data. The software can handle a number of different input types from mapped reads to imputed genotype probabilities. Most methods take genotype uncertainty into account instead of basing the analysis on called genotypes. This is especially useful for low and medium depth data.",
   "homepage": "http://www.popgen.dk/angsd",
   "operation": "sequence-analysis",
@@ -11,7 +12,8 @@
       "localInstallDate": "26/11/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "0.931": {
       "localInstallUser": "galaxy",
@@ -19,7 +21,8 @@
       "localInstallDate": "22/11/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "0.933": {
       "localInstallUser": "galaxy",
@@ -27,7 +30,8 @@
       "localInstallDate": "25/11/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

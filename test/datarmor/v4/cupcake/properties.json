@@ -1,5 +1,6 @@
 {
   "name": "cupcake",
+  "bio.tools_id": "",
   "description": "Miscellaneous collection of Python and R scripts for processing Iso-Seq data",
   "homepage": "https://github.com/Magdoll/cDNA_Cupcake",
   "operation": "data-handling",
@@ -11,7 +12,8 @@
       "localInstallDate": "21/02/2022",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

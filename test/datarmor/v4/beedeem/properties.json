@@ -1,5 +1,6 @@
 {
   "name": "BeeDeeM",
+  "bio.tools_id": "",
   "description": "a Bioinformatics Databank Manager System",
   "homepage": "https://github.com/pgdurand/BeeDeeM/wiki",
   "operation": "database-management",
@@ -11,7 +12,8 @@
       "localInstallDate": "28/04/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

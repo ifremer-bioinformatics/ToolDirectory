@@ -1,5 +1,6 @@
 {
   "name": "pbcoretools",
+  "bio.tools_id": "",
   "description": "CLI tools and add-ons for PacBio's core APIs (incl dataset)",
   "homepage": "https://github.com/PacificBiosciences/pbbioconda",
   "operation": "data-handling",
@@ -11,7 +12,8 @@
       "localInstallDate": "23/02/2022",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

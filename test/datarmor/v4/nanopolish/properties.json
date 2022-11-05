@@ -1,9 +1,10 @@
 {
   "name": "Nanopolish",
+  "bio.tools_id": "Nanopolish",
   "description": "A package for detecting cytosine methylations and genetic variations from nanopore MinION sequencing data.",
   "homepage": "https://github.com/jts/nanopolish",
   "operation": "statistical-calculation",
-  "topic": "Sequence analysis,Sequencing,Genetic variation,Statistics and probability",
+  "topic": "Statistics and probability,Genetic variation,Sequencing,Sequence analysis",
   "version": {
     "0.13.2": {
       "localInstallUser": "galaxy",
@@ -11,7 +12,8 @@
       "localInstallDate": "13/04/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

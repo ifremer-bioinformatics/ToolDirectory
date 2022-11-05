@@ -1,9 +1,10 @@
 {
   "name": "gffread",
+  "bio.tools_id": "gffread",
   "description": "program for filtering, converting and manipulating GFF files",
   "homepage": "https://ccb.jhu.edu/software/stringtie/gff.shtml",
   "operation": "sequence-annotation",
-  "topic": "Sequence analysis,Nucleic acids",
+  "topic": "Nucleic acids,Sequence analysis",
   "version": {
     "0.12.7": {
       "localInstallUser": "cnoel",
@@ -11,7 +12,8 @@
       "localInstallDate": "15/10/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

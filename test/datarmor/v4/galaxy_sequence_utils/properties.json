@@ -1,5 +1,6 @@
 {
   "name": "Galaxy sequence utils",
+  "bio.tools_id": "",
   "description": "Galaxy sequence utilities are a set of Python modules for reading, analyzing, and converting sequence formats.",
   "homepage": "https://github.com/galaxyproject/sequence_utils",
   "operation": "data-handling",
@@ -11,7 +12,8 @@
       "localInstallDate": "09/01/2018",
       "isCmdline": "false",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "1.1.2": {
       "localInstallUser": "galaxy",
@@ -19,7 +21,8 @@
       "localInstallDate": "09/01/2018",
       "isCmdline": "false",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

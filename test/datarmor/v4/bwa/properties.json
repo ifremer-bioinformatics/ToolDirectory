@@ -1,8 +1,9 @@
 {
   "name": "BWA",
+  "bio.tools_id": "BWA",
   "description": "Fast, accurate, memory-efficient aligner for short and long sequencing reads",
   "homepage": "http://bio-bwa.sourceforge.net",
-  "operation": "generation,sequence-alignment,read-mapping,genome-indexing",
+  "operation": "read-mapping,sequence-alignment,generation,genome-indexing",
   "topic": "Mapping",
   "version": {
     "0.7.15": {
@@ -11,7 +12,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "0.7.17": {
       "localInstallUser": "galaxy",
@@ -19,7 +21,8 @@
       "localInstallDate": "16/02/2021",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

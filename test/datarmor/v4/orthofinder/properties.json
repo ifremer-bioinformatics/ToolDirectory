@@ -1,9 +1,10 @@
 {
   "name": "OrthoFinder",
+  "bio.tools_id": "OrthoFinder",
   "description": "OrthoFinder is a fast, accurate and comprehensive platform for comparative genomics. It finds orthogroups and orthologs, infers rooted gene trees for all orthogroups and identifies all of the gene duplcation events in those gene trees. It also infers a rooted species tree for the species being analysed and maps the gene duplication events from the gene trees to branches in the species tree. OrthoFinder also provides comprehensive statistics for comparative genomic analyses.",
   "homepage": "https://github.com/davidemms/OrthoFinder",
   "operation": "genome-comparison",
-  "topic": "Bioinformatics,Sequence analysis,Phylogenetics,Comparative genomics,Phylogenomics",
+  "topic": "Phylogenomics,Comparative genomics,Phylogenetics,Bioinformatics,Sequence analysis",
   "version": {
     "2.4.0": {
       "localInstallUser": "galaxy",
@@ -11,7 +12,8 @@
       "localInstallDate": "17/08/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

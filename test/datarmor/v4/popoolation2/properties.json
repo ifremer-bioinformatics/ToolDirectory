@@ -1,9 +1,10 @@
 {
   "name": "PoPoolation2",
+  "bio.tools_id": "PoPoolation2",
   "description": "PoPoolation2 allows to compare allele frequencies for SNPs between two or more populations and to identify significant differences. PoPoolation2 requires next generation sequencing data of pooled genomic DNA (Pool-Seq). It may be used for measuring differentiation between populations, for genome wide association studies and for experimental evolution.",
   "homepage": "https://sourceforge.net/projects/popoolation2/",
   "operation": "sequence-feature-comparison",
-  "topic": "Genomics,Population genetics,DNA polymorphism",
+  "topic": "Population genetics,Genomics,DNA polymorphism",
   "version": {
     "1201": {
       "localInstallUser": "galaxy",
@@ -11,7 +12,8 @@
       "localInstallDate": "25/10/2017",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

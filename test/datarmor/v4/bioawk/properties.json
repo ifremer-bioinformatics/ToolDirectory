@@ -1,5 +1,6 @@
 {
   "name": "Bioawk",
+  "bio.tools_id": "",
   "description": "Extension to Brian Kernighan's awk, adding the support of several common biological data formats",
   "homepage": "https://github.com/lh3/bioawk",
   "operation": "data-handling",
@@ -11,7 +12,8 @@
       "localInstallDate": "30/09/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

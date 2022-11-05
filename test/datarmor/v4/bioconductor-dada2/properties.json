@@ -1,5 +1,6 @@
 {
   "name": "bioconductor-dada2",
+  "bio.tools_id": "",
   "description": "Accurate, high-resolution sample inference from amplicon sequencing data",
   "homepage": "https://bioconductor.org/packages/release/bioc/html/dada2.html",
   "operation": "genetic-variation-analysis",
@@ -11,7 +12,8 @@
       "localInstallDate": "03/10/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "1.8.0": {
       "localInstallUser": "galaxy",
@@ -19,7 +21,8 @@
       "localInstallDate": "26/10/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

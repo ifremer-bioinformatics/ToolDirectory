@@ -1,5 +1,6 @@
 {
   "name": "SNVoter",
+  "bio.tools_id": "",
   "description": "Improving SNV detection from low coverage nanopore sequencing data (<30x)",
   "homepage": "https://github.com/vahidAK/SNVoter",
   "operation": "snp-detection",
@@ -11,7 +12,8 @@
       "localInstallDate": "29/06/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

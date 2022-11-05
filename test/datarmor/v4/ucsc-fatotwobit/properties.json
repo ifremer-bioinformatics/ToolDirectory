@@ -1,5 +1,6 @@
 {
   "name": "faToTwoBit",
+  "bio.tools_id": "faToTwoBit",
   "description": "Convert DNA from fasta to 2bit format",
   "homepage": "https://bioconda.github.io/recipes/ucsc-fatotwobit/README.html",
   "operation": "",
@@ -11,7 +12,8 @@
       "localInstallDate": "26/02/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

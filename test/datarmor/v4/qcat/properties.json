@@ -1,5 +1,6 @@
 {
   "name": "qcat",
+  "bio.tools_id": "",
   "description": "qcat is a Python command-line tool for demultiplexing Oxford Nanopore reads from FASTQ files. ",
   "homepage": "https://github.com/nanoporetech/qcat",
   "operation": "demultiplexing",
@@ -11,7 +12,8 @@
       "localInstallDate": "17/06/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

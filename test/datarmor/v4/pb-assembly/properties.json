@@ -1,5 +1,6 @@
 {
   "name": "pb-assembly/Falcon",
+  "bio.tools_id": "",
   "description": "FALCON is a diploid-aware assembler which follows the hierarchical genome assembly process (HGAP) and is optimized for large genome assembly though microbial genomes can also be assembled",
   "homepage": "https://github.com/PacificBiosciences/pb-assembly",
   "operation": "genome-assembly",
@@ -11,7 +12,8 @@
       "localInstallDate": "16/01/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

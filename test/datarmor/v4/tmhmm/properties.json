@@ -1,9 +1,10 @@
 {
   "name": "TMHMM",
+  "bio.tools_id": "TMHMM",
   "description": "Prediction of transmembrane helices in proteins.",
   "homepage": "http://cbs.dtu.dk/services/TMHMM/",
   "operation": "transmembrane-protein-prediction",
-  "topic": "Membrane and lipoproteins,Protein secondary structure,Protein modifications,Protein folds and structural domains,Proteomics",
+  "topic": "Proteomics,Protein modifications,Protein folds and structural domains,Membrane and lipoproteins,Protein secondary structure",
   "version": {
     "2.0": {
       "localInstallUser": "galaxy",
@@ -11,7 +12,8 @@
       "localInstallDate": "23/11/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

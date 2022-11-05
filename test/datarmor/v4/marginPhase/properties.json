@@ -1,5 +1,6 @@
 {
   "name": "marginPhase",
+  "bio.tools_id": "marginPhase",
   "description": "MarginPhase is a program for simultaneous haplotyping and genotyping.",
   "homepage": "https://github.com/benedictpaten/marginPhase",
   "operation": "haplotype-mapping",
@@ -11,7 +12,8 @@
       "localInstallDate": "18/03/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

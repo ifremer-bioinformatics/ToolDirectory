@@ -1,5 +1,6 @@
 {
   "name": "mlst",
+  "bio.tools_id": "mlst",
   "description": "Multi Locus Sequence Typing from an assembled genome or from a set of reads.",
   "homepage": "http://cge.cbs.dtu.dk/services/MLST/",
   "operation": "taxonomic-classification",
@@ -11,7 +12,8 @@
       "localInstallDate": "07/08/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

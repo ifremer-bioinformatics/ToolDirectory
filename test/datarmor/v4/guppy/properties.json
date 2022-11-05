@@ -1,9 +1,10 @@
 {
   "name": "guppy",
+  "bio.tools_id": "guppy",
   "description": "Program to visualize sequence annotation data of the genetic sequence data with graphical layout. This highly interactive program allows scrolling and zooming from the genomic landscape to discrete nucleic acid sequences. Its main function is quick rendering of data on a standalone personal computer to save the layout as a parsonal file. With optional link to the internet resources, and printing support, this program tries to make more greater use of computational media in research actitiviy.",
   "homepage": "http://staff.aist.go.jp/yutaka.ueno/guppy/",
   "operation": "sequence-visualisation",
-  "topic": "Sequencing,Genetics,Genomics,Data visualisation",
+  "topic": "Genetics,Sequencing,Data visualisation,Genomics",
   "version": {
     "3.3.3": {
       "localInstallUser": "galaxy",
@@ -11,7 +12,8 @@
       "localInstallDate": "29/11/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "3.4.4": {
       "localInstallUser": "galaxy",
@@ -19,7 +21,8 @@
       "localInstallDate": "17/02/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "3.6.0": {
       "localInstallUser": "galaxy",
@@ -27,7 +30,8 @@
       "localInstallDate": "22/04/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "4.0.15": {
       "localInstallUser": "galaxy",
@@ -35,7 +39,8 @@
       "localInstallDate": "21/08/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "4.2.2": {
       "localInstallUser": "galaxy",
@@ -43,7 +48,8 @@
       "localInstallDate": "28/09/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "4.4.0": {
       "localInstallUser": "galaxy",
@@ -51,7 +57,8 @@
       "localInstallDate": "23/12/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "4.5.3": {
       "localInstallUser": "galaxy",
@@ -59,7 +66,8 @@
       "localInstallDate": "20/04/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "5.0.7": {
       "localInstallUser": "mdequidt",
@@ -67,7 +75,8 @@
       "localInstallDate": "31/05/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

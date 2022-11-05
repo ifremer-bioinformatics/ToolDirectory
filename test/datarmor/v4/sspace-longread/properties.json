@@ -1,5 +1,6 @@
 {
   "name": "SSpace-long read",
+  "bio.tools_id": "",
   "description": "A program for scaffolding pre-assembled contigs using long reads",
   "homepage": "https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-15-211",
   "operation": "scaffolding",
@@ -11,7 +12,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

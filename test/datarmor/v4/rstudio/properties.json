@@ -1,9 +1,10 @@
 {
   "name": "RStudio",
+  "bio.tools_id": "RStudio",
   "description": "Integrated development environment (IDE) for the R programming language.",
   "homepage": "https://www.rstudio.com/",
   "operation": "data-handling",
-  "topic": "Data architecture, analysis and design,Statistics and probability,Mathematics",
+  "topic": "Data architecture, analysis and design,Mathematics,Statistics and probability",
   "version": {
     "1.1.456": {
       "localInstallUser": "galaxy",
@@ -11,7 +12,8 @@
       "localInstallDate": "20/02/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

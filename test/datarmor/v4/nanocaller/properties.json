@@ -1,9 +1,10 @@
 {
   "name": "NanoCaller",
+  "bio.tools_id": "NanoCaller",
   "description": "NanoCaller for accurate detection of SNPs and small indels from long-read sequencing by deep neural networks.",
   "homepage": "https://github.com/WGLab/NanoCaller",
   "operation": "indel-detection",
-  "topic": "Sequencing,Mapping,Machine learning,DNA polymorphism",
+  "topic": "Machine learning,Sequencing,Mapping,DNA polymorphism",
   "version": {
     "0.3.3": {
       "localInstallUser": "galaxy",
@@ -11,7 +12,8 @@
       "localInstallDate": "10/04/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "0.4.0": {
       "localInstallUser": "cnoel",
@@ -19,7 +21,8 @@
       "localInstallDate": "29/06/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

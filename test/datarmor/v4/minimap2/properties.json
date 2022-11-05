@@ -1,5 +1,6 @@
 {
   "name": "minimap2",
+  "bio.tools_id": "minimap2",
   "description": "Pairwise aligner for genomic and spliced nucleotide sequences",
   "homepage": "https://github.com/lh3/minimap2",
   "operation": "pairwise-sequence-alignment",
@@ -11,7 +12,8 @@
       "localInstallDate": "02/04/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.17": {
       "localInstallUser": "galaxy",
@@ -19,7 +21,8 @@
       "localInstallDate": "16/01/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.18": {
       "localInstallUser": "acormier",
@@ -27,7 +30,8 @@
       "localInstallDate": "12/05/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.19": {
       "localInstallUser": "cnoel",
@@ -35,7 +39,8 @@
       "localInstallDate": "27/05/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.22": {
       "localInstallUser": "acormier",
@@ -43,7 +48,8 @@
       "localInstallDate": "24/09/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.23": {
       "localInstallUser": "acormier",
@@ -51,7 +57,8 @@
       "localInstallDate": "09/12/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.24": {
       "localInstallUser": "acormier",
@@ -59,7 +66,8 @@
       "localInstallDate": "07/01/2022",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.9": {
       "localInstallUser": "galaxy",
@@ -67,7 +75,8 @@
       "localInstallDate": "14/03/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

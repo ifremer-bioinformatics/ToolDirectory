@@ -1,5 +1,6 @@
 {
   "name": "HaploConduct",
+  "bio.tools_id": "",
   "description": "Haplotype-aware genome assembly toolkit ",
   "homepage": "https://github.com/haploconduct/haploconduct",
   "operation": "genome-assembly",
@@ -11,7 +12,8 @@
       "localInstallDate": "14/02/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

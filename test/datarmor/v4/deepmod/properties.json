@@ -1,5 +1,6 @@
 {
   "name": "DeepMod",
+  "bio.tools_id": "",
   "description": "a deep-learning tool for genomic-scale, strand-sensitive and single-nucleotide based detection of DNA modifications.",
   "homepage": "https://github.com/WGLab/DeepMod",
   "operation": "methylation-analysis",
@@ -11,7 +12,8 @@
       "localInstallDate": "16/07/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

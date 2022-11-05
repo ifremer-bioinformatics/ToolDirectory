@@ -1,9 +1,10 @@
 {
   "name": "FROGS",
-  "description": "Analyze large sets of amplicon sequences and produce abundance tables of Operational Taxonomic Units (OTUs) and their taxonomic affiliation.",
+  "bio.tools_id": "FROGS",
+  "description": "The user-friendly and Galaxy-supported pipeline FROGS analyses large sets of DNA amplicons sequences accurately and rapidly, essential for microbe community studies.",
   "homepage": "http://frogs.toulouse.inra.fr/",
   "operation": "taxonomic-classification",
-  "topic": "Metagenomics,Sequencing,Evolutionary biology,Microbial ecology,Taxonomy",
+  "topic": "Sequencing,Metagenomics,Taxonomy,Evolutionary biology,Microbial ecology",
   "version": {
     "1.4.0": {
       "localInstallUser": "galaxy",
@@ -11,7 +12,8 @@
       "localInstallDate": "17/02/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.0.0": {
       "localInstallUser": "galaxy",
@@ -19,7 +21,8 @@
       "localInstallDate": "11/04/2018",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "3.2.1": {
       "localInstallUser": "galaxy",
@@ -27,7 +30,8 @@
       "localInstallDate": "11/03/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

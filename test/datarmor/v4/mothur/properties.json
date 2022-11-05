@@ -1,5 +1,6 @@
 {
   "name": "mothur",
+  "bio.tools_id": "mothur",
   "description": "\"Open-source, platform-independent, community-supported software for describing and comparing microbial communities\" Schloss PD et al. 2009",
   "homepage": "http://mothur.org/",
   "operation": "",
@@ -11,7 +12,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "1.39.5": {
       "localInstallUser": "galaxy",
@@ -19,7 +21,8 @@
       "localInstallDate": "22/11/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "1.42.1": {
       "localInstallUser": "galaxy",
@@ -27,7 +30,8 @@
       "localInstallDate": "06/06/2019",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

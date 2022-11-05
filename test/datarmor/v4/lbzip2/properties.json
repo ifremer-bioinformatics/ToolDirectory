@@ -1,5 +1,6 @@
 {
   "name": "lbzip2",
+  "bio.tools_id": "",
   "description": "lbzip2 is a free, multi-threaded compression utility with support for bzip2 compressed file format",
   "homepage": "http://lbzip2.org/",
   "operation": "data-handling",
@@ -11,7 +12,8 @@
       "localInstallDate": "22/02/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

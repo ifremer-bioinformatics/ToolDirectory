@@ -1,5 +1,6 @@
 {
   "name": "SHAPEIT4",
+  "bio.tools_id": "",
   "description": "fast and accurate method for estimation of haplotypes (aka phasing) for SNP array and high coverage sequencing data",
   "homepage": "https://odelaneau.github.io/shapeit4/",
   "operation": "haplotype-mapping",
@@ -11,7 +12,8 @@
       "localInstallDate": "10/03/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

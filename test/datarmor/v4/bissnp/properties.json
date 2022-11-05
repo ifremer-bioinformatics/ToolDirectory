@@ -1,5 +1,6 @@
 {
   "name": "BisSNP",
+  "bio.tools_id": "",
   "description": "Bisulfite-seq/NOMe-seq SNPs & cytosine methylation caller",
   "homepage": "http://people.csail.mit.edu/dnaase/bissnp2011/",
   "operation": "methylation-calling",
@@ -11,7 +12,8 @@
       "localInstallDate": "26/10/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

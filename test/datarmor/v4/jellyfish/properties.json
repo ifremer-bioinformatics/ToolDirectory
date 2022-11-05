@@ -1,9 +1,10 @@
 {
   "name": "jellyfish",
+  "bio.tools_id": "jellyfish",
   "description": "A command-line algorithm for counting k-mers in DNA sequence.",
   "homepage": "http://www.genome.umd.edu/jellyfish.html",
   "operation": "k-mer-counting",
-  "topic": "Sequence analysis,Genomics",
+  "topic": "Genomics,Sequence analysis",
   "version": {
     "2.2.10": {
       "localInstallUser": "acormier",
@@ -11,7 +12,8 @@
       "localInstallDate": "09/12/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.2.6": {
       "localInstallUser": "galaxy",
@@ -19,7 +21,8 @@
       "localInstallDate": "14/03/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

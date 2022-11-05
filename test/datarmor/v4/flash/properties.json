@@ -1,9 +1,10 @@
 {
   "name": "FLASh",
+  "bio.tools_id": "FLASh",
   "description": "Identifies paired-end reads which overlap in the middle, converting them to single long reads",
   "homepage": "http://ccb.jhu.edu/software/FLASH/",
   "operation": "read-pre-processing",
-  "topic": "Sequencing,Sequence assembly",
+  "topic": "Sequence assembly,Sequencing",
   "version": {
     "1.2.11": {
       "localInstallUser": "galaxy",
@@ -11,7 +12,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

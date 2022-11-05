@@ -1,5 +1,6 @@
 {
   "name": "PCAngsd",
+  "bio.tools_id": "",
   "description": "Framework for analyzing low depth next-generation sequencing data in heterogeneous populations using PCA",
   "homepage": "https://github.com/Rosemeis/pcangsd",
   "operation": "population-structure",
@@ -11,7 +12,8 @@
       "localInstallDate": "15/07/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

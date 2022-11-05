@@ -1,5 +1,6 @@
 {
   "name": "Velvet",
+  "bio.tools_id": "Velvet",
   "description": "A de novo genomic assembler specially designed for short read sequencing technologies, such as Solexa or 454 or SOLiD.",
   "homepage": "https://github.com/dzerbino/velvet",
   "operation": "formatting,de-novo-assembly",
@@ -11,7 +12,8 @@
       "localInstallDate": "28/01/2019",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

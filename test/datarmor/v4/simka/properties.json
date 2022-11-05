@@ -1,5 +1,6 @@
 {
   "name": "Simka",
+  "bio.tools_id": "Simka",
   "description": "Simka is a de novo comparative metagenomics tool. Simka represents each dataset as a k-mer spectrum and compute several classical ecological distances between them.",
   "homepage": "https://github.com/GATB/simka",
   "operation": "sequence-distance-matrix-generation",
@@ -11,7 +12,8 @@
       "localInstallDate": "22/08/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

@@ -1,5 +1,6 @@
 {
   "name": "faststructure",
+  "bio.tools_id": "faststructure",
   "description": "fastStructure is an algorithm for inferring population structure from large SNP genotype data. It is based on a variational Bayesian framework for posterior inference and is written in Python2.x.",
   "homepage": "http://rajanil.github.io/fastStructure/",
   "operation": "genetic-variation-analysis",
@@ -11,7 +12,8 @@
       "localInstallDate": "20/07/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

@@ -1,5 +1,6 @@
 {
   "name": "bedtools",
+  "bio.tools_id": "bedtools",
   "description": "BEDTools is an extensive suite of utilities for comparing genomic features in BED format.",
   "homepage": "https://github.com/arq5x/bedtools2",
   "operation": "mapping",
@@ -11,7 +12,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.27.1": {
       "localInstallUser": "galaxy",
@@ -19,7 +21,8 @@
       "localInstallDate": "12/03/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.30.0": {
       "localInstallUser": "acormier",
@@ -27,7 +30,8 @@
       "localInstallDate": "05/10/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

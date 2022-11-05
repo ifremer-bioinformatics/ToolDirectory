@@ -1,5 +1,6 @@
 {
   "name": "FImpute",
+  "bio.tools_id": "FImpute",
   "description": "Developed for large scale genotype imputation in livestock where hundreds of thousands of individuals are genotypes with different panels. It uses an overlapping sliding window approach to exploit relationships or haplotype similarities between target and reference individuals. The process starts with long windows to capture haplotype similarity between close relatives.",
   "homepage": "http://www.aps.uoguelph.ca/~msargol/fimpute/",
   "operation": "imputation",
@@ -11,7 +12,8 @@
       "localInstallDate": "03/04/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

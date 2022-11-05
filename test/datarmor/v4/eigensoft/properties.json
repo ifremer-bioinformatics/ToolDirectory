@@ -1,5 +1,6 @@
 {
   "name": "Eigensoft",
+  "bio.tools_id": "Eigensoft",
   "description": "Combindes functionality from population genetics methods (Patterson et al. 2006) and the EIGENSTRAT correection method (Price et al. 2006). The EIGENSTRAT methods uses principal component analysis to model ancestry differences between cases and controls along continuous axes of variation. The resulting correction is specific to a candidate markers variation in frequency across ancestral populations, minimizing spurious associations while maximising power to detect true associations.",
   "homepage": "https://www.hsph.harvard.edu/alkes-price/software/",
   "operation": "genetic-variation-analysis",
@@ -11,7 +12,8 @@
       "localInstallDate": "25/11/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

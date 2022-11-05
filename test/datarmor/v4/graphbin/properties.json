@@ -1,9 +1,10 @@
 {
   "name": "GraphBin",
+  "bio.tools_id": "GraphBin",
   "description": "Refined binning of metagenomic contigs using assembly graphs.",
   "homepage": "https://github.com/Vini2/GraphBin",
   "operation": "sequence-assembly",
-  "topic": "Mapping,Sequence assembly,Metagenomics,Sequencing,Microbial ecology",
+  "topic": "Sequence assembly,Sequencing,Mapping,Metagenomics,Microbial ecology",
   "version": {
     "1.1": {
       "localInstallUser": "galaxy",
@@ -11,7 +12,8 @@
       "localInstallDate": "30/06/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "1.3": {
       "localInstallUser": "galaxy",
@@ -19,7 +21,8 @@
       "localInstallDate": "24/10/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

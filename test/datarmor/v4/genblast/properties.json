@@ -1,5 +1,6 @@
 {
   "name": "genBlast",
+  "bio.tools_id": "",
   "description": "enabling BLAST to identify homologous gene sequences",
   "homepage": "http://genome.sfu.ca/genblast/index.html",
   "operation": "gene-prediction",
@@ -11,7 +12,8 @@
       "localInstallDate": "27/02/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

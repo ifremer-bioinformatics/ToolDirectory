@@ -1,5 +1,6 @@
 {
   "name": "gmap",
+  "bio.tools_id": "gmap",
   "description": "Genomic Mapping and Alignment Program for mRNA and EST Sequences.",
   "homepage": "http://research-pub.gene.com/gmap/",
   "operation": "genetic-mapping",
@@ -11,7 +12,8 @@
       "localInstallDate": "16/07/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2021.08.25": {
       "localInstallUser": "acormier",
@@ -19,7 +21,8 @@
       "localInstallDate": "21/01/2022",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

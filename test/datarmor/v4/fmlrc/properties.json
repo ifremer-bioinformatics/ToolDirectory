@@ -1,5 +1,6 @@
 {
   "name": "FMLRC",
+  "bio.tools_id": "",
   "description": "Tool for performing hybrid correction of long read sequencing",
   "homepage": "https://github.com/holtjma/fmlrc",
   "operation": "read-correction",
@@ -11,7 +12,8 @@
       "localInstallDate": "26/09/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

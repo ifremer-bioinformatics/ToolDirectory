@@ -1,5 +1,6 @@
 {
   "name": "OAU",
+  "bio.tools_id": "",
   "description": "Average nucleotide identity (ANI) calculator, which uses the improved ANI algorithm (OrthoANI) with USEARCH",
   "homepage": "https://www.ezbiocloud.net/tools/orthoaniu",
   "operation": "sequence-similarity",
@@ -11,7 +12,8 @@
       "localInstallDate": "18/05/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

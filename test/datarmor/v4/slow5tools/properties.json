@@ -1,5 +1,6 @@
 {
   "name": "slow5tools",
+  "bio.tools_id": "",
   "description": "Slow5tools is a simple toolkit for converting (FAST5 <-> SLOW5), compressing, viewing, indexing and manipulating data in SLOW5 format, a new file format for storing signal data from Oxford Nanopore Technologies (ONT) devices.",
   "homepage": "https://github.com/hasindu2008/slow5tools",
   "operation": "data-handling",
@@ -11,7 +12,8 @@
       "localInstallDate": "16/03/2022",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

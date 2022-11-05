@@ -1,5 +1,6 @@
 {
   "name": "nano",
+  "bio.tools_id": "",
   "description": "Simple text editor",
   "homepage": "https://www.nano-editor.org/dist/v3/nano.html",
   "operation": "editing",
@@ -11,7 +12,8 @@
       "localInstallDate": "25/09/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

@@ -1,5 +1,6 @@
 {
   "name": "GLnexus",
+  "bio.tools_id": "",
   "description": "Scalable gVCF merging and joint variant calling for population sequencing projects.",
   "homepage": "https://github.com/dnanexus-rnd/GLnexus",
   "operation": "variant-calling",
@@ -11,7 +12,8 @@
       "localInstallDate": "20/09/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

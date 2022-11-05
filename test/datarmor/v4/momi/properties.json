@@ -1,5 +1,6 @@
 {
   "name": "momi",
+  "bio.tools_id": "",
   "description": "Python package that computes the expected sample frequency spectrum (SFS), a statistic commonly used in population genetics, and uses it to fit demographic history.",
   "homepage": "https://momi2.readthedocs.io/en/latest/index.html",
   "operation": "population-structure",
@@ -11,7 +12,8 @@
       "localInstallDate": "02/06/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

@@ -1,5 +1,6 @@
 {
   "name": "QUAST",
+  "bio.tools_id": "QUAST",
   "description": "QUAST stands for QUality ASsessment Tool.  ",
   "homepage": "http://quast.sourceforge.net/quast",
   "operation": "visualisation",
@@ -11,7 +12,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "4.6.3": {
       "localInstallUser": "galaxy",
@@ -19,7 +21,8 @@
       "localInstallDate": "04/07/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "5.0.0": {
       "localInstallUser": "galaxy",
@@ -27,7 +30,8 @@
       "localInstallDate": "05/09/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "5.0.2": {
       "localInstallUser": "galaxy",
@@ -35,7 +39,8 @@
       "localInstallDate": "15/11/2019",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

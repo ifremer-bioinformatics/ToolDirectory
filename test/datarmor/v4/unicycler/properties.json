@@ -1,9 +1,10 @@
 {
   "name": "Unicycler",
+  "bio.tools_id": "Unicycler",
   "description": "A tool for assembling bacterial genomes from a combination of short (2nd generation) and long (3rd generation) sequencing reads.",
   "homepage": "https://github.com/rrwick/Unicycler",
   "operation": "genome-assembly",
-  "topic": "Sequencing,Sequence assembly,Microbiology,Genomics",
+  "topic": "Sequence assembly,Sequencing,Microbiology,Genomics",
   "version": {
     "0.4.8": {
       "localInstallUser": "galaxy",
@@ -11,7 +12,8 @@
       "localInstallDate": "23/09/2019",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "0.5.0": {
       "localInstallUser": "pauffret",
@@ -19,7 +21,8 @@
       "localInstallDate": "09/02/2022",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

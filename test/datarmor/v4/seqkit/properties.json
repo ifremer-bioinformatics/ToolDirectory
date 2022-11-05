@@ -1,9 +1,10 @@
 {
   "name": "seqkit",
+  "bio.tools_id": "seqkit",
   "description": "FASTA and FASTQ are basic and ubiquitous formats for storing nucleotide and protein sequences. Common manipulations of FASTA/Q file include converting, searching, filtering, deduplication, splitting, shuffling, and sampling. Existing tools only implement some of these manipulations, and not particularly efficiently, and some are only available for certain operating systems. Furthermore, the complicated installation process of required packages and running environments can render these programs less user friendly. SeqKit demonstrates competitive performance in execution time and memory usage compared to similar tools. The efficiency and usability of SeqKit enable researchers to rapidly accomplish common FASTA/Q file manipulations.",
   "homepage": "https://bioinf.shenwei.me/seqkit/",
   "operation": "dna-transcription",
-  "topic": "",
+  "topic": "Database management,Sequence analysis",
   "version": {
     "0.9.1": {
       "localInstallUser": "galaxy",
@@ -11,7 +12,8 @@
       "localInstallDate": "19/10/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.0.0": {
       "localInstallUser": "acormier",
@@ -19,7 +21,8 @@
       "localInstallDate": "08/10/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.1.0": {
       "localInstallUser": "acormier",
@@ -27,7 +30,8 @@
       "localInstallDate": "09/12/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

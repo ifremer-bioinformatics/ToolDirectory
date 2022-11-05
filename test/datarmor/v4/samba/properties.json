@@ -1,9 +1,10 @@
 {
   "name": "SAMBA",
+  "bio.tools_id": "SAMBA",
   "description": "The SAMBA tool uses long reads to improve the contiguity of genome assemblies.",
   "homepage": "https://github.com/alekseyzimin/masurca",
   "operation": "scaffolding",
-  "topic": "Sequencing,Mapping,Sequence assembly",
+  "topic": "Sequence assembly,Mapping,Sequencing",
   "version": {
     "2.0.0": {
       "localInstallUser": "lquintri",
@@ -11,7 +12,8 @@
       "localInstallDate": "23/06/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "3.0.1": {
       "localInstallUser": "cnoel",
@@ -19,7 +21,8 @@
       "localInstallDate": "22/02/2021",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

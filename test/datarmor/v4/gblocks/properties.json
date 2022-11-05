@@ -1,5 +1,6 @@
 {
   "name": "Gblocks",
+  "bio.tools_id": "Gblocks",
   "description": "Cleaning aligned sequences.",
   "homepage": "http://www.embl-heidelberg.de/~castresa/Gblocks/Gblocks.html",
   "operation": "sequence-alignment-analysis",
@@ -11,7 +12,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

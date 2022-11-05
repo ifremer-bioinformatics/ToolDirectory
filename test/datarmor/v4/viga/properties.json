@@ -1,5 +1,6 @@
 {
   "name": "VIGA",
+  "bio.tools_id": "",
   "description": "De novo Viral Genome Annotator. VIGA is a script written in Python 2.7 that annotates viral genomes automatically (using a de novo algorithm) and predict the function of their proteins using BLAST and HMMER",
   "homepage": "https://github.com/EGTortuero/viga",
   "operation": "sequence-annotation,functional-prediction",
@@ -11,7 +12,8 @@
       "localInstallDate": "14/03/2022",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

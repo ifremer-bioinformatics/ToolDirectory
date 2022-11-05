@@ -1,9 +1,10 @@
 {
   "name": "preseq",
+  "bio.tools_id": "preseq",
   "description": "This package is aimed at predicting and number of distinct reads and how many will be expected from additional sequencing using an initial sequencing experiment. The estimates can then be used to examine the utility of further sequencing, optimize the sequencing depth, or to screen multiple libraries to avoid low complexity samples.",
   "homepage": "http://smithlabresearch.org/software/preseq/",
   "operation": "prediction-and-recognition",
-  "topic": "Sequencing,DNA,Genomics",
+  "topic": "DNA,Sequencing,Genomics",
   "version": {
     "2.0.3": {
       "localInstallUser": "galaxy",
@@ -11,7 +12,8 @@
       "localInstallDate": "29/05/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

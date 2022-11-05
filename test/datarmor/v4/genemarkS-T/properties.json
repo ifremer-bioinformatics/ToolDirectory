@@ -1,5 +1,6 @@
 {
   "name": "GeneMarkS-T",
+  "bio.tools_id": "GeneMarkS-T",
   "description": "Sets of assembled eukaryotic transcripts can be analyzed by the modified GeneMarkS algorithm (the set should be large enough to permit self-training). A single transcript can be analyzed by a special version of GeneMark.hmm with Heuristic models. A new advanced algorithm GeneMarkS-T was developed recently (manuscript sent to publisher).",
   "homepage": "http://topaz.gatech.edu/GeneMark/",
   "operation": "",
@@ -11,7 +12,8 @@
       "localInstallDate": "16/02/2022",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

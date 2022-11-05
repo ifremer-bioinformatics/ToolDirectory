@@ -1,5 +1,6 @@
 {
   "name": "MrBayes",
+  "bio.tools_id": "MrBayes",
   "description": "Program for Bayesian inference and model choice across a wide range of phylogenetic and evolutionary models. It uses Markov chain Monte Carlo (MCMC) methods to estimate the posterior distribution of model parameters.",
   "homepage": "http://nbisweden.github.io/MrBayes/",
   "operation": "phylogenetic-tree-generation-(maximum-likelihood-and-bayesian-methods)",
@@ -11,7 +12,8 @@
       "localInstallDate": "12/05/2020",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

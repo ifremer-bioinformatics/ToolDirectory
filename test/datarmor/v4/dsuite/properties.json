@@ -1,9 +1,10 @@
 {
   "name": "Dsuite",
+  "bio.tools_id": "Dsuite",
   "description": "Fast calculation of the ABBA-BABA statistics across many populations/species.",
   "homepage": "https://github.com/millanek/Dsuite",
   "operation": "genotyping",
-  "topic": "Phylogeny,Phylogenomics,DNA polymorphism",
+  "topic": "Phylogenomics,Phylogeny,DNA polymorphism",
   "version": {
     "master": {
       "localInstallUser": "galaxy",
@@ -11,7 +12,8 @@
       "localInstallDate": "12/11/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

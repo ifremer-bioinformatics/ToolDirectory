@@ -1,9 +1,10 @@
 {
   "name": "Gemma",
+  "bio.tools_id": "Gemma",
   "description": "Gemma is an open source database, analysis software system and web site for expression data re-use and meta-analysis. It currently contains analyzed data from over 3300 expression profiling studies, yielding billions of data points that can be searched and explored. Gemma offers web-based access to differential expression results and coexpression data in a meta-analysis framework.",
   "homepage": "http://chibi.ubc.ca/Gemma",
   "operation": "differential-gene-expression-analysis",
-  "topic": "Genetics,Gene expression,Genomics",
+  "topic": "Gene expression,Genetics,Genomics",
   "version": {
     "0.98.5": {
       "localInstallUser": "pgdurand",
@@ -11,7 +12,8 @@
       "localInstallDate": "16/11/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

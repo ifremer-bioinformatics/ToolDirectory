@@ -1,5 +1,6 @@
 {
   "name": "PSASS",
+  "bio.tools_id": "",
   "description": "Software to compare pooled sequencing datasets from two groups (usually two sexes).",
   "homepage": "https://github.com/SexGenomicsToolkit/PSASS",
   "operation": "sequence-assembly-validation",
@@ -11,7 +12,8 @@
       "localInstallDate": "09/06/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

@@ -1,5 +1,6 @@
 {
   "name": "Centrifuge",
+  "bio.tools_id": "Centrifuge",
   "description": "A very rapid and memory-efficient system for the classification of DNA sequences from microbial samples. The system uses a novel indexing scheme based on the Burrows-Wheeler transform and the Ferragina-Manzini index, optimized specifically for the metagenomic classification problem. Together these advances enable timely and accurate analysis of large metagenomics data sets on conventional desktop computers.",
   "homepage": "https://ccb.jhu.edu/software/centrifuge/",
   "operation": "nucleic-acid-sequence-analysis",
@@ -11,7 +12,8 @@
       "localInstallDate": "05/07/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

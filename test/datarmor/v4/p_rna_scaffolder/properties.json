@@ -1,5 +1,6 @@
 {
   "name": "P_RNA_scaffolder",
+  "bio.tools_id": "",
   "description": "Use paired-end transcriptome reads to scaffold genomes",
   "homepage": "https://github.com/CAFS-bioinformatics/P_RNA_scaffolder",
   "operation": "scaffolding",
@@ -11,7 +12,8 @@
       "localInstallDate": "23/09/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

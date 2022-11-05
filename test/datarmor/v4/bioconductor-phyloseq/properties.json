@@ -1,9 +1,10 @@
 {
   "name": "phyloseq",
+  "bio.tools_id": "phyloseq",
   "description": "Provides a set of classes and tools to facilitate the import, storage, analysis, and graphical display of microbiome census data.",
   "homepage": "http://bioconductor.org/packages/release/bioc/html/phyloseq.html",
   "operation": "deposition",
-  "topic": "Sequence analysis,Microbiology,Metagenomics",
+  "topic": "Metagenomics,Microbiology,Sequence analysis",
   "version": {
     "1.14.2": {
       "localInstallUser": "galaxy",
@@ -11,7 +12,8 @@
       "localInstallDate": "21/01/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

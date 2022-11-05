@@ -1,5 +1,6 @@
 {
   "name": "dbgwas",
+  "bio.tools_id": "",
   "description": "DBGWAS is a tool for quick and efficient bacterial GWAS",
   "homepage": "https://gitlab.com/leoisl/dbgwas",
   "operation": "genetic-variation-analysis",
@@ -11,7 +12,8 @@
       "localInstallDate": "05/07/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

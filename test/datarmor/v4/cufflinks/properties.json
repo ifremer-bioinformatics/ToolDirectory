@@ -1,9 +1,10 @@
 {
   "name": "Cufflinks",
+  "bio.tools_id": "Cufflinks",
   "description": "Cufflinks assembles transcripts and estimates their abundances in RNA-Seq samples. It accepts aligned RNA-Seq reads and assembles the alignments into a parsimonious set of transcripts. Cufflinks then estimates the relative abundances of these transcripts based on how many reads support each one.",
   "homepage": "http://cole-trapnell-lab.github.io/cufflinks",
-  "operation": "aggregation,gene-expression-comparison,rna-seq-read-count-analysis,standardisation-and-normalisation,rna-seq-time-series-data-analysis,sequence-comparison",
-  "topic": "RNA-Seq,RNA splicing,Transcriptomics",
+  "operation": "aggregation,sequence-comparison,standardisation-and-normalisation,rna-seq-read-count-analysis,gene-expression-comparison,rna-seq-time-series-data-analysis",
+  "topic": "RNA-Seq,Transcriptomics,RNA splicing",
   "version": {
     "2.2.1": {
       "localInstallUser": "galaxy",
@@ -11,7 +12,8 @@
       "localInstallDate": "23/11/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

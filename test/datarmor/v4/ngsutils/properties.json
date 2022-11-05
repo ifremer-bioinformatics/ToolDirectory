@@ -1,5 +1,6 @@
 {
   "name": "NGSUtils",
+  "bio.tools_id": "NGSUtils",
   "description": "NGSUtils is a suite of software tools for working with next-generation sequencing datasets",
   "homepage": "http://ngsutils.org",
   "operation": "read-pre-processing",
@@ -11,7 +12,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

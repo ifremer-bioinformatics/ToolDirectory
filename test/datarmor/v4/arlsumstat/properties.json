@@ -1,5 +1,6 @@
 {
   "name": "ARLSUMSTAT",
+  "bio.tools_id": "",
   "description": "modified version of Arlequin for computing summary statistics",
   "homepage": "http://cmpg.unibe.ch/software/arlequin35/man/arlsumstat_readme.txt",
   "operation": "statistics-and-probability",
@@ -11,7 +12,8 @@
       "localInstallDate": "18/04/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

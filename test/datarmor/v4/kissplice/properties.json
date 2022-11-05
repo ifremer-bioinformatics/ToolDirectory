@@ -1,5 +1,6 @@
 {
   "name": "KisSplice",
+  "bio.tools_id": "KisSplice",
   "description": "KisSplice is a software that enables to analyse RNA-seq data with or without a reference genome.",
   "homepage": "http://kissplice.prabi.fr",
   "operation": "",
@@ -11,7 +12,8 @@
       "localInstallDate": "12/04/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

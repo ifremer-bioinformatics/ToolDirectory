@@ -1,5 +1,6 @@
 {
   "name": "FImpute3",
+  "bio.tools_id": "",
   "description": "a large scale genotype imputation tool using information from relatives",
   "homepage": "http://www.aps.uoguelph.ca/~msargol/fimpute/",
   "operation": "genotyping",
@@ -11,7 +12,8 @@
       "localInstallDate": "22/06/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

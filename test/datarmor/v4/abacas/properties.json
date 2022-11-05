@@ -1,5 +1,6 @@
 {
   "name": "ABACAS",
+  "bio.tools_id": "",
   "description": "Algorithm Based Automatic Contiguation of Assembled Sequences.",
   "homepage": "http://abacas.sourceforge.net/",
   "operation": "scaffold-gap-completion",
@@ -11,7 +12,8 @@
       "localInstallDate": "27/04/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

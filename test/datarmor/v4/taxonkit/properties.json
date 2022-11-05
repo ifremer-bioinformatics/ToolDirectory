@@ -1,9 +1,10 @@
 {
   "name": "taxonkit",
+  "bio.tools_id": "taxonkit",
   "description": "TaxonKit is a practical and efficient NCBI taxonomy toolkit.",
   "homepage": "https://github.com/shenwei356/taxonkit",
   "operation": "formatting",
-  "topic": "Ecology,Biotechnology,Taxonomy",
+  "topic": "Taxonomy,Ecology,Biotechnology",
   "version": {
     "0.8.0": {
       "localInstallUser": "galaxy",
@@ -11,7 +12,8 @@
       "localInstallDate": "21/04/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

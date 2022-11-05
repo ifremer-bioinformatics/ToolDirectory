@@ -1,9 +1,10 @@
 {
   "name": "blobtools",
+  "bio.tools_id": "blobtools",
   "description": "Visualisation, quality control and taxonomic partitioning of genome datasets.",
   "homepage": "https://github.com/DRL/blobtools",
   "operation": "sequence-assembly-visualisation",
-  "topic": "Sequence assembly,Genomics,Data management",
+  "topic": "Sequence assembly,Data management,Genomics",
   "version": {
     "1.1": {
       "localInstallUser": "galaxy",
@@ -11,7 +12,8 @@
       "localInstallDate": "22/07/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.6.3": {
       "localInstallUser": "cnoel",
@@ -19,7 +21,8 @@
       "localInstallDate": "21/10/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

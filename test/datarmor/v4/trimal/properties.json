@@ -1,9 +1,10 @@
 {
   "name": "Trimal",
+  "bio.tools_id": "Trimal",
   "description": "Tool for the automated removal of spurious sequences or poorly aligned regions from a multiple sequence alignment.",
   "homepage": "http://trimal.cgenomics.org",
   "operation": "multiple-sequence-alignment",
-  "topic": "Sequence analysis,Sequencing,Sequence sites, features and motifs",
+  "topic": "Sequencing,Sequence sites, features and motifs,Sequence analysis",
   "version": {
     "1.4.1": {
       "localInstallUser": "galaxy",
@@ -11,7 +12,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

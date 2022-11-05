@@ -1,5 +1,6 @@
 {
   "name": "GNU Datamash",
+  "bio.tools_id": "",
   "description": "Performs basic numeric,textual and statistical operations on input textual data files",
   "homepage": "https://www.gnu.org/software/datamash/",
   "operation": "data-handling",
@@ -11,7 +12,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

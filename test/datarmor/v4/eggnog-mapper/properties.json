@@ -1,5 +1,6 @@
 {
   "name": "eggnog-mapper",
+  "bio.tools_id": "eggnog-mapper",
   "description": "For fast functional annotation of novel sequences. It uses precomputed orthologous groups and phylogenies from the eggNOG database to transfer functional information from fine-grained orthologs only. Its common uses include the annotation of novel genomes, transcriptomes or even metagenomic gene catalogs.",
   "homepage": "http://beta-eggnogdb.embl.de/#/app/emapper",
   "operation": "database-search",
@@ -11,7 +12,8 @@
       "localInstallDate": "14/06/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.1.0": {
       "localInstallUser": "galaxy",
@@ -19,7 +21,8 @@
       "localInstallDate": "29/03/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

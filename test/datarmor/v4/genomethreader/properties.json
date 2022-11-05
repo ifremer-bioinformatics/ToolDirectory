@@ -1,5 +1,6 @@
 {
   "name": "GenomeThreader",
+  "bio.tools_id": "GenomeThreader",
   "description": "Software tool to compute gene structure predictions. The gene structure predictions are calculated using a similarity-based approach where additional cDNA/EST and/or protein sequences are used to predict gene structures via spliced alignments.",
   "homepage": "http://genomethreader.org/",
   "operation": "sequence-feature-detection",
@@ -11,7 +12,8 @@
       "localInstallDate": "16/11/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

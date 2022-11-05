@@ -1,5 +1,6 @@
 {
   "name": "Platypus variant",
+  "bio.tools_id": "",
   "description": "A Haplotype-Based Variant Caller For Next Generation Sequence Data",
   "homepage": "https://www.well.ox.ac.uk/research/research-groups/lunter-group/lunter-group/platypus-a-haplotype-based-variant-caller-for-next-generation-sequence-data",
   "operation": "variant-calling",
@@ -11,7 +12,8 @@
       "localInstallDate": "07/04/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

@@ -1,5 +1,6 @@
 {
   "name": "vsearch",
+  "bio.tools_id": "vsearch",
   "description": "High-throughput search and clustering sequence analysis tool. It supports de novo and reference based chimera detection, clustering, full-length and prefix dereplication, reverse complementation, masking, all-vs-all pairwise global alignment, exact and global alignment searching, shuffling, subsampling and sorting. It also supports FASTQ file analysis, filtering and conversion.",
   "homepage": "https://github.com/torognes/vsearch",
   "operation": "dna-mapping",
@@ -11,7 +12,8 @@
       "localInstallDate": "07/03/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

@@ -1,5 +1,6 @@
 {
   "name": "Planemo",
+  "bio.tools_id": "",
   "description": "Command-line utilities to assist in building tools for the Galaxy project",
   "homepage": "https://planemo.readthedocs.io/en/latest/",
   "operation": "data-handling",
@@ -11,7 +12,8 @@
       "localInstallDate": "30/06/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

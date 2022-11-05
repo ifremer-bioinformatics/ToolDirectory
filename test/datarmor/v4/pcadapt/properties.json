@@ -1,9 +1,10 @@
 {
   "name": "PCAdapt",
+  "bio.tools_id": "PCAdapt",
   "description": "Software to detect footprints of local adaptation in population genetics data set.",
   "homepage": "http://membres-timc.imag.fr/Nicolas.Duforet-Frebourg/PCAdapt.html",
   "operation": "sequence-analysis",
-  "topic": "Evolutionary biology,Genetics,Genomics,Population genetics",
+  "topic": "Genetics,Evolutionary biology,Population genetics,Genomics",
   "version": {
     "3.0.4": {
       "localInstallUser": "galaxy",
@@ -11,7 +12,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

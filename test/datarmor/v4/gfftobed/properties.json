@@ -1,5 +1,6 @@
 {
   "name": "gfftobed",
+  "bio.tools_id": "",
   "description": "Convert GFF3/GTF to BED",
   "homepage": "https://github.com/jacobbierstedt/gfftobed",
   "operation": "data-handling",
@@ -11,7 +12,8 @@
       "localInstallDate": "09/02/2022",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

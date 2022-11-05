@@ -1,5 +1,6 @@
 {
   "name": "Strainberry",
+  "bio.tools_id": "",
   "description": "Strain separation in low-complexity metagenomes using error-prone long-read technologies",
   "homepage": "https://github.com/rvicedomini/strainberry#installation",
   "operation": "genome-assembly",
@@ -11,7 +12,8 @@
       "localInstallDate": "05/11/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

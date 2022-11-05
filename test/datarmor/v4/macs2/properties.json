@@ -1,9 +1,10 @@
 {
   "name": "MACS",
+  "bio.tools_id": "MACS",
   "description": "Model-based Analysis of ChIP-seq data.",
   "homepage": "http://liulab.dfci.harvard.edu/MACS/",
   "operation": "peak-calling",
-  "topic": "Transcription factors and regulatory sites,Molecular interactions, pathways and networks,ChIP-seq",
+  "topic": "ChIP-seq,Molecular interactions, pathways and networks,Transcription factors and regulatory sites",
   "version": {
     "2.1.1.20160309": {
       "localInstallUser": "galaxy",
@@ -11,7 +12,8 @@
       "localInstallDate": "26/03/2019",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

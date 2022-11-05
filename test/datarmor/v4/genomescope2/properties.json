@@ -1,5 +1,6 @@
 {
   "name": "genomescope2",
+  "bio.tools_id": "",
   "description": "Reference-free profiling of polyploid genomes",
   "homepage": "https://github.com/tbenavi1/genomescope2.0",
   "operation": "sequence-assembly",
@@ -11,7 +12,8 @@
       "localInstallDate": "10/12/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

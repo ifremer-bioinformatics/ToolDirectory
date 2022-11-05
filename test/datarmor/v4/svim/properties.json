@@ -1,5 +1,6 @@
 {
   "name": "SVIM",
+  "bio.tools_id": "",
   "description": "Structural variant identification using long reads",
   "homepage": "https://github.com/eldariont/svim",
   "operation": "variant-calling",
@@ -11,7 +12,8 @@
       "localInstallDate": "07/04/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.0.0": {
       "localInstallUser": "cnoel",
@@ -19,7 +21,8 @@
       "localInstallDate": "06/07/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

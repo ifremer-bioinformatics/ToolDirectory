@@ -1,5 +1,6 @@
 {
   "name": "mitobim",
+  "bio.tools_id": "",
   "description": "MITObim - mitochondrial baiting and iterative mapping",
   "homepage": "https://github.com/chrishah/MITObim",
   "operation": "genome-assembly",
@@ -11,7 +12,8 @@
       "localInstallDate": "17/01/2022",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

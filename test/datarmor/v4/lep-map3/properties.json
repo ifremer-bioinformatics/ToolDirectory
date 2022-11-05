@@ -1,5 +1,6 @@
 {
   "name": "Lep-MAP3",
+  "bio.tools_id": "Lep-MAP3",
   "description": "Robust linkage mapping software even for low coverage whole genome sequencing data",
   "homepage": "https://sourceforge.net/projects/lep-map3/",
   "operation": "mapping",
@@ -11,7 +12,8 @@
       "localInstallDate": "03/04/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

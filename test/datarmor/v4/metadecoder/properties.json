@@ -1,5 +1,6 @@
 {
   "name": "metadecoder",
+  "bio.tools_id": "",
   "description": "An algorithm for clustering metagenomic sequences",
   "homepage": "https://github.com/liu-congcong/MetaDecoder",
   "operation": "read-binning",
@@ -11,7 +12,8 @@
       "localInstallDate": "15/03/2022",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

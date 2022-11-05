@@ -1,5 +1,6 @@
 {
   "name": "KING",
+  "bio.tools_id": "",
   "description": "Relationship inference in genome-wide association studies",
   "homepage": "http://people.virginia.edu/~wc9c/KING/",
   "operation": "genotyping",
@@ -11,7 +12,8 @@
       "localInstallDate": "07/05/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

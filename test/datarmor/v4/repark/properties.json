@@ -1,5 +1,6 @@
 {
   "name": "RpARK",
+  "bio.tools_id": "",
   "description": "wrapper script for constructing a repeat library from sequencing reads",
   "homepage": "https://github.com/PhKoch/RepARK",
   "operation": "repeat-sequence-analysis",
@@ -11,7 +12,8 @@
       "localInstallDate": "30/09/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

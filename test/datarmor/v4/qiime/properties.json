@@ -1,5 +1,6 @@
 {
   "name": "QIIME",
+  "bio.tools_id": "QIIME",
   "description": "Open-source bioinformatics pipeline for performing microbiome analysis from raw DNA sequencing data. The pipeline is designed to take users from raw sequencing data generated on the Illumina or other platforms through publication quality graphics and statistics. This includes demultiplexing and quality filtering, OTU picking, taxonomic assignment, and phylogenetic reconstruction, and diversity analyses and visualizations.",
   "homepage": "http://qiime.org/",
   "operation": "analysis",
@@ -11,7 +12,8 @@
       "localInstallDate": "21/08/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.0.0": {
       "localInstallUser": "galaxy",
@@ -19,7 +21,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2019.04": {
       "localInstallUser": "galaxy",
@@ -27,7 +30,8 @@
       "localInstallDate": "15/07/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2019.07": {
       "localInstallUser": "galaxy",
@@ -35,7 +39,8 @@
       "localInstallDate": "16/09/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2019.10": {
       "localInstallUser": "galaxy",
@@ -43,7 +48,8 @@
       "localInstallDate": "08/04/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2020.02": {
       "localInstallUser": "galaxy",
@@ -51,7 +57,8 @@
       "localInstallDate": "17/03/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2020.08": {
       "localInstallUser": "galaxy",
@@ -59,7 +66,8 @@
       "localInstallDate": "16/11/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2021.08": {
       "localInstallUser": "cnoel",
@@ -67,7 +75,8 @@
       "localInstallDate": "05/11/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2021.11": {
       "localInstallUser": "cnoel",
@@ -75,7 +84,8 @@
       "localInstallDate": "08/02/2022",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

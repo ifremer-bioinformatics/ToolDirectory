@@ -1,5 +1,6 @@
 {
   "name": "BlastViewer",
+  "bio.tools_id": "",
   "description": "A graphical workbench to analyse BLAST result files.",
   "homepage": "https://github.com/pgdurand/BlastViewer/wiki",
   "operation": "sequence-similarity-search,visualisation",
@@ -11,7 +12,8 @@
       "localInstallDate": "02/11/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

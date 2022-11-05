@@ -1,5 +1,6 @@
 {
   "name": "DeepSignal2",
+  "bio.tools_id": "",
   "description": "A deep-learning method for detecting methylation state from Oxford Nanopore sequencing reads.",
   "homepage": "https://github.com/PengNi/deepsignal2",
   "operation": "methylation-analysis",
@@ -11,7 +12,8 @@
       "localInstallDate": "21/06/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

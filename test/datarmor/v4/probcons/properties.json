@@ -1,5 +1,6 @@
 {
   "name": "ProbCons",
+  "bio.tools_id": "ProbCons",
   "description": "Probabilistic Consistency-based Multiple Alignment of Amino Acid Sequences.",
   "homepage": "http://probcons.stanford.edu/",
   "operation": "sequence-comparison",
@@ -11,7 +12,8 @@
       "localInstallDate": "14/12/2017",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

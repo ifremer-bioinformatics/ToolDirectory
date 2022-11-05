@@ -1,9 +1,10 @@
 {
   "name": "Trimmomatic",
+  "bio.tools_id": "Trimmomatic",
   "description": "A flexible read trimming tool for Illumina NGS data",
   "homepage": "http://www.usadellab.org/cms/index.php?page=trimmomatic",
   "operation": "sequence-trimming",
-  "topic": "Sequencing,Data quality management,Sequence analysis",
+  "topic": "Data quality management,Sequencing,Sequence analysis",
   "version": {
     "0.36": {
       "localInstallUser": "galaxy",
@@ -11,7 +12,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

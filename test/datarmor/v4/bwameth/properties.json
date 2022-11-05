@@ -1,5 +1,6 @@
 {
   "name": "bwa-meth",
+  "bio.tools_id": "",
   "description": "Fast and accurante alignment of BS-Seq reads.",
   "homepage": "https://github.com/brentp/bwa-meth",
   "operation": "bisulfite-mapping",
@@ -11,7 +12,8 @@
       "localInstallDate": "06/01/2022",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

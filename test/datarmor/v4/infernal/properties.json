@@ -1,5 +1,6 @@
 {
   "name": "Infernal",
+  "bio.tools_id": "Infernal",
   "description": "Infernal (\"INFERence of RNA ALignment\") is for searching DNA sequence databases for RNA structure and sequence similarities. It is an implementation of a special case of profile stochastic context-free grammars called covariance models (CMs). A CM is like a sequence profile, but it scores a combination of sequence consensus and RNA secondary structure consensus, so in many cases, it is more capable of identifying RNA homologs that conserve their secondary structure more than their primary sequence.",
   "homepage": "http://eddylab.org/infernal/",
   "operation": "nucleic-acid-sequence-analysis",
@@ -11,7 +12,8 @@
       "localInstallDate": "24/11/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

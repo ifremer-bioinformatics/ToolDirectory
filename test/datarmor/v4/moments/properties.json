@@ -1,5 +1,6 @@
 {
   "name": "moments",
+  "bio.tools_id": "",
   "description": "Moment-based solution of the diffusion equation in genetics.",
   "homepage": "https://bitbucket.org/simongravel/moments",
   "operation": "statistics-and-probability",
@@ -11,7 +12,8 @@
       "localInstallDate": "25/11/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

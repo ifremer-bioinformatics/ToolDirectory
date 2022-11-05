@@ -1,5 +1,6 @@
 {
   "name": "HHsuite",
+  "bio.tools_id": "HHsuite",
   "description": "HH-suite is a remote protein homology detection suite.",
   "homepage": "https://github.com/soedinglab/hh-suite",
   "operation": "sequence-analysis",
@@ -11,7 +12,8 @@
       "localInstallDate": "03/04/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

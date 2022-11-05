@@ -1,5 +1,6 @@
 {
   "name": "JBrowse2",
+  "bio.tools_id": "",
   "description": "Genome browser",
   "homepage": "https://jbrowse.org/jb2/",
   "operation": "genome-visualisation",
@@ -11,7 +12,8 @@
       "localInstallDate": "18/02/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

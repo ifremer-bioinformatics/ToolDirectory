@@ -1,5 +1,6 @@
 {
   "name": "DAS_Tool",
+  "bio.tools_id": "",
   "description": "DAS Tool is an automated method that integrates the results of a flexible number of binning algorithms to calculate an optimized, non-redundant set of bins from a single assembly.",
   "homepage": "https://github.com/cmks/DAS_Tool",
   "operation": "read-binning",
@@ -11,7 +12,8 @@
       "localInstallDate": "14/12/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

@@ -1,5 +1,6 @@
 {
   "name": "HMMER",
+  "bio.tools_id": "",
   "description": "biosequence analysis using profile hidden Markov models",
   "homepage": "http://hmmer.org/documentation.html",
   "operation": "sequence-similarity-search",
@@ -11,7 +12,8 @@
       "localInstallDate": "15/04/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "3.3.2": {
       "localInstallUser": "cnoel",
@@ -19,7 +21,8 @@
       "localInstallDate": "26/10/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "3.3": {
       "localInstallUser": "galaxy",
@@ -27,7 +30,8 @@
       "localInstallDate": "22/07/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

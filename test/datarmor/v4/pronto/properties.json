@@ -1,5 +1,6 @@
 {
   "name": "pronto",
+  "bio.tools_id": "",
   "description": "Pronto is a Python library to parse, browse, create, and export ontologies, supporting several ontology languages and formats",
   "homepage": "https://github.com/althonos/pronto",
   "operation": "ontology_visualisation",
@@ -11,7 +12,8 @@
       "localInstallDate": "22/09/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

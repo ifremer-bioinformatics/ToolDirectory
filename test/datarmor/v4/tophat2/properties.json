@@ -1,5 +1,6 @@
 {
   "name": "Tophat2",
+  "bio.tools_id": "Tophat2",
   "description": "Gapped-read mapper for RNA-seq data.",
   "homepage": "http://ccb.jhu.edu/software/tophat/index.shtml",
   "operation": "read-mapping",
@@ -11,7 +12,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

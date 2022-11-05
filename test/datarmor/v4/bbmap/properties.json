@@ -1,9 +1,10 @@
 {
   "name": "cutadapt",
+  "bio.tools_id": "cutadapt",
   "description": "Find and remove adapter sequences, primers, poly-A tails and other types of unwanted sequence from your high-throughput sequencing reads.",
   "homepage": "https://pypi.python.org/pypi/cutadapt",
   "operation": "sequence-trimming",
-  "topic": "Sequencing,Probes and primers,Genomics",
+  "topic": "Probes and primers,Sequencing,Genomics",
   "version": {
     "1.18": {
       "localInstallUser": "galaxy",
@@ -11,7 +12,8 @@
       "localInstallDate": "14/09/2018",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "38.57": {
       "localInstallUser": "galaxy",
@@ -19,7 +21,8 @@
       "localInstallDate": "15/07/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

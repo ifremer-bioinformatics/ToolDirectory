@@ -1,5 +1,6 @@
 {
   "name": "NextDenovo",
+  "bio.tools_id": "NextDenovo",
   "description": "NextDenovo is a string graph-based de novo assembler for long reads (CLR, HiFi and ONT). It uses a \"correct-then-assemble\" strategy similar to canu (no correction step for PacBio Hifi reads), but requires significantly less computing resources and storages.",
   "homepage": "https://github.com/Nextomics/NextDenovo",
   "operation": "de-novo-assembly",
@@ -11,7 +12,8 @@
       "localInstallDate": "06/07/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

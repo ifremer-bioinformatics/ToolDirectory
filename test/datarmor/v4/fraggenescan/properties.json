@@ -1,9 +1,10 @@
 {
   "name": "FragGeneScan",
+  "bio.tools_id": "FragGeneScan",
   "description": "Application for finding (fragmented) genes in short reads",
   "homepage": "https://sourceforge.net/projects/fraggenescan/",
   "operation": "gene-prediction",
-  "topic": "Sequence analysis,Genetics",
+  "topic": "Genetics,Sequence analysis",
   "version": {
     "1.31": {
       "localInstallUser": "cnoel",
@@ -11,7 +12,8 @@
       "localInstallDate": "02/02/2022",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

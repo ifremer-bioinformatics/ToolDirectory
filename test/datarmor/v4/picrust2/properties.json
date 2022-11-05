@@ -1,9 +1,10 @@
 {
   "name": "PICRUSt2",
+  "bio.tools_id": "PICRUSt2",
   "description": "PICRUSt2 (Phylogenetic Investigation of Communities by Reconstruction of Unobserved States) is a software for predicting functional abundances based only on marker gene sequences.",
   "homepage": "https://github.com/picrust/picrust2",
   "operation": "phylogenetic-reconstruction",
-  "topic": "Metagenomics,Microbiology,Metagenomic sequencing,Phylogenetics",
+  "topic": "Phylogenetics,Metagenomics,Metagenomic sequencing,Microbiology",
   "version": {
     "2.4.1": {
       "localInstallUser": "cnoel",
@@ -11,7 +12,8 @@
       "localInstallDate": "06/07/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

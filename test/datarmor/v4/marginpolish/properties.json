@@ -1,5 +1,6 @@
 {
   "name": "MarginPolish",
+  "bio.tools_id": "",
   "description": "A graph-based assembly polisher",
   "homepage": "https://github.com/UCSC-nanopore-cgl/MarginPolish",
   "operation": "sequence-assembly",
@@ -11,7 +12,8 @@
       "localInstallDate": "09/09/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

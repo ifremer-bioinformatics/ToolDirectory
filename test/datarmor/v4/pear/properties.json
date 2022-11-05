@@ -1,5 +1,6 @@
 {
   "name": "PEAR",
+  "bio.tools_id": "PEAR",
   "description": "Paired-end read merger. PEAR evaluates all possible paired-end read overlaps without requiring the target fragment size as input. In addition, it implements a statistical test for minimizing false-positive results.",
   "homepage": "http://sco.h-its.org/exelixis/web/software/pear/",
   "operation": "sequence-merging",
@@ -11,7 +12,8 @@
       "localInstallDate": "04/07/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

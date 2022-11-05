@@ -1,5 +1,6 @@
 {
   "name": "tooldirectory",
+  "bio.tools_id": "",
   "description": "Dynamic visualization of softwares managed by a Bioinformatics Core Facility",
   "homepage": "https://github.com/ifremer-bioinformatics/ToolDirectory",
   "operation": "visualisation",
@@ -11,7 +12,8 @@
       "localInstallDate": "05/05/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

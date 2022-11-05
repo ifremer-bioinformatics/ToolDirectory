@@ -1,9 +1,10 @@
 {
   "name": "DiscoSNP",
+  "bio.tools_id": "DiscoSNP",
   "description": "This software is designed for discovering Single Nucleotide Polymorphism (SNP) from raw set(s) of reads obtained with Next Generation Sequencers (NGS).",
   "homepage": "https://colibread.inria.fr/software/discosnp/",
   "operation": "snp-detection",
-  "topic": "Sequencing,Genetic variation,Genetics,DNA polymorphism",
+  "topic": "Genetics,Genetic variation,Sequencing,DNA polymorphism",
   "version": {
     "2.4.4": {
       "localInstallUser": "galaxy",
@@ -11,7 +12,8 @@
       "localInstallDate": "07/04/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

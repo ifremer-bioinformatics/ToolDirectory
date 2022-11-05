@@ -1,5 +1,6 @@
 {
   "name": "ibm-aspera-connect",
+  "bio.tools_id": "",
   "description": "Enable high-speed FASP transfers",
   "homepage": "https://www.ibm.com/support/knowledgecenter/SSXMX3_3.10/connect_user_linux/guide.html",
   "operation": "data-handling",
@@ -11,7 +12,8 @@
       "localInstallDate": "01/10/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

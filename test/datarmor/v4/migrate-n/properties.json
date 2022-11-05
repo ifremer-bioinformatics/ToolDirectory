@@ -1,5 +1,6 @@
 {
   "name": "MIGRATE-N",
+  "bio.tools_id": "",
   "description": "Estimation of population sizes and gene flow using the coalescent",
   "homepage": "http://popgen.sc.fsu.edu/Migrate/Migrate-n.html",
   "operation": "population-genomics",
@@ -11,7 +12,8 @@
       "localInstallDate": "27/09/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

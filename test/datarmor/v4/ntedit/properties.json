@@ -1,5 +1,6 @@
 {
   "name": "ntEdit",
+  "bio.tools_id": "ntEdit",
   "description": "Scalable genomics application for polishing genome assembly drafts. It simplifies polishing and \"haploidization\" of gene and genome sequences with its re-usable Bloom filter design.",
   "homepage": "https://github.com/bcgsc/ntedit",
   "operation": "genome-assembly",
@@ -11,7 +12,8 @@
       "localInstallDate": "03/12/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

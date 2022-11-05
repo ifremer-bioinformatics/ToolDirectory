@@ -1,5 +1,6 @@
 {
   "name": "p7zip",
+  "bio.tools_id": "",
   "description": "file compressor/decompressor relying on 7zip",
   "homepage": "https://anaconda.org/conda-forge/p7zip",
   "operation": "data-handling",
@@ -11,7 +12,8 @@
       "localInstallDate": "16/11/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

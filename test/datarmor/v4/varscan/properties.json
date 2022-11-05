@@ -1,5 +1,6 @@
 {
   "name": "VarScan",
+  "bio.tools_id": "VarScan",
   "description": "VarScan, an open source tool for variant detection that is compatible with several short read align-ers.",
   "homepage": "http://dkoboldt.github.io/varscan/",
   "operation": "variant-calling",
@@ -11,7 +12,8 @@
       "localInstallDate": "16/04/2019",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

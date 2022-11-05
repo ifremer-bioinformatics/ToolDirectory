@@ -1,5 +1,6 @@
 {
   "name": "yak",
+  "bio.tools_id": "",
   "description": "Yet another k-mer analyzer ",
   "homepage": "https://github.com/lh3/yak",
   "operation": "k-mer-counting",
@@ -11,7 +12,8 @@
       "localInstallDate": "05/08/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

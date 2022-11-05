@@ -1,5 +1,6 @@
 {
   "name": "BeeDeeM-Tools",
+  "bio.tools_id": "",
   "description": "sequence-based data analysis pipeline tools",
   "homepage": "https://gitlab.ifremer.fr/bioinfo/BeeDeeM-Tools/blob/master/documentation/tutorial.md",
   "operation": "data-handling",
@@ -11,7 +12,8 @@
       "localInstallDate": "31/08/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.0.1": {
       "localInstallUser": "galaxy",
@@ -19,7 +21,8 @@
       "localInstallDate": "24/04/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.1.0": {
       "localInstallUser": "pgdurand",
@@ -27,7 +30,8 @@
       "localInstallDate": "08/10/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

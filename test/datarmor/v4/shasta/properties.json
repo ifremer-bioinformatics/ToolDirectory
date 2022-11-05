@@ -1,5 +1,6 @@
 {
   "name": "shasta",
+  "bio.tools_id": "shasta",
   "description": "De novo assembly from Oxford Nanopore reads.",
   "homepage": "https://github.com/chanzuckerberg/shasta",
   "operation": "genome-assembly",
@@ -11,7 +12,8 @@
       "localInstallDate": "20/01/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

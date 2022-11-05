@@ -1,5 +1,6 @@
 {
   "name": "MCScanX",
+  "bio.tools_id": "",
   "description": "Multiple Collinearity Scan toolkit",
   "homepage": "http://chibba.pgml.uga.edu/mcscan2/",
   "operation": "synteny",
@@ -11,7 +12,8 @@
       "localInstallDate": "17/09/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

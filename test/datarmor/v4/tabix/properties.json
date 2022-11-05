@@ -1,5 +1,6 @@
 {
   "name": "tabix",
+  "bio.tools_id": "tabix",
   "description": "Tabix indexes a TAB-delimited genome position file in.tab.bgz and creates an index file (in.tab.bgz.tbi or in.tab.bgz.csi) when region is absent from the command-line. The input data file must be position sorted and compressed by bgzip which has a gzip(1) like interface.",
   "homepage": "http://www.htslib.org/doc/tabix.html",
   "operation": "",
@@ -11,7 +12,8 @@
       "localInstallDate": "19/01/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

@@ -1,5 +1,6 @@
 {
   "name": "Variabel",
+  "bio.tools_id": "",
   "description": "Novel approach and method for intrahost variant detection, which outperforms existing ONT variant callers",
   "homepage": "https://gitlab.com/treangenlab/variabel",
   "operation": "variant-calling",
@@ -11,7 +12,8 @@
       "localInstallDate": "05/11/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

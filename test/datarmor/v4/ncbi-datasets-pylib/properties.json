@@ -1,5 +1,6 @@
 {
   "name": "ncbi-datasets-pylib",
+  "bio.tools_id": "",
   "description": "Easily gather data from across NCBI databases",
   "homepage": "https://pypi.org/project/ncbi-datasets-pylib/",
   "operation": "data-handling",
@@ -11,7 +12,8 @@
       "localInstallDate": "28/10/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

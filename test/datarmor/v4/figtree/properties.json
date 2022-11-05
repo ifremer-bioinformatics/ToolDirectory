@@ -1,5 +1,6 @@
 {
   "name": "FigTree",
+  "bio.tools_id": "FigTree",
   "description": "This tool is designed as a graphical viewer of phylogenetic trees and as a program for producing publication-ready figures.",
   "homepage": "http://tree.bio.ed.ac.uk/software/figtree/",
   "operation": "phylogenetic-tree-visualisation",
@@ -11,7 +12,8 @@
       "localInstallDate": "21/02/2022",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

@@ -1,5 +1,6 @@
 {
   "name": "MinIONQC",
+  "bio.tools_id": "",
   "description": "Fast and effective quality control for MinION and PromethION sequencing data ",
   "homepage": "https://github.com/roblanf/minion_qc",
   "operation": "quality-control",
@@ -11,7 +12,8 @@
       "localInstallDate": "08/04/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

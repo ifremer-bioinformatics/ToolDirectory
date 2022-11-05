@@ -1,5 +1,6 @@
 {
   "name": "iq-tree",
+  "bio.tools_id": "iq-tree",
   "description": "Very efficient phylogenetic software for reconstructing maximum-likelihood trees and assessing branch supports with the ultrafast bootstrap approximation. It is based on the IQPNNI algorithm with 10-fold speedup together with substantially additional features.",
   "homepage": "http://www.cibiv.at/software/iqtree/",
   "operation": "phylogenetic-tree-generation-(maximum-likelihood-and-bayesian-methods)",
@@ -11,7 +12,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "1.6.7": {
       "localInstallUser": "galaxy",
@@ -19,7 +21,8 @@
       "localInstallDate": "04/09/2018",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.0.3": {
       "localInstallUser": "galaxy",
@@ -27,7 +30,8 @@
       "localInstallDate": "10/06/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

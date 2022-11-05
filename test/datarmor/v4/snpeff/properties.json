@@ -1,5 +1,6 @@
 {
   "name": "snpeff",
+  "bio.tools_id": "snpeff",
   "description": "Variant annotation and effect prediction tool. It annotates and predicts the effects of variants on genes and proteins (such as amino acid changes).",
   "homepage": "http://snpeff.sourceforge.net/",
   "operation": "snp-detection",
@@ -11,7 +12,8 @@
       "localInstallDate": "18/02/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "4.3": {
       "localInstallUser": "galaxy",
@@ -19,7 +21,8 @@
       "localInstallDate": "17/11/2017",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "4.5covid19": {
       "localInstallUser": "galaxy",
@@ -27,7 +30,8 @@
       "localInstallDate": "18/02/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "5.0": {
       "localInstallUser": "cnoel",
@@ -35,7 +39,8 @@
       "localInstallDate": "13/10/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

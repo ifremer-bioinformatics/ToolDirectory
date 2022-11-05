@@ -1,5 +1,6 @@
 {
   "name": "PLAST",
+  "bio.tools_id": "PLAST",
   "description": "Parallel Local Alignment Search Tool for Database Comparison.",
   "homepage": "http://www.irisa.fr/symbiose/projects/plast/",
   "operation": "local-alignment",
@@ -11,7 +12,8 @@
       "localInstallDate": "16/11/2017",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "2.3.3": {
       "localInstallUser": "galaxy",
@@ -19,7 +21,8 @@
       "localInstallDate": "11/07/2018",
       "isCmdline": "true",
       "isGalaxy": "true",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

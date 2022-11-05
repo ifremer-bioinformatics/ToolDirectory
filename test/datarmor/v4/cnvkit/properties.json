@@ -1,5 +1,6 @@
 {
   "name": "CNVkit",
+  "bio.tools_id": "CNVkit",
   "description": "CNVkit is a software toolkit to infer and visualize copy number from targeted DNA sequencing data.",
   "homepage": "https://github.com/etal/cnvkit",
   "operation": "variant-calling",
@@ -11,7 +12,8 @@
       "localInstallDate": "28/02/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

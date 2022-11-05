@@ -1,5 +1,6 @@
 {
   "name": "PEPPER-Margin-DeepVariant",
+  "bio.tools_id": "",
   "description": "PEPPER-Margin-DeepVariant is a haplotype-aware variant calling pipeline for long reads.",
   "homepage": "https://github.com/kishwarshafin/pepper",
   "operation": "Oxford Nanopore and PacBio HiFi variant calling",
@@ -11,7 +12,8 @@
       "localInstallDate": "17/03/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     },
     "r0.5": {
       "localInstallUser": "cnoel",
@@ -19,7 +21,8 @@
       "localInstallDate": "06/09/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

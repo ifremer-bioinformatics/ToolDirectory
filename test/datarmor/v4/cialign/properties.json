@@ -1,5 +1,6 @@
 {
   "name": "CIAlign",
+  "bio.tools_id": "",
   "description": "A command line tool which performs various functions to clean and analyse a multiple sequence alignment (MSA)",
   "homepage": "https://github.com/KatyBrown/CIAlign/",
   "operation": "sequence-alignement-analysis",
@@ -11,7 +12,8 @@
       "localInstallDate": "16/03/2022",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

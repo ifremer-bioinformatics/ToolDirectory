@@ -1,9 +1,10 @@
 {
   "name": "w2rap-contigger",
+  "bio.tools_id": "w2rap-contigger",
   "description": "An Illumina PE genome contig assembler, can handle large (17Gbp) complex (hexaploid) genomes.",
   "homepage": "https://github.com/bioinfologics/w2rap-contigger",
   "operation": "genome-assembly",
-  "topic": "Genomics,Sequence assembly",
+  "topic": "Sequence assembly,Genomics",
   "version": {
     "2019-07-11": {
       "localInstallUser": "galaxy",
@@ -11,7 +12,8 @@
       "localInstallDate": "11/07/2019",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

@@ -1,5 +1,6 @@
 {
   "name": "Aria2",
+  "bio.tools_id": "",
   "description": "The lightweight multi-protocol & multi-source command-line download utility.",
   "homepage": "http://aria2.github.io/",
   "operation": "data-handling",
@@ -11,7 +12,8 @@
       "localInstallDate": "04/01/2022",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

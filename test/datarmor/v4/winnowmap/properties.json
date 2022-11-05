@@ -1,8 +1,9 @@
 {
   "name": "Winnowmap",
-  "description": "Winnowmap is a long-read mapping algorithm optimized for mapping ONT and PacBio reads to repetitive reference sequences.",
+  "bio.tools_id": "Winnowmap",
+  "description": "Winnowmap is a long-read mapping algorithm optimized for mapping ONT and PacBio reads to repetitive reference sequences. Winnowmap development began on top of minimap2 codebase, and since then we have incorporated the following two ideas to improve mapping accuracy within repeats",
   "homepage": "https://github.com/marbl/Winnowmap",
-  "operation": "pairwise-sequence-alignment",
+  "operation": "sequence-alignment",
   "topic": "Mapping",
   "version": {
     "2.03": {
@@ -11,7 +12,8 @@
       "localInstallDate": "19/07/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

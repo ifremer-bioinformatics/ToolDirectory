@@ -1,5 +1,6 @@
 {
   "name": "Octopus",
+  "bio.tools_id": "Octopus",
   "description": "Prediction of membrane protein topology and signal peptides.",
   "homepage": "http://octopus.cbr.su.se/",
   "operation": "transmembrane-protein-analysis",
@@ -11,7 +12,8 @@
       "localInstallDate": "03/02/2020",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

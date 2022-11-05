@@ -1,9 +1,10 @@
 {
   "name": "MultiNanopolish",
+  "bio.tools_id": "MultiNanopolish",
   "description": "Refined grouping method for reducing redundant calculations in nanopolish.",
   "homepage": "https://github.com/BioinformaticsCSU/MultiNanopolish",
   "operation": "sequence-assembly",
-  "topic": "DNA polymorphism,Sequence assembly,Sequence sites, features and motifs",
+  "topic": "Sequence assembly,Sequence sites, features and motifs,DNA polymorphism",
   "version": {
     "master": {
       "localInstallUser": "cnoel",
@@ -11,7 +12,8 @@
       "localInstallDate": "29/06/2021",
       "isCmdline": "true",
       "isGalaxy": "false",
-      "isWorkflow": "False"
+      "isWorkflow": "false",
+      "status": "active"
     }
   }
 }

@@ -1,15 +1,15 @@
 {
-  "name": "AGAT",
-  "bio.tools_id": "AGAT",
-  "description": "Another Gff Analysis Toolkit (AGAT)",
-  "homepage": "https://github.com/NBISweden/AGAT",
+  "name": "zzccmxtp",
+  "bio.tools_id": "",
+  "description": "",
+  "homepage": "",
   "operation": "",
   "topic": "",
   "version": {
-    "0.8.0": {
+    "0.4.1": {
       "localInstallUser": "acormier",
       "environment": "conda",
-      "localInstallDate": "10/01/2022",
+      "localInstallDate": "05-11-2022",
       "isCmdline": "true",
       "isGalaxy": "false",
       "isWorkflow": "false",
