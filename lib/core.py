@@ -15,6 +15,89 @@ environment = {
 }
 
 
+def create_properties(args, properties):
+    eprint(f"\033[0;37;46m LOG: Launch create for " + args.name + " \033[0m")
+    if args.bid:
+        eprint(f"\033[0;37;46m LOG: Search on Bio.tools for " + args.bid + " instead of " + args.name + "\033[0m")
+    eprint(f"\033[0;37;46m LOG: Collect info. from Bio.tools \033[0m")
+    response, code = biotools_api_request(args, properties)
+    eprint(f"\033[0;37;46m LOG: Load and parse JSON \033[0m")
+    bio_json = json.loads(response)
+    eprint(f"\033[0;37;46m LOG: Create properties \033[0m")
+    write_properties(args, bio_json, properties)
+    eprint(f"\033[0;37;46m LOG: All done!\033[0m")
+
+
+def add_version(args, properties):
+    eprint(f"\033[0;37;46m LOG: " + args.name + " already exist. Adding new version number... \033[0m")
+    with open(properties) as json_data:
+        p = json.load(json_data)
+    p_check = p['version'].keys()
+    install_date = daytime()
+    if args.datetime:
+        install_date = args.datetime
+    if args.version not in p_check:
+        p['version'][args.version] = {
+            "localInstallUser": args.installer,
+            "environment": environment[args.environment],
+            "localInstallDate": install_date,
+            "isCmdline": args.cmdline,
+            "isGalaxy": args.galaxy,
+            "isWorkflow": args.workflow,
+            "status": "active"
+        }
+        with open(properties, 'w') as o:
+            json.dump(p, o, sort_keys=False, indent=2)
+        o.close()
+        eprint(f"\033[0;37;46m LOG: all done!\033[0m")
+    else:
+        eprint(f"\033[0;31;47m WARNING: tool version already declared. Skip.\033[0m")
+
+
+def set_status(properties, versions, status):
+    with open(properties) as json_data:
+        p = json.load(json_data)
+    for version in versions:
+        try:
+            p['version'][version]['status'] = status
+        except KeyError:
+            eprint(f"\033[0;31;47m WARNING: Invalid tool version: {versions}. Skip.\033[0m")
+            pass
+        with open(properties, 'w') as o:
+            json.dump(p, o, sort_keys=False, indent=2)
+        o.close()
+        eprint(f"\033[0;37;46m LOG: All done!\033[0m")
+
+
+def kcsv_writing(csv_out, json_lst):
+    txt = open(csv_out, 'w')
+    txt.write('Name,Version,Operation,Topic,Doc,Description,Environment,Galaxy,Workflow\n')
+
+    json_lst.sort(key=str.lower)
+
+    for tool in json_lst:
+        with open(tool) as json_data:
+            p = json.load(json_data)
+            ver_env = []
+            env = []
+            name = p['name']
+            operation = p['operation']
+            topic = p['topic']
+            homepage = p['homepage']
+            description = p['description']
+            for k in sorted(p['version'].keys(), reverse=True):
+                if p['version'][k]['status'] == 'active':
+                    ver_env.append(k + '-' + p['version'][k]['environment'])
+                    if p['version'][k]['environment'] not in env:
+                        env.append(p['version'][k]['environment'])
+            versions = ','.join(ver_env)
+            environments = ','.join(env)
+            isGalaxy = p['version'][k]['isGalaxy']
+            isWorkflow = p['version'][k]['isWorkflow']
+            txt.write(f'"{name}","{versions}","{operation}","{topic}","{homepage}","{description}","{environments}","{isGalaxy}","{isWorkflow}"\n')
+    txt.close()
+
+
 def walk_level(directory, depth=2):
     if depth < 0:
         for root, dirs, files in os.walk(directory):
@@ -88,45 +171,33 @@ def check_path(args):
         exit(1)
 
 
-def create_properties(args, properties):
-    eprint(f"\033[0;37;46m LOG: Launch create for " + args.name + " \033[0m")
-    if args.bid:
-        eprint(f"\033[0;37;46m LOG: Search on Bio.tools for " + args.bid + " instead of " + args.name + "\033[0m")
-    eprint(f"\033[0;37;46m LOG: Collect info. from Bio.tools \033[0m")
-    response, code = biotools_api_request(args, properties)
-    eprint(f"\033[0;37;46m LOG: Load and parse JSON \033[0m")
-    bio_json = json.loads(response)
-    eprint(f"\033[0;37;46m LOG: Create properties \033[0m")
-    write_properties(args, bio_json, properties)
-    eprint(f"\033[0;37;46m LOG: All done!\033[0m")
-
-
 def write_properties(args, biojson, properties):
     operation = []
     for i in biojson['function']:
         operation.append(i['operation'][0]['term'].lower().replace(' ', '-'))
     operations = ','.join(list(set(operation)))
     if len(operation) == 0:
-        eprint(f"\033[0;31;47m ERROR: No EDAM terms for operation \033[0m")
+        eprint(f"\033[0;31;47m ERROR: No operations EDAM terms found\033[0m")
         eprint(f"\033[0;31;47m ERROR: Processus killed \033[0m")
         exit(1)
     else:
-        eprint(f"\033[0;37;46m LOG: { len(operation) } EDAM operation found\033[0m")
+        eprint(f"\033[0;37;46m LOG: { len(operation) } operations EDAM found\033[0m")
     topic = []
     for i in biojson['topic']:
         topic.append(i['term'])
     topics = ','.join(list(set(topic)))
     if len(topic) == 0:
-        eprint(f"\033[0;31;47m ERROR: No EDAM terms for operation \033[0m")
+        eprint(f"\033[0;31;47m ERROR: No topics EDAM terms found\033[0m")
         eprint(f"\033[0;31;47m ERROR: Processus killed \033[0m")
         exit(1)
     else:
-        eprint(f"\033[0;37;46m LOG: { len(topic) } EDAM topics found\033[0m")
+        eprint(f"\033[0;37;46m LOG: { len(topic) } topics EDAM found\033[0m")
     install_date = daytime()
     if args.datetime:
         install_date = args.datetime
     prop = {
-        'name': biojson['biotoolsID'],
+        'name': args.name,
+        'bio.tools_id': biojson['biotoolsID'],
         'description': biojson['description'].split('\n')[0],
         'homepage': biojson['homepage'],
         "operation": operations,
@@ -156,6 +227,7 @@ def write_properties_default(args, properties):
         install_date = args.datetime
     prop = {
         'name': args.name,
+        'bio.tools_id': '',
         'description': '',
         'homepage': '',
         "operation": '',
@@ -175,73 +247,3 @@ def write_properties_default(args, properties):
     with open(properties, 'w') as out_json:
         json.dump(prop, out_json, sort_keys=False, indent=2)
     out_json.close()
-
-
-def add_version(args, properties):
-    eprint(f"\033[0;37;46m LOG: " + args.name + " already exist. Adding new version number... \033[0m")
-    with open(properties) as json_data:
-        p = json.load(json_data)
-    p_check = p['version'].keys()
-    install_date = daytime()
-    if args.datetime:
-        install_date = args.datetime
-    if args.version not in p_check:
-        p['version'][args.version] = {
-            "localInstallUser": args.installer,
-            "environment": environment[args.environment],
-            "localInstallDate": install_date,
-            "isCmdline": args.cmdline,
-            "isGalaxy": args.galaxy,
-            "isWorkflow": args.workflow,
-            "status": "active"
-        }
-        with open(properties, 'w') as o:
-            json.dump(p, o, sort_keys=False, indent=2)
-        o.close()
-        eprint(f"\033[0;37;46m LOG: all done!\033[0m")
-    else:
-        eprint(f"\033[0;31;47m WARNING: tool version already declared. Skip.\033[0m")
-
-
-def kcsv_writing(csv_out, json_lst):
-    txt = open(csv_out, 'w')
-    txt.write('Name,Version,Operation,Topic,Doc,Description,Environment,Galaxy,Workflow\n')
-
-    json_lst.sort(key=str.lower)
-
-    for tool in json_lst:
-        with open(tool) as json_data:
-            p = json.load(json_data)
-            ver_env = []
-            env = []
-            name = p['name']
-            operation = p['operation']
-            topic = p['topic']
-            homepage = p['homepage']
-            description = p['description']
-            for k in sorted(p['version'].keys(), reverse=True):
-                if p['version'][k]['status'] == 'active':
-                    ver_env.append(k + '-' + p['version'][k]['environment'])
-                    if p['version'][k]['environment'] not in env:
-                        env.append(p['version'][k]['environment'])
-            versions = ','.join(ver_env)
-            environments = ','.join(env)
-            isGalaxy = p['version'][k]['isGalaxy']
-            isWorkflow = p['version'][k]['isWorkflow']
-            txt.write(f'"{name}","{versions}","{operation}","{topic}","{homepage}","{description}","{environments}","{isGalaxy}","{isWorkflow}"\n')
-    txt.close()
-
-
-def set_status(properties, versions, status):
-    with open(properties) as json_data:
-        p = json.load(json_data)
-    for version in versions:
-        try:
-            p['version'][version]['status'] = status
-        except KeyError:
-            eprint(f"\033[0;31;47m WARNING: Invalid tool version: {versions}. Skip.\033[0m")
-            pass
-        with open(properties, 'w') as o:
-            json.dump(p, o, sort_keys=False, indent=2)
-        o.close()
-        eprint(f"\033[0;37;46m LOG: All done!\033[0m")
