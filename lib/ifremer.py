@@ -6,10 +6,8 @@ def eprint(*args, **kwargs):
     print(*args, file=sys.stderr, **kwargs)
 
 
-def make_tool_dir(params, args):
+def make_tool_dir(params, tool_name, tool_version):
     install_dir_path = params['install_dir_path']
-    tool_name = args.tool_name
-    tool_version = args.tool_version
     path_tool = os.path.join(install_dir_path, tool_name, tool_version)
     if os.path.isdir(path_tool):
         eprint(f"\033[0;31;47m WARNING:" + path_tool + " already exist! \033[0m")
@@ -20,10 +18,8 @@ def make_tool_dir(params, args):
     return path_tool
 
 
-def conda_tool(params, args):
+def conda_tool(params, tool_name, tool_version):
     eprint(f"\033[0;37;46m LOG: Conda installation detected \033[0m")
-    tool_name = args.tool_name
-    tool_version = args.tool_version
     install_conda = params['conda_envs_path']
     install_dir = params['install_dir_path']
     path_tool = os.path.join(install_dir, tool_name, tool_version)

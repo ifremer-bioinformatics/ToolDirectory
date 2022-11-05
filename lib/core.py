@@ -6,7 +6,7 @@ import requests
 import datetime
 from requests.exceptions import HTTPError
 
-environment = {
+env = {
     "b": "bash",
     "c": "conda",
     "d": "docker",
@@ -15,35 +15,38 @@ environment = {
 }
 
 
-def create_properties(args, properties):
-    eprint(f"\033[0;37;46m LOG: Launch create for " + args.name + " \033[0m")
-    if args.bid:
-        eprint(f"\033[0;37;46m LOG: Search on Bio.tools for " + args.bid + " instead of " + args.name + "\033[0m")
+def create_properties(name, bid, version, owner, cmd, galaxy, environment, workflow, date, properties):
+    eprint(f"\033[0;37;46m LOG: Launch create for " + name + " \033[0m")
+    if bid:
+        eprint(f"\033[0;37;46m LOG: Search on Bio.tools for " + bid + " instead of " + name + "\033[0m")
     eprint(f"\033[0;37;46m LOG: Collect info. from Bio.tools \033[0m")
-    response, code = biotools_api_request(args, properties)
-    eprint(f"\033[0;37;46m LOG: Load and parse JSON \033[0m")
-    bio_json = json.loads(response)
-    eprint(f"\033[0;37;46m LOG: Create properties \033[0m")
-    write_properties(args, bio_json, properties)
-    eprint(f"\033[0;37;46m LOG: All done!\033[0m")
+    response, code = biotools_api_request(name, bid)
+    if code == 404:
+        write_properties_default(name, version, owner, cmd, galaxy, environment, workflow, date, properties)
+    else:
+        eprint(f"\033[0;37;46m LOG: Load and parse JSON \033[0m")
+        biojson = json.loads(response)
+        eprint(f"\033[0;37;46m LOG: Create properties \033[0m")
+        write_properties(name, version, date, owner, environment, cmd, galaxy, workflow, biojson, properties)
+        eprint(f"\033[0;37;46m LOG: All done!\033[0m")
 
 
-def add_version(args, properties):
-    eprint(f"\033[0;37;46m LOG: " + args.name + " already exist. Adding new version number... \033[0m")
+def add_version(name, version, date, owner, environment, cmd, galaxy, workflow, properties):
+    eprint(f"\033[0;37;46m LOG: " + name + " already exist. Adding new version number... \033[0m")
     with open(properties) as json_data:
         p = json.load(json_data)
     p_check = p['version'].keys()
     install_date = daytime()
-    if args.datetime:
-        install_date = args.datetime
-    if args.version not in p_check:
-        p['version'][args.version] = {
-            "localInstallUser": args.installer,
-            "environment": environment[args.environment],
+    if date:
+        install_date = date
+    if version not in p_check:
+        p['version'][version] = {
+            "localInstallUser": owner,
+            "environment": env[environment],
             "localInstallDate": install_date,
-            "isCmdline": args.cmdline,
-            "isGalaxy": args.galaxy,
-            "isWorkflow": args.workflow,
+            "isCmdline": cmd,
+            "isGalaxy": galaxy,
+            "isWorkflow": workflow,
             "status": "active"
         }
         with open(properties, 'w') as o:
@@ -94,7 +97,8 @@ def kcsv_writing(csv_out, json_lst):
             environments = ','.join(env)
             isGalaxy = p['version'][k]['isGalaxy']
             isWorkflow = p['version'][k]['isWorkflow']
-            txt.write(f'"{name}","{versions}","{operation}","{topic}","{homepage}","{description}","{environments}","{isGalaxy}","{isWorkflow}"\n')
+            txt.write(
+                f'"{name}","{versions}","{operation}","{topic}","{homepage}","{description}","{environments}","{isGalaxy}","{isWorkflow}"\n')
     txt.close()
 
 
@@ -131,47 +135,51 @@ def daytime():
     return time
 
 
-def biotools_api_request(args, properties):
-    name = args.name
-    if args.bid:
-        name = args.bid
+def biotools_api_request(name, bid):
+    search = name
+    if bid:
+        search = bid
     try:
-        response = requests.get('https://bio.tools/api/tool/' + name + '/?format=json')
+        response = requests.get('https://bio.tools/api/tool/' + search + '/?format=json')
         response.raise_for_status()
+
+        response_json = response.text
+        code = response.status_code
+
+        return response_json, code
+
     except HTTPError as http_error:
         if response.status_code == 404:
             # eprint(f"\033[0;31;47m WARNING: HTTP error occurred: {http_error} \033[0m")
-            eprint(f"\033[0;31;47m WARNING: " + name + " is not described in Bio.tools \033[0m")
-            eprint(f"\033[0;31;47m WARNING: writing empty properties file \033[0m")
-            eprint(f"\033[0;31;47m WARNING: please, fill it manual: {properties} \033[0m")
-            write_properties_default(args, properties)
-            exit(0)
+            # eprint(f"\033[0;31;47m WARNING: " + search + " is not described in Bio.tools \033[0m")
+            # eprint(f"\033[0;31;47m WARNING: writing empty properties file \033[0m")
+            # eprint(f"\033[0;31;47m WARNING: please, fill it manual: {properties} \033[0m")
+            response_json = response.text
+            code = response.status_code
+
+            return response_json, code
         else:
             eprint(f"\033[0;31;47m ERROR: HTTP error occurred: {http_error} \033[0m")
             exit(1)
     except Exception as error:
         eprint(f"\033[0;31;47m ERROR: Other error occurred: {error} \033[0m")
         exit(1)
-    else:
-        response_json = response.text
-        code = response.status_code
-        return response_json, code
 
 
-def check_path(args):
-    tool_path = os.path.join(args.path, args.name)
+def check_path(path, tool_name, tool_version):
+    tool_path = os.path.join(path, tool_name)
     if not os.path.isdir(tool_path):
         eprint(f"\033[0;31;47m ERROR:" + tool_path + " do not exist! \033[0m")
         eprint(f"\033[0;31;47m ERROR: processus killed \033[0m")
         exit(1)
-    tool_version_path = os.path.join(args.path, args.name, args.version)
+    tool_version_path = os.path.join(path, tool_name, tool_version)
     if not os.path.isfile(tool_version_path) and not os.path.isdir(tool_version_path):
         eprint(f"\033[0;31;47m ERROR:" + tool_version_path + " do not exist! \033[0m")
         eprint(f"\033[0;31;47m ERROR: processus killed \033[0m")
         exit(1)
 
 
-def write_properties(args, biojson, properties):
+def write_properties(name, version, date, owner, environment, cmd, galaxy, workflow, biojson, properties):
     operation = []
     for i in biojson['function']:
         operation.append(i['operation'][0]['term'].lower().replace(' ', '-'))
@@ -181,7 +189,7 @@ def write_properties(args, biojson, properties):
         eprint(f"\033[0;31;47m ERROR: Processus killed \033[0m")
         exit(1)
     else:
-        eprint(f"\033[0;37;46m LOG: { len(operation) } operations EDAM found\033[0m")
+        eprint(f"\033[0;37;46m LOG: {len(operation)} operations EDAM found\033[0m")
     topic = []
     for i in biojson['topic']:
         topic.append(i['term'])
@@ -191,25 +199,25 @@ def write_properties(args, biojson, properties):
         eprint(f"\033[0;31;47m ERROR: Processus killed \033[0m")
         exit(1)
     else:
-        eprint(f"\033[0;37;46m LOG: { len(topic) } topics EDAM found\033[0m")
+        eprint(f"\033[0;37;46m LOG: {len(topic)} topics EDAM found\033[0m")
     install_date = daytime()
-    if args.datetime:
-        install_date = args.datetime
+    if date:
+        install_date = date
     prop = {
-        'name': args.name,
+        'name': name,
         'bio.tools_id': biojson['biotoolsID'],
         'description': biojson['description'].split('\n')[0],
         'homepage': biojson['homepage'],
         "operation": operations,
         "topic": topics,
         'version': {
-            args.version: {
-                "localInstallUser": args.installer,
-                "environment": environment[args.environment],
+            version: {
+                "localInstallUser": owner,
+                "environment": env[environment],
                 "localInstallDate": install_date,
-                "isCmdline": args.cmdline,
-                "isGalaxy": args.galaxy,
-                "isWorkflow": args.workflow,
+                "isCmdline": cmd,
+                "isGalaxy": galaxy,
+                "isWorkflow": workflow,
                 "status": "active"
             }
         }
@@ -221,25 +229,25 @@ def write_properties(args, biojson, properties):
     out_json.close()
 
 
-def write_properties_default(args, properties):
+def write_properties_default(name, version, owner, cmd, galaxy, environment, workflow, date, properties):
     install_date = daytime()
-    if args.datetime:
-        install_date = args.datetime
+    if date:
+        install_date = datetime
     prop = {
-        'name': args.name,
+        'name': name,
         'bio.tools_id': '',
         'description': '',
         'homepage': '',
         "operation": '',
         "topic": '',
         'version': {
-            args.version: {
-                "localInstallUser": args.installer,
-                "environment": environment[args.environment],
+            version: {
+                "localInstallUser": owner,
+                "environment": env[environment],
                 "localInstallDate": install_date,
-                "isCmdline": args.cmdline,
-                "isGalaxy": args.galaxy,
-                "isWorkflow": args.workflow,
+                "isCmdline": cmd,
+                "isGalaxy": galaxy,
+                "isWorkflow": workflow,
                 "status": "active"
             }
         }
