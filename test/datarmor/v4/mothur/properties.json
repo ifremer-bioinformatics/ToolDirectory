@@ -1,0 +1,33 @@
+{
+  "name": "mothur",
+  "description": "\"Open-source, platform-independent, community-supported software for describing and comparing microbial communities\" Schloss PD et al. 2009",
+  "homepage": "http://mothur.org/",
+  "operation": "",
+  "topic": "Microbial ecology",
+  "version": {
+    "1.38.1.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    },
+    "1.39.5": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "22/11/2018",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    },
+    "1.42.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "06/06/2019",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "False"
+    }
+  }
+}

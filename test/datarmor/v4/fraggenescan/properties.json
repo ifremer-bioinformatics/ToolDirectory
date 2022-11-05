@@ -1,0 +1,17 @@
+{
+  "name": "FragGeneScan",
+  "description": "Application for finding (fragmented) genes in short reads",
+  "homepage": "https://sourceforge.net/projects/fraggenescan/",
+  "operation": "gene-prediction",
+  "topic": "Sequence analysis,Genetics",
+  "version": {
+    "1.31": {
+      "localInstallUser": "cnoel",
+      "environment": "conda",
+      "localInstallDate": "02/02/2022",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

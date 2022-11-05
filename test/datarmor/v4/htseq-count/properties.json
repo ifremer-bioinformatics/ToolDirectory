@@ -1,0 +1,33 @@
+{
+  "name": "HTSeq-count",
+  "description": "Counts for each gene how many reads map to it",
+  "homepage": "http://htseq.readthedocs.io/",
+  "operation": "rna-seq-quantification",
+  "topic": "Transcriptomics",
+  "version": {
+    "0.13.5": {
+      "localInstallUser": "cnoel",
+      "environment": "conda",
+      "localInstallDate": "24/08/2021",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "False"
+    },
+    "0.6.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "01/12/2017",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "False"
+    },
+    "0.9.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "12/03/2019",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "False"
+    }
+  }
+}

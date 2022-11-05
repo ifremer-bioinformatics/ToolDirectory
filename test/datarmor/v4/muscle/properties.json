@@ -1,0 +1,17 @@
+{
+  "name": "muscle",
+  "description": "This tool performs multiple sequence alignments of nucleotide or amino acid sequences.",
+  "homepage": "https://www.drive5.com/muscle/",
+  "operation": "multiple-sequence-alignment",
+  "topic": "Sequence analysis",
+  "version": {
+    "3.8": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "16/11/2018",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

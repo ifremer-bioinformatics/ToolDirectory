@@ -1,0 +1,17 @@
+{
+  "name": "sourmash",
+  "description": "Compute and compare MinHash signatures for DNA data sets.",
+  "homepage": "https://sourmash.readthedocs.io/en/latest/",
+  "operation": "sequence-similarity-search",
+  "topic": "Computational biology",
+  "version": {
+    "2.0.0": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "27/11/2018",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

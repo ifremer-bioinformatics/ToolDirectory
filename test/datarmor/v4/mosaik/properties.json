@@ -1,0 +1,17 @@
+{
+  "name": "MOSAIK",
+  "description": "Reference guided aligner/assembler.",
+  "homepage": "https://github.com/wanpinglee/MOSAIK",
+  "operation": "sequence-assembly",
+  "topic": "Sequence analysis,Sequence assembly",
+  "version": {
+    "2.2.26": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "False"
+    }
+  }
+}

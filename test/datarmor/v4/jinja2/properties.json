@@ -1,0 +1,17 @@
+{
+  "name": "Jinja2",
+  "description": "Jinja is a fast, expressive, extensible templating engine.",
+  "homepage": "https://jinja.palletsprojects.com/en/master/",
+  "operation": "data-handling",
+  "topic": "Data visualisation",
+  "version": {
+    "2.11.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "11/05/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

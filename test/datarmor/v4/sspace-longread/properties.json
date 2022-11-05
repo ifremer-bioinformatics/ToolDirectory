@@ -1,0 +1,17 @@
+{
+  "name": "SSpace-long read",
+  "description": "A program for scaffolding pre-assembled contigs using long reads",
+  "homepage": "https://bmcbioinformatics.biomedcentral.com/articles/10.1186/1471-2105-15-211",
+  "operation": "scaffolding",
+  "topic": "Sequence assembly",
+  "version": {
+    "1.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "NGSUtils",
+  "description": "NGSUtils is a suite of software tools for working with next-generation sequencing datasets",
+  "homepage": "http://ngsutils.org",
+  "operation": "read-pre-processing",
+  "topic": "Transcriptomics,Genomics",
+  "version": {
+    "0.5.9": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

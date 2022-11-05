@@ -1,0 +1,17 @@
+{
+  "name": "KofamScan",
+  "description": "KofamScan is a gene function annotation tool based on KEGG Orthology and hidden Markov model.",
+  "homepage": "https://github.com/takaram/kofam_scan",
+  "operation": "expression-profile-pathway-mapping,protein-feature-detection",
+  "topic": "Gene and protein families",
+  "version": {
+    "1.3.0": {
+      "localInstallUser": "cnoel",
+      "environment": "conda",
+      "localInstallDate": "14/03/2022",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

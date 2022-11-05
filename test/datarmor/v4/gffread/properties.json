@@ -1,0 +1,17 @@
+{
+  "name": "gffread",
+  "description": "program for filtering, converting and manipulating GFF files",
+  "homepage": "https://ccb.jhu.edu/software/stringtie/gff.shtml",
+  "operation": "sequence-annotation",
+  "topic": "Sequence analysis,Nucleic acids",
+  "version": {
+    "0.12.7": {
+      "localInstallUser": "cnoel",
+      "environment": "conda",
+      "localInstallDate": "15/10/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "pairtools",
+  "description": "CLI tools to process mapped Hi-C data",
+  "homepage": "https://github.com/open2c/pairtools",
+  "operation": "data-handling",
+  "topic": "Sequence assembly,Epigenetics",
+  "version": {
+    "0.3.0": {
+      "localInstallUser": "acormier",
+      "environment": "conda",
+      "localInstallDate": "07/09/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

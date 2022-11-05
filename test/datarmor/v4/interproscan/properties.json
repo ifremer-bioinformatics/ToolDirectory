@@ -1,0 +1,25 @@
+{
+  "name": "InterProScan",
+  "description": "the software package that allows sequences to be scanned against InterPro's signatures",
+  "homepage": "http://www.ebi.ac.uk/interpro/about.html",
+  "operation": "sequence-annotation",
+  "topic": "Functional genomics",
+  "version": {
+    "5.28-67.0": {
+      "localInstallUser": "galaxy",
+      "environment": "shell",
+      "localInstallDate": "19/04/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    },
+    "5.48-83.0": {
+      "localInstallUser": "galaxy",
+      "environment": "singularity",
+      "localInstallDate": "28/01/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "bam2fastq",
+  "description": "Extract reads from a bam file and write them in fastq format.",
+  "homepage": "https://gsl.hudsonalpha.org/information/software/bam2fastq",
+  "operation": "formatting",
+  "topic": "Sequence analysis,Sequencing,Data management",
+  "version": {
+    "1.1.0": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "29/10/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

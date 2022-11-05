@@ -1,0 +1,17 @@
+{
+  "name": "ragout",
+  "description": "Tool for assisted assembly using multiple references. It takes a short read assembly (a set of contigs), a set of related references and a corresponding phylogenetic tree and then assembles the contigs into scaffolds.",
+  "homepage": "http://fenderglass.github.io/Ragout/",
+  "operation": "genome-assembly",
+  "topic": "DNA,Sequence analysis,Sequence assembly",
+  "version": {
+    "2.3": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "28/05/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

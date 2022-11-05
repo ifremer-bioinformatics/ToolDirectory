@@ -1,0 +1,17 @@
+{
+  "name": "bamUtil",
+  "description": "Bamutil provides a serie of programs to work on SAM/BAM files.",
+  "homepage": "http://genome.sph.umich.edu/wiki/BamUtil",
+  "operation": "data-handling",
+  "topic": "Data management",
+  "version": {
+    "1.0.14": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "14/10/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}

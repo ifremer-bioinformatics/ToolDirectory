@@ -1,0 +1,17 @@
+{
+  "name": "DeepMP",
+  "description": "Deep learning tool to detect DNA base modifications on Nanopore sequencing data.",
+  "homepage": "http://github.com/pepebonet/DeepMP",
+  "operation": "base-calling",
+  "topic": "Epigenetics,Methylated DNA immunoprecipitation,Machine learning,Sequence sites, features and motifs,DNA",
+  "version": {
+    "master": {
+      "localInstallUser": "cnoel",
+      "environment": "conda",
+      "localInstallDate": "16/07/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "False"
+    }
+  }
+}
