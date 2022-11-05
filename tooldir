@@ -49,13 +49,21 @@ def create(name, bid, version, owner, cmd, galaxy, environment, workflow, path, 
 
 
 @cli.command()
-@click.option('--propertie', '-p', type=str, required=True, help='Path to json')
+@click.option('--json', '-j', type=str, required=True, help='Path to json')
+@click.option('--bid', '-b', type=str, help='Force update using Bio.tools ID')
+def update(json, bid):
+    """Update metadata of a tool"""
+    cl.update(json, bid)
+
+
+@cli.command()
+@click.option('--jp', '-j', type=str, required=True, help='Path to json')
 @click.option('--status', '-s', type=click.Choice(['active', 'inactive']), default='inactive',
               help='Version status [active]')
 @click.option('--version', '-v', type=(str, int), required=True, multiple=True, help='Version(s) to set status')
-def status(propertie, status, version):
+def status(json, status, version):
     """Set installation status of a tool's version"""
-    cl.set_status(propertie, version, status)
+    cl.set_status(json, version, status)
 
 
 @cli.command()
@@ -72,7 +80,7 @@ click.rich_click.COMMAND_GROUPS = {
     "tooldir": [
         {
             "name": "Main usage",
-            "commands": ["create", "status"],
+            "commands": ["create", "update", "status"],
         },
         {
             "name": "Visualization",

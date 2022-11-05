@@ -17,7 +17,10 @@ env = {
 
 def create_properties(name, bid, version, owner, cmd, galaxy, environment, workflow, date, properties):
     logger.info(f"Create properties file for {name}")
-    response, code = biotools_api_request(name, bid)
+    search = name
+    if bid:
+        search = bid
+    response, code = biotools_api_request(search)
     if code == 404:
         write_properties_default(name, version, owner, cmd, galaxy, environment, workflow, date, properties)
     else:
@@ -56,8 +59,48 @@ def add_version(name, version, date, owner, environment, cmd, galaxy, workflow, 
         logger.warning(f"Skip")
 
 
-def set_status(properties, versions, status):
+def update(jp, bid):
+    with open(jp) as json_data:
+        p = json.load(json_data)
+    logger.info(f"Starting update metadata for {p['name']}")
+    search = p['name']
+    if p['bio.tools_id'] != '':
+        search = p['bio.tools_id']
+    if bid:
+        search = bid
+    response, code = biotools_api_request(search)
+    if code == 404:
+        logger.error(f"Enable to find {search} in Bio.tools")
+        logger.error(f"Update aborded")
+        if not bid:
+            logger.error(f"Force search with --bid could solve this issue")
+        exit(1)
+    else:
+        bio_update = json.loads(response)
+        operation = []
+        for i in bio_update['function']:
+            operation.append(i['operation'][0]['term'].lower().replace(' ', '-'))
+        operations = ','.join(list(set(operation)))
+        topic = []
+        for i in bio_update['topic']:
+            topic.append(i['term'])
+        topics = ','.join(list(set(topic)))
+        p['description'] = bio_update['description'].split('\n')[0]
+        p['homepage'] = bio_update['homepage']
+        p['operation'] = operations
+        p['topic'] = topics
+        if bid:
+            p['bio.tools_id'] = bid
+        if len(p['description'].split('\n')[0]) > 400:
+            logger.warning(f"Tool description longer than 400 characters")
+        with open(jp, 'w') as out_json:
+            json.dump(p, out_json, sort_keys=False, indent=2)
+        out_json.close()
+        logger.info(f"Properties successfully updated")
+        logger.info(f"Done")
 
+
+def set_status(properties, versions, status):
     with open(properties) as json_data:
         p = json.load(json_data)
     logger.info(f"Setting status for versions of {p['name']}")
@@ -137,12 +180,8 @@ def daytime():
     return time
 
 
-def biotools_api_request(name, bid):
-    logger.info(f"Collect metadata from Bio.tools for {name}")
-    search = name
-    if bid:
-        search = bid
-    logger.info(f"Search term is {search}")
+def biotools_api_request(search):
+    logger.info(f"Collect metadata from Bio.tools for {search}")
     try:
         response = requests.get('https://bio.tools/api/tool/' + search + '/?format=json')
         response.raise_for_status()
