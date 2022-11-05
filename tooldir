@@ -42,7 +42,8 @@ class ToolDir(object):
 
     def create(self):
         parser = argparse.ArgumentParser(description="Create tool properties JSON")
-        parser.add_argument('-n', dest="name", type=str, required=True, help='Tool Name. Ex: bowtie2')
+        parser.add_argument('-n', dest="name", type=str, required=True, help='Tool name. Ex: bowtie2')
+        parser.add_argument('-b', dest="bid", type=str, help='Bio.tools tool ID')
         parser.add_argument('-v', dest="version", type=str, required=True, help='Tool version. Ex: 2.3.5')
         parser.add_argument('-o', dest="installer", type=str, required=True, help='Installer uid. Ex: acormier')
         parser.add_argument('-c', dest="cmdline", type=str, default='true', choices=['true', 'false'],
