@@ -57,7 +57,7 @@ def update_from_biotools(properties):
     for tool_id, tool_property in properties.items():
         try:
             print(f"Try to update {tool_property['properties']['name']}")
-            response, code = cl.biotools_api_request(tool_property['properties']['name'], None)
+            response, code = cl.biotools_api_request(tool_property['properties']['name'])
             if code == 404:
                 tool_property['properties']['bio.tools_id'] = ''
                 print(f"Enable to find {tool_property['properties']['name']} in Bio.tools")
