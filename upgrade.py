@@ -56,10 +56,11 @@ def extract_properties(jsons):
 def update_from_biotools(properties):
     for tool_id, tool_property in properties.items():
         try:
-            print(f"Update {tool_property['properties']['name']}")
+            print(f"Try to update {tool_property['properties']['name']}")
             response, code = cl.biotools_api_request(tool_property['properties']['name'], None)
             if code == 404:
                 tool_property['properties']['bio.tools_id'] = ''
+                print(f"Enable to find {tool_property['properties']['name']} in Bio.tools")
             else:
                 bio_update = json.loads(response)
                 operation = []
@@ -74,7 +75,9 @@ def update_from_biotools(properties):
                 tool_property['properties']['homepage'] = bio_update['homepage']
                 tool_property['properties']['operation'] = operations
                 tool_property['properties']['topic'] = topics
+                print(f"Successfully update {tool_property['properties']['name']}")
         except:
+            print(f"ERROR: Enable to update {tool_property['properties']['name']} for unknow reason")
             pass
 
     return properties
