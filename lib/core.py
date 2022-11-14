@@ -6,14 +6,6 @@ import datetime
 from requests.exceptions import HTTPError
 from loguru import logger
 
-env = {
-    "b": "bash",
-    "c": "conda",
-    "d": "docker",
-    "s": "singularity",
-    "o": "other"
-}
-
 
 def create_properties(name, bid, version, owner, cmd, galaxy, environment, workflow, date, properties):
     logger.info(f"Create properties file for {name}")
@@ -42,7 +34,7 @@ def add_version(name, version, date, owner, environment, cmd, galaxy, workflow, 
     if version not in p_check:
         p['version'][version] = {
             "localInstallUser": owner,
-            "environment": env[environment],
+            "environment": environment,
             "localInstallDate": install_date,
             "isCmdline": cmd,
             "isGalaxy": galaxy,
@@ -250,7 +242,7 @@ def write_properties(name, version, date, owner, environment, cmd, galaxy, workf
         'version': {
             version: {
                 "localInstallUser": owner,
-                "environment": env[environment],
+                "environment": environment,
                 "localInstallDate": install_date,
                 "isCmdline": cmd,
                 "isGalaxy": galaxy,
@@ -284,7 +276,7 @@ def write_properties_default(name, version, owner, cmd, galaxy, environment, wor
         'version': {
             version: {
                 "localInstallUser": owner,
-                "environment": env[environment],
+                "environment": environment,
                 "localInstallDate": install_date,
                 "isCmdline": cmd,
                 "isGalaxy": galaxy,
