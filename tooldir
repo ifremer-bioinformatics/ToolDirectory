@@ -22,8 +22,8 @@ def cli():
 @click.option('--cmd', '-c', type=click.Choice(['true', 'false']), default='true', help='Available in cmdline [True]')
 @click.option('--galaxy', '-g', type=click.Choice(['true', 'false']), default='false',
               help='Available in Galaxy [False]')
-@click.option('--environment', '-e', type=click.Choice(['c', 'b', 'd', 's', 'o']), default='c',
-              help='[c]onda/[b]ash/[d]ocker/[s]ingularity/[o]ther [conda]')
+@click.option('--environment', '-e', type=click.Choice(['conda', 'bash', 'docker', 'singularity', 'other']), default='conda',
+              help='conda/bash/docker/singularity/other [conda]')
 @click.option('--workflow', '-w', type=click.Choice(['false', 'true']), default='false', help='Is a workflow')
 @click.option('--path', '-p', type=click.Path(exists=True), required=True, help='Path to modulefiles')
 @click.option('--date', '-d', type=str, help='Installation date [Current date]')
