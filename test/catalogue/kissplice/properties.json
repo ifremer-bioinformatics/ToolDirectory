@@ -1,0 +1,18 @@
+{
+  "name": "KisSplice",
+  "description": "A local transcriptome assembler for SNPs, indels and AS events",
+  "homepage": "http://kissplice.prabi.fr/",
+  "operation": "transcriptome-assembly",
+  "topic": "Transcriptomics",
+  "version": {
+    "2.4.0-p1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "12/04/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

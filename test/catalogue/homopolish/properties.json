@@ -1,0 +1,18 @@
+{
+  "name": "Homopolish",
+  "description": "A genome polisher originally developed for Nanopore and subsequently extended for PacBio CLR",
+  "homepage": "https://github.com/ythuang0522/homopolish",
+  "operation": "genome-assembly",
+  "topic": "Sequence assembly",
+  "version": {
+    "0.3.2": {
+      "localInstallUser": "cnoel",
+      "environment": "conda",
+      "localInstallDate": "09/09/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

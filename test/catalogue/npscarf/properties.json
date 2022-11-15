@@ -1,0 +1,18 @@
+{
+  "name": "npScarf",
+  "description": "Scaffolding and Completing Assemblies in Real-time Fashion",
+  "homepage": "https://github.com/mdcao/npScarf",
+  "operation": "scaffolding",
+  "topic": "Sequence assembly",
+  "version": {
+    "2019.09": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "26/09/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

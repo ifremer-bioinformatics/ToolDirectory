@@ -1,0 +1,18 @@
+{
+  "name": "jcvi",
+  "description": "Python utility libraries on genome assembly, annotation and comparative genomics ",
+  "homepage": "https://github.com/tanghaibao/jcvi",
+  "operation": "genome-assembly,scaffolding",
+  "topic": "Sequence assembly",
+  "version": {
+    "0.9.14": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/01/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

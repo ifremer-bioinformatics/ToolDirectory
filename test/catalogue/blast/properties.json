@@ -1,0 +1,45 @@
+{
+  "name": "NCBI Blast+",
+  "description": "Basic Local Alignment Search Tool",
+  "homepage": "https://blast.ncbi.nlm.nih.gov/Blast.cgi",
+  "operation": "sequence-similarity-search",
+  "topic": "Biological databases",
+  "version": {
+    "2.12.0": {
+      "localInstallUser": "pgdurand",
+      "environment": "conda",
+      "localInstallDate": "30/11/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "2.2.31": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "2.6.0": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "2.9.0": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "21/02/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

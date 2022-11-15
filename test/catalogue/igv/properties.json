@@ -1,0 +1,27 @@
+{
+  "name": "IGV",
+  "description": "Integrative Genomics Viewer (IGV)",
+  "homepage": "http://software.broadinstitute.org/software/igv/book/export/html/6",
+  "operation": "sequence-visualisation",
+  "topic": "Data visualisation",
+  "version": {
+    "2.5.3": {
+      "localInstallUser": "galaxy",
+      "environment": "shell",
+      "localInstallDate": "20/06/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "2.8.10": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "03/10/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

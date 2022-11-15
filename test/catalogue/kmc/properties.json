@@ -1,0 +1,18 @@
+{
+  "name": "KMC",
+  "description": "Fast and frugal disk based k-mer counter ",
+  "homepage": "https://github.com/refresh-bio/KMC",
+  "operation": "k-mer-counting",
+  "topic": "Sequence assembly",
+  "version": {
+    "3.1.2rc1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "02/04/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

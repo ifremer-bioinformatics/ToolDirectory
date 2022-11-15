@@ -1,0 +1,27 @@
+{
+  "name": "NanoPlot",
+  "description": "Creating many relevant plots derived from reads (fastq), alignments (bam) and albacore/guppy summary files",
+  "homepage": "https://github.com/wdecoster/NanoPlot",
+  "operation": "quality-control",
+  "topic": "Bioinformatics",
+  "version": {
+    "1.28.0": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "16/01/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "1.32.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "12/09/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

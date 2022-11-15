@@ -1,0 +1,18 @@
+{
+  "name": "metadecoder",
+  "description": "An algorithm for clustering metagenomic sequences",
+  "homepage": "https://github.com/liu-congcong/MetaDecoder",
+  "operation": "read-binning",
+  "topic": "Metagenomics",
+  "version": {
+    "1.0.8": {
+      "localInstallUser": "acormier",
+      "environment": "conda",
+      "localInstallDate": "15/03/2022",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

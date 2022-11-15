@@ -1,0 +1,18 @@
+{
+  "name": "Gemma",
+  "description": "Genome-wide Efficient Mixed Model Association",
+  "homepage": "https://github.com/genetics-statistics/GEMMA",
+  "operation": "genetic-variation-analysis",
+  "topic": "GWAS study",
+  "version": {
+    "0.98.5": {
+      "localInstallUser": "pgdurand",
+      "environment": "shell",
+      "localInstallDate": "16/11/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

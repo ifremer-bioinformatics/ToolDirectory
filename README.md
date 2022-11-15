@@ -7,7 +7,7 @@ ToolDirectory provides a convenient tool to display list of softwares in a webpa
 
 You can test our [public demo](https://ifremer-bioinformatics.github.io/ToolDirectorySample/)
 
-## Installation
+## Direct use of ToolDirectory Viewer
 
 ToolDirectory is a Python 3.x program. It also requires the following package:
 
@@ -51,6 +51,9 @@ ToolDirectory expects a directory structure with the following constraints:
 
 Or, with [modules](http://modules.sourceforge.net/) architecture:
 - /path/to/tools/tool-name/modulefile
+
+Or, with [modules](http://modules.sourceforge.net/) architecture:
+- \<install-dir>/\<tool>/<version-module>
 
 Here is an example:
 
@@ -104,6 +107,7 @@ git clone https://gitlab.ifremer.fr/bioinfo/katalog.git /foo/bar/www/tooldirecto
 Then, generate the software list:
 ```bash
 tooldir kcsv -p /path/to/tools/ -c /foo/bar/www/tooldirectory/Softwares.csv
+
 ```
 
 You can use a crontab to automatically update the software listing.

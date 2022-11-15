@@ -1,0 +1,18 @@
+{
+  "name": "Trimmomatic",
+  "description": "A flexible trimmer for Illumina sequence data",
+  "homepage": "http://www.usadellab.org/cms/uploads/supplementary/Trimmomatic/TrimmomaticManual_V0.32.pdf",
+  "operation": "sequence-trimming",
+  "topic": "Bioinformatics",
+  "version": {
+    "0.36": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

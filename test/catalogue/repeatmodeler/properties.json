@@ -1,0 +1,27 @@
+{
+  "name": "RepeatModeler",
+  "description": "De-Novo Repeat Discovery Tool",
+  "homepage": "https://github.com/rmhubley/RepeatModeler",
+  "operation": "repeat-sequence-analysis",
+  "topic": "Sequence composition, complexity and repeats",
+  "version": {
+    "1.0.11": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "10/02/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "2.0.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "11/02/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

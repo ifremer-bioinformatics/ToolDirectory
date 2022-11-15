@@ -1,0 +1,36 @@
+{
+  "name": "FROGS",
+  "description": "Workflow designed to produce an OTU count matrix from high depth sequencing amplicon data",
+  "homepage": "https://github.com/geraldinepascal/FROGS",
+  "operation": "community-profiling",
+  "topic": "Metagenomics",
+  "version": {
+    "1.4.0": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/02/2018",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "2.0.0": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "11/04/2018",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "3.2.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "11/03/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

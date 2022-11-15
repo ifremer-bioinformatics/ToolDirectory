@@ -1,0 +1,18 @@
+{
+  "name": "CpGIScan",
+  "description": "an ultrafast tool for CpG islands identification from genome sequences",
+  "homepage": "https://github.com/jianzuoyi/CpGIScan",
+  "operation": "sequence-similarity-search",
+  "topic": "Biological databases",
+  "version": {
+    "master": {
+      "localInstallUser": "cnoel",
+      "environment": "shell",
+      "localInstallDate": "08/02/2022",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

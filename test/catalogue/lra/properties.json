@@ -1,0 +1,18 @@
+{
+  "name": "LRA",
+  "description": "Long read aligner for sequences and contigs",
+  "homepage": "https://github.com/ChaissonLab/LRA",
+  "operation": "sequence-alignment",
+  "topic": "Sequence assembly",
+  "version": {
+    "1.3.2": {
+      "localInstallUser": "cnoel",
+      "environment": "conda",
+      "localInstallDate": "26/10/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

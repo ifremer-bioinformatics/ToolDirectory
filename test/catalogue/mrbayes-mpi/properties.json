@@ -1,0 +1,18 @@
+{
+  "name": "MrBayes",
+  "description": "Bayesian inference and model choice across a wide range of phylogenetic and evolutionary models",
+  "homepage": "http://mrbayes.sourceforge.net/",
+  "operation": "phylogenetic-tree-construction",
+  "topic": "Phylogeny",
+  "version": {
+    "3.2.7": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "12/05/2020",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "PLINK",
+  "description": "whole genome association analysis toolset",
+  "homepage": "http://zzz.bwh.harvard.edu/plink/",
+  "operation": "genetic-variation-analysis",
+  "topic": "GWAS study",
+  "version": {
+    "1.07": {
+      "localInstallUser": "galaxy",
+      "environment": "shell",
+      "localInstallDate": "18/10/2018",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "1.9": {
+      "localInstallUser": "galaxy",
+      "environment": "shell",
+      "localInstallDate": "18/10/2018",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

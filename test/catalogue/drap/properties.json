@@ -1,0 +1,18 @@
+{
+  "name": "DRAP",
+  "description": "De novo RNA-seq Assembly Pipeline",
+  "homepage": "http://www.sigenae.org/drap/",
+  "operation": "genome-assembly",
+  "topic": "Transcriptomics",
+  "version": {
+    "1.91": {
+      "localInstallUser": "galaxy",
+      "environment": "docker",
+      "localInstallDate": "13/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

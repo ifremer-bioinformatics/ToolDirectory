@@ -1,0 +1,27 @@
+{
+  "name": "NanoFilt",
+  "description": "Streaming script for filtering a fastq file based on a minimum length, minimum quality cut-off, minimum and maximum average GC",
+  "homepage": "https://github.com/wdecoster/nanofilt",
+  "operation": "data-handling",
+  "topic": "Bioinformatics",
+  "version": {
+    "2.6.0": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "16/01/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "2.7.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "12/09/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

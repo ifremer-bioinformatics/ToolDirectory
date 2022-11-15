@@ -1,0 +1,90 @@
+{
+  "name": "QIIME",
+  "description": "Pipeline for performing microbiome analysis from raw DNA sequencing data",
+  "homepage": "http://qiime.org/",
+  "operation": "community-profiling",
+  "topic": "Metagenomics",
+  "version": {
+    "1.9.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "21/08/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "2.0.0": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "2019.04": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "15/07/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "2019.07": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "16/09/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "2019.10": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "08/04/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "2020.02": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/03/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "2020.08": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "16/11/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "2021.08": {
+      "localInstallUser": "cnoel",
+      "environment": "conda",
+      "localInstallDate": "05/11/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "2021.11": {
+      "localInstallUser": "cnoel",
+      "environment": "conda",
+      "localInstallDate": "08/02/2022",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

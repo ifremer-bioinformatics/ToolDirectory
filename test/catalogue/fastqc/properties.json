@@ -1,0 +1,45 @@
+{
+  "name": "FastQC",
+  "description": "A quality control tool for high throughput sequence data",
+  "homepage": "http://www.bioinformatics.babraham.ac.uk/projects/fastqc/",
+  "operation": "quality-control",
+  "topic": "Bioinformatics",
+  "version": {
+    "0.11.5": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "0.11.6": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "24/05/2018",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "0.11.8": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "14/01/2019",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "0.11.9": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "01/02/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

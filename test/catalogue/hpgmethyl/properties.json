@@ -1,0 +1,18 @@
+{
+  "name": "HPG-Methyl",
+  "description": "ultrafast and highly sensitive Next-Generation Sequencing (NGS) read mapper and methylation context extractor",
+  "homepage": "https://github.com/grev-uv/hpg-methyl",
+  "operation": "read-mapping",
+  "topic": "Epigenetics",
+  "version": {
+    "3.2.5": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "10/12/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

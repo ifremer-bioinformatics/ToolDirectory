@@ -1,0 +1,18 @@
+{
+  "name": "cupcake",
+  "description": "Miscellaneous collection of Python and R scripts for processing Iso-Seq data",
+  "homepage": "https://github.com/Magdoll/cDNA_Cupcake",
+  "operation": "data-handling",
+  "topic": "Transcriptomics",
+  "version": {
+    "28.0.0": {
+      "localInstallUser": "acormier",
+      "environment": "conda",
+      "localInstallDate": "21/02/2022",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

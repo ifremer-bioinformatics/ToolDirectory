@@ -1,0 +1,27 @@
+{
+  "name": "PLAST",
+  "description": "High Performance Parallel Local Alignment Search Tool",
+  "homepage": "https://plast.inria.fr/user-guide/",
+  "operation": "sequence-similarity-search",
+  "topic": "Biological databases",
+  "version": {
+    "2.3.2": {
+      "localInstallUser": "galaxy",
+      "environment": "shell",
+      "localInstallDate": "16/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "2.3.3": {
+      "localInstallUser": "galaxy",
+      "environment": "shell",
+      "localInstallDate": "11/07/2018",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

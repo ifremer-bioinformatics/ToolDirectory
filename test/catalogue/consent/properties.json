@@ -1,0 +1,27 @@
+{
+  "name": "CONSENT",
+  "description": "self-correction method for long reads",
+  "homepage": "https://github.com/morispi/CONSENT",
+  "operation": "read-correction",
+  "topic": "Sequence assembly",
+  "version": {
+    "1.2": {
+      "localInstallUser": "galaxy",
+      "environment": "shell",
+      "localInstallDate": "30/10/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "2.2.2": {
+      "localInstallUser": "cnoel",
+      "environment": "shell",
+      "localInstallDate": "12/07/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

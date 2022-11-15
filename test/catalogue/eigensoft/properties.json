@@ -1,0 +1,18 @@
+{
+  "name": "Eigensoft",
+  "description": "Analyze population structure and perform stratification correction",
+  "homepage": "https://www.hsph.harvard.edu/alkes-price/software/",
+  "operation": "population-structure",
+  "topic": "Population genetics",
+  "version": {
+    "7.2.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "25/11/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

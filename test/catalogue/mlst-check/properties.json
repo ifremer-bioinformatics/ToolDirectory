@@ -1,0 +1,18 @@
+{
+  "name": "MLST-Check",
+  "description": "Multilocus sequence typing by blast using the schemes from PubMLST",
+  "homepage": "https://github.com/sanger-pathogens/mlst_check",
+  "operation": "multilocus-sequence-typing",
+  "topic": "Comparative genomics",
+  "version": {
+    "2.1.1": {
+      "localInstallUser": "galaxy",
+      "environment": "docker",
+      "localInstallDate": "20/09/2018",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

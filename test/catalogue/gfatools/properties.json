@@ -1,0 +1,18 @@
+{
+  "name": "gfatools",
+  "description": "A command-line tool as well as a library in C that parses, validates and transforms assembly graphs in a dialect of the GFA1 format",
+  "homepage": "https://github.com/lh3/gfa1",
+  "operation": "data-handling",
+  "topic": "Bioinformatics",
+  "version": {
+    "0.4": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "22/10/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

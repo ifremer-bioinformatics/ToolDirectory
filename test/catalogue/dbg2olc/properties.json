@@ -1,0 +1,27 @@
+{
+  "name": "DBG2OLC",
+  "description": "Assembly of Large Genomes Using Long Erroneous Reads of the Third Generation Sequencing Technologies",
+  "homepage": "https://github.com/yechengxi/DBG2OLC",
+  "operation": "genome-assembly",
+  "topic": "Sequence assembly",
+  "version": {
+    "20160205": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "04/05/2018",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "20180222": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "27/03/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

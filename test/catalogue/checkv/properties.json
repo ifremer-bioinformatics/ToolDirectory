@@ -1,0 +1,18 @@
+{
+  "name": "CheckV",
+  "description": "A fully automated command-line pipeline for assessing the quality of metagenome-assembled viral genomes",
+  "homepage": "https://bitbucket.org/berkeleylab/checkv/src/master/",
+  "operation": "sequence-assembly-validation",
+  "topic": "Metagenomics",
+  "version": {
+    "0.5.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "15/05/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

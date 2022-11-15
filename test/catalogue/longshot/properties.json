@@ -1,0 +1,36 @@
+{
+  "name": "longshot",
+  "description": "Longshot is a variant calling tool for diploid genomes using long error prone reads such as Pacific Biosciences (PacBio) SMRT and Oxford Nanopore Technologies (ONT).",
+  "homepage": "https://github.com/pjedge/longshot",
+  "operation": "variant-calling",
+  "topic": "Comparative genomics",
+  "version": {
+    "0.4.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "25/09/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "0.4.2": {
+      "localInstallUser": "galaxy",
+      "environment": "singularity",
+      "localInstallDate": "17/11/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "0.4.3": {
+      "localInstallUser": "cnoel",
+      "environment": "singularity",
+      "localInstallDate": "29/06/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

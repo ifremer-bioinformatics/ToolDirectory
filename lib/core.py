@@ -211,6 +211,7 @@ def check_path(path, tool_name, tool_version):
 
 def write_properties(name, version, date, owner, environment, cmd, galaxy, workflow, biojson, properties):
     logger.info(f"Writing properties file")
+
     operation = []
     for i in biojson['function']:
         operation.append(i['operation'][0]['term'].lower().replace(' ', '-'))

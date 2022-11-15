@@ -1,0 +1,18 @@
+{
+  "name": "KING",
+  "description": "Relationship inference in genome-wide association studies",
+  "homepage": "http://people.virginia.edu/~wc9c/KING/",
+  "operation": "genotyping",
+  "topic": "Genotype and phenotype",
+  "version": {
+    "2.8.1": {
+      "localInstallUser": "galaxy",
+      "environment": "shell",
+      "localInstallDate": "07/05/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

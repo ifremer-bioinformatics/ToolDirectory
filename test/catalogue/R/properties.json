@@ -1,0 +1,45 @@
+{
+  "name": "r",
+  "description": "R base",
+  "homepage": "https://www.r-project.org/",
+  "operation": "statistics-and-probability,visualisation",
+  "topic": "Statistics and probability",
+  "version": {
+    "3.5.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "05/06/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "3.6.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "08/05/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "4.0.0": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "08/05/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "4.1.1": {
+      "localInstallUser": "cnoel",
+      "environment": "conda",
+      "localInstallDate": "25/08/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

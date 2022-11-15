@@ -1,0 +1,36 @@
+{
+  "name": "sartools",
+  "description": "A tool for statistical analysis of RNA-Seq",
+  "homepage": "https://github.com/PF2-pasteur-fr/SARTools",
+  "operation": "statistical-calculation",
+  "topic": "Transcriptomics",
+  "version": {
+    "1.3.2": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "07/12/2017",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "1.6.3": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "28/07/2020",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "1.7.3": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "07/07/2020",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "Illumina_utils",
+  "description": "a small library and a bunch of clients to perform various operations on FASTQ files",
+  "homepage": "https://github.com/merenlab/illumina-utils",
+  "operation": "data-handling",
+  "topic": "Bioinformatics",
+  "version": {
+    "2.3": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "20/03/2018",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "FLASh",
+  "description": "Fast Length Adjustment of Short reads",
+  "homepage": "http://ccb.jhu.edu/software/FLASH/",
+  "operation": "data-handling",
+  "topic": "Bioinformatics",
+  "version": {
+    "1.2.11": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "name": "Racon",
+  "description": "Ultrafast consensus module for raw de novo genome assembly of long uncorrected reads ",
+  "homepage": "https://github.com/lbcb-sci/racon",
+  "operation": "sequencing-error-detection",
+  "topic": "Sequence assembly",
+  "version": {
+    "1.4.10": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "21/01/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "1.4.20": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "20/04/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

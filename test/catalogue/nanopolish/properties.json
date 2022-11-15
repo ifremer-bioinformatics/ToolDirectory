@@ -1,0 +1,18 @@
+{
+  "name": "Nanopolish",
+  "description": "Software package for signal-level analysis of Oxford Nanopore sequencing data.",
+  "homepage": "https://github.com/jts/nanopolish",
+  "operation": "sequence-analysis,genetic-variation-analysis",
+  "topic": "Sequence assembly",
+  "version": {
+    "0.13.2": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "13/04/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

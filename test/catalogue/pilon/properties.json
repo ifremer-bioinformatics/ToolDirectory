@@ -1,0 +1,27 @@
+{
+  "name": "Pilon",
+  "description": "Pilon is an automated genome assembly improvement and variant detection tool ",
+  "homepage": "https://github.com/broadinstitute/pilon/",
+  "operation": "sequencing-error-detection",
+  "topic": "Sequence assembly",
+  "version": {
+    "1.23": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "20/01/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "1.24": {
+      "localInstallUser": "cnoel",
+      "environment": "conda",
+      "localInstallDate": "29/06/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

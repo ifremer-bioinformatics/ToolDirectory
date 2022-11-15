@@ -1,0 +1,36 @@
+{
+  "name": "ANGSD",
+  "description": "Analysis of next generation Sequencing Data",
+  "homepage": "http://www.popgen.dk/angsd/index.php/ANGSD",
+  "operation": "genotyping",
+  "topic": "Population genetics",
+  "version": {
+    "0.923": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "26/11/2018",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "0.931": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "22/11/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "0.933": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "25/11/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

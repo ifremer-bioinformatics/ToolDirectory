@@ -1,0 +1,27 @@
+{
+  "name": "SAMBA",
+  "description": "Standardized and Automated MetaBarcoding Analyses.",
+  "homepage": "https://github.com/ifremer-bioinformatics/samba",
+  "operation": "community-profiling",
+  "topic": "Metagenomics,Workflows",
+  "version": {
+    "2.0.0": {
+      "localInstallUser": "lquintri",
+      "environment": "Nextflow",
+      "localInstallDate": "23/06/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "3.0.1": {
+      "localInstallUser": "cnoel",
+      "environment": "Nextflow",
+      "localInstallDate": "22/02/2021",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

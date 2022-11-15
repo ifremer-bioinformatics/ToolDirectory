@@ -1,0 +1,18 @@
+{
+  "name": "remoVecSec",
+  "description": "Module and script to remove contamination in assembled genomes before submission to ncbi ",
+  "homepage": "https://github.com/htafer/remoVecSec",
+  "operation": "sequence-contamination-filtering",
+  "topic": "Biological databases",
+  "version": {
+    "0.02": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "25/02/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

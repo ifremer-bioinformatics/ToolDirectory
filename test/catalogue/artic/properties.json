@@ -1,0 +1,18 @@
+{
+  "name": "ARTIC",
+  "description": "Pipeline and set of accompanying tools for working with viral nanopore sequencing data.",
+  "homepage": "https://artic.readthedocs.io/en/latest/",
+  "operation": "sequence-alignment",
+  "topic": "Metagenomics",
+  "version": {
+    "1.2.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "14/04/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

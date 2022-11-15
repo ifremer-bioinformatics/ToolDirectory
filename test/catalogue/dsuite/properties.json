@@ -1,0 +1,18 @@
+{
+  "name": "Dsuite",
+  "description": "Dsuite \u2010 fast D\u2010statistics and related admixture evidence from VCF files",
+  "homepage": "https://github.com/millanek/Dsuite",
+  "operation": "data-handling",
+  "topic": "Bioinformatics",
+  "version": {
+    "master": {
+      "localInstallUser": "galaxy",
+      "environment": "shell",
+      "localInstallDate": "12/11/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

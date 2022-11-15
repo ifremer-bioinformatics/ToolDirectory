@@ -1,0 +1,36 @@
+{
+  "name": "bedtools",
+  "description": "Toolset for genome arithmetic",
+  "homepage": "http://bedtools.readthedocs.io/en/latest/",
+  "operation": "data-handling",
+  "topic": "Bioinformatics",
+  "version": {
+    "2.26.0": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "2.27.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "12/03/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "2.30.0": {
+      "localInstallUser": "acormier",
+      "environment": "conda",
+      "localInstallDate": "05/10/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "methylartist",
+  "description": "Pipeline for performing microbiome analysis from raw DNA sequencing data",
+  "homepage": "https://github.com/adamewing/methylartist",
+  "operation": "methylation-analysis",
+  "topic": "Epigenetics",
+  "version": {
+    "1.0.5": {
+      "localInstallUser": "cnoel",
+      "environment": "conda",
+      "localInstallDate": "06/09/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

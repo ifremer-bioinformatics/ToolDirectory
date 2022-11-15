@@ -1,0 +1,18 @@
+{
+  "name": "LINKS",
+  "description": "Long Interval Nucleotide K-mer Scaffolder",
+  "homepage": "http://www.bcgsc.ca/platform/bioinfo/software/links",
+  "operation": "scaffolding",
+  "topic": "Sequence assembly",
+  "version": {
+    "1.8.6": {
+      "localInstallUser": "galaxy",
+      "environment": "shell",
+      "localInstallDate": "05/05/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

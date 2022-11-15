@@ -1,0 +1,18 @@
+{
+  "name": "ModelTest-NG",
+  "description": "A new and scalable tool for the selection of DNA and protein evolutionary models. ",
+  "homepage": "https://github.com/ddarriba/modeltest",
+  "operation": "read-binning",
+  "topic": "Phylogeny",
+  "version": {
+    "0.1.6": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "02/02/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

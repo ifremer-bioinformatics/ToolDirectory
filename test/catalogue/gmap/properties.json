@@ -1,0 +1,27 @@
+{
+  "name": "gmap",
+  "description": "Genomic Mapping and Alignment Program for mRNA and EST Sequences.",
+  "homepage": "http://research-pub.gene.com/gmap/",
+  "operation": "genetic-mapping",
+  "topic": "Mapping",
+  "version": {
+    "2020.06.01": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "16/07/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "2021.08.25": {
+      "localInstallUser": "acormier",
+      "environment": "conda",
+      "localInstallDate": "21/01/2022",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

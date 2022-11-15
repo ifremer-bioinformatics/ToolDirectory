@@ -1,0 +1,36 @@
+{
+  "name": "iq-tree",
+  "description": "Stochastic algorithm to infer phylogenetic trees by maximum likelihood.",
+  "homepage": "http://www.iqtree.org/",
+  "operation": "phylogenetic-tree-construction",
+  "topic": "Phylogeny",
+  "version": {
+    "1.5.5.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "1.6.7": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "04/09/2018",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "2.0.3": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "10/06/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

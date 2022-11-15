@@ -1,0 +1,45 @@
+{
+  "name": "Medaka",
+  "description": "Sequence correction provided by ONT Research ",
+  "homepage": "https://github.com/nanoporetech/medaka",
+  "operation": "sequencing-error-detection",
+  "topic": "Sequence assembly",
+  "version": {
+    "0.11.4": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "16/01/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "1.2.6": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "08/04/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "1.3.3": {
+      "localInstallUser": "cnoel",
+      "environment": "conda",
+      "localInstallDate": "18/05/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "1.4.3": {
+      "localInstallUser": "cnoel",
+      "environment": "conda",
+      "localInstallDate": "29/06/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

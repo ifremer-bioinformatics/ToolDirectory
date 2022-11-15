@@ -1,0 +1,36 @@
+{
+  "name": "signalP",
+  "description": "predicts the presence and location of signal peptide cleavage sites in amino acid sequences ",
+  "homepage": "http://www.cbs.dtu.dk/services/SignalP/",
+  "operation": "sequence-motif-recognition",
+  "topic": "Structure analysis",
+  "version": {
+    "4.1": {
+      "localInstallUser": "galaxy",
+      "environment": "shell",
+      "localInstallDate": "09/05/2018",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "5.0b": {
+      "localInstallUser": "galaxy",
+      "environment": "shell",
+      "localInstallDate": "23/11/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "6.0g": {
+      "localInstallUser": "acormier",
+      "environment": "singularity",
+      "localInstallDate": "09/02/2022",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}
