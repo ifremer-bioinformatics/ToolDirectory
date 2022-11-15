@@ -1,0 +1,19 @@
+{
+  "name": "pbcoretools",
+  "bio.tools_id": "",
+  "description": "CLI tools and add-ons for PacBio's core APIs (incl dataset)",
+  "homepage": "https://github.com/PacificBiosciences/pbbioconda",
+  "operation": "data-handling",
+  "topic": "Bioinformatics",
+  "version": {
+    "0.2.4": {
+      "localInstallUser": "acormier",
+      "environment": "conda",
+      "localInstallDate": "23/02/2022",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

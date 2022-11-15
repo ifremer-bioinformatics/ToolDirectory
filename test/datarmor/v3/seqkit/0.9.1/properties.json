@@ -1,0 +1,13 @@
+{
+  "NAME": "seqkit",
+  "DESCRIPTION": "Tool to manipulate fastq files",
+  "VERSION": "0.9.1",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://bioinf.shenwei.me/seqkit",
+  "KEYWORDS": "data-handling",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Bioinformatics",
+  "DATE_INSTALL": "19/10/2018",
+  "OWNER": "galaxy"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "trnascan-se",
+  "bio.tools_id": "trnascan-se",
+  "description": "A program for improved detection of transfer RNA genes in genomic sequence.",
+  "homepage": "http://trna.ucsc.edu/tRNAscan-SE/",
+  "operation": "trna-gene-prediction",
+  "topic": "Sequence analysis,RNA,Genomics",
+  "version": {
+    "2.0.7": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "26/02/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

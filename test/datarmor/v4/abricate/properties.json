@@ -1,0 +1,19 @@
+{
+  "name": "abricate",
+  "bio.tools_id": "abricate",
+  "description": "Mass screening of contigs for antimicrobial resistance or virulence genes.",
+  "homepage": "https://github.com/tseemann/abricate",
+  "operation": "antimicrobial-resistance-prediction",
+  "topic": "Microbiology,Genomics",
+  "version": {
+    "0.9.8": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "13/12/2019",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

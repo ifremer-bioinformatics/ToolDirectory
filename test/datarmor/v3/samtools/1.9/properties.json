@@ -1,0 +1,13 @@
+{
+  "NAME": "SAMtools",
+  "DESCRIPTION": "Provides various utilities for manipulating alignments in the SAM format",
+  "VERSION": "1.9",
+  "CMDLINE": "true",
+  "GALAXY": "true",
+  "URLDOC": "http://samtools.sourceforge.net/",
+  "KEYWORDS": "data-handling",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Bioinformatics",
+  "DATE_INSTALL": "12/03/2019",
+  "OWNER": "galaxy"
+}

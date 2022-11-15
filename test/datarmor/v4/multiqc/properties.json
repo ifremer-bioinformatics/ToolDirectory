@@ -1,0 +1,64 @@
+{
+  "name": "multiqc",
+  "bio.tools_id": "multiqc",
+  "description": "MultiQC aggregates results from multiple bioinformatics analyses across many samples into a single report. It searches a given directory for analysis logs and compiles a HTML report. It's a general use tool, perfect for summarising the output from numerous bioinformatics tools.",
+  "homepage": "http://multiqc.info/",
+  "operation": "validation",
+  "topic": "Bioinformatics,Sequencing",
+  "version": {
+    "1.11": {
+      "localInstallUser": "acormier",
+      "environment": "conda",
+      "localInstallDate": "26/10/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "1.12": {
+      "localInstallUser": "acormier",
+      "environment": "conda",
+      "localInstallDate": "09/03/2022",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "1.2": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "1.5": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "24/05/2018",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "1.8": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "08/01/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "1.9": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "03/11/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

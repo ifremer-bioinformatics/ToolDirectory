@@ -1,0 +1,13 @@
+{
+  "NAME": "bbtools",
+  "DESCRIPTION": "BBMap short read aligner, and other bioinformatic tools (reads filter, reads merge, sequences converter) ",
+  "VERSION": "34.62",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://jgi.doe.gov/data-and-tools/bbtools/",
+  "KEYWORDS": "data-handling",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Bioinformatics",
+  "DATE_INSTALL": "18/07/2019",
+  "OWNER": "galaxy"
+}

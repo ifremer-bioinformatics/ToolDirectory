@@ -1,0 +1,13 @@
+{
+  "NAME": "tooldirectory",
+  "DESCRIPTION": "Dynamic visualization of softwares managed by a Bioinformatics Core Facility",
+  "VERSION": "v3.0.0",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/ifremer-bioinformatics/ToolDirectory",
+  "CMD_INSTALL": "conda",
+  "DATE_INSTALL": "05/05/2021",
+  "OWNER": "acormier",
+  "KEYWORDS": "visualisation",
+  "TOPIC": "Bioinformatics"
+}

@@ -1,0 +1,28 @@
+{
+  "name": "MMseqs2 (mpi)",
+  "bio.tools_id": "",
+  "description": "MMseqs2 (Many-against-Many sequence searching) is a software suite to search and cluster huge protein and nucleotide sequence sets. ",
+  "homepage": "https://mmseqs.com",
+  "operation": "taxonomic-classification,sequence-similarity-search,sequence-clustering",
+  "topic": "Gene and protein families",
+  "version": {
+    "11.e1a1c": {
+      "localInstallUser": "galaxy",
+      "environment": "shell",
+      "localInstallDate": "06/07/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "12-113e3": {
+      "localInstallUser": "galaxy",
+      "environment": "shell",
+      "localInstallDate": "07/09/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

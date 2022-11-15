@@ -1,0 +1,13 @@
+{
+  "NAME": "Trimgalore",
+  "DESCRIPTION": "A tool to automate quality and adapter trimming as well as quality control",
+  "VERSION": "0.6.3",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/FelixKrueger/TrimGalore",
+  "KEYWORDS": "quality-control,sequence-trimming",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Bioinformatics",
+  "DATE_INSTALL": "31/10/2019",
+  "OWNER": "galaxy"
+}

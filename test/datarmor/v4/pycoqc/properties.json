@@ -1,0 +1,28 @@
+{
+  "name": "pycoQC",
+  "bio.tools_id": "pycoQC",
+  "description": "PycoQC computes metrics and generates interactive QC plots for Oxford Nanopore technologies sequencing data.",
+  "homepage": "https://a-slide.github.io/pycoQC/",
+  "operation": "sequencing-quality-control",
+  "topic": "Data quality management,Sequencing,Sequence analysis",
+  "version": {
+    "2.5.0.19": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/01/2020",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "2.5.2": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "10/03/2021",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "SAMBA-ROME",
+  "bio.tools_id": "",
+  "description": "Workflow for the standardized and automated analyses of the metabarcoding data from the ROME project.",
+  "homepage": "https://github.com/ifremer-bioinformatics/samba-rome",
+  "operation": "community-profiling",
+  "topic": "Metagenomics,Workflows",
+  "version": {
+    "1.0.0": {
+      "localInstallUser": "cnoel",
+      "environment": "Nextflow",
+      "localInstallDate": "29/10/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

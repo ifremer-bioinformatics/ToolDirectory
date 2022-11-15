@@ -1,0 +1,46 @@
+{
+  "name": "GATK",
+  "bio.tools_id": "GATK",
+  "description": "The Genome Analysis Toolkit (GATK) is a set of bioinformatic tools for analyzing high-throughput sequencing (HTS) and variant call format (VCF) data. The toolkit is well established for germline short variant discovery from whole genome and exome sequencing data. GATK4 expands functionality into copy number and somatic analyses and offers pipeline scripts for workflows.  ",
+  "homepage": "https://software.broadinstitute.org/gatk/",
+  "operation": "polymorphism-detection",
+  "topic": "Genetic variation,Sequencing,Workflows,Sequence analysis",
+  "version": {
+    "3.7": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "06/11/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "4.0.2.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "16/04/2018",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "4.1.3.0": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "06/11/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "4.2.0.0": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "15/04/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

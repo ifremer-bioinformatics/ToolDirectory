@@ -1,0 +1,13 @@
+{
+  "NAME": "bowtie2",
+  "DESCRIPTION": "Aligning sequencing reads to long reference sequences",
+  "VERSION": "2.3.5",
+  "CMDLINE": "true",
+  "GALAXY": "true",
+  "URLDOC": "http://bowtie-bio.sourceforge.net/bowtie2/index.shtml",
+  "KEYWORDS": "read-mapping",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Mapping",
+  "DATE_INSTALL": "07/02/2020",
+  "OWNER": "galaxy"
+}

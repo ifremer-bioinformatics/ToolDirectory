@@ -1,0 +1,28 @@
+{
+  "name": "WhatsHap",
+  "bio.tools_id": "WhatsHap",
+  "description": "Software for phasing genomic variants using DNA sequencing reads, also called haplotype assembly. It is especially suitable for long reads, but works also well with short reads.",
+  "homepage": "http://whatshap.readthedocs.io",
+  "operation": "genotyping",
+  "topic": "Sequence assembly,DNA polymorphism",
+  "version": {
+    "0.18": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "21/01/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "1.0": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "10/03/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

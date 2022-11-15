@@ -1,0 +1,19 @@
+{
+  "name": "wtdbg2/Readbean",
+  "bio.tools_id": "",
+  "description": "A fuzzy Bruijn graph approach to long noisy reads assembly",
+  "homepage": "https://github.com/ruanjue/wtdbg2",
+  "operation": "genome-assembly",
+  "topic": "Sequence assembly",
+  "version": {
+    "2.5": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "16/01/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

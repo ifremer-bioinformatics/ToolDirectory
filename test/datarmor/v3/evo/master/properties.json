@@ -1,0 +1,13 @@
+{
+  "NAME": "evo",
+  "DESCRIPTION": "A loose set of tools for (mainly evolutionary) genomics",
+  "VERSION": "current",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/millanek/evo",
+  "KEYWORDS": "data-handling",
+  "CMD_INSTALL": "singularity",
+  "TOPIC": "Bioinformatics",
+  "DATE_INSTALL": "12/11/2020",
+  "OWNER": "galaxy"
+}

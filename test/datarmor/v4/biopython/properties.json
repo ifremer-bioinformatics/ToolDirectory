@@ -1,0 +1,37 @@
+{
+  "name": "Biopython",
+  "bio.tools_id": "Biopython",
+  "description": "Biopython is a set of freely available tools for biological computation written in Python by an international team of developers.",
+  "homepage": "http://biopython.org/",
+  "operation": "deposition",
+  "topic": "Bioinformatics,Software engineering,Computational biology,Data management",
+  "version": {
+    "1.70": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "10/01/2018",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "latest": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "16/04/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "1.78": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "29/04/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

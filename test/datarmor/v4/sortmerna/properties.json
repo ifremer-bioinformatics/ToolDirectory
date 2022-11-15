@@ -1,0 +1,28 @@
+{
+  "name": "SortMeRNA",
+  "bio.tools_id": "SortMeRNA",
+  "description": "Sequence analysis tool for filtering, mapping and OTU-picking NGS reads.",
+  "homepage": "http://bioinfo.lifl.fr/RNA/sortmerna/",
+  "operation": "sequence-similarity-search",
+  "topic": "Transcriptomics",
+  "version": {
+    "2.1b": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "04/07/2018",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "4.2.0": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "05/12/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

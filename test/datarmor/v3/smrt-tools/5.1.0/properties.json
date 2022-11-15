@@ -1,0 +1,13 @@
+{
+  "NAME": "SMRT Tools",
+  "DESCRIPTION": "Suite available for analysis of DNA sequencing data from Pacific Biosciences\u2019 SMRT technology",
+  "VERSION": "5.1.0",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "http://programs.pacificbiosciences.com/l/1652/2018-03-20/3wrpm7/1652/190674/SMRT_Tools_Reference_Guide__v5.1.0_.pdf",
+  "KEYWORDS": "workflows",
+  "CMD_INSTALL": "shell",
+  "TOPIC": "Bioinformatics",
+  "DATE_INSTALL": "23/02/2018",
+  "OWNER": "galaxy"
+}

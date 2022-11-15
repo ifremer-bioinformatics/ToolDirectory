@@ -1,0 +1,13 @@
+{
+  "NAME": "DeepMP",
+  "DESCRIPTION": "Convolutional neural network (CNN)-based model that takes information from Nanopore signals and basecalling errors to detect whether a read is methylated or not.",
+  "VERSION": "master",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/pepebonet/DeepMP#Installation",
+  "KEYWORDS": "methylation-analysis",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Epigenetics",
+  "DATE_INSTALL": "16/07/2021",
+  "OWNER": "cnoel"
+}

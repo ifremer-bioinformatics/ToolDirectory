@@ -1,0 +1,19 @@
+{
+  "name": "vadr",
+  "bio.tools_id": "vadr",
+  "description": "Classification and annotation of viral sequences based on RefSeq annotation.",
+  "homepage": "https://github.com/nawrockie/vadr",
+  "operation": "deposition",
+  "topic": "Gene and protein families,Small molecules,Sequence sites, features and motifs,Genomics,Virology",
+  "version": {
+    "1.1": {
+      "localInstallUser": "galaxy",
+      "environment": "singularity",
+      "localInstallDate": "28/05/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

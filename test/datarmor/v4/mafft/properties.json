@@ -1,0 +1,37 @@
+{
+  "name": "MAFFT",
+  "bio.tools_id": "MAFFT",
+  "description": "MAFFT (Multiple Alignment using Fast Fourier Transform) is a high speed multiple sequence alignment program.",
+  "homepage": "http://mafft.cbrc.jp/alignment/server/index.html",
+  "operation": "multiple-sequence-alignment",
+  "topic": "Sequence analysis",
+  "version": {
+    "7.245": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "7.310": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "19/01/2018",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "7.490": {
+      "localInstallUser": "cnoel",
+      "environment": "conda",
+      "localInstallDate": "15/11/2021",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

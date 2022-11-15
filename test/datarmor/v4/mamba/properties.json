@@ -1,0 +1,28 @@
+{
+  "name": "mamba",
+  "bio.tools_id": "mamba",
+  "description": "Perception of Chemical Bonds via Machine Learning.",
+  "homepage": "https://github.com/CHLoschen/mamba",
+  "operation": "forcefield-parameterisation",
+  "topic": "Chemistry,Cheminformatics,Machine learning,Small molecules",
+  "version": {
+    "0.19.0": {
+      "localInstallUser": "acormier",
+      "environment": "conda",
+      "localInstallDate": "06/12/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "0.21.2": {
+      "localInstallUser": "acormier",
+      "environment": "conda",
+      "localInstallDate": "23/02/2022",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

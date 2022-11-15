@@ -1,0 +1,13 @@
+{
+  "NAME": "mlst",
+  "DESCRIPTION": "Multi Locus Sequence Typing from an assembled genome or from a set of reads.",
+  "VERSION": "2.19.0",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "http://cge.cbs.dtu.dk/services/MLST/",
+  "KEYWORDS": "taxonomic-classification",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Transcriptomics",
+  "DATE_INSTALL": "07/08/2020",
+  "OWNER": "galaxy"
+}

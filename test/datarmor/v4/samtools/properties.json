@@ -1,0 +1,73 @@
+{
+  "name": "SAMtools",
+  "bio.tools_id": "SAMtools",
+  "description": "SAMtools and BCFtools are widely used programs for processing and analysing high-throughput sequencing data. They include tools for file format conversion and manipulation, sorting, querying, statistics, variant calling, and effect analysis amongst other methods.",
+  "homepage": "http://www.htslib.org/",
+  "operation": "indexing",
+  "topic": "Mapping,Sequencing,Rare diseases,Sequence analysis",
+  "version": {
+    "1.10": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "25/03/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "1.11": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "24/02/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "1.13": {
+      "localInstallUser": "acormier",
+      "environment": "conda",
+      "localInstallDate": "09/09/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "1.14": {
+      "localInstallUser": "acormier",
+      "environment": "conda",
+      "localInstallDate": "09/12/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "1.4.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "1.6": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "30/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "1.9": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "12/03/2019",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

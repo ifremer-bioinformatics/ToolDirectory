@@ -1,0 +1,13 @@
+{
+  "NAME": "GetOrganelle",
+  "DESCRIPTION": "A fast and versatile toolkit for accurate de novo assembly of organelle genomes.",
+  "VERSION": "1.7.5.0",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/Kinggerm/GetOrganelle",
+  "KEYWORDS": "genome-assembly",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Sequence assembly",
+  "DATE_INSTALL": "17/01/2022",
+  "OWNER": "cnoel"
+}

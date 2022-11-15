@@ -1,0 +1,13 @@
+{
+  "NAME": "Spades",
+  "DESCRIPTION": "An assembly toolkit containing various assembly pipelines",
+  "VERSION": "3.10.1",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "http://cab.spbu.ru/software/spades/",
+  "KEYWORDS": "sequence-assembly",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Sequence assembly",
+  "DATE_INSTALL": "17/11/2017",
+  "OWNER": "galaxy"
+}

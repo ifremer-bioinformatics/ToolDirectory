@@ -1,90 +1,93 @@
 #!/usr/bin/env python3
 
-import argparse
-import sys
 import os
+import rich_click as click
 from lib import core as cl
+from lib import ifremer as ifr
 
 
-class ToolDir(object):
-
-    def __init__(self):
-        parser = argparse.ArgumentParser(
-            description='ToolDirectory: Dynamic visualization of software',
-            usage='''tooldir <command> [<args>]
-            The available commands are:
-            create   Create tool properties
-            status   Set installation status of tool/version
-            kcsv     Create csv for Keshif visualization
-            ''')
-        #  upgrade  Update tool properties (add new key(s), change values)
-        parser.add_argument('command', help='Subcommand to run')
-        # if there is no command specified, print the parser's help message
-        if len(sys.argv) == 1:
-            parser.print_help()
-            exit(1)
-        # parse_args defaults to [1:] for args, but you need to
-        # exclude the rest of the args too, or validation will fail
-        args = parser.parse_args(sys.argv[1:2])
-        # LBYL (Look Before You Leap)
-        # validate command using dispatch list, print error message if the command is unrecognized
-        dispatch = ['create', 'status', 'kcsv']
-        if args.command not in dispatch:  # if not hasattr(self, args.command):
-            print(f"tooldir: '{args.command}' is not a tooldir command. See 'tooldir --help'")
-            exit(1)
-        # if not hasattr(self, args.command):
-        #     print('Unrecognized command')
-        #     parser.print_help()
-        #     exit(1)
-        # use dispatch pattern to invoke method with same name
-        getattr(self, args.command)()
-
-    def create(self):
-        parser = argparse.ArgumentParser(description="Create tool properties JSON")
-        parser.add_argument('-n', dest="name", type=str, required=True, help='Tool Name. Ex: bowtie2')
-        parser.add_argument('-v', dest="version", type=str, required=True, help='Tool version. Ex: 2.3.5')
-        parser.add_argument('-o', dest="installer", type=str, required=True, help='Installer uid. Ex: acormier')
-        parser.add_argument('-c', dest="cmdline", type=str, default='true', choices=['true', 'false'],
-                            help='Available in cmdline [%(default)s]')
-        parser.add_argument('-g', dest="galaxy", type=str, default='false', choices=['true', 'false'],
-                            help='Available in Galaxy [%(default)s]')
-        parser.add_argument('-i', dest="environment", type=str, default='c', choices=['c', 'b', 'd', 's', 'o'],
-                            help='[c]onda/[b]ash/[d]ocker/[s]ingularity/[o]ther [%(default)s]')
-        parser.add_argument('-w', dest="workflow", type=str, default='false', choices=['false', 'true'],
-                            help='For workflow')
-        parser.add_argument('-p', dest="path", type=str, default='test/ifb/', help='Path to module files')
-        parser.add_argument('-d', dest="datetime", type=str, help='Installation date [Current date]')
-
-        args = parser.parse_args(sys.argv[2:])
-
-        cl.check_path(args)
-        properties = os.path.join(args.path, args.name, 'properties.json')
-        if os.path.isfile(properties):
-            cl.add_version(args, properties)
-        else:
-            cl.create_properties(args, properties)
-
-    def status(self):
-        parser = argparse.ArgumentParser(description="Set installation status of tool/version")
-        parser.add_argument('-p', dest="propertie", type=str, default="test/", help='Path to json')
-        parser.add_argument('-s', dest="status", type=str, default='inactive', choices=['active', 'inactive'], help='Tool/version installation status [%(default)s]')
-        parser.add_argument('-l', dest="versions", type=str, nargs='+', help='Version(s) to set status')
-
-        args = parser.parse_args(sys.argv[2:])
-
-        cl.set_status(args.propertie, args.versions, args.status)
-
-    def kcsv(self):
-        parser = argparse.ArgumentParser(description="Create csv for Keshif visualisation")
-        parser.add_argument('-p', dest="toolspath", type=str, default="test/", help='Tools main folder')
-        parser.add_argument('-o', dest="csvfile", type=str, default="test/Softwares.csv", help='Output csv name')
-
-        args = parser.parse_args(sys.argv[2:])
-
-        directories = cl.walk_level(args.toolspath)
-        prop_json = cl.get_json(directories)
-        cl.kcsv_writing(args.csvfile, prop_json)
+@click.version_option("4.1", prog_name="ToolDirectory")
+@click.group(context_settings=dict(help_option_names=["-h", "--help"]))
+def cli():
+    """
+    ToolDirectory: A dynamic visualization of pieces of software managed by a Bioinformatics Core Facility
+    """
 
 
-if __name__ == '__main__':
-    ToolDir()
+@cli.command()
+@click.option('--name', '-n', type=str, required=True, help='Tool name')
+@click.option('--bid', '-b', type=str, help='Bio.tools tool ID')
+@click.option('--version', '-v', type=str, required=True, help='Tool version')
+@click.option('--owner', '-o', type=str, required=True, help='Installer uid')
+@click.option('--cmd', '-c', type=click.Choice(['true', 'false']), default='true', help='Available in cmdline [True]')
+@click.option('--galaxy', '-g', type=click.Choice(['true', 'false']), default='false',
+              help='Available in Galaxy [False]')
+@click.option('--environment', '-e', type=click.Choice(['conda', 'bash', 'docker', 'singularity', 'other']), default='conda',
+              help='conda/bash/docker/singularity/other [conda]')
+@click.option('--workflow', '-w', type=click.Choice(['false', 'true']), default='false', help='Is a workflow')
+@click.option('--path', '-p', type=click.Path(exists=True), required=True, help='Path to modulefiles')
+@click.option('--date', '-d', type=str, help='Installation date [Current date]')
+def create(name, bid, version, owner, cmd, galaxy, environment, workflow, path, date):
+    """Create tool properties or add a new version"""
+    # IFREMER
+    params = {
+        "install_dir_path": "/appli/bioinfo/",
+        "conda_envs_path": "/appli/conda-env/bioinfo",
+        "anaconda_dir_path": "/appli/anaconda/versions/",
+        "anaconda_profile_d": "/appli/anaconda/latest/etc/profile.d/conda.sh"
+    }
+    if environment == 'conda':
+        ifr.make_tool_dir(params, name, version)
+        ifr.conda_tool(params, name, version)
+    #  ALL
+    cl.check_path(path, name, version)
+    properties = os.path.join(path, name, 'properties.json')
+    if os.path.isfile(properties):
+        cl.add_version(name, version, date, owner, environment, cmd, galaxy, workflow, properties)
+    else:
+        cl.create_properties(name, bid, version, owner, cmd, galaxy, environment, workflow, date, properties)
+
+
+@cli.command()
+@click.option('--json', '-j', type=str, required=True, help='Path to json')
+@click.option('--bid', '-b', type=str, help='Force update using Bio.tools ID')
+def update(json, bid):
+    """Update metadata of a tool"""
+    cl.update(json, bid)
+
+
+@cli.command()
+@click.option('--jp', '-j', type=str, required=True, help='Path to json')
+@click.option('--status', '-s', type=click.Choice(['active', 'inactive']), default='inactive',
+              help='Version status [active]')
+@click.option('--version', '-v', type=(str, int), required=True, multiple=True, help='Version(s) to set status')
+def status(json, status, version):
+    """Set installation status of a tool's version"""
+    cl.set_status(json, version, status)
+
+
+@cli.command()
+@click.option('--path', '-p', type=click.Path(exists=True), required=True, help='Tools main folder')
+@click.option('--csv', '-c', type=str, required=True, help='Output csv name')
+def kcsv(path, csv):
+    """Create csv for Keshif visualisation"""
+    directories = cl.walk_level(path)
+    prop_json = cl.get_json(directories)
+    cl.kcsv_writing(csv, prop_json)
+
+
+click.rich_click.COMMAND_GROUPS = {
+    "tooldir": [
+        {
+            "name": "Main usage",
+            "commands": ["create", "update", "status"],
+        },
+        {
+            "name": "Visualization",
+            "commands": ["kcsv"],
+        },
+    ]
+}
+
+if __name__ == "__main__":
+    cli()

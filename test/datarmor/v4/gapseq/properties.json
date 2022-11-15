@@ -1,0 +1,19 @@
+{
+  "name": "gapseq",
+  "bio.tools_id": "gapseq",
+  "description": "Informed prediction of bacterial metabolic pathways and reconstruction of accurate metabolic models.",
+  "homepage": "https://github.com/jotech/gapseq",
+  "operation": "metabolic-network-modelling",
+  "topic": "Molecular interactions, pathways and networks,Endocrinology and metabolism,Enzymes,Genotype and phenotype,Microbial ecology",
+  "version": {
+    "1.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "18/03/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

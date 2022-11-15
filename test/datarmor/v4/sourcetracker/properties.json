@@ -1,0 +1,28 @@
+{
+  "name": "SourceTracker",
+  "bio.tools_id": "",
+  "description": "Bayesian approach to estimating the proportion of a novel community that comes from a set of source environments",
+  "homepage": "https://github.com/danknights/sourcetracker/",
+  "operation": "community-profiling",
+  "topic": "Metagenomics",
+  "version": {
+    "1.0.1": {
+      "localInstallUser": "galaxy",
+      "environment": "shell",
+      "localInstallDate": "17/01/2018",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "2.0.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "05/09/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

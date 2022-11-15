@@ -1,0 +1,13 @@
+{
+  "NAME": "barrnap",
+  "DESCRIPTION": "Predict the location of ribosomal RNA genes in genomes. It supports bacteria (5S,23S,16S), archaea (5S,5.8S,23S,16S), mitochondria (12S,16S) and eukaryotes (5S,5.8S,28S,18S).",
+  "VERSION": "0.9",
+  "CMDLINE": "true",
+  "GALAXY": "true",
+  "URLDOC": "https://github.com/tseemann/barrnap",
+  "KEYWORDS": "gene-prediction",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Sequence analysis",
+  "DATE_INSTALL": "25/11/2020",
+  "OWNER": "galaxy"
+}

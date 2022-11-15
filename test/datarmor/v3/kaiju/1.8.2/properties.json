@@ -1,0 +1,13 @@
+{
+  "NAME": "kaiju",
+  "DESCRIPTION": "Program for the taxonomic assignment of high-throughput sequencing reads, e.g., Illumina or Roche/454, from whole-genome sequencing of metagenomic DNA.",
+  "VERSION": "1.8.2",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "http://kaiju.binf.ku.dk",
+  "CMD_INSTALL": "conda",
+  "DATE_INSTALL": "18/01/2022",
+  "OWNER": "acormier",
+  "KEYWORDS": "taxonomic-classification",
+  "TOPIC": "Metagenomics"
+}

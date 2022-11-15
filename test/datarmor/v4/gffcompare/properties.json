@@ -1,0 +1,19 @@
+{
+  "name": "gffcompare",
+  "bio.tools_id": "gffcompare",
+  "description": "Program for comparing, annotating, merging and tracking transcripts in GFF files.",
+  "homepage": "https://ccb.jhu.edu/software/stringtie/gff.shtml",
+  "operation": "sequence-annotation",
+  "topic": "Nucleic acids,Sequence analysis",
+  "version": {
+    "0.11.2": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "06/12/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

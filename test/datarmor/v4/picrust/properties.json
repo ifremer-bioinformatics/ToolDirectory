@@ -1,0 +1,19 @@
+{
+  "name": "PICRUSt",
+  "bio.tools_id": "PICRUSt",
+  "description": "PICRUSt (Phylogenetic Investigation of Communities by Reconstruction of Unobserved States) is a bioinformatics software package designed to predict metagenome functional content from marker gene (e.g., 16S rRNA) surveys and full genomes.",
+  "homepage": "http://picrust.github.io/picrust/",
+  "operation": "phylogenetic-reconstruction",
+  "topic": "Microbial ecology,Functional, regulatory and non-coding RNA,Metagenomics,Metagenomic sequencing",
+  "version": {
+    "1.1.0": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

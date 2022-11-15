@@ -1,0 +1,19 @@
+{
+  "name": "gfa1",
+  "bio.tools_id": "",
+  "description": "A command-line tool as well as a library in C that parses, validates and transforms assembly graphs in a dialect of the GFA1 format",
+  "homepage": "https://github.com/lh3/gfa1",
+  "operation": "data-handling",
+  "topic": "Bioinformatics",
+  "version": {
+    "2faeed2": {
+      "localInstallUser": "galaxy",
+      "environment": "shell",
+      "localInstallDate": "23/10/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

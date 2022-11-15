@@ -1,0 +1,19 @@
+{
+  "name": "Oligotyping",
+  "bio.tools_id": "",
+  "description": "Investigate diversity within their OTUs at a precise level by utilizing subtle variations among 16S Ribosomal RNA gene sequences",
+  "homepage": "http://merenlab.org/software/oligotyping/",
+  "operation": "community-profiling",
+  "topic": "Metagenomics",
+  "version": {
+    "2.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "20/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

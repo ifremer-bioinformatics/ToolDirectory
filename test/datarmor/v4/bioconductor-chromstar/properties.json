@@ -1,0 +1,19 @@
+{
+  "name": "bioconductor-chromstaR",
+  "bio.tools_id": "",
+  "description": "Combinatorial and Differential Chromatin State Analysis for ChIP-Seq Data",
+  "homepage": "https://bioconductor.org/packages/3.8/bioc/html/chromstaR.html",
+  "operation": "chip-seq",
+  "topic": "Epigenetics",
+  "version": {
+    "1.8.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "Picard",
+  "bio.tools_id": "",
+  "description": "A set of Java command line tools for manipulating high-throughput sequencing (HTS) data and formats",
+  "homepage": "https://github.com/broadinstitute/picard",
+  "operation": "data-handling",
+  "topic": "Bioinformatics",
+  "version": {
+    "2.21.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "14/10/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

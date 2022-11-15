@@ -1,0 +1,13 @@
+{
+  "NAME": "ElConcatenero",
+  "DESCRIPTION": "ElConcatenero3 is a python program that converts and concatenates common population genetics and phylogenetics data file types (such as Fasta, Phylip and Nexus)",
+  "VERSION": "current",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/ODiogoSilva/ElConcatenero",
+  "KEYWORDS": "data-handling",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Phylogeny",
+  "DATE_INSTALL": "17/06/2020",
+  "OWNER": "galaxy"
+}

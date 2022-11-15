@@ -1,0 +1,19 @@
+{
+  "name": "hap.py",
+  "bio.tools_id": "hap.py",
+  "description": "This is a set of programs based on htslib to benchmark variant calls against gold standard truth datasets.",
+  "homepage": "https://github.com/Illumina/hap.py",
+  "operation": "",
+  "topic": "",
+  "version": {
+    "v0.3.12": {
+      "localInstallUser": "galaxy",
+      "environment": "singularity",
+      "localInstallDate": "17/03/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

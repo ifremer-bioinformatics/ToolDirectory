@@ -1,0 +1,19 @@
+{
+  "name": "PointFinder",
+  "bio.tools_id": "PointFinder",
+  "description": "PointFinder is an Improved Resistance Prediction in Mycobacterium tuberculosis by Better Handling of Insertions and Deletions, Premature Stop Codons, and Filtering of Non-informative Sites.",
+  "homepage": "http://bitbucket.org/genomicepidemiology/pointfinder_db",
+  "operation": "polymorphism-detection",
+  "topic": "DNA,Bioinformatics,Whole genome sequencing,Genetic variation,GWAS study",
+  "version": {
+    "2018-05-23": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "06/09/2018",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

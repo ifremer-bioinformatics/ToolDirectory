@@ -1,0 +1,19 @@
+{
+  "name": "mosdepth",
+  "bio.tools_id": "mosdepth",
+  "description": "Fast BAM/CRAM depth calculation for WGS, exome, or targeted sequencing.",
+  "homepage": "https://github.com/brentp/mosdepth",
+  "operation": "nucleic-acid-sequence-analysis",
+  "topic": "Data quality management,Statistics and probability",
+  "version": {
+    "0.2.7": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "16/01/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

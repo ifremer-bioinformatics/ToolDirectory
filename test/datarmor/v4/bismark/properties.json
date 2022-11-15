@@ -1,0 +1,37 @@
+{
+  "name": "Bismark",
+  "bio.tools_id": "Bismark",
+  "description": "Bismark is a tool to map bisulfite treated sequencing reads and perform methylation calling in a quick and easy-to-use fashion.",
+  "homepage": "https://github.com/FelixKrueger/Bismark",
+  "operation": "methylation-analysis",
+  "topic": "Epigenetics,Epigenomics,Genomics",
+  "version": {
+    "0.17": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "0.19": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "0.20.0": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "28/03/2019",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

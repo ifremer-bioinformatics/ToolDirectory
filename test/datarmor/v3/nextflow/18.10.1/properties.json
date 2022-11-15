@@ -1,0 +1,13 @@
+{
+  "NAME": "Nextflow",
+  "DESCRIPTION": "workflow framework",
+  "VERSION": "18.10.1",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://www.nextflow.io/docs/latest/basic.html",
+  "KEYWORDS": "workflows",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Bioinformatics",
+  "DATE_INSTALL": "22/01/2019",
+  "OWNER": "galaxy"
+}

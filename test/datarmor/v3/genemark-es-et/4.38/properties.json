@@ -1,0 +1,13 @@
+{
+  "NAME": "GeneMark",
+  "DESCRIPTION": "eukaryotic gene finder that can perform gene prediction without curated training sets",
+  "VERSION": "4.38",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "http://exon.gatech.edu/GeneMark/",
+  "KEYWORDS": "gene-prediction",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Functional genomics",
+  "DATE_INSTALL": "25/03/2019",
+  "OWNER": "galaxy"
+}

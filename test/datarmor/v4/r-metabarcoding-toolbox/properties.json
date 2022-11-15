@@ -1,0 +1,19 @@
+{
+  "name": "r-metabarcoding-toolbox",
+  "bio.tools_id": "",
+  "description": "Homemade toolbox with common tools used in R for metabacording analysis",
+  "homepage": "https://w3z.ifremer.fr/bioinfo/Cmdline-Datarmor/Ressources-disponibles/Les-toolboxes-creees-a-facon/R-Metabarcoding-toolbox",
+  "operation": "community-profiling",
+  "topic": "Metagenomics",
+  "version": {
+    "1.0": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "05/06/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

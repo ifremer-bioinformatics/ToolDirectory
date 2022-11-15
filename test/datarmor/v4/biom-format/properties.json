@@ -1,0 +1,19 @@
+{
+  "name": "biom-format",
+  "bio.tools_id": "",
+  "description": "Converting between file formats",
+  "homepage": "http://biom-format.org/documentation/biom_conversion.html",
+  "operation": "conversion",
+  "topic": "Bioinformatics",
+  "version": {
+    "2.1.6": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

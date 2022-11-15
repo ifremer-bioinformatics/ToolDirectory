@@ -1,0 +1,13 @@
+{
+  "NAME": "Platanus",
+  "DESCRIPTION": "Platanus-allee is a de novo haplotype assembler",
+  "VERSION": "2.0.2",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "http://platanus.bio.titech.ac.jp/platanus2",
+  "KEYWORDS": "genome-assembly",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Sequence assembly",
+  "DATE_INSTALL": "22/01/2019",
+  "OWNER": "galaxy"
+}

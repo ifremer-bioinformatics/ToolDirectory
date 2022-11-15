@@ -1,0 +1,64 @@
+{
+  "name": "star",
+  "bio.tools_id": "star",
+  "description": "Ultrafast universal RNA-seq data aligner",
+  "homepage": "http://code.google.com/p/rna-star/",
+  "operation": "sequence-alignment",
+  "topic": "Transcriptomics,RNA-Seq",
+  "version": {
+    "2.5.3a": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "2.7.0d": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "11/03/2019",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "2.7.10a": {
+      "localInstallUser": "cnoel",
+      "environment": "conda",
+      "localInstallDate": "25/01/2022",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "2.7.2c": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "06/07/2020",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "2.7.8a": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "02/04/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "2.7.9a": {
+      "localInstallUser": "cnoel",
+      "environment": "conda",
+      "localInstallDate": "14/06/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "GATB Minia assembly pipeline",
+  "bio.tools_id": "",
+  "description": "de novo assembly pipeline for Illumina data",
+  "homepage": "https://github.com/GATB/gatb-minia-pipeline",
+  "operation": "sequence-assembly",
+  "topic": "Sequence assembly",
+  "version": {
+    "1.4.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "07/02/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

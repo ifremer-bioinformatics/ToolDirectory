@@ -1,0 +1,13 @@
+{
+  "NAME": "BRAKER2",
+  "DESCRIPTION": "BRAKER is a pipeline for fully automated prediction of protein coding gene structures with GeneMark-ES/ET and AUGUSTUS in novel eukaryotic genomes ",
+  "VERSION": "2.1.5",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/Gaius-Augustus/BRAKER",
+  "KEYWORDS": "gene-prediction",
+  "CMD_INSTALL": "singularity",
+  "TOPIC": "Functional genomics",
+  "DATE_INSTALL": "30/09/2020",
+  "OWNER": "acormier"
+}

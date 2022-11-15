@@ -1,0 +1,19 @@
+{
+  "name": "RGI",
+  "bio.tools_id": "",
+  "description": "Resistance Gene Identifier (RGI) predicts resistome(s) from protein or nucleotide data based on homology and SNP models",
+  "homepage": "https://github.com/arpcard/rgi",
+  "operation": "gene-prediction",
+  "topic": "Functional genomics",
+  "version": {
+    "5.1.1": {
+      "localInstallUser": "lleroi",
+      "environment": "conda",
+      "localInstallDate": "14/12/2021",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

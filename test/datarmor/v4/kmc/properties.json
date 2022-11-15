@@ -1,0 +1,19 @@
+{
+  "name": "KMC",
+  "bio.tools_id": "KMC",
+  "description": "KMC is a utility designed for counting k-mers (sequences of consecutive k symbols) in a set of reads from genome sequencing projects.",
+  "homepage": "http://sun.aei.polsl.pl/REFRESH/index.php?page=projects&project=kmc&subpage=about",
+  "operation": "k-mer-counting",
+  "topic": "Sequence assembly,Whole genome sequencing,Genomics",
+  "version": {
+    "3.1.2rc1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "02/04/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

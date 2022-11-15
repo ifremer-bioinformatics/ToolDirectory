@@ -1,0 +1,19 @@
+{
+  "name": "dRep",
+  "bio.tools_id": "dRep",
+  "description": "Fast and accurate genomic comparisons that enables improved genome recovery from metagenomes through de-replication.",
+  "homepage": "https://github.com/MrOlm/drep",
+  "operation": "genome-comparison",
+  "topic": "Sequence analysis,Metagenomics,Genomics",
+  "version": {
+    "2.2.3": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "07/03/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

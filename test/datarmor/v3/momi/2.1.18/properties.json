@@ -1,0 +1,13 @@
+{
+  "NAME": "momi",
+  "DESCRIPTION": "Python package that computes the expected sample frequency spectrum (SFS), a statistic commonly used in population genetics, and uses it to fit demographic history.",
+  "VERSION": "2.1.18",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://momi2.readthedocs.io/en/latest/index.html",
+  "KEYWORDS": "population-structure",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Population genetics",
+  "DATE_INSTALL": "02/06/2021",
+  "OWNER": "pgdurand"
+}

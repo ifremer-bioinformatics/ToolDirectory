@@ -1,0 +1,19 @@
+{
+  "name": "WHdenovo",
+  "bio.tools_id": "WHdenovo",
+  "description": "A haplotype-aware de novo assembly of related individuals using pedigree sequence graph.",
+  "homepage": "https://github.com/shilpagarg/WHdenovo",
+  "operation": "phasing",
+  "topic": "Sequence assembly,Sequencing,Model organisms",
+  "version": {
+    "14012020": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "20/01/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "NAME": "antiSMASH",
+  "DESCRIPTION": "Rapid genome-wide identification, annotation and analysis of secondary metabolite biosynthesis gene clusters in bacterial and fungal genomes",
+  "VERSION": "6.0.1",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://docs.antismash.secondarymetabolites.org/",
+  "KEYWORDS": "sequence-clustering,gene-prediction",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Gene and protein families",
+  "DATE_INSTALL": "03/03/2022",
+  "OWNER": "cnoel"
+}

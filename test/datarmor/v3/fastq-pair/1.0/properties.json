@@ -1,0 +1,13 @@
+{
+  "NAME": "fastq-pair",
+  "DESCRIPTION": "Match up paired end fastq files quickly and efficiently",
+  "VERSION": "1.0",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/linsalrob/fastq-pair",
+  "KEYWORDS": "quality-control",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Bioinformatics",
+  "DATE_INSTALL": "10/06/2020",
+  "OWNER": "galaxy"
+}

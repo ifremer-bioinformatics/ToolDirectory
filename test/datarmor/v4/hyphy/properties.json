@@ -1,0 +1,19 @@
+{
+  "name": "HyPhy",
+  "bio.tools_id": "HyPhy",
+  "description": "Software package for the analysis of genetic sequences using techniques in phylogenetics, molecular evolution, and machine learning.",
+  "homepage": "http://hyphy.org",
+  "operation": "statistical-calculation",
+  "topic": "Small molecules,Molecular interactions, pathways and networks,Phylogeny",
+  "version": {
+    "2.3.14": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "15/11/2018",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "NAME": "igv",
+  "DESCRIPTION": "High-performance visualization tool for interactive exploration of large, integrated datasets. It supports a wide variety of data types and format, including short-read alignments in the SAM/BAM format.",
+  "VERSION": "2.8.10",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "http://www.broadinstitute.org/igv/",
+  "KEYWORDS": "visualisation,sequence-assembly-visualisation",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Data visualisation",
+  "DATE_INSTALL": "03/10/2020",
+  "OWNER": "galaxy"
+}

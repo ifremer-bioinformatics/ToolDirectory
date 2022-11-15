@@ -1,0 +1,13 @@
+{
+  "NAME": "salmon",
+  "DESCRIPTION": "A tool for transcript expression quantification from RNA-seq data",
+  "VERSION": "1.6",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://combine-lab.github.io/salmon",
+  "CMD_INSTALL": "conda",
+  "DATE_INSTALL": "25/01/2022",
+  "OWNER": "cnoel",
+  "KEYWORDS": "sequence-composition-calculation",
+  "TOPIC": "Transcriptomics"
+}

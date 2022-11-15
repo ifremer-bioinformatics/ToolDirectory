@@ -1,0 +1,19 @@
+{
+  "name": "ra",
+  "bio.tools_id": "ra",
+  "description": "Assembler for raw de novo genome assembly of long uncorrected reads.",
+  "homepage": "https://github.com/lbcb-sci/ra",
+  "operation": "genome-assembly",
+  "topic": "Sequence assembly,Genomics",
+  "version": {
+    "0.2.1": {
+      "localInstallUser": "cnoel",
+      "environment": "shell",
+      "localInstallDate": "07/07/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

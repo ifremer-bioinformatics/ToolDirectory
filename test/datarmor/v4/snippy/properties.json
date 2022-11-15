@@ -1,0 +1,28 @@
+{
+  "name": "Snippy",
+  "bio.tools_id": "Snippy",
+  "description": "Rapid haploid variant calling and core SNP phylogeny generation.",
+  "homepage": "https://github.com/tseemann/snippy",
+  "operation": "phylogenetic-tree-visualisation",
+  "topic": "Phylogenetics,Model organisms,Genomics,DNA polymorphism",
+  "version": {
+    "4.1.0": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "18/09/2018",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "4.4.0": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "26/06/2019",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

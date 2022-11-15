@@ -1,0 +1,13 @@
+{
+  "NAME": "PSASS",
+  "DESCRIPTION": "Software to compare pooled sequencing datasets from two groups (usually two sexes).",
+  "VERSION": "3.1.0",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/SexGenomicsToolkit/PSASS",
+  "KEYWORDS": "sequence-assembly-validation",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Sequence assembly",
+  "DATE_INSTALL": "09/06/2021",
+  "OWNER": "cnoel"
+}

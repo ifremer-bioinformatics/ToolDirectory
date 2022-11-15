@@ -1,0 +1,19 @@
+{
+  "name": "DRAP",
+  "bio.tools_id": "DRAP",
+  "description": "De novo RNA-Seq Assembly Pipeline.",
+  "homepage": "http://www.sigenae.org/drap/",
+  "operation": "sequence-assembly-validation",
+  "topic": "Sequence assembly,RNA-seq,Sequence analysis",
+  "version": {
+    "1.91": {
+      "localInstallUser": "galaxy",
+      "environment": "docker",
+      "localInstallDate": "13/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

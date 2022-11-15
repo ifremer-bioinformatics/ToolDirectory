@@ -1,0 +1,13 @@
+{
+  "NAME": "sourmash",
+  "DESCRIPTION": "Compute MinHash signatures for nucleotide (DNA/RNA) and protein sequences",
+  "VERSION": "2.0.0",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/dib-lab/sourmash",
+  "KEYWORDS": "sequence-similarity",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Bioinformatics",
+  "DATE_INSTALL": "27/11/2018",
+  "OWNER": "galaxy"
+}

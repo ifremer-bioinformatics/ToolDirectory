@@ -1,0 +1,19 @@
+{
+  "name": "MEGAHIT",
+  "bio.tools_id": "MEGAHIT",
+  "description": "Single node assembler for large and complex metagenomics NGS reads, such as soil. It makes use of succinct de Bruijn graph to achieve low memory usage, whereas its goal is not to make memory usage as low as possible.",
+  "homepage": "https://github.com/voutcn/megahit",
+  "operation": "genome-assembly",
+  "topic": "Sequence assembly,Sequencing,Metagenomics,Ecology",
+  "version": {
+    "1.1.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "01/04/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

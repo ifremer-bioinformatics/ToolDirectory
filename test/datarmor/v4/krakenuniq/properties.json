@@ -1,0 +1,19 @@
+{
+  "name": "KrakenUniq",
+  "bio.tools_id": "KrakenUniq",
+  "description": "Identification and quantitation of clinically relevant microbes in patient samples.",
+  "homepage": "https://github.com/hurwitzlab/krakenuniq",
+  "operation": "quantification",
+  "topic": "Metagenomics,Taxonomy,Metagenomic sequencing,Whole genome sequencing,Infectious disease",
+  "version": {
+    "0.5.8": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "02/12/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "DESeq2",
+  "bio.tools_id": "DESeq2",
+  "description": "R/Bioconductor package for differential gene expression analysis based on the negative binomial distribution. Estimate variance-mean dependence in count data from high-throughput sequencing assays and test for differential expression based on a model using the negative binomial distribution.",
+  "homepage": "http://bioconductor.org/packages/DESeq2/",
+  "operation": "differential-gene-expression-analysis",
+  "topic": "Transcriptomics",
+  "version": {
+    "1.14.1": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "01/12/2017",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "1.20.0": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "18/06/2019",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

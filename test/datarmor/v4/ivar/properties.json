@@ -1,0 +1,19 @@
+{
+  "name": "ivar",
+  "bio.tools_id": "ivar",
+  "description": "Interpretation-oriented tool to manage the update and revision of variant annotation and classification.",
+  "homepage": "https://github.com/CGR-UNIMORE/iVar",
+  "operation": "variant-classification",
+  "topic": "Evolutionary biology,Sequencing,Biological databases",
+  "version": {
+    "1.2.2": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "16/02/2021",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

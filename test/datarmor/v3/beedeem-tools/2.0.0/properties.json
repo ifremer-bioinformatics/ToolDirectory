@@ -1,0 +1,13 @@
+{
+  "NAME": "BeeDeeM-Tools",
+  "DESCRIPTION": "sequence-based data analysis pipeline tools",
+  "VERSION": "2.0.0",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://gitlab.ifremer.fr/bioinfo/BeeDeeM-Tools/blob/master/documentation/tutorial.md",
+  "KEYWORDS": "data-handling",
+  "CMD_INSTALL": "shell",
+  "TOPIC": "Biological databases",
+  "DATE_INSTALL": "31/08/2018",
+  "OWNER": "galaxy"
+}

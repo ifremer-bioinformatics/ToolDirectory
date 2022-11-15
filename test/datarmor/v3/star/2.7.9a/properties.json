@@ -1,0 +1,13 @@
+{
+  "NAME": "star",
+  "DESCRIPTION": "Ultrafast universal RNA-seq aligner",
+  "VERSION": "2.7.9a",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/alexdobin/STAR",
+  "KEYWORDS": "sequence-alignment",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Transcriptomics",
+  "DATE_INSTALL": "14/06/2021",
+  "OWNER": "cnoel"
+}

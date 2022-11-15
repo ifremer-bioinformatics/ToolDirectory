@@ -1,0 +1,13 @@
+{
+  "NAME": "FlowCraft",
+  "DESCRIPTION": "FlowCraft: a component-based pipeline composer for omics analysis using Nextflow",
+  "VERSION": "1.4.1",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/assemblerflow/flowcraft",
+  "KEYWORDS": "workflows",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Bioinformatics",
+  "DATE_INSTALL": "10/02/2020",
+  "OWNER": "galaxy"
+}

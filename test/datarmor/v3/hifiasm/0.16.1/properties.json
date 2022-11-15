@@ -1,0 +1,13 @@
+{
+  "NAME": "hifiasm",
+  "DESCRIPTION": "Hifiasm is a fast haplotype-resolved de novo assembler for PacBio Hifi reads",
+  "VERSION": "0.16.1",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/chhylp123/hifiasm",
+  "KEYWORDS": "de-novo-assembly",
+  "CMD_INSTALL": "shell",
+  "TOPIC": "Sequence assembly",
+  "DATE_INSTALL": "11/10/2021",
+  "OWNER": "acormier"
+}

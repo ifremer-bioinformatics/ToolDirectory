@@ -1,0 +1,13 @@
+{
+  "NAME": "anvi'o",
+  "DESCRIPTION": "advanced analysis and visualization platform for omics data",
+  "VERSION": "6.2",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "http://merenlab.org/software/anvio/",
+  "KEYWORDS": "visualisation,workflows",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Metagenomics",
+  "DATE_INSTALL": "24/10/2020",
+  "OWNER": "galaxy"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "BaseSpace CLI",
+  "bio.tools_id": "",
+  "description": "scripting and programmatic access to Illumina BaseSpace Sequence Hub",
+  "homepage": "https://developer.basespace.illumina.com/docs/content/documentation/cli/cli-overview",
+  "operation": "data-handling",
+  "topic": "Bioinformatics",
+  "version": {
+    "1.0.0": {
+      "localInstallUser": "galaxy",
+      "environment": "shell",
+      "localInstallDate": "09/01/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

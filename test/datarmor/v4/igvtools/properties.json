@@ -1,0 +1,19 @@
+{
+  "name": "igvtools",
+  "bio.tools_id": "igvtools",
+  "description": "The igvtools utility provides a set of tools for pre-processing data files.",
+  "homepage": "https://software.broadinstitute.org/software/igv/igvtools",
+  "operation": "formatting",
+  "topic": "Sequence analysis",
+  "version": {
+    "2.5.3": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "15/02/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

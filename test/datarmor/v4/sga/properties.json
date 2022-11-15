@@ -1,0 +1,19 @@
+{
+  "name": "SGA",
+  "bio.tools_id": "SGA",
+  "description": "SGA is a de novo assembler designed to assemble large genomes from high coverage short read data.",
+  "homepage": "https://github.com/jts/sga",
+  "operation": "sequence-assembly",
+  "topic": "Sequence assembly,Whole genome sequencing,Genomics",
+  "version": {
+    "0.10.15": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "13/02/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

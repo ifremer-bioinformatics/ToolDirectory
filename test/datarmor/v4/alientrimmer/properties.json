@@ -1,0 +1,19 @@
+{
+  "name": "AlienTrimmer",
+  "bio.tools_id": "AlienTrimmer",
+  "description": "Trimming and clipping FASTQ-formatted read files.",
+  "homepage": "https://research.pasteur.fr/en/software/alientrimmer/",
+  "operation": "nucleic-acid-sequence-analysis",
+  "topic": "Sequence analysis",
+  "version": {
+    "0.4.2": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "20/04/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

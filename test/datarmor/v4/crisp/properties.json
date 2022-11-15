@@ -1,0 +1,19 @@
+{
+  "name": "CRISP",
+  "bio.tools_id": "CRISP",
+  "description": "Identifies rare and common variants in pooled sequencing data",
+  "homepage": "https://bansal-lab.github.io/software/crisp.html",
+  "operation": "genetic-variation-analysis",
+  "topic": "Genetics,Genetic variation,Sequencing",
+  "version": {
+    "0.7": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

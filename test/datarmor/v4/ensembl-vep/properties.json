@@ -1,0 +1,19 @@
+{
+  "name": "ensembl-vep",
+  "bio.tools_id": "",
+  "description": "VEP (Variant Effect Predictor) predicts the functional effects of genomic variants",
+  "homepage": "https://github.com/Ensembl/ensembl-vep",
+  "operation": "genetic-variation-analysis",
+  "topic": "Genetic variation",
+  "version": {
+    "105.0": {
+      "localInstallUser": "cnoel",
+      "environment": "conda",
+      "localInstallDate": "07/02/2022",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

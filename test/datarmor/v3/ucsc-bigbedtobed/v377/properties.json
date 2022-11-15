@@ -1,0 +1,13 @@
+{
+  "NAME": "ucsc-bigbedtobed",
+  "DESCRIPTION": "Convert from bigBed to ascii bed format.",
+  "VERSION": "v377",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "http://hgdownload.cse.ucsc.edu/admin/exe/",
+  "KEYWORDS": "data-handling",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Bioinformatics",
+  "DATE_INSTALL": "08/02/2022",
+  "OWNER": "cnoel"
+}

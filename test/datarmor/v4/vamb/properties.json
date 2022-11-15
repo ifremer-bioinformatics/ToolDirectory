@@ -1,0 +1,28 @@
+{
+  "name": "vamb",
+  "bio.tools_id": "vamb",
+  "description": "Improved metagenome binning and assembly using deep variational autoencoders.",
+  "homepage": "https://github.com/RasmussenLab/vamb",
+  "operation": "scaffolding",
+  "topic": "Sequence assembly,Machine learning,Metagenomics,Informatics,Microbial ecology",
+  "version": {
+    "3.0.3-gpu": {
+      "localInstallUser": "acormier",
+      "environment": "conda",
+      "localInstallDate": "15/03/2022",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "3.0.3": {
+      "localInstallUser": "acormier",
+      "environment": "conda",
+      "localInstallDate": "15/12/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

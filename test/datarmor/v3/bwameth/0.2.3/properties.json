@@ -1,0 +1,13 @@
+{
+  "NAME": "bwa-meth",
+  "DESCRIPTION": "Fast and accurante alignment of BS-Seq reads.",
+  "VERSION": "0.2.3",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/brentp/bwa-meth",
+  "KEYWORDS": "bisulfite-mapping",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Epigenetics",
+  "DATE_INSTALL": "06/01/2022",
+  "OWNER": "cnoel"
+}

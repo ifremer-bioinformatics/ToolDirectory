@@ -1,0 +1,19 @@
+{
+  "name": "Clair",
+  "bio.tools_id": "Clair",
+  "description": "Exploring the limit of using a deep neural network on pileup data for germline variant calling.",
+  "homepage": "https://github.com/HKU-BAL/Clair",
+  "operation": "genome-assembly",
+  "topic": "Sequence assembly,Machine learning,Epigenetics,Molecular biology,Genetic variation",
+  "version": {
+    "2.1.1": {
+      "localInstallUser": "cnoel",
+      "environment": "conda",
+      "localInstallDate": "17/05/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

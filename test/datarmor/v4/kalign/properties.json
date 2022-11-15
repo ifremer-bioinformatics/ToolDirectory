@@ -1,0 +1,19 @@
+{
+  "name": "Kalign",
+  "bio.tools_id": "Kalign",
+  "description": "Fast and accurate multiple sequence alignment which handles large sequences.",
+  "homepage": "http://www.ebi.ac.uk/Tools/msa/kalign/",
+  "operation": "multiple-sequence-alignment",
+  "topic": "Sequence analysis",
+  "version": {
+    "2.04": {
+      "localInstallUser": "galaxy",
+      "environment": "shell",
+      "localInstallDate": "14/12/2017",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

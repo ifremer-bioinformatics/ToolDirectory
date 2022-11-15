@@ -1,0 +1,13 @@
+{
+  "NAME": "snpsift",
+  "DESCRIPTION": "Toolbox that allows you to filter and manipulate annotated vcf files.",
+  "VERSION": "4.3.1t",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "http://snpeff.sourceforge.net/SnpSift.html",
+  "KEYWORDS": "variant-filtering",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Comparative genomics",
+  "DATE_INSTALL": "08/04/2021",
+  "OWNER": "galaxy"
+}

@@ -1,0 +1,13 @@
+{
+  "NAME": "dada2",
+  "DESCRIPTION": "Fast and accurate sample inference from amplicon data with single-nucleotide resolution",
+  "VERSION": "1.10",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://benjjneb.github.io/dada2/index.html",
+  "KEYWORDS": "community-profiling",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Metagenomics",
+  "DATE_INSTALL": "04/03/2019",
+  "OWNER": "galaxy"
+}

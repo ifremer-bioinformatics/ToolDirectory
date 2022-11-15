@@ -1,0 +1,19 @@
+{
+  "name": "PHYLIP",
+  "bio.tools_id": "PHYLIP",
+  "description": "Comprehensive set of programs for phylogenetic analyses; available for PC and Mac; source code available for easy compiling in UNIX.",
+  "homepage": "http://evolution.genetics.washington.edu/phylip.html",
+  "operation": "phylogenetic-tree-bootstrapping",
+  "topic": "Gene and protein families,Phylogenetics,Model organisms,Phylogeny,Physiology",
+  "version": {
+    "3.696": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "17/11/2017",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

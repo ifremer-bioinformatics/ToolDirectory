@@ -1,0 +1,28 @@
+{
+  "name": "MMseqs2",
+  "bio.tools_id": "MMseqs2",
+  "description": "MMseqs2 (Many-against-Many sequence searching) is a software suite to search and cluster huge protein and nucleotide sequence sets. MMseqs2 is open source GPL-licensed software implemented in C++ for Linux, MacOS, and (as beta version, via cygwin) Windows. The software is designed to run on multiple cores and servers and exhibits very good scalability. MMseqs2 can run 10000 times faster than BLAST. At 100 times its speed it achieves almost the same sensitivity. It can perform profile searches with the same sensitivity as PSI-BLAST at over 400 times its speed.",
+  "homepage": "https://mmseqs.com",
+  "operation": "taxonomic-classification,sequence-similarity-search,sequence-clustering",
+  "topic": "Nucleic acids,Gene and protein families,Proteins,Metagenomics,Taxonomy,Sequence analysis",
+  "version": {
+    "11.e1a1c": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "06/07/2020",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "9-d36de": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "27/06/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

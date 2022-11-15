@@ -1,0 +1,13 @@
+{
+  "NAME": "yak",
+  "DESCRIPTION": "Yet another k-mer analyzer ",
+  "VERSION": "0.1",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://github.com/lh3/yak",
+  "KEYWORDS": "k-mer-counting",
+  "CMD_INSTALL": "shell",
+  "TOPIC": "Sequence assembly",
+  "DATE_INSTALL": "05/08/2020",
+  "OWNER": "galaxy"
+}

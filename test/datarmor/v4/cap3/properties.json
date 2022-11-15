@@ -1,0 +1,19 @@
+{
+  "name": "cap3",
+  "bio.tools_id": "cap3",
+  "description": "Web-based contig assembly.",
+  "homepage": "http://biosrv.cab.unina.it/webcap3/",
+  "operation": "genome-assembly",
+  "topic": "Sequence assembly,Genetic variation,Sequencing,Sequence analysis",
+  "version": {
+    "10.2011": {
+      "localInstallUser": "acormier",
+      "environment": "conda",
+      "localInstallDate": "15/02/2022",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

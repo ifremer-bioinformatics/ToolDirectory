@@ -1,0 +1,19 @@
+{
+  "name": "zzccmxtp",
+  "bio.tools_id": "",
+  "description": "",
+  "homepage": "",
+  "operation": "",
+  "topic": "",
+  "version": {
+    "0.4.1": {
+      "localInstallUser": "acormier",
+      "environment": "conda",
+      "localInstallDate": "05-11-2022",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

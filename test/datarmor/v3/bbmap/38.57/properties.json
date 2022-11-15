@@ -1,0 +1,13 @@
+{
+  "NAME": "bbmap",
+  "DESCRIPTION": "A splice-aware global aligner for DNA and RNA sequencing reads",
+  "VERSION": "38.57",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://jgi.doe.gov/data-and-tools/bbtools/bb-tools-user-guide/usage-guide/",
+  "KEYWORDS": "data-handling",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Bioinformatics",
+  "DATE_INSTALL": "15/07/2019",
+  "OWNER": "galaxy"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "circos",
+  "bio.tools_id": "circos",
+  "description": "Circos is tool for visualizing data in a circular format. It was developed for genomic data but can work for many other kinds of data as well.",
+  "homepage": "http://circos.ca/",
+  "operation": "visualisation",
+  "topic": "Comparative genomics,Data visualisation",
+  "version": {
+    "0.69.6": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "13/09/2018",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "name": "cd-hit",
+  "bio.tools_id": "cd-hit",
+  "description": "Cluster a nucleotide dataset into representative sequences.",
+  "homepage": "https://github.com/weizhongli/cdhit",
+  "operation": "sequence-clustering",
+  "topic": "Sequencing",
+  "version": {
+    "4.8.1": {
+      "localInstallUser": "galaxy",
+      "environment": "shell",
+      "localInstallDate": "12/03/2019",
+      "isCmdline": "true",
+      "isGalaxy": "true",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

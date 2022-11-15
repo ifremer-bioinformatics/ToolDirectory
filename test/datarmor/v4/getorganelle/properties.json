@@ -1,0 +1,19 @@
+{
+  "name": "GetOrganelle",
+  "bio.tools_id": "GetOrganelle",
+  "description": "A fast and versatile toolkit for accurate de novo assembly of organelle genomes.",
+  "homepage": "https://github.com/Kinggerm/GetOrganelle",
+  "operation": "de-novo-assembly",
+  "topic": "Sequence assembly,Cell biology,Model organisms,Whole genome sequencing,Plant biology",
+  "version": {
+    "1.7.5.0": {
+      "localInstallUser": "cnoel",
+      "environment": "conda",
+      "localInstallDate": "17/01/2022",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

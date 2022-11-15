@@ -1,0 +1,28 @@
+{
+  "name": "Sniffles",
+  "bio.tools_id": "Sniffles",
+  "description": "An algorithm for structural variation detection from third generation sequencing alignment.",
+  "homepage": "https://github.com/fritzsedlazeck/Sniffles",
+  "operation": "sequence-analysis",
+  "topic": "Sequencing,DNA structural variation",
+  "version": {
+    "1.0.12": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "07/04/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    },
+    "1.0.7": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "12/06/2018",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

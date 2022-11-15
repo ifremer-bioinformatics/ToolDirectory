@@ -1,0 +1,19 @@
+{
+  "name": "GeneMark",
+  "bio.tools_id": "GeneMark",
+  "description": "A family of gene prediction programs: Gene Prediction in Bacteria, Archaea, Metagenomes and Metatranscriptomes; Gene Prediction in Eukaryotes; Gene Prediction in Transcripts; Gene Prediction in Viruses, Phages and Plasmids.",
+  "homepage": "http://exon.gatech.edu/GeneMark/",
+  "operation": "gene-prediction",
+  "topic": "Gene structure",
+  "version": {
+    "4.38": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "25/03/2019",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

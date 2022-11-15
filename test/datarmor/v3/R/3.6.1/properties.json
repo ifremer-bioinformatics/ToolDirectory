@@ -1,0 +1,13 @@
+{
+  "NAME": "r",
+  "DESCRIPTION": "R base",
+  "VERSION": "3.6.1",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://www.r-project.org/",
+  "KEYWORDS": "statistics-and-probability,visualisation",
+  "CMD_INSTALL": "conda",
+  "TOPIC": "Statistics and probability",
+  "DATE_INSTALL": "08/05/2020",
+  "OWNER": "galaxy"
+}

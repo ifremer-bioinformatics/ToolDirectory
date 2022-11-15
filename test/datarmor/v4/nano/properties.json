@@ -1,0 +1,19 @@
+{
+  "name": "nano",
+  "bio.tools_id": "",
+  "description": "Simple text editor",
+  "homepage": "https://www.nano-editor.org/dist/v3/nano.html",
+  "operation": "editing",
+  "topic": "Bioinformatics",
+  "version": {
+    "2.2.6": {
+      "localInstallUser": "galaxy",
+      "environment": "shell",
+      "localInstallDate": "25/09/2018",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

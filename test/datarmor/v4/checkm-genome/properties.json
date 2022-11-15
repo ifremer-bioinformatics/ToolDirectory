@@ -1,0 +1,19 @@
+{
+  "name": "CheckM-genome",
+  "bio.tools_id": "",
+  "description": "GAPPadder is designed for closing gaps on the draft genomes with paired-end reads or mate-paired reads.",
+  "homepage": "https://ecogenomics.github.io/CheckM/",
+  "operation": "sequence-assembly-validation",
+  "topic": "Sequence assembly",
+  "version": {
+    "1.1.3": {
+      "localInstallUser": "galaxy",
+      "environment": "conda",
+      "localInstallDate": "30/04/2021",
+      "isCmdline": "true",
+      "isGalaxy": "false",
+      "isWorkflow": "false",
+      "status": "active"
+    }
+  }
+}

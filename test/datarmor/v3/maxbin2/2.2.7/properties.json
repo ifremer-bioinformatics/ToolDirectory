@@ -1,0 +1,13 @@
+{
+  "NAME": "maxbin2",
+  "DESCRIPTION": "An automatic tool for binning metagenomics sequences.",
+  "VERSION": "2.2.7",
+  "CMDLINE": "true",
+  "GALAXY": "false",
+  "URLDOC": "https://sourceforge.net/projects/maxbin2/",
+  "CMD_INSTALL": "conda",
+  "DATE_INSTALL": "14/12/2021",
+  "OWNER": "acormier",
+  "KEYWORDS": "read-binning",
+  "TOPIC": "Metagenomics"
+}
