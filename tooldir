@@ -3,7 +3,6 @@
 import os
 import rich_click as click
 from lib import core as cl
-from lib import ifremer as ifr
 
 
 @click.version_option("4.1", prog_name="ToolDirectory")
@@ -29,17 +28,6 @@ def cli():
 @click.option('--date', '-d', type=str, help='Installation date [Current date]')
 def create(name, bid, version, owner, cmd, galaxy, environment, workflow, path, date):
     """Create tool properties or add a new version"""
-    # IFREMER
-    params = {
-        "install_dir_path": "/appli/bioinfo/",
-        "conda_envs_path": "/appli/conda-env/bioinfo",
-        "anaconda_dir_path": "/appli/anaconda/versions/",
-        "anaconda_profile_d": "/appli/anaconda/latest/etc/profile.d/conda.sh"
-    }
-    if environment == 'conda':
-        ifr.make_tool_dir(params, name, version)
-        ifr.conda_tool(params, name, version)
-    #  ALL
     cl.check_path(path, name, version)
     properties = os.path.join(path, name, 'properties.json')
     if os.path.isfile(properties):
