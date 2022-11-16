@@ -118,26 +118,31 @@ def kcsv_writing(csv_out, json_lst):
     json_lst.sort(key=str.lower)
 
     for tool in json_lst:
-        with open(tool) as json_data:
-            p = json.load(json_data)
-            ver_env = []
-            env = []
-            name = p['name']
-            operation = p['operation']
-            topic = p['topic']
-            homepage = p['homepage']
-            description = p['description']
-            for k in sorted(p['version'].keys(), reverse=True):
-                if p['version'][k]['status'] == 'active':
-                    ver_env.append(k + '-' + p['version'][k]['environment'])
-                    if p['version'][k]['environment'] not in env:
-                        env.append(p['version'][k]['environment'])
-            versions = ','.join(ver_env)
-            environments = ','.join(env)
-            isGalaxy = p['version'][k]['isGalaxy']
-            isWorkflow = p['version'][k]['isWorkflow']
-            txt.write(
-                f'"{name}","{versions}","{operation}","{topic}","{homepage}","{description}","{environments}","{isGalaxy}","{isWorkflow}"\n')
+        logger.info(f'Read {tool}')
+        try:
+            with open(tool) as json_data:
+                p = json.load(json_data)
+                ver_env = []
+                env = []
+                name = p['name']
+                operation = p['operation']
+                topic = p['topic']
+                homepage = p['homepage']
+                description = p['description']
+                for k in sorted(p['version'].keys(), reverse=True):
+                    if p['version'][k]['status'] == 'active':
+                        ver_env.append(k + '-' + p['version'][k]['environment'])
+                        if p['version'][k]['environment'] not in env:
+                            env.append(p['version'][k]['environment'])
+                versions = ','.join(ver_env)
+                environments = ','.join(env)
+                isGalaxy = p['version'][k]['isGalaxy']
+                isWorkflow = p['version'][k]['isWorkflow']
+                txt.write(
+                    f'"{name}","{versions}","{operation}","{topic}","{homepage}","{description}","{environments}","{isGalaxy}","{isWorkflow}"\n')
+        except Exception as error:
+            logger.error(f"Error occurred: {error}")
+            exit(1)
     txt.close()
     logger.info(f"CSV successfully written")
     logger.info(f"Done")
