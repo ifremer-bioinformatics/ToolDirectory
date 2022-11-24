@@ -13,13 +13,13 @@ CONTEXT_SETTINGS = dict(help_option_names=['-h', '--help'])
 @click.option('-p', '--path', type=click.Path(exists=True), default='../test_env/', required=True,
               help='Path to tools dir.')
 def main(path):
-    print('Explorer path')
+    logger.info(f'Explorer path')
     directories = cl.walk_level(path)
-    print('Collect env.sh files')
+    logger.info(f'Collect env.sh files')
     envs = get_envs(directories)
-    print('Check calls in env.sh files')
+    logger.info(f'Check calls in env.sh files')
     envs = check_existing_call(envs)
-    print('Add systemd call to env.sh')
+    logger.info('Add systemd call to env.sh')
     add_systemd_call(envs)
 
 
