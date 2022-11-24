@@ -31,6 +31,7 @@ def conda_tool(params, tool_name, tool_version):
     env_sh.write(f"#!/usr/bin/env bash\n")
     env_sh.write(f". {params['anaconda_profile_d']}\n")
     env_sh.write(f"conda activate {path_env}\n")
+    env_sh.write(f'echo "`date +%d-%m-%Y`|sebimer-tool-activation|{tool_name}:{tool_version}:`hostname`:`whoami`" | systemd-cat -p info\n')
     env_sh.close()
     delenv_sh = open(os.path.join(path_tool, 'delenv.sh'), 'w')
     delenv_sh.write(f"#!/usr/bin/env bash\n")
