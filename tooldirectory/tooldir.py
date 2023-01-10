@@ -2,10 +2,10 @@
 
 import os
 import rich_click as click
-from lib import core as cl
+from .lib import core as td
 
 
-@click.version_option("4.1", prog_name="ToolDirectory")
+@click.version_option("5.1.0", prog_name="tooldir")
 @click.group(context_settings=dict(help_option_names=["-h", "--help"]))
 def cli():
     """
@@ -28,12 +28,12 @@ def cli():
 @click.option('--date', '-d', type=str, help='Installation date [Current date]')
 def create(name, bid, version, owner, cmd, galaxy, environment, workflow, path, date):
     """Create tool properties or add a new version"""
-    cl.check_path(path, name, version)
+    td.check_path(path, name, version)
     properties = os.path.join(path, name, 'properties.json')
     if os.path.isfile(properties):
-        cl.add_version(name, version, date, owner, environment, cmd, galaxy, workflow, properties)
+        td.add_version(name, version, date, owner, environment, cmd, galaxy, workflow, properties)
     else:
-        cl.create_properties(name, bid, version, owner, cmd, galaxy, environment, workflow, date, properties)
+        td.create_properties(name, bid, version, owner, cmd, galaxy, environment, workflow, date, properties)
 
 
 @cli.command()
@@ -41,7 +41,7 @@ def create(name, bid, version, owner, cmd, galaxy, environment, workflow, path, 
 @click.option('--bid', '-b', type=str, help='Force update using Bio.tools ID')
 def update(json, bid):
     """Update metadata of a tool"""
-    cl.update(json, bid)
+    td.update(json, bid)
 
 
 @cli.command()
@@ -51,7 +51,7 @@ def update(json, bid):
 @click.option('--version', '-v', type=(str, int), required=True, multiple=True, help='Version(s) to set status')
 def status(json, status, version):
     """Set installation status of a tool's version"""
-    cl.set_status(json, version, status)
+    td.set_status(json, version, status)
 
 
 @cli.command()
@@ -59,9 +59,9 @@ def status(json, status, version):
 @click.option('--csv', '-c', type=str, required=True, help='Output csv name')
 def kcsv(path, csv):
     """Create csv for Keshif visualisation"""
-    directories = cl.walk_level(path)
-    prop_json = cl.get_json(directories)
-    cl.kcsv_writing(csv, prop_json)
+    directories = td.walk_level(path)
+    prop_json = td.get_json(directories)
+    td.kcsv_writing(csv, prop_json)
 
 
 click.rich_click.COMMAND_GROUPS = {
