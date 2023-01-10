@@ -101,7 +101,7 @@ def set_status(properties, versions, status):
             p['version'][version]['status'] = status
             logger.info(f"Status set to {status} for version: {version}")
         except KeyError:
-            logger.warning(f"Invalid tool version: {versions}")
+            logger.warning(f"Invalid tool version: {version}")
             logger.warning(f"Skip...")
             pass
         with open(properties, 'w') as o:

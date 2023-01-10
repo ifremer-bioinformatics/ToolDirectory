@@ -37,7 +37,7 @@ def create(name, bid, version, owner, cmd, galaxy, environment, workflow, path, 
 
 
 @cli.command()
-@click.option('--json', '-j', type=str, required=True, help='Path to json')
+@click.option('--json', '-j', type=click.Path(exists=True), required=True, help='Path to json')
 @click.option('--bid', '-b', type=str, help='Force update using Bio.tools ID')
 def update(json, bid):
     """Update metadata of a tool"""
@@ -45,11 +45,11 @@ def update(json, bid):
 
 
 @cli.command()
-@click.option('--jp', '-j', type=str, required=True, help='Path to json')
+@click.argument('version', nargs=-1, type=str)
+@click.option('--json', '-j', type=click.Path(exists=True), required=True, help='Path to json')
 @click.option('--status', '-s', type=click.Choice(['active', 'inactive']), default='inactive',
               help='Version status [active]')
-@click.option('--version', '-v', type=(str, int), required=True, multiple=True, help='Version(s) to set status')
-def status(json, status, version):
+def status(version, json, status):
     """Set installation status of a tool's version"""
     td.set_status(json, version, status)
 
