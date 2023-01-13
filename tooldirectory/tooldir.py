@@ -5,7 +5,7 @@ import rich_click as click
 from .lib import core as td
 
 
-@click.version_option("5.1.0", prog_name="tooldir")
+@click.version_option("5.1.1", prog_name="tooldir")
 @click.group(context_settings=dict(help_option_names=["-h", "--help"]))
 def cli():
     """
