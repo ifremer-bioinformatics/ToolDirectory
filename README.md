@@ -1,11 +1,20 @@
 # ToolDirectory
+
 ## Introduction
 
-ToolDirectory provides a convenient tool to display list of softwares in a webpage along with dynamic data filtering capabilities.
+ToolDirectory provides a convenient tool to display list of softwares in a web page along with dynamic data filtering capabilities.
 
 ![Tool Directory](images/tooldirectory.png)
 
 You can test our [public demo](https://ifremer-bioinformatics.github.io/ToolDirectorySample/)
+
+## Data visualization
+
+Web rendering relies on the open-source [Keshif](https://github.com/adilyalcin/Keshif) data visualization library. 
+
+For the specific use of ToolDirectory, we setup a dedicated version of Keshif, namely [Katalog](https://gitlab.ifremer.fr/bioinfo/katalog). That version of the viewer simply expects your provide a ".csv" file containing the list of software metadata to use for visualization. The csv format expected by Katalog is quite simple, simply refer to [this example](https://github.com/ifremer-bioinformatics/ToolDirectory/blob/master/test/Softwares.csv) to review column names (matadata).
+
+Either you create that ".csv" file yourself (i.e. a dedicated script to collect software information installed on your cluster), of you use the Python ToolDirectory herafter presented.
 
 ## Direct use of ToolDirectory Viewer
 
@@ -18,8 +27,6 @@ ToolDirectory is a Python 3.x program. It also requires the following package:
 ```
 conda create -p tooldir -c anaconda requests=2.25.1 rich-click=1.5.2 loguru=0.6.0
 ```
-
-Web rendering relies on the open-source version of [Keshif](https://github.com/adilyalcin/Keshif) data visualisation. We provided [Katalog](https://gitlab.ifremer.fr/bioinfo/katalog), a lightweight version specifically designed for ToolDirectory and DataDirectory.
 
 ## Basic usage
 
