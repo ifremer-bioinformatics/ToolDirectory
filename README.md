@@ -10,9 +10,7 @@ You can test our [public demo](https://ifremer-bioinformatics.github.io/ToolDire
 
 ## Data visualization
 
-Web rendering relies on the open-source [Keshif](https://github.com/adilyalcin/Keshif) data visualization library. 
-
-For the specific use of ToolDirectory, we setup a dedicated version of Keshif, namely [Katalog](https://gitlab.ifremer.fr/bioinfo/katalog). That version of the viewer simply expects your provide a ".csv" file containing the list of software metadata to use for visualization. The csv format expected by Katalog is quite simple, simply refer to [this example](https://github.com/ifremer-bioinformatics/ToolDirectory/blob/master/test/Softwares.csv) to review column names (matadata).
+Web rendering relies on [Katalog viewer](https://github.com/ifremer-bioinformatics/Katalog) which simply expects you provide a ".csv" file containing the list of software metadata to use for visualization. The csv format expected by Katalog is quite simple, simply refer to [this example](https://github.com/ifremer-bioinformatics/Katalog/blob/master/examples/Ifremer-Softwares.csv) to review column names (matadata).
 
 Either you create that ".csv" file yourself (i.e. a dedicated script to collect software information installed on your cluster), of you use the Python ToolDirectory herafter presented.
 
@@ -104,16 +102,16 @@ tooldir update -j /appli/bioinfo/interproscan/properties.json -b interproscan_eb
 
 ## Setup visualisation
 
-You will need [Katalog](https://gitlab.ifremer.fr/bioinfo/katalog), a lightweight version of [Keshif](https://github.com/adilyalcin/Keshif) specifically designed for ToolDirectory and DataDirectory.
+You will need [Katalog](https://github.com/ifremer-bioinformatics/Katalog) viewer library.
 
 
 ```bash
-git clone https://gitlab.ifremer.fr/bioinfo/katalog.git /foo/bar/www/tooldirectory
+git clone https://github.com/ifremer-bioinformatics/Katalog /foo/bar/www/ToolDirectory
 ```
 
 Then, generate the software list:
 ```bash
-tooldir kcsv -p /path/to/tools/ -c /foo/bar/www/tooldirectory/Softwares.csv
+tooldir kcsv -p /path/to/tools/ -c /foo/bar/www/ToolDirectory/Softwares.csv
 
 ```
 
