@@ -14,7 +14,9 @@ Web rendering relies on [Katalog viewer](https://github.com/ifremer-bioinformati
 
 Either you create that ".csv" file yourself (i.e. a dedicated script to collect software information installed on your cluster), of you use the Python ToolDirectory herafter presented.
 
-## Direct use of ToolDirectory Viewer
+## Using ToolDirectory to manage bioinformatics softwares
+
+### Installation
 
 ToolDirectory is a Python 3.x program. It also requires the following package:
 
@@ -26,7 +28,7 @@ ToolDirectory is a Python 3.x program. It also requires the following package:
 conda create -p tooldir -c anaconda requests=2.25.1 rich-click=1.5.2 loguru=0.6.0
 ```
 
-## Basic usage
+### Basic usage
 
 ```bash
 $ tooldir -h
@@ -49,7 +51,7 @@ $ tooldir -h
 ╰───────────────────────────────────────────────────────────────────────╯
 ```
 
-## Data structure
+### Data structure
 
 ToolDirectory expects a directory structure with the following constraints:
 - /path/to/tools/tool-name/tool-version/
@@ -74,7 +76,7 @@ Here is an example:
   .../...
 ```
 
-## Usage
+### Usage
 #### Creation a tool description
 
 ```bash
